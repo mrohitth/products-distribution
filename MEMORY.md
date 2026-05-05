@@ -248,3 +248,12 @@ Human Infrastructure: [1-sentence scale thesis]
 ---
 
 _Last updated: 2026-05-05T06:15:00Z_
+
+### MarketBot v2 — Live ✅ (2026-05-05T19:15:00Z)
+- **Portfolio coverage:** All 10 holdings (VTI, NVDA, VOO, QQQ, SMH, SCHG, VXUS, SCHD, SPYD, ASTS) — expanded from 3
+- **Macro tickers:** SPY, QQQ, DXY, TLT, GLD — market context fetch
+- **Sector sweep:** 20 semi/tech stocks for Profit Maximizer scanner
+- **Data source:** Yahoo Finance via `yahoo-finance2` — no API key needed (replaced Alpha Vantage)
+- **Capital Pilot cron fixed:** Cron `3276d08a` converted from `systemEvent` → `agentTurn` with `delivery.mode: "announce"` → Telegram (was broken: stdout to execution log, never to Telegram)
+- **Live test:** 10 portfolio + 4 macro + 20 sector tickers fetched; 9 rebalance recommendations generated
+- **Repo:** `mrohitth/MarketBot` (c71cd94 pushed)
