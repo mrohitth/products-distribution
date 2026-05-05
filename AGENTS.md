@@ -1,6 +1,6 @@
 # AGENTS.md — Workspace Crew Hierarchy & Conventions
 
-_Version 4.0 | Gateway Router (MiniMax Professional Subscription) — MiniMax-M2.7 (T2/Workhorse) → DeepSeek V4 Pro (T1/Architect) → DeepSeek V4 Flash (T3/Sentinel). RAM-gated escalation at 70%._
+_Version 5.0 | Gateway Router (MiniMax Professional Subscription). MiniMax-M2.7 is the ONLY auto-routed cloud model. DeepSeek (pay-as-you-go) requires explicit override. Llama 3.2 3B for lightweight local tasks. RAM-gated escalation at 70%._
 
 ---
 
@@ -16,18 +16,18 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 
 ## Gateway Router — Model Assignment (Escalation Ladder)
 
-| Tier | Model | Task Type |
-|-------|-------|-----------|
-| **T1 — Architect** | DeepSeek V4 Pro | High-level strategy, final product review, initial scaffolding |
-| **T2 — Workhorse** | MiniMax-M2.7 (default) | Research, 1,000+ line drafts, complex code, ETL, SQL |
-| **T3 — Sentinel** | DeepSeek V4 Flash | Routine cron, TrendScout filtering, log indexing, 121s retry bridge |
-| **T4 — Local** | Bitty (Llama) | PII scrubbing, local cleanup, gateway-unstable fallback |
+| Tier | Model | Cost | Task Type |
+|-------|-------|------|-----------|
+| **T1 — Primary** | MiniMax-M2.7 | $0 (subscription) | ALL cloud tasks — research, drafts, code, strategy, cron |
+| **T2 — Light** | Llama 3.2 3B (Local) | $0 (local) | PII scrubbing, lightweight file ops, gateway-fallback bridge |
+| **T3 — Overflow** | DeepSeek V4 Pro | PAYG ⚠️ | Explicit override only — never auto-routed |
+| **T4 — Overflow** | DeepSeek V4 Flash | PAYG ⚠️ | Explicit override only — never auto-routed |
 
-**Routing Logic:**
-- Default all tasks to MiniMax-M2.7 to utilize Professional subscription
-- Tasks >5K input tokens + reasoning required → MiniMax-M2.7 first
-- Retry after 121s timeout → DeepSeek V4 Flash (low-cost bridge)
-- RAM-gated escalation: Before cloud requests, check 70% threshold.
+**Routing Logic (revised May 2026):**
+- **All cloud tasks → MiniMax-M2.7** (Professional subscription, $0 marginal cost)
+- **Lightweight local tasks → Llama 3.2 3B** (Bitty, via Ollama) — replaces DeepSeek Flash for cheap bridge operations
+- **DeepSeek is PAYG** — blocked from automatic fallback chain. Manual `model=` override required for any DeepSeek usage
+- RAM-gated escalation: Before cloud requests, check 70% threshold. If exceeded, fall back to local Llama
 
 **RAM-Gated Escalation:** Before escalating to cloud models (Bitty inference, Ollama), check 70% RAM threshold. If exceeded, queue task until RAM drops.
 
@@ -173,6 +173,7 @@ Real-time reflection of workspace state. Tasks from `## Tasks` checkbox syntax. 
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.0 | 2026-05-05 | DeepSeek moved to PAYG — removed from auto-fallback chain. MiniMax M2.7 is sole cloud primary. Llama 3.2 3B (Bitty) replaces DeepSeek Flash for bridge operations. Heartbeat disabled (0m interval). |
 | 4.0 | 2026-05-05 | MiniMax Professional Subscription. Highspeed purged. New hierarchy: M2.7 default workhorse. DeepSeek V4 Flash as Sentinel/T3. Routing rules for >5K tokens, 121s retry, RAM gating. |
 | 3.3 | 2026-05-03 | RAM threshold 80%→70%. DeepSeek provider added. Hybrid Pro-Mini stack. |
 | 3.0 | 2026-05-03 | Full roster: Kitty (DeepSeek Pro), Witty (DeepSeek Flash), Mitty (Gemini Flash), Bitty (Llama 3.2 3B), Titty (MiniMax M2.7). |

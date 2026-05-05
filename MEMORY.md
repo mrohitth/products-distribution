@@ -32,17 +32,18 @@ _Version 3.0 | Curated, distilled, persistent — source of truth for everything
 
 ### Model Hierarchy (MiniMax Professional Subscription)
 
-| Tier | Role | Model | Use Case |
-|------|------|-------|----------|
-| **T1 — Architect** | Kitty 🐱 | DeepSeek V4 Pro | Strategy, final review, initial scaffolding (high cost, max depth) |
-| **T2 — Workhorse** | Titty 🔬 | MiniMax-M2.7 | Research, 1,000+ line drafts, complex code, default routing |
-| **T3 — Sentinel** | Witty 🌐 / Mitty 🔒 | DeepSeek V4 Flash | Cron jobs, TrendScout filtering, log indexing, 121s retry bridge |
-| **T4 — Local** | Bitty 🌿 | Llama 3.2 3B (Ollama) | PII scrubbing, local cleanup, API-gateway-unstable fallback |
+| Tier | Role | Model | Cost | Use Case |
+|------|------|-------|------|----------|
+| **T1 — Primary** | Kitty 🐱 / Titty 🔬 | MiniMax-M2.7 | $0 (subscription) | ALL cloud tasks — research, drafts, code, strategy, cron |
+| **T2 — Local** | Bitty 🌿 | Llama 3.2 3B (Ollama) | $0 (local) | PII scrubbing, lightweight ops, gateway-fallback bridge |
+| **T3 — Overflow** | Witty 🌐 / Mitty 🔒 | DeepSeek V4 Pro | PAYG ⚠️ | Explicit override only — never auto-routed |
+| **T4 — Overflow** | — | DeepSeek V4 Flash | PAYG ⚠️ | Explicit override only — never auto-routed |
 
 ### Routing Rules
-- **>5K input tokens + reasoning required →** Route to MiniMax-M2.7 first (subscription utilization)
-- **Retry after 121s timeout →** Escalate to DeepSeek V4 Flash (low-cost bridge)
-- **RAM >70% →** Pause cloud requests; fall back to Bitty (Llama)
+- **All cloud tasks → MiniMax-M2.7** (Professional subscription, $0 marginal cost)
+- **Lightweight local tasks → Llama 3.2 3B** (Bitty, via Ollama) — replaces DeepSeek Flash for bridge operations
+- **DeepSeek is PAYG** — removed from automatic fallback chain. Manual `model=` override required for any DeepSeek usage
+- **RAM >70% →** Pause cloud requests; fall back to local Llama
 
 ### Command Structure
 ```
