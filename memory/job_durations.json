@@ -1,0 +1,33 @@
+{
+  "1e85c944-0d23-4cb0-a6be-37dbf267ff29": {
+    "name": "TrendScout Daily",
+    "durations": [
+      134818,
+      178975,
+      96883,
+      60078
+    ],
+    "max_dur": 178975
+  },
+  "87f4dfda-0ed3-4b36-a7fc-7258960cdb38": {
+    "name": "Kitty Morning Kaizen",
+    "durations": [
+      78010
+    ],
+    "max_dur": 78010
+  },
+  "3276d08a-d2df-416c-a2d8-8addd81453ed": {
+    "name": "Capital Pilot Daily Brief",
+    "durations": [
+      1004
+    ],
+    "max_dur": 1004
+  },
+  "618c0a1c-272d-4313-b13c-be1a46a000a8": {
+    "name": "Mitty Security Audit",
+    "durations": [
+      2899
+    ],
+    "max_dur": 2899
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-04T04:34:51.380Z",
+  "entries": {
+    "memory:memory/2026-05-03.md:57:71": {
+      "key": "memory:memory/2026-05-03.md:57:71",
+      "path": "memory/2026-05-03.md",
+      "startLine": 57,
+      "endLine": 71,
+      "source": "memory",
+      "snippet": "- **Status:** ACTIVE - **Activated at:** 2026-05-03T06:41:06.774Z - **Mission:** Research, content synthesis, data aggregation for investment analysis - **First task:** Awaiting assignment from Kitty ## Decisions - Portfolio Health in KATZEN now tracks 7 holdings (NVDA, SMH, SCHG, QQQ, SCHD, VXUS, VOOG) from Fidelity email extraction - Market signal API updated to fetch live Alpha Vantage prices with realistic mock fallback - portfolio.json expanded with 7 tickers, avg costs from April 2026 trades, current prices - portfolio-context.md created as baseline reference for Capital Pilot daily job ## Notes - Fidelity trade confirmation emails show price but NOT share count — must enter manually",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4877943336963653,
+      "maxScore": 0.4877943336963653,
+      "firstRecalledAt": "2026-05-03T10:05:09.609Z",
+      "lastRecalledAt": "2026-05-03T10:05:09.609Z",
+      "queryHashes": [
+        "2ec8a7dff576"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "2026-05-03t06",
+        "06.774z",
+        "portfolio.json",
+        "portfolio-context.md",
+        "status",
+        "active",
+        "activated",
+        "03t06"
+      ]
+    },
+    "memory:memory/2026-05-03.md:42:62": {
+      "key": "memory:memory/2026-05-03.md:42:62",
+      "path": "memory/2026-05-03.md",
+      "startLine": 42,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "- [x] [P]KATZEN] Add Memory Tooltips on task hover (/api/search → MEMORY.md snippets) (2026-05-03T08:20:00Z) - [x] [P]KATZEN] Update workspace files (SOUL.md, IDENTITY.md, USER.md, AGENTS.md, TOOLS.md, HEARTBEAT.md, DREAMS.md) (2026-05-03T08:25:00Z) - [x] [P]KATZEN] Multi-Agent Handshake (Agent Initialization, Swarm Activity Feed, Task Velocity SLA, ARRIVAL logs) (2026-05-03T08:30:00Z) - [x] [P]KATZEN] Swarm Orchestration (HUD Attribution, Smart Delegation, Weekly Report Attribution, Titty credited for research) (2026-05-03T08:32:00Z) - [x] [P]MarketBot] Capital Pilot Build (MarketBot repo, SPEC.md, budget/market/profitMaximizer modules, mock data test pass) (2026-05-03T08:35:00Z) - [x] [P]M",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4756719768047332,
+      "maxScore": 0.4756719768047332,
+      "firstRecalledAt": "2026-05-03T10:05:09.609Z",
+      "lastRecalledAt": "2026-05-03T10:05:09.609Z",
+      "queryHashes": [
+        "2ec8a7dff576"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "api/search",
+        "memory.md",
+        "2026-05-03t08",
+        "soul.md",
+        "identity.md",
+        "user.md",
+        "agents.md",
+        "tools.md"
+      ]
+    },
+    "memory:memory/2026-05-03.md:40:71": {
+      "key": "memory:memory/2026-05-03.md:40:71",
+      "path": "memory/2026-05-03.md",
+      "startLine": 40,
+      "endLine": 71,
+      "source": "memory",
+      "snippet": "- **Black Swan:** None detected ## Notes - SMH drift is severe at -43.3% from target weight — this is the most urgent rebalance - Cash position ($850) is insufficient for all 3 rebalances simultaneously - No sector setups from Profit Maximizer today ## Tasks - [x] Capital Pilot cron triggered and brief delivered to Telegram ## Decisions - Portfolio drift is severe: SMH -43.3%, SCHG -30.1%, NVDA -15.0% from target allocation - Cash buffer ($850) too low to execute rebalances — needs ~$10.7K for SMH rebalance alone - Brief delivered successfully to Telegram (5607383477) via OpenClaw cron announce ## Notes - Capital Pilot daily brief ran successfully via cron job - Brief content: portfolio",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36751062273979185,
+      "maxScore": 0.36751062273979185,
+      "firstRecalledAt": "2026-05-04T04:34:51.380Z",
+      "lastRecalledAt": "2026-05-04T04:34:51.380Z",
+      "queryHashes": [
+        "eadd11b67eeb"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "43.3",
+        "30.1",
+        "15.0",
+        "10.7k",
+        "black",
+        "swan",
+        "none",
+        "detected"
+      ]
+    }
+  }
+}

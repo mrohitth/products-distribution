@@ -1,0 +1,229 @@
+/* ============================================
+   You First, For Once — Pandoc PDF Style
+   Smart-Casual Design Language
+   ============================================ */
+
+/* --- TYPOGRAPHY --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Charter', 'Georgia', 'Bitstream Charter', serif;
+    font-size: 11.5pt;
+    line-height: 1.65;
+    color: #2D2D2D;
+    background: #FAFAFA;
+    max-width: 6.5in;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+    color: #1A1A1A;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #1A365D;
+    margin-top: 0;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid #1A365D;
+}
+
+h2 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-top: 2.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #1A365D;
+}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #555;
+}
+
+/* --- CALLOUT BOXES --- */
+.callout-script {
+    background: #F0F4F8;
+    border-left: 4px solid #1A365D;
+    padding: 1.2em 1.5em;
+    margin: 1.8em 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95em;
+}
+
+.callout-script strong:first-child {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #1A365D;
+    margin-bottom: 0.6em;
+}
+
+.callout-audit {
+    background: #FAFAFA;
+    border: 1.5px solid #DDD;
+    padding: 1.4em 1.6em;
+    margin: 1.8em 0;
+    border-radius: 6px;
+    page-break-inside: avoid;
+}
+
+.callout-audit::before {
+    content: "ENERGY AUDIT";
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 0.8em;
+}
+
+.callout-takeaway {
+    background: #1A365D;
+    color: #FFFFFF;
+    padding: 1em 1.4em;
+    margin: 2em 0;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+}
+
+.callout-takeaway strong {
+    font-weight: 600;
+}
+
+/* --- TABLES --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.95em;
+}
+
+thead {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-bottom: 2px solid #1A365D;
+}
+
+th {
+    text-align: left;
+    padding: 0.6em 0.8em;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #555;
+}
+
+td {
+    padding: 0.6em 0.8em;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- BLOCKQUOTES --- */
+blockquote {
+    border-left: 3px solid #1A365D;
+    margin: 1.5em 0;
+    padding: 0.8em 1.2em;
+    background: #F7F9FC;
+    font-style: italic;
+    color: #444;
+}
+
+/* --- LISTS --- */
+ul, ol {
+    padding-left: 1.4em;
+}
+
+li {
+    margin-bottom: 0.4em;
+}
+
+/* --- CODE / MONOSPACE --- */
+code {
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+    font-size: 0.9em;
+    background: #F0F0F0;
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+}
+
+/* --- HORIZONTAL RULES --- */
+hr {
+    border: none;
+    border-top: 1px solid #DDD;
+    margin: 2.5em 0;
+}
+
+/* --- PAGE SETUP --- */
+@page {
+    size: letter;
+    margin: 1in 0.9in;
+    @bottom-center {
+        content: counter(page);
+        font-family: 'Inter', sans-serif;
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+@page :first {
+    @bottom-center {
+        content: none;
+    }
+}
+
+/* --- TABLE OF CONTENTS --- */
+nav#TOC {
+    page-break-after: always;
+    margin-bottom: 3em;
+}
+
+nav#TOC ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav#TOC a {
+    color: #2D2D2D;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+nav#TOC a:hover {
+    color: #1A365D;
+}
+
+/* --- PRINT FIXES --- */
+@media print {
+    body {
+        background: #FFFFFF;
+    }
+    .callout-script, .callout-audit {
+        page-break-inside: avoid;
+    }
+    h2 {
+        page-break-before: avoid;
+    }
+}
