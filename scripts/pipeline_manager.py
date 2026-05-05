@@ -523,6 +523,179 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
     return True
 
 
+def cleanup_for_production(md_text, dry_run=False):
+    r"""
+    Strip draft artifacts from markdown before PDF generation.
+
+    Removes:
+      - YAML front matter (--- blocks at top)
+      - Version/draft header lines (### Version 1 Draft | TrendScout...)
+      - Trailing draft metadata lines (*Version 1 Draft ..., *TrendScout...)
+      - "Coming in V2:" italic paragraphs
+      - Lone horizontal rules used as non-YAML section dividers
+      - Blank-line runs > 2 lines (compact)
+      - [AI-GENERATED], [FIRST DRAFT] bracket markers
+
+    Transforms:
+      - **Key Takeaway:** blocks → <div class="callout-takeaway"> wrapped
+      - **Say:** / **Don't say:** blocks → <div class="callout-script"> wrapped
+
+    Args:
+        md_text: Raw markdown string
+        dry_run: If True, return cleaned text but print stats only
+
+    Returns:
+        Cleaned markdown string
+    """
+    import re as _re
+
+    lines = md_text.split("\n")
+    cleaned = []
+    in_yaml = False
+    yaml_closed = False
+    consecutive_blanks = 0
+
+    # Regex patterns (compiled once)
+    re_version_hdr = _re.compile(r"^###\s+Version\s+\d+\s+Draft", _re.IGNORECASE)
+    re_coming_v2 = _re.compile(r"^\*(Coming in V2|What.s coming in V2):", _re.IGNORECASE)
+    re_trailing_meta = _re.compile(
+        r"^\*(Version\s+\d+\s+Draft|TrendScout|Pipeline:|Next:\s+Stage|"
+        r"This draft is matte|Draft generated|Framework:|Top Conviction:)",
+        _re.IGNORECASE,
+    )
+    re_ai_marker = _re.compile(r"\[(AI-GENERATED|FIRST.DRAFT|TEMP|DRAFT ONLY)\]", _re.IGNORECASE)
+    re_key_takeaway = _re.compile(r"^\*\*Key Takeaway:\*\*\s*(.*)")
+    re_script_block = _re.compile(r"^\*\*(Say|Don't\s+say):\*\*\s*(.*)")
+    re_chapter_hdr = _re.compile(r"^###\s+Chapter\s+\d+:", _re.IGNORECASE)
+
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+
+        # ── YAML front matter ──
+        if not yaml_closed and i <= 2 and stripped == "---":
+            in_yaml = True
+            i += 1
+            continue
+
+        # Close YAML when we hit the second ---
+        if in_yaml and stripped == "---":
+            in_yaml = False
+            yaml_closed = True
+            i += 1
+            while i < len(lines) and lines[i].strip() == "":
+                i += 1
+            continue
+
+        if in_yaml:
+            i += 1
+            continue
+
+        # ── Strip bracket markers [AI-GENERATED], [FIRST DRAFT], [TEMP] ──
+        if re_ai_marker.search(stripped):
+            i += 1
+            continue
+
+        # ── Version/draft header ──
+        if re_version_hdr.match(stripped):
+            i += 1
+            while i < len(lines) and lines[i].strip() == "":
+                i += 1
+            continue
+
+        # ── "Coming in V2:" italic paragraphs ──
+        if re_coming_v2.match(stripped):
+            i += 1
+            while i < len(lines) and lines[i].strip() == "":
+                i += 1
+            continue
+
+        # ── Trailing draft metadata ──
+        if re_trailing_meta.match(stripped):
+            i += 1
+            while i < len(lines) and lines[i].strip() == "":
+                i += 1
+            continue
+
+        # ── Lone horizontal rule used as body divider ──
+        # Only strip if it's followed by blank+heading (section divider pattern)
+        if stripped == "---":
+            j = i + 1
+            while j < len(lines) and lines[j].strip() == "":
+                j += 1
+            # If next non-blank is a heading, this HR is a section divider — strip it
+            if j < len(lines) and lines[j].strip().startswith("#"):
+                i = j  # skip HR + blanks, go to heading
+                continue
+            # Otherwise leave the HR as-is (content separator)
+            i += 1
+            continue
+
+        # ── Transform: **Key Takeaway:** → callout-takeaway div ──
+        kt_match = re_key_takeaway.match(stripped)
+        if kt_match:
+            inner = kt_match.group(1)
+            cleaned.append('<div class="callout-takeaway"><strong>Key Takeaway</strong>')
+            cleaned.append(inner)
+            cleaned.append('</div>')
+            cleaned.append('')
+            consecutive_blanks = 0
+            i += 1
+            continue
+
+        # ── Transform: **Say:** / **Don't say:** → callout-script div ──
+        scr_match = re_script_block.match(stripped)
+        if scr_match:
+            label = scr_match.group(1)
+            text = scr_match.group(2).strip()
+            if text:
+                cleaned.append('<div class="callout-script"><strong>' + label + '</strong>')
+                cleaned.append(text)
+                cleaned.append('</div>')
+                cleaned.append('')
+                consecutive_blanks = 0
+            i += 1
+            continue
+
+        # ── Transform: "### Chapter N: Title" → "## Title" (promote chapter to H2) ──
+        ch_match = re_chapter_hdr.match(stripped)
+        if ch_match:
+            title = stripped[stripped.index(":") + 1:].strip()
+            cleaned.append("## " + title)
+            cleaned.append("")
+            consecutive_blanks = 0
+            i += 1
+            continue
+
+        # ── Blank-line compaction (max 2) ──
+        if stripped == "":
+            consecutive_blanks += 1
+            if consecutive_blanks <= 2:
+                cleaned.append(line)
+            i += 1
+            continue
+        else:
+            consecutive_blanks = 0
+
+        cleaned.append(line)
+        i += 1
+
+    # Strip trailing blank lines
+    while cleaned and cleaned[-1].strip() == "":
+        cleaned.pop()
+
+    result = "\n".join(cleaned)
+
+    stripped_bytes = len(md_text.encode("utf-8")) - len(result.encode("utf-8"))
+    if dry_run:
+        print(f"  [DRY-RUN] Would strip ~{stripped_bytes} bytes of draft artifacts")
+        return result
+    else:
+        print(f"  Stripped ~{stripped_bytes} bytes of draft artifacts")
+        return result
+
+
 def stage5_production_weasyprint(draft_path, css_path=None):
     """
     Stage 5: WeasyPrint PDF generation.
@@ -548,9 +721,12 @@ def stage5_production_weasyprint(draft_path, css_path=None):
         print("  ⚠️  WeasyPrint not installed — cannot generate PDF")
         return None
 
-    # Read and convert markdown
+    # Read, clean, and convert markdown
     with open(draft_path, "r", encoding="utf-8") as f:
         md_content = f.read()
+
+    # Pre-process: strip draft artifacts
+    md_content = cleanup_for_production(md_content)
 
     md = markdown.Markdown(extensions=["extra", "meta"])
     html_body = md.convert(md_content)
@@ -738,7 +914,28 @@ def main():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "--share-only":
+    if len(sys.argv) > 1 and sys.argv[1] == "--dry-run":
+        # Preview mode: show cleaned markdown for latest draft without generating PDF
+        if not DRAFTS_DIR.exists():
+            print("No drafts directory")
+            sys.exit(1)
+        drafts = sorted(DRAFTS_DIR.glob("*_V1.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+        if not drafts:
+            drafts = sorted(DRAFTS_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+        if not drafts:
+            print("No drafts found")
+            sys.exit(1)
+        latest = drafts[0]
+        raw = latest.read_text()
+        cleaned = cleanup_for_production(raw, dry_run=True)
+        out = WORKSPACE / "output" / "final_products" / f"PREVIEW_{latest.stem}.md"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(cleaned)
+        print(f"  Preview saved: {out}")
+        print(f"  Original: {len(raw)} bytes → Cleaned: {len(cleaned)} bytes")
+        print(f"  Lines: {cleaned.count(chr(10))}")
+        sys.exit(0)
+    elif len(sys.argv) > 1 and sys.argv[1] == "--share-only":
         # Share mode: find latest draft and send via Telegram
         if not DRAFTS_DIR.exists():
             print("No drafts directory")
