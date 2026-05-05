@@ -914,7 +914,29 @@ def main():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "--dry-run":
+    if len(sys.argv) > 1 and sys.argv[1] == "--pdf-only":
+        # Production mode: clean + PDF + GitHub on latest draft (no MiniMax call)
+        if not DRAFTS_DIR.exists():
+            print("No drafts directory")
+            sys.exit(1)
+        drafts = sorted(DRAFTS_DIR.glob("*_V1.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+        if not drafts:
+            drafts = sorted(DRAFTS_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+        if not drafts:
+            print("No drafts found")
+            sys.exit(1)
+        latest_draft = drafts[0]
+        print(f"Processing: {latest_draft.name}")
+        pdf = stage5_production_weasyprint(str(latest_draft))
+        if pdf:
+            gh_token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+            if gh_token:
+                sync_to_github(pdf)
+                create_github_release(pdf)
+            else:
+                print("  ⚠️  GH_TOKEN not set — skipping GitHub sync/release")
+        sys.exit(0)
+    elif len(sys.argv) > 1 and sys.argv[1] == "--dry-run":
         # Preview mode: show cleaned markdown for latest draft without generating PDF
         if not DRAFTS_DIR.exists():
             print("No drafts directory")
