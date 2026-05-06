@@ -248,6 +248,17 @@ Human Infrastructure: [1-sentence scale thesis]
 | Phase 3 (MarketBot) | ✅ Added | `scripts/marketbot_feedback.py` — webhook listener + Scout re-weighting |
 | Phase 4 (Pre-Flight) | ✅ Done | `scripts/preflight_check.sh` — green light diagnostic |
 
+### Pipeline Deduplication Guards (2026-05-06)
+**Problem:** Pipeline was generating duplicate skeletons and drafts for the same topic, and treating rewrites as new products.
+
+**Fixes applied:**
+- `check_existing_skeleton(topic_title, skeletons_dir)` — fuzzy slug match at Stage 2, prevents duplicate skeleton generation
+- `check_existing_draft(slug, drafts_dir)` — base-slug dedup at Stage 3, prevents duplicate draft generation
+- `normalize_to_canonical()` — archives any existing `_V1` before writing a new one (ensures one canonical version only)
+- `--force-skeleton` / `--force-draft` flags to override when intentional rewrite is needed
+- Naming convention enforced: `*_V1.md` = canonical only. `_FINAL`, `_v2`, `_V2` suffixes prohibited
+- Archived duplicates live in `products/archive/`
+
 ### Deployment Infrastructure
 | Component | Path | Status |
 |-----------|------|--------|
