@@ -1295,12 +1295,15 @@ def main():
 
 def stage5_production_docx(draft_path):
     """
-    Stage 5b: Generate editable DOCX from draft markdown using pandoc.
-    Output: output/final_products/{draft_name}.docx
-    DOCX is fully editable — Mathew can make direct formatting tweaks.
+    Stage 5b: Generate editable DOCX from the EXACT same HTML used for the PDF.
+    This ensures DOCX formatting matches PDF exactly — same heading styles,
+    same cover layout, same page breaks. Uses pandoc to convert HTML→DOCX.
     """
     import subprocess
-    import sys
+    import tempfile
+    import re
+    import markdown
+    import weasyprint
     sys.path.insert(0, str(Path(__file__).parent.parent))
     from scripts.pipeline_manager import cleanup_for_production
 
@@ -1309,26 +1312,45 @@ def stage5_production_docx(draft_path):
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{draft_path.stem}.docx"
 
-    md_content = draft_path.read_text()
-    md_content = cleanup_for_production(md_content)
+    # ── Build the EXACT same HTML as stage5_production_weasyprint ──────────────
+    with open(draft_path, "r", encoding="utf-8") as f:
+        md_content = f.read()
 
-    # Write cleaned markdown to temp file for pandoc
-    import tempfile
-    with tempfile.NamedTemporaryFile(suffix=".md", mode="w", delete=False, encoding="utf-8") as tmp:
-        tmp.write(md_content)
+    md_content = cleanup_for_production(md_content)
+    md_content = _preprocess_for_pdf(md_content)
+
+    md = markdown.Markdown(extensions=["extra", "meta", "toc"])
+    html_body = md.convert(md_content)
+
+    # ── Wrap first h1 in div.cover (same as PDF stage5) ───────────────────────
+    first_h1_match = re.search(r'(<h1[^>]*>.*?</h1>)', html_body, re.DOTALL)
+    if first_h1_match:
+        wrapped = f'<div class="cover">\n{first_h1_match.group(1)}\n</div>'
+        html_body = html_body[:first_h1_match.start()] + wrapped + html_body[first_h1_match.end():]
+
+    # ── Read CSS and build full HTML document ──────────────────────────────────
+    CSS_PATH = WORKSPACE / "products" / "assets" / "pdf_style.css"
+    css_text = CSS_PATH.read_text()
+    html_doc = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>\n{css_text}\n</style>
+</head>
+<body>
+{html_body}
+</body>
+</html>"""
+
+    # ── Write HTML to temp file and convert to DOCX via pandoc ────────────────
+    with tempfile.NamedTemporaryFile(suffix=".html", mode="w", delete=False, encoding="utf-8") as tmp:
+        tmp.write(html_doc)
         tmp_path = tmp.name
 
-    # Convert to DOCX using pandoc
-    cmd = [
-        "pandoc", tmp_path,
-        "-o", str(output_path),
-        "--from=markdown",
-        "--to=docx",
-        "--standalone",
-        "--highlight-style=tango",
-    ]
-
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    result = subprocess.run(
+        ["pandoc", tmp_path, "-o", str(output_path), "--from=html", "--to=docx"],
+        capture_output=True, text=True
+    )
 
     import os
     os.unlink(tmp_path)
