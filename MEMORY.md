@@ -241,7 +241,25 @@ Human Infrastructure: [1-sentence scale thesis]
 | Stage 2 | ✅ Done (manual) | `single_parent_burnout_SKELETON.md` |
 | Stage 3 | ✅ Done (manual) | `off_switch_V1.md` |
 | Stage 4 | ✅ Done | `products/assets/` — Lemon Squeezy copy, insight post, order bump |
-| Stage 5 | ✅ Active | `scripts/pipeline_manager.py` — Pandoc → PDF + GitHub Release |
+| Stage 5 | ✅ Active | `scripts/pipeline_manager.py` + `products/assets/pdf_style.css` — WeasyPrint PDF with professional styling |
+
+### Stage 5 — PDF Production Standards
+
+**CSS:** `products/assets/pdf_style.css` — Inter font, navy palette, TOC, page breaks, callout boxes
+
+**Strip from all PDFs before rendering:**
+- `# PRODUCT METADATA` block (H1 + table)
+- `# ABOUT THE AUTHOR` block (H1 + paragraphs)
+- `## What's Coming in V2` / sections with "Coming in V2" placeholders
+- `*Awaiting review*` / `*Draft V1 generated*` footer metadata
+
+**Page breaks:** Only before `## Part N:` major sections — not every H2 subsection
+
+**H1 normalization:** H1 Part headings (ragdoll-style) → H2 so page breaks target correctly
+
+**Key Insight styling:** `### Key Insight:` / `### Key Takeaway:` → `.callout-insight` gradient div
+
+**Blockquotes:** Opening `*"..."*` paragraphs → `<blockquote class="script-quote">` with left border
 | Stage 6 | ✅ Active | `distro/flywheel.py` — Distribution engine auto-triggered after draft |
 | Phase 1 (GitHub) | ✅ Added | `scripts/pipeline_manager.py::sync_to_github()` + `create_github_release()` |
 | Phase 2 (Storefront) | ✅ Done | `products/storefront_manifest.md` + `products/email_sequence.md` |
