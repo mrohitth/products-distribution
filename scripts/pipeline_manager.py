@@ -858,17 +858,64 @@ def cleanup_for_production(md_text, dry_run=False):
         return result
 
 
+def _preprocess_for_pdf(md_text):
+    """
+    Pre-process markdown before HTML conversion:
+    1. Convert *"quoted italic text"* at start of paragraph to styled blockquote
+    2. Convert ### Key Insight/Takeaway headings to callout-insight divs (with — prefix)
+    3. Ensure existing <div class="callout-takeaway"> blocks render cleanly
+    4. Add page-break hints before every H2 major section
+    """
+    import re
+
+    # ── 1. Blockquote conversion ──────────────────────────────────────────────
+    # Pattern: paragraph that STARTS with *"..."* (italic + leading quote)
+    # Convert to <blockquote> with em-dash prefix for visual punch
+    md_text = re.sub(
+        r'^(\S.*?)\n?(\*"[^"]+"\*)',
+        lambda m: f'<blockquote class="script-quote"><p>{m.group(2)[1:-1]}</p></blockquote>\n\n{m.group(1)}',
+        md_text, flags=re.M | re.DOTALL
+    )
+
+    # ── 2. Key Insight / Key Takeaway headings ────────────────────────────────
+    # Handle: ### Key Insight: ... | ### **Key Insight:** ... | ### Key Takeaway: ...
+    def convert_insight(m):
+        label = m.group(1).capitalize()
+        text = m.group(2).strip()
+        return f'<div class="callout-insight"><strong>Key {label}</strong><p>— {text}</p></div>'
+
+    md_text = re.sub(
+        r'^#{1,3}\s+\*{0,2}Key\s+(Insight|Takeaway)\*{0,2}:\*{0,2}\s*(.*)',
+        convert_insight, md_text, flags=re.MULTILINE
+    )
+
+    # ── 3. Add page breaks before H2 sections ───────────────────────────────
+    lines = md_text.split('\n')
+    result = []
+    prev_was_h2 = False
+    for line in lines:
+        if re.match(r'^##\s+', line):
+            if result:
+                result.append('')
+        result.append(line)
+    md_text = '\n'.join(result)
+
+    # ── 4. Normalize em-dashes (WeasyPrint handles unicode but be safe) ────────
+    md_text = md_text.replace('—', '—').replace('"', '"').replace('"', '"')
+
+    return md_text
+
+
 def stage5_production_weasyprint(draft_path, css_path=None):
     """
-    Stage 5: WeasyPrint PDF generation.
-    Falls back to Pandoc if WeasyPrint isn't available.
+    Stage 5: WeasyPrint PDF generation with professional styling.
+    Uses pdf_style.css — TOC, Key Insight callouts, page breaks all included.
     Returns the path to the generated PDF, or None on failure.
     """
-    import markdown, io, shutil as _shutil
-    CSS_PATH = Path(css_path) if css_path else WORKSPACE / "products" / "assets" / "pandoc_style.css"
+    import markdown, io
+    CSS_PATH = Path(css_path) if css_path else WORKSPACE / "products" / "assets" / "pdf_style.css"
     OUTPUT_DIR = WORKSPACE / "output" / "final_products"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
 
     if not CSS_PATH.exists():
         print(f"  ⚠️  CSS not found: {CSS_PATH} — skipping PDF generation")
@@ -890,16 +937,18 @@ def stage5_production_weasyprint(draft_path, css_path=None):
     # Pre-process: strip draft artifacts
     md_content = cleanup_for_production(md_content)
 
-    md = markdown.Markdown(extensions=["extra", "meta"])
+    # Pre-process: convert Key Insight/Takeaway headings to styled callout divs
+    md_content = _preprocess_for_pdf(md_content)
+
+    # Convert with TOC extension
+    md = markdown.Markdown(extensions=["extra", "meta", "toc"])
     html_body = md.convert(md_content)
 
-    # Read CSS for print stylesheet
+    # Read CSS
     css_text = CSS_PATH.read_text()
-    # WeasyPrint needs absolute URLs for font imports if they're http
-    css_io = io.StringIO(css_text)
 
     # Build full HTML document
-    html_doc = f""""<!DOCTYPE html>
+    html_doc = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -907,7 +956,6 @@ def stage5_production_weasyprint(draft_path, css_path=None):
 </head>
 <body>\n{html_body}\n</body>
 </html>"""
-
 
     try:
         wp_doc = weasyprint.HTML(string=html_doc)

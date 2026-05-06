@@ -1,0 +1,461 @@
+/* ============================================
+   Digital Product — Professional PDF Style
+   Smart-Casual / Matte-Finish Design Language
+   ============================================ */
+
+/* --- FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* --- TYPOGRAPHY --- */
+body {
+    font-family: 'Charter', 'Georgia', 'Bitstream Charter', serif;
+    font-size: 11.5pt;
+    line-height: 1.75;
+    color: #1E1E1E;
+    background: #FFFFFF;
+    max-width: 6.5in;
+    margin: 0 auto;
+    padding: 0.75in 0.85in;
+}
+
+/* --- COVER / TITLE PAGE --- */
+.cover {
+    text-align: center;
+    padding: 2in 0;
+    border-bottom: 3px solid #1A365D;
+    margin-bottom: 0.5in;
+}
+
+.cover h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.4em;
+    font-weight: 800;
+    color: #1A365D;
+    border: none;
+    padding: 0;
+    margin-bottom: 0.3em;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.cover .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 0.5em;
+}
+
+.cover .meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* --- HEADINGS --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+    color: #0F1B2D;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 1.9em;
+    font-weight: 700;
+    color: #1A365D;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid #1A365D;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+    color: #0F1B2D;
+}
+
+h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #1A365D;
+    margin-top: 1.4em;
+    margin-bottom: 0.3em;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #555;
+    margin-top: 1.2em;
+}
+
+h2, h3 {
+    page-break-after: avoid;
+}
+
+/* --- SECTION PARTS (Part 1, Part 2 etc.) --- */
+h2[class*="Part"] {
+    background: #1A365D;
+    color: #FFFFFF !important;
+    padding: 0.4em 0.6em;
+    border-radius: 6px 6px 0 0;
+    margin-top: 1.5em;
+    border-bottom: none;
+}
+
+h2[class*="Part"] + p {
+    margin-top: 0.8em;
+}
+
+/* --- TABLE OF CONTENTS --- */
+nav#TOC {
+    page-break-after: always;
+    margin: 1em 0 2em 0;
+    padding: 1em 0;
+    border-bottom: 2px solid #E8ECF0;
+}
+
+nav#TOC > h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #888;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    border-bottom: none;
+    padding: 0;
+}
+
+nav#TOC ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav#TOC ul ul {
+    padding-left: 1.2em;
+}
+
+nav#TOC li {
+    margin-bottom: 0.35em;
+}
+
+nav#TOC a {
+    color: #1E1E1E;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+}
+
+nav#TOC a:hover {
+    color: #1A365D;
+}
+
+nav#TOC li::before {
+    content: none;
+}
+
+/* TOC dots */
+nav#TOC .toc-entry::after {
+    content: " ";
+    display: inline-block;
+    width: 2em;
+}
+
+/* --- PAGE BREAKS --- */
+h2 {
+    page-break-before: always;
+}
+
+h3 {
+    page-break-before: avoid;
+}
+
+.page-break {
+    page-break-before: always;
+}
+
+/* --- CALLOUT BOXES --- */
+
+/* Key Insight (inline ### Key Insight: ... style) */
+.callout-insight {
+    background: linear-gradient(135deg, #1A365D 0%, #2D4A7A 100%);
+    color: #FFFFFF;
+    padding: 1em 1.2em;
+    margin: 1.5em 0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+    box-shadow: 0 2px 8px rgba(26, 54, 93, 0.2);
+}
+
+.callout-insight strong {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5em;
+    opacity: 0.85;
+}
+
+.callout-insight strong::before {
+    content: "— ";
+    opacity: 0.6;
+}
+
+.callout-insight p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Key Takeaway (div block) */
+.callout-takeaway {
+    background: #F0F4F8;
+    border-left: 5px solid #1A365D;
+    padding: 1em 1.4em;
+    margin: 1.5em 0;
+    border-radius: 0 8px 8px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+}
+
+.callout-takeaway strong {
+    display: block;
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1A365D;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.callout-takeaway p {
+    margin: 0;
+    color: #1E1E1E;
+}
+
+/* Script callout (Don't say / Do say) */
+.callout-script {
+    background: #F7F9FC;
+    border-left: 4px solid #C0392B;
+    padding: 1em 1.4em;
+    margin: 1.5em 0;
+    border-radius: 0 6px 6px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+}
+
+.callout-script strong {
+    display: block;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #C0392B;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+/* Audit/calculator callout */
+.callout-audit {
+    background: #FFFFFF;
+    border: 1.5px solid #E0E6ED;
+    padding: 1.2em 1.5em;
+    margin: 1.5em 0;
+    border-radius: 8px;
+}
+
+.callout-audit::before {
+    content: attr(data-label);
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #888;
+    margin-bottom: 0.7em;
+}
+
+/* --- TABLES --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.93em;
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+thead {
+    background: #1A365D;
+    color: #FFFFFF;
+}
+
+thead th {
+    font-weight: 600;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.7em 0.9em;
+    text-align: left;
+}
+
+td {
+    padding: 0.65em 0.9em;
+    border-bottom: 1px solid #EEF0F4;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background: #F8FAFC;
+}
+
+/* --- BLOCKQUOTES (scrip quotes) --- */
+blockquote {
+    border: none;
+    background: linear-gradient(90deg, #F0F4F8 0%, #F8FAFC 100%);
+    margin: 1.5em 0;
+    padding: 1em 1.4em;
+    border-radius: 8px;
+    border-left: 4px solid #1A365D;
+    font-style: normal;
+    color: #2D3748;
+    position: relative;
+}
+
+blockquote p {
+    margin: 0;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+blockquote em {
+    color: #4A5568;
+}
+
+/* --- LISTS --- */
+ul, ol {
+    padding-left: 1.5em;
+    margin: 0.8em 0;
+}
+
+li {
+    margin-bottom: 0.4em;
+    line-height: 1.6;
+}
+
+ul li::marker {
+    color: #1A365D;
+}
+
+ol li::marker {
+    color: #1A365D;
+    font-weight: 600;
+}
+
+/* --- BULLET LISTS (checklists, tools) --- */
+ul.checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.checklist li {
+    position: relative;
+    padding-left: 1.6em;
+}
+
+ul.checklist li::before {
+    content: "▢";
+    position: absolute;
+    left: 0;
+    color: #1A365D;
+    font-size: 0.9em;
+}
+
+/* --- HORIZONTAL RULES --- */
+hr {
+    border: none;
+    border-top: 2px solid #E8ECF0;
+    margin: 2em 0;
+}
+
+/* --- CODE --- */
+code {
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+    font-size: 0.88em;
+    background: #F0F4F8;
+    padding: 0.15em 0.45em;
+    border-radius: 4px;
+    color: #2D4A7A;
+}
+
+/* --- STRONG / EMPHASIS --- */
+strong {
+    font-weight: 700;
+    color: #0F1B2D;
+}
+
+em {
+    font-style: italic;
+    color: #4A5568;
+}
+
+/* --- PAGE SETUP --- */
+@page {
+    size: letter;
+    margin: 0.75in 0.85in;
+    @bottom-center {
+        content: counter(page);
+        font-family: 'Inter', sans-serif;
+        font-size: 9pt;
+        color: #BBBBBB;
+    }
+}
+
+@page :first {
+    @bottom-center {
+        content: none;
+    }
+}
+
+/* --- PRINT FIXES --- */
+@media print {
+    body {
+        background: #FFFFFF;
+    }
+
+    h2 {
+        page-break-before: always;
+    }
+
+    h3 {
+        page-break-before: avoid;
+    }
+
+    .callout-insight, .callout-takeaway, .callout-script, .callout-audit {
+        page-break-inside: avoid;
+        box-shadow: none;
+    }
+
+    table {
+        box-shadow: none;
+    }
+
+    nav#TOC {
+        page-break-after: always;
+    }
+}
