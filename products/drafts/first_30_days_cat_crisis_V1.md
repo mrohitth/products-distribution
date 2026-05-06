@@ -173,7 +173,3 @@ The Capital Pilot angle: pet tech is a real investment thesis. Not because pets 
 - Do I work in a safety-sensitive job? → Boarding recommended
 - Is my household at tension because of the noise? → Boarding recommended
 - Is boarding a genuine financial hardship? → Keep home, reduce stimulation, use Feliway
-
-
-*Draft V1 generated 2026-05-05 by TrendScout (MiniMax M2.7) — Stage 3 complete*
-*Awaiting review. Stage 4 (share) pending confirmation.*

@@ -686,8 +686,8 @@ def cleanup_for_production(md_text, dry_run=False):
     re_coming_v2 = _re.compile(r"^\*(Coming in V2|What.s coming in V2):", _re.IGNORECASE)
     re_coming_v2_section = _re.compile(r"Coming in V2", _re.IGNORECASE)
     re_trailing_meta = _re.compile(
-        r"^\*(Version\s+\d+\s+Draft|TrendScout|Pipeline:|Next:\s+Stage|"
-        r"This draft is matte|Draft generated|Framework:|Top Conviction:)",
+        r"^\*(Version\s+\d+\s+Draft|Draft.*generated|Awaiting review|TrendScout|Pipeline:|Next:\s+Stage|"
+        r"This draft is matte|Framework:|Top Conviction:)",
         _re.IGNORECASE,
     )
     re_ai_marker = _re.compile(r"\[(AI-GENERATED|FIRST.DRAFT|TEMP|DRAFT ONLY)\]", _re.IGNORECASE)

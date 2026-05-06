@@ -2,8 +2,6 @@
 
 ## The First 30 Days That Determine Your Entire Relationship
 
----
-
 # PRODUCT METADATA
 
 | Field | Value |
@@ -19,8 +17,6 @@
 | **Version** | 2.0 — Strategic Rewrite (DeepSeek V4 Pro) |
 | **Website/Link** | mrohitth Workspace — KATZEN Product Library |
 
----
-
 # ABOUT THE AUTHOR
 
 This guide was not written by a content marketer who Googled "Ragdoll cat facts" and paraphrased the first three results. It was synthesized from a structured research pipeline, cross-referenced against veterinary behavioral science literature, pressure-tested against real owner pain points, and assembled using the same systematic methodology its author applies to distributed data systems: no assumptions without verification, no gaps in the protocol, and no hand-waving when precise instruction is what keeps a living creature alive.
@@ -28,8 +24,6 @@ This guide was not written by a content marketer who Googled "Ragdoll cat facts"
 I am a Senior Data Engineer who treats breed research the way I treat pipeline architecture — every variable matters, every dependency has a consequence, and every failure mode has a root cause you can trace backward if you built the system right.
 
 If something in this guide doesn't align with your individual cat — trust your cat. This is a decision-support framework, not a cage. But follow the framework first, because the framework accounts for failure modes you haven't encountered yet.
-
----
 
 # THE FLOPPY PARADOX
 
@@ -52,8 +46,6 @@ Every decision you make in this window compounds: where you place the litter box
 There is no rewinding the first month. But if you follow this protocol, you will not need to rewind it. You will give your Ragdoll exactly what they need to become the calm, bonded, thriving cat they were bred to be — and you will stop the anxiety spiral before it starts.
 
 Let's begin.
-
----
 
 # PART 1: BEFORE THEY ARRIVE — THE SANCTUARY SETUP
 
@@ -87,8 +79,6 @@ Ragdolls process environmental instability through their bodies. Stress suppress
 - [ ] Soft slicker brush + greyhound comb (metal, wide-tooth)
 - [ ] Cat-specific nail clippers (not human clippers — they crush the nail rather than cutting it cleanly)
 - [ ] Emergency vet fund: **minimum $1,000 accessible within the hour**
-
----
 
 # PART 2: THE FIRST WEEK — DECOMPRESSION & THE ATTENTION DEPENDENCY REALITY
 
@@ -153,8 +143,6 @@ Track daily. The data is your early-warning system. Your Ragdoll cannot tell you
 | Lethargy — Ragdolls are docile, not unconscious | Systemic illness or advanced dehydration | **Within 12 hours** |
 | Sneezing with nasal discharge, eyes held half-closed | URI — herpesvirus flare, calicivirus, or bacterial secondary infection | **Within 48 hours** |
 
----
-
 # PART 3: TRUST ARCHITECTURE — WEEKS 2–4
 
 ## The Consent Framework
@@ -213,8 +201,6 @@ By week three, your Ragdoll should be:
 | **Exposing the belly** | Maximum vulnerability display. "I am testing whether you violate boundaries." | Do not rub immediately. Acknowledge with a slow blink. Rubbing the exposed belly of a cat who doesn't yet fully trust you is a fast way to get bitten and reset trust to zero. |
 | **Bringing a toy or "gift"** | "I am contributing to our shared territory." | Accept the gift. Praise calmly. This is a bonding ritual. |
 
----
-
 # PART 4: OPERATIONAL MAINTENANCE
 
 ## Month-One Grooming Protocol
@@ -267,8 +253,6 @@ You are not being paranoid. You are establishing a baseline. A cat who has been 
 - **5** — Hard, dry, crumbly (dehydrated — increase water access immediately)
 
 **The included Notion tracker automates this.** You open it each evening, check five boxes, and it builds your cat's health baseline over time. When the vet asks "how long has this been going on?" you will have data, not a guess.
-
----
 
 # PART 5: THE REAL COST OF A RAGDOLL FIRST MONTH
 
@@ -336,8 +320,6 @@ This framing is not fear-mongering. It is a map of the territory. The guide you'
 3. **CareCredit:** A healthcare credit card accepted by most veterinary emergency hospitals. It's not ideal — interest rates are high — but it's better than delaying care while a blocked cat's kidneys deteriorate.
 4. **The tracker as prevention:** Daily logging catches declining litter box frequency, appetite changes, and weight shifts before they become Tier 3 emergencies. The $15 guide + tracker is priced as insurance against the $2,000–$5,000 scenario. This is not accidental. It is the product's thesis.
 
----
-
 # PART 6: HOME SAFETY & THE BOSCH CROSS-SELL
 
 ## General Home Safety for the Indoor Ragdoll
@@ -366,8 +348,6 @@ This guide is built for the Ragdoll owner who tracks their cat's health data sys
 If you track your cat's health because you understand that data prevents disaster, you will appreciate tracking your dishwasher's maintenance because you understand the same principle applied to a different system. Same methodology. Same philosophy. Same workspace.
 
 For now, focus on the creature. The machine can wait.
-
----
 
 # PART 7: THE THRIVING INDEX — IS YOUR RAGDOLL OKAY?
 
@@ -398,8 +378,6 @@ For now, focus on the creature. The machine can wait.
 | Weight loss | Hyperthyroidism, dental disease, GI malabsorption | Veterinary visit |
 | Rapid weight gain | Overfeeding — Ragdolls gain weight deceptively fast | Reduce calories; increase structured play; review portion sizes against food label guidelines |
 
----
-
 # PART 8: RESOURCES, TOOLS & NEXT STEPS
 
 ## Recommended Products
@@ -429,8 +407,6 @@ If your Ragdoll shows any of the following after Week 3, a board-certified veter
 - Severe separation anxiety — vocalizing, destruction, or inappropriate elimination within 5 minutes of your departure
 - Litter box avoidance that persists after veterinary workup has ruled out medical causes (urinalysis, bloodwork, imaging)
 
----
-
 # CLOSING: THE FOUNDATION, NOT THE TEST
 
 Here is what I need you to hear, because the anxiety you're carrying is real and it matters:
@@ -449,8 +425,6 @@ The relationship is not earned in the first week. It is proven across the first 
 
 Build the foundation. The bond follows.
 
----
-
 ## Next Steps — Action Sequence
 
 1. **Right now:** Plug in the Feliway diffuser in the sanctuary room (needs 24 hours to saturate)
@@ -461,8 +435,6 @@ Build the foundation. The bond follows.
 6. **Week 3:** Begin gradual home expansion and supervised inter-pet introductions
 7. **Week 4:** Complete the Thriving Index checklist — if warning signs persist, escalate to your veterinarian or a board-certified veterinary behaviorist
 8. **Ongoing:** Maintain the daily health log in your Notion tracker — it becomes your cat's lifelong medical baseline
-
----
 
 ## Included with This Guide
 
@@ -475,12 +447,10 @@ This strategic protocol is delivered as a **Notion template** with:
 - **Cost Tracker** — Monthly budget dashboard with emergency fund balance monitoring and insurance premium tracking
 - **Printable PDF** — Condensed quick-reference version for the refrigerator or cat carrier
 
----
 
 *Protocol Version: 2.0 — Strategic Rewrite*
 *DeepSeek V4 Pro · Kitty 🐱 · mrohitth Workspace — KATZEN Product Library*
 *Last Updated: May 4, 2026*
 
----
 
 *This guide is a decision-support framework. Your individual cat is the authority on their own experience. When in doubt, consult your veterinarian. When in emergency, go to the emergency vet — do not re-read the guide.*
