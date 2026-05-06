@@ -242,7 +242,7 @@ Human Infrastructure: [1-sentence scale thesis]
 | Stage 3 | ✅ Done (manual) | `off_switch_V1.md` |
 | Stage 4 | ✅ Done | `products/assets/` — Lemon Squeezy copy, insight post, order bump |
 | Stage 5 | ✅ Active | `scripts/pipeline_manager.py` + `products/assets/pdf_style.css` — WeasyPrint PDF with professional styling |
-| Stage 5b | ✅ Active | `stage5_production_docx()` — pandoc → editable DOCX for manual tweaks by Mathew |
+| Stage 5b | ✅ Active | `stage5_production_docx()` — pandoc HTML→DOCX + `_docx_apply_styling()` for visual parity with PDF |
 
 ### Stage 5 — PDF Production Standards
 
@@ -261,6 +261,22 @@ Human Infrastructure: [1-sentence scale thesis]
 **Key Insight styling:** `### Key Insight:` / `### Key Takeaway:` → `.callout-insight` gradient div
 
 **Blockquotes:** Opening `*"..."*` paragraphs → `<blockquote class="script-quote">` with left border
+
+### Stage 5b — DOCX Production (Visual Parity with PDF)
+
+**Pipeline:**
+1. `_preprocess_for_docx()` — same structural normalization as PDF (H1→H2, callout divs, blockquote conversion), strips page-break divs
+2. `markdown.Markdown()` → HTML body
+3. `pandoc HTML→DOCX` with `products/assets/reference.docx` for base styles (Charter body, Inter headings)
+4. `_docx_apply_styling()` — XML-level post-processing (python-docx + lxml):
+   - **CoverTitle:** first non-empty `Heading 1` paragraph → `CoverTitle` style + 3pt bottom border (`w:pBdr/w:bottom`)
+   - **PartHeading:** paragraphs matching `Part N:` → `PartHeading` style + dark blue fill (`w:shd`) + white bold runs
+   - **InsightBox:** paragraphs whose first bold run starts with `Key Takeaway` or `Key Insight` → navy fill + white text
+   - **QuoteBox:** blockquote paragraphs → light grey fill
+
+**reference.docx styles:** CoverTitle (Inter 28pt), PartHeading (Inter 16pt white on navy), InsightBox/TakeawayBox (Inter, navy fill), QuoteBox (Calibri italic, grey fill)
+
+**Key insight:** pandoc strips HTML classes/IDs/comments during HTML parsing — visual styling cannot be CSS-driven. All formatting (borders, shading, colors) must be applied via XML manipulation in python-docx post-processing, identified by paragraph style + content patterns.
 | Stage 6 | ✅ Active | `distro/flywheel.py` — Distribution engine auto-triggered after draft |
 | Phase 1 (GitHub) | ✅ Added | `scripts/pipeline_manager.py::sync_to_github()` + `create_github_release()` |
 | Phase 2 (Storefront) | ✅ Done | `products/storefront_manifest.md` + `products/email_sequence.md` |
