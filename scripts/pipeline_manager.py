@@ -1295,11 +1295,15 @@ def main():
 
 def stage5_production_docx(draft_path):
     """
-    Stage 5b: Generate editable DOCX using the EXACT same HTML as the PDF.
-    Uses pandoc --reference-doc to apply Word-native heading styles.
-    Heading mapping: h1→Title(Heading1) h2→Heading2 h3→Heading3 h4→Heading4
+    Stage 5b: Generate editable DOCX matching the PDF structure.
+    Uses pandoc HTML→DOCX + python-docx post-processing for Word-native heading styles.
+    Heading styles applied by text matching against known heading patterns.
     """
     import subprocess, tempfile, re, markdown
+    from docx import Document
+    from docx.shared import Pt
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+
     sys.path.insert(0, str(Path(__file__).parent.parent))
     from scripts.pipeline_manager import cleanup_for_production
 
@@ -1317,19 +1321,14 @@ def stage5_production_docx(draft_path):
     md = markdown.Markdown(extensions=["extra", "meta", "toc"])
     html_body = md.convert(md_content)
 
-    # ── Strip div.cover wrapper (not needed for DOCX, keep the h1) ────────────
+    # Strip div.cover wrapper and page-break divs (not needed in DOCX)
     html_body = re.sub(r'<div class="cover">\s*', '', html_body)
     html_body = re.sub(r'\s*</div>', '', html_body)
+    html_body = re.sub(r'<div style="[^"]*page-break[^"]*">[\s\S]*?</div>', '', html_body)
 
-    # ── Build HTML for pandoc conversion ──────────────────────────────────────
-    # Font specs only — pandoc applies reference.docx heading styles for hierarchy
+    # Build HTML for pandoc — minimal CSS, font specs only for visual structure
     css_text = """body { font-family: Calibri; font-size: 11pt; line-height: 1.6; }
-h1 { font-family: Tahoma; font-size: 28pt; font-weight: bold; text-align: center; }
-h2 { font-family: Tahoma; font-size: 16pt; font-weight: bold; color: #1A365D; }
-h3 { font-family: Tahoma; font-size: 14pt; font-weight: bold; }
-h4 { font-family: Tahoma; font-size: 12pt; font-weight: bold; }
 blockquote { font-style: italic; margin-left: 0.25in; border-left: 3pt solid #555; padding-left: 8pt; }
-.callout-insight, .callout-takeaway { font-weight: bold; }
 """
 
     html_doc = f"""<!DOCTYPE html>
@@ -1357,13 +1356,92 @@ blockquote { font-style: italic; margin-left: 0.25in; border-left: 3pt solid #55
     import os
     os.unlink(tmp_path)
 
-    if result.returncode == 0 and output_path.exists():
-        size_kb = output_path.stat().st_size // 1024
-        print(f"✅ DOCX generated: {output_path} ({size_kb} KB)")
-        return str(output_path)
-    else:
-        print(f"❌ DOCX failed: {result.stderr[:300]}")
+    if result.returncode != 0 or not output_path.exists():
+        print(f"❌ DOCX pandoc failed: {result.stderr[:300]}")
         return None
+
+    # ── Post-process with python-docx to apply Word-native heading styles ────
+    # The reference DOCX structure: Title(centered) > Heading1(Part chaps) >
+    #   Heading2(sections) > Heading3(ALL CAPS sub-subs) > Heading4(mixed sub-subs)
+    doc = Document(str(output_path))
+
+    # Known heading text sets (all-caps normalized for matching)
+    def norm(t):
+        return t.strip().upper()
+
+    # Heading 1: Part chapter headings
+    H1_PATTERNS = {
+        norm(p) for p in [
+            "Part 1: The Energy Audit", "Part 2: Scripts That Actually Work",
+            "Part 3:", "Part 4:", "Part 5:", "Part 6:"
+        ]
+    }
+    # Heading 2: major section headings
+    H2_PATTERNS = {
+        norm(p) for p in [
+            "Introduction: You're Not Broken", "You First, For Once",
+            'The "Where Did My Week Go" Audit', "The 20% Rule",
+            "The No Shame Saturday Protocol", "Part 1 Summary: The Energy Audit at a Glance",
+            'The "No War" Method', "The Teen Meltdown Protocol",
+            "The Homework Standoff", "The Chore War",
+            "The Screen Time Standoff", "The Body Image Conversation",
+            "Part 2 Summary: The Scripts at a Glance", "Why This Guide Exists",
+        ]
+    }
+    # Heading 3: ALL CAPS sub-section headings
+    H3_PATTERNS = {
+        norm(p) for p in [
+            "THE 72-HOUR GRID", "WHAT THE DATA USUALLY SHOWS",
+            "THE WEEK-BY-WEEK ROLLOUT", "WHY THIS WORKS",
+            "STEP 1: NAME IT", "STEP 2: PAUSE IT", "STEP 3: BOUNDARY IT",
+            "FULL PROTOCOL CHEAT SHEET", "THE CORE SCRIPT",
+            'WHEN THEY SAY "I DON\'T CARE ABOUT SCHOOL"',
+            "WHEN THEY HAVE ADHD OR EXECUTIVE FUNCTION ISSUES",
+            'THE "ONCE" RULE', "THE LONG GAME: OWNERSHIP TRANSFER",
+            "WHEN THEY PUSH BACK", "SCREEN TIME AS SELF-PROTECTION",
+            'THE FIRST "I HATE MY BODY" SCRIPT', "WHAT NOT TO SAY (AND WHY)",
+            "THE BRA SHOPPING SCRIPT", "LONG-TERM: THE MEDIA LITERACY CONVERSATION",
+        ]
+    }
+    def is_h4_heading(text):
+        """Heading 4 classification: short THIS IS / THIS ISN'T, RULE:, etc."""
+        n = text.strip().upper()
+        if n.startswith('RULE:'):  return True
+        if n.startswith(("HERE'S HOW", "THE RULES:", "YOU ALREADY KNOW")):  return True
+        # Short "This is..." — must be brief, no em-dash, no "called" pattern
+        if n.startswith('THIS IS') and len(text) <= 70 and '—' not in text and ' called ' not in text.lower():
+            return True
+        # Short "This isn't..." — must be brief, no em-dash
+        if n.startswith("THIS ISN'T") and len(text) <= 65 and '—' not in text:
+            return True
+        return False
+
+    title_applied = False
+    for para in doc.paragraphs:
+        text = para.text.strip()
+        if not text:
+            continue
+
+        n = norm(text)
+
+        # Title: first paragraph starting with document title phrase
+        if not title_applied and n.startswith("YOU FIRST"):
+            para.style = doc.styles["Title"]
+            para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            title_applied = True
+        elif n in H1_PATTERNS:
+            para.style = doc.styles["Heading 1"]
+        elif n in H2_PATTERNS:
+            para.style = doc.styles["Heading 2"]
+        elif n in H3_PATTERNS:
+            para.style = doc.styles["Heading 3"]
+        elif is_h4_heading(text):
+            para.style = doc.styles["Heading 4"]
+
+    doc.save(str(output_path))
+    size_kb = output_path.stat().st_size // 1024
+    print(f"✅ DOCX generated: {output_path} ({size_kb} KB)")
+    return str(output_path)
 
 
 
