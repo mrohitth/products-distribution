@@ -194,11 +194,14 @@ CDC pipelines and warehouse code must use **Python/Bash only**. Forbidden: Spark
 | Field | Value |
 |-------|-------|
 | **Trigger** | Draft complete (auto from pipeline) |
-| **Action** | Generate Reddit posts, Pinterest pins (30), TikTok scripts (3), LinkedIn carousel, email lead magnet, 5-email welcome sequence |
+| **Action** | Reddit posts (active) · Pinterest pins (planned) · TikTok scripts (planned) · LinkedIn (not planned) · email lead magnet + sequence (active) |
 | **Output** | `distro/content/{slug}/` + `distro/email/{slug}_*` |
 | **Delivery** | Background subprocess — non-blocking (session stays responsive) |
+| **Channel gating** | Reads `distro/manifest/state.json` channels.enabled — skips disabled platforms |
 | **Email funnel** | Welcome sequence → Notion template upsell ($17) |
-| **Notion upsell** | Near-zero production cost, auto-generated per product |
+| **Current active** | Reddit + Email list |
+| **Planned (no account yet)** | Pinterest, TikTok |
+| **Not planned** | LinkedIn |
 
 ### Workflow State Machine
 ```
