@@ -960,6 +960,31 @@ def _preprocess_for_pdf(md_text):
     # ── 4. Normalize em-dashes (WeasyPrint handles unicode but be safe) ────────
     md_text = md_text.replace('—', '—').replace('"', '"').replace('"', '"')
 
+    # ── 5. Move opening blockquote BEFORE title (after conversion) ───────────
+    # The blockquote was already converted by step 2 (→ <blockquote>).
+    # We need to find <blockquote class="script-quote"> lines that appear
+    # BEFORE the first H1 and move them to be right before the H1.
+    lines = md_text.split('\n')
+    title_idx = next((i for i, l in enumerate(lines)
+                      if re.match(r'^#\s+\S', l)), None)
+    if title_idx is not None and title_idx > 0:
+        bq_start = None
+        for i in range(title_idx):
+            if lines[i].startswith('<blockquote class="script-quote">'):
+                bq_start = i
+            elif bq_start is not None:
+                break
+        if bq_start is not None:
+            bq_lines = [lines[i] for i in range(bq_start, title_idx)]
+            for i in range(title_idx - 1, bq_start - 1, -1):
+                lines.pop(i)
+            new_title_idx = next((i for i, l in enumerate(lines)
+                                  if re.match(r'^#\s+\S', l)), None)
+            if new_title_idx is not None:
+                for j, bq_line in enumerate(bq_lines):
+                    lines.insert(new_title_idx + j, bq_line)
+            md_text = '\n'.join(lines)
+
     return md_text
 
 
