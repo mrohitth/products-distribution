@@ -880,18 +880,45 @@ def _preprocess_for_pdf(md_text):
     1. Normalize H1 Part/N section headings → H2 (preserve hierarchy, fix page breaks)
     2. Convert *"quoted italic text"* at start of paragraph to styled blockquote
     3. Convert ### Key Insight/Takeaway headings to callout-insight divs (with — prefix)
-    4. Add page-break hints before every major Part section
     """
     import re
 
     # ── 1. Normalize H1 Part/N headings → H2 ─────────────────────────────────
-    # Ragdoll and other drafts use H1 for Part 1, Part 2, etc.
-    # We need to convert # PART N: → ## Part N: so page breaks work correctly
-    md_text = re.sub(
-        r'^#\s+(PART\s+\d+.*)$',
-        lambda m: f'## {m.group(1)}',
-        md_text, flags=re.MULTILINE
-    )
+    # Keep the first H1 as the document title. Demote all subsequent H1s
+    # (including # PART N: sections) to H2 so they don't render oversized.
+    # Also title-case the demoted headings for consistent presentation.
+    # ── Smart heading level assignment ────────────────────────────────────────
+    # Rules:
+    #  - First H1 = document title (keep)
+    #  - H1 that starts with "Part N:" or "Day N" or "Step N" → H2 (major section, gets page break)
+    #  - All other H1 (conceptual section openers like "The Floppy Paradox") → H2
+    #  - After processing: any H2 that is NOT a "Part N:" or "Day N" section → H3 (subsection)
+    lines = md_text.split('\n')
+    first_h1_done = False
+    result_lines = []
+    for line in lines:
+        is_h1 = re.match(r'^#\s+\S', line)
+        if is_h1 and not first_h1_done:
+            first_h1_done = True
+        elif is_h1 and first_h1_done:
+            # Demote to H2 and title-case
+            heading_text = line.lstrip('#').strip()
+            title_cased = heading_text.title()
+            line = f'## {title_cased}'
+        result_lines.append(line)
+    md_text = '\n'.join(result_lines)
+
+    # Demote non-Part, non-Day H2s to H3 (these are conceptual openers, not chapters)
+    major_section_pattern = re.compile(r'^##\s+(Part\s+\d+|Day\s+\d+|Step\s+\d+)', re.IGNORECASE)
+    lines = md_text.split('\n')
+    result_lines = []
+    for line in lines:
+        is_h2_major = bool(major_section_pattern.match(line))
+        if line.startswith('## ') and not is_h2_major:
+            # Demote to H3
+            line = line.replace('## ', '### ', 1)
+        result_lines.append(line)
+    md_text = '\n'.join(result_lines)
 
     # ── 1. Blockquote conversion ──────────────────────────────────────────────
     # Pattern: paragraph that STARTS with *"..."* (italic + leading quote)
@@ -902,8 +929,19 @@ def _preprocess_for_pdf(md_text):
         md_text, flags=re.M | re.DOTALL
     )
 
-    # ── 2. Key Insight / Key Takeaway headings ────────────────────────────────
-    # Handle: ### Key Insight: ... | ### **Key Insight:** ... | ### Key Takeaway: ...
+    # ── 3. Explicit page breaks before major Part sections ─────────────────────
+    # Insert a page-break div BEFORE Part headings (CSS page-break-after was causing blank pages)
+    lines = md_text.split('\n')
+    result = []
+    major_section_pattern = re.compile(r'^##\s+(Part\s+\d+|Day\s+\d+|Step\s+\d+)', re.IGNORECASE)
+    for line in lines:
+        is_major = bool(major_section_pattern.match(line))
+        if is_major and result:
+            result.append('<div style="page-break-before: always;"></div>')
+        result.append(line)
+    md_text = '\n'.join(result)
+
+    # ── 4. Key Insight / Key Takeaway headings ────────────────────────────────
     def convert_insight(m):
         label = m.group(1).capitalize()
         text = m.group(2).strip()
@@ -913,18 +951,6 @@ def _preprocess_for_pdf(md_text):
         r'^#{1,3}\s+\*{0,2}Key\s+(Insight|Takeaway)\*{0,2}:\*{0,2}\s*(.*)',
         convert_insight, md_text, flags=re.MULTILINE
     )
-
-    # ── 3. Add page breaks before MAJOR sections only (Part 1, Part 2, etc.)
-    #   Skip page break for non-part H2s (intro, appendix, tools, etc.)
-    lines = md_text.split('\n')
-    result = []
-    for line in lines:
-        # Only break before H2 that is explicitly a "Part N:" section
-        part_match = re.match(r'^##\s+Part\s+\d+', line, re.IGNORECASE)
-        if part_match and result:
-            result.append('')  # blank line before Part sections only
-        result.append(line)
-    md_text = '\n'.join(result)
 
     # ── 4. Normalize em-dashes (WeasyPrint handles unicode but be safe) ────────
     md_text = md_text.replace('—', '—').replace('"', '"').replace('"', '"')

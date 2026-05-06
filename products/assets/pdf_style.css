@@ -171,14 +171,17 @@ nav#TOC .toc-entry::after {
 }
 
 /* --- PAGE BREAKS --- */
+/* Page break BEFORE every major h2 heading — content starts on fresh page */
 h2 {
-    page-break-before: always;
+    page-break-before: auto;
+    page-break-after: avoid;
 }
-
 h3 {
     page-break-before: avoid;
+    page-break-after: auto;
 }
 
+/* Explicit page-break div (if used) */
 .page-break {
     page-break-before: always;
 }
