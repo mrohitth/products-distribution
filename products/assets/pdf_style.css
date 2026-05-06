@@ -27,8 +27,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     padding: 0 0 1.5in 0;
-    border-bottom: 3px solid #1A365D;
-    margin-bottom: 0.5in;
+    /* No margin-bottom — content (Introduction) starts right after cover area */
 }
 
 .cover h1 {
@@ -38,9 +37,11 @@ body {
     color: #1A365D;
     border: none;
     padding: 0;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.15em;
     letter-spacing: -0.03em;
     line-height: 1.1;
+    /* Underline flush against title text — border at bottom of title, not of cover div */
+    border-bottom: 3px solid #1A365D;
 }
 
 .cover .subtitle {
