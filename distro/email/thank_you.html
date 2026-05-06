@@ -1,0 +1,176 @@
+<think>The user wants a dark-themed, mobile-responsive thank you page as a single HTML file with inline CSS in a <style> tag within <head>. 
+
+Here are the key requirements:
+1. Headline: "Your checklist is on its way."
+2. Subtext: "Check your inbox — it should be there in the next few minutes."
+3. "What happens next" section with:
+   - Day 2: You'll get a short email with one insight from the guide
+   - Day 5: A real story from a parent who was where you are
+   - Day 8: The offer for the full guide — $27, one-time
+4. "While you wait" section with:
+   - Teaser: "Here's one thing from the guide you can use today:"
+   - Bullet: "Give your teenager one task you've been doing for them out of guilt — just one. Watch how much it shifts."
+5. Link to Lemon Squeezy store (placeholder: "https://yourshop.lemonsqueezy.com" with text "Browse the Full Guide — $27")
+6. Footer: "© 2026 You First, For Once"
+
+Design specifications:
+- Dark background #0f0f1a
+- Amber/gold accent #f5c842
+- White body text
+- Centered, max-width 600px, mobile responsive
+- CTA button #f5c842 with dark text, hover lighter
+
+Return ONLY raw HTML starting with <!DOCTYPE html>. No markdown fences.
+
+Let me create this HTML file with the specified requirements.</think>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist On Its Way | You First, For Once</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0f0f1a;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .checkmark {
+            width: 60px;
+            height: 60px;
+            background-color: #f5c842;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .checkmark svg {
+            width: 30px;
+            height: 30px;
+            stroke: #0f0f1a;
+            stroke-width: 3;
+            fill: none;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 12px;
+            color: #f5c842;
+        }
+
+        .subtext {
+            text-align: center;
+            color: #b0b0b0;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background-color: #1a1a2e;
+            border-radius: 12px;
+            padding: 28px 24px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #ffffff;
+        }
+
+        .timeline {
+            list-style: none;
+        }
+
+        .timeline li {
+            margin-bottom: 16px;
+            padding-left: 0;
+        }
+
+        .timeline li:last-child {
+            margin-bottom: 0;
+        }
+
+        .day {
+            display: inline-block;
+            background-color: #f5c842;
+            color: #0f0f1a;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+
+        .timeline li p {
+            color: #d0d0d0;
+            font-size: 15px;
+        }
+
+        .teaser {
+            color: #b0b0b0;
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .tip {
+            color: #ffffff;
+            font-size: 16px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tip::before {
+            content: "•";
+            color: #f5c842;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: #f5c842;
+            color: #0f0f1a;
+            text-align: center;
+            padding: 16px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 32px;
+            transition: background-color 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ffd966;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 48px

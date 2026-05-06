@@ -1,0 +1,159 @@
+<think>The user wants a dark-themed, mobile-responsive email capture landing page as a single HTML file with inline CSS in a <style> tag within <head>. They request specific content and design details.
+
+We must follow the instruction: "Return ONLY raw HTML starting with <!DOCTYPE html>. No markdown fences, no explanations."
+
+So produce the HTML. Should include <!DOCTYPE html>, <html>, <head> with <meta charset="UTF-8"> and viewport, title, style block. CSS: dark background #0f0f1a, amber accent #f5c842, white body text. Centered, max-width 600px, mobile responsive. Input dark bg #1a1a2e, light border. CTA button #f5c842 background, dark text, hover slightly lighter. Social proof. Footer.
+
+Make it accessible, use placeholder and appropriate attributes. Use CSS media queries for mobile.
+
+Make sure to include all required elements exactly as requested.
+
+The HTML should be valid.
+
+We must not include any extra commentary.
+
+We need to ensure that the page is mobile responsive. Use viewport meta.
+
+Use proper semantic tags: header, main, footer, maybe form.
+
+The CTA button: background #f5c842, color #0f0f1a (or dark). hover lighter maybe #ffd64f.
+
+Input field: background #1a1a2e, border #333, maybe border 1px solid #444; color white; placeholder #ccc.
+
+Font: system fonts, maybe "Segoe UI", Arial.
+
+Spacing: using padding and margin.
+
+Center the content: margin: 0 auto; max-width: 600px; padding.
+
+Make the page look good.
+
+Now we produce the HTML.
+
+Potential improvements: Use a container div to center and maintain max-width.
+
+Add the social proof line.
+
+Add privacy note.
+
+We should also include the footer.
+
+We should make sure to use proper HTML5.
+
+Now generate the raw HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You First, For Once</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f1a;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f5c842;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  .subheadline {
+    font-size: 1.25rem;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+  }
+  .description {
+    font-size: 1rem;
+    color: #c9c9c9;
+    margin-bottom: 2rem;
+  }
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .input-email {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #1a1a2e;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .input-email::placeholder {
+    color: #aaa;
+  }
+  .input-email:focus {
+    border-color: #f5c842;
+  }
+  .cta-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #f5c842;
+    color: #0f0f1a;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .cta-button:hover {
+    background-color: #ffd64f;
+  }
+  .privacy-note {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 1rem;
+  }
+  .social-proof {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+  }
+  .footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #555;
+    border-top: 1px solid #222;
+    padding-top: 1rem;
+  }
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+    .subheadline {
+      font-size: 1.1rem;
+    }
+    .description {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>You First, For Once</h1>
+    <p class="subheadline">The Free Checklist for Single Parents Who Are Running on Empty</p>
+  </header>
+  <main>
+    <p class="description">21 small</think>
