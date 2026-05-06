@@ -911,12 +911,10 @@ def _preprocess_for_pdf(md_text):
         result_lines.append(line)
     md_text = '\n'.join(result_lines)
 
-    # ── Page break after title (cover page) ──────────────────────────────────
-    # Insert page-break div AFTER the first H1 so content starts on page 2
-    if title_idx is not None:
-        title_lines = md_text.split('\n')
-        title_lines.insert(title_idx + 1, '<div style="page-break-after: always;"></div>')
-        md_text = '\n'.join(title_lines)
+    # ── Title page: content starts on page 2 naturally ──────────────────────
+    # The title H1 renders at top of page 1. With .cover {{ min-height: 67vh }}
+    # and flex centering, the title sits at ~2/3 page height.
+    # Content flows onto page 2 automatically — no explicit page-break div needed.
 
     # Demote non-Part, non-Day H2s to H3 (these are conceptual openers, not chapters)
     major_section_pattern = re.compile(r'^##\s+(Part\s+\d+|Day\s+\d+|Step\s+\d+)', re.IGNORECASE)

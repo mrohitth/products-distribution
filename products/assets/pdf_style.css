@@ -21,7 +21,12 @@ body {
 /* --- COVER / TITLE PAGE --- */
 .cover {
     text-align: center;
-    padding: 2in 0;
+    /* Push title to ~2/3 of page height */
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 1.5in 0;
     border-bottom: 3px solid #1A365D;
     margin-bottom: 0.5in;
 }
