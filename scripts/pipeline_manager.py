@@ -805,6 +805,7 @@ def send_report(trend, skeleton_path, draft_path):
 
 Skeleton: {skeleton_path}
 Draft: {draft_path}
+Distribution Flywheel: distro/flywheel.py — Reddit, Pinterest, TikTok, LinkedIn, email sequence, Notion upsell auto-generated
 
 Human Infrastructure Angle: This product scales because it solves the highest-cost 
 problem in any system — operator burnout. Single parents are running a household 
@@ -897,10 +898,37 @@ def main():
     else:
         print(f"  Phase 1: Skipped — no PDF generated")
 
-    # 6. Send draft via Telegram
+    # 6. Auto-register in distro manifest
+    sys.path.insert(0, str(WORKSPACE / "distro"))
+    try:
+        from manifest import register_product as mp_register
+        mp_register(
+            slug,
+            top.get("title", top.get("name", slug)),
+            27,
+            str(draft_path),
+            "trendscout",
+        )
+        print(f"  Stage 6: Registered '{slug}' in distro manifest")
+    except Exception as e:
+        print(f"  Stage 6: WARNING — could not register product: {e}")
+
+    # 6b. Run distribution flywheel in background (non-blocking)
+    import subprocess as _subprocess
+    distro_script = WORKSPACE / "distro" / "flywheel.py"
+    if distro_script.exists():
+        pid = _subprocess.Popen(
+            [sys.executable, str(distro_script), "run", slug],
+            cwd=str(WORKSPACE),
+        ).pid
+        print(f"  Stage 6b: Distribution flywheel launched (PID {pid})")
+    else:
+        print(f"  Stage 6b: Distribution flywheel not found — skipping")
+
+    # 7. Send draft via Telegram
     send_draft_via_telegram(str(draft_path), creds)
 
-    # 7. Report
+    # 8. Report
     success_report = send_report(top, str(skeleton_path), str(draft_path))
     if pdf_path:
         success_report = success_report.replace(

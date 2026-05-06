@@ -190,6 +190,16 @@ CDC pipelines and warehouse code must use **Python/Bash only**. Forbidden: Spark
 | **Output** | `output/final_products/[SLUG]_V1.pdf` |
 | **Note** | Requires pandoc + texlive-xelatex |
 
+### STAGE 6: Distribution Flywheel 🚀
+| Field | Value |
+|-------|-------|
+| **Trigger** | Draft complete (auto from pipeline) |
+| **Action** | Generate Reddit posts, Pinterest pins (30), TikTok scripts (3), LinkedIn carousel, email lead magnet, 5-email welcome sequence |
+| **Output** | `distro/content/{slug}/` + `distro/email/{slug}_*` |
+| **Delivery** | Background subprocess — non-blocking (session stays responsive) |
+| **Email funnel** | Welcome sequence → Notion template upsell ($17) |
+| **Notion upsell** | Near-zero production cost, auto-generated per product |
+
 ### Workflow State Machine
 ```
 [10:00 AM] Scout → Score > 8? → YES → Architect → Skeleton
@@ -229,6 +239,7 @@ Human Infrastructure: [1-sentence scale thesis]
 | Stage 3 | ✅ Done (manual) | `off_switch_V1.md` |
 | Stage 4 | ✅ Done | `products/assets/` — Lemon Squeezy copy, insight post, order bump |
 | Stage 5 | ✅ Active | `scripts/pipeline_manager.py` — Pandoc → PDF + GitHub Release |
+| Stage 6 | ✅ Active | `distro/flywheel.py` — Distribution engine auto-triggered after draft |
 | Phase 1 (GitHub) | ✅ Added | `scripts/pipeline_manager.py::sync_to_github()` + `create_github_release()` |
 | Phase 2 (Storefront) | ✅ Done | `products/storefront_manifest.md` + `products/email_sequence.md` |
 | Phase 3 (MarketBot) | ✅ Added | `scripts/marketbot_feedback.py` — webhook listener + Scout re-weighting |
@@ -237,7 +248,8 @@ Human Infrastructure: [1-sentence scale thesis]
 ### Deployment Infrastructure
 | Component | Path | Status |
 |-----------|------|--------|
-| Pipeline Manager | `scripts/pipeline_manager.py` | Phase 1 hooks added |
+| Pipeline Manager | `scripts/pipeline_manager.py` | Stages 2-5 + Stage 6 auto-register + distro launch |
+| Distribution Flywheel | `distro/flywheel.py` | Reddit/Pinterest/TikTok/LinkedIn/email + Notion upsell |
 | GitHub Release Tagger | `scripts/pipeline_manager.py::create_github_release()` | Needs `gh` auth |
 | Webhook Listener | `scripts/marketbot_feedback.py` | Ready to run |
 | Sales DB | `output/sales_performance.db` | Auto-created on first sale |
@@ -247,7 +259,7 @@ Human Infrastructure: [1-sentence scale thesis]
 
 ---
 
-_Last updated: 2026-05-05T06:15:00Z_
+_Last updated: 2026-05-06T01:24:00Z_
 
 ### MarketBot v2 — Live ✅ (2026-05-05T19:15:00Z)
 - **Portfolio coverage:** All 10 holdings (VTI, NVDA, VOO, QQQ, SMH, SCHG, VXUS, SCHD, SPYD, ASTS) — expanded from 3
