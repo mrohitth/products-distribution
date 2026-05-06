@@ -692,6 +692,8 @@ def cleanup_for_production(md_text, dry_run=False):
 
     # Regex patterns (compiled once)
     re_version_hdr = _re.compile(r"^###\s+Version\s+\d+\s+Draft", _re.IGNORECASE)
+    re_product_meta = _re.compile(r"^#\s+PRODUCT\s+METADATA", _re.IGNORECASE)
+    re_about_author = _re.compile(r"^#\s+ABOUT\s+THE\s+AUTHOR", _re.IGNORECASE)
     re_coming_v2 = _re.compile(r"^\*(Coming in V2|What.s coming in V2):", _re.IGNORECASE)
     re_coming_v2_section = _re.compile(r"Coming in V2", _re.IGNORECASE)
     re_trailing_meta = _re.compile(
@@ -773,8 +775,22 @@ def cleanup_for_production(md_text, dry_run=False):
                 i += 1
             continue
 
+        # ── PRODUCT METADATA block (H1 + table) ──
+        if re_product_meta.match(stripped):
+            i += 1
+            while i < len(lines) and not re_about_author.match(lines[i].strip()) \
+                   and not lines[i].strip().startswith("# "):
+                i += 1
+            continue
+
+        # ── ABOUT THE AUTHOR block (H1 + paragraphs) ──
+        if re_about_author.match(stripped):
+            i += 1
+            while i < len(lines) and not lines[i].strip().startswith("# "):
+                i += 1
+            continue
+
         # ── Trailing draft metadata ──
-        if re_trailing_meta.match(stripped):
             i += 1
             while i < len(lines) and lines[i].strip() == "":
                 i += 1
@@ -861,12 +877,21 @@ def cleanup_for_production(md_text, dry_run=False):
 def _preprocess_for_pdf(md_text):
     """
     Pre-process markdown before HTML conversion:
-    1. Convert *"quoted italic text"* at start of paragraph to styled blockquote
-    2. Convert ### Key Insight/Takeaway headings to callout-insight divs (with — prefix)
-    3. Ensure existing <div class="callout-takeaway"> blocks render cleanly
-    4. Add page-break hints before every H2 major section
+    1. Normalize H1 Part/N section headings → H2 (preserve hierarchy, fix page breaks)
+    2. Convert *"quoted italic text"* at start of paragraph to styled blockquote
+    3. Convert ### Key Insight/Takeaway headings to callout-insight divs (with — prefix)
+    4. Add page-break hints before every major Part section
     """
     import re
+
+    # ── 1. Normalize H1 Part/N headings → H2 ─────────────────────────────────
+    # Ragdoll and other drafts use H1 for Part 1, Part 2, etc.
+    # We need to convert # PART N: → ## Part N: so page breaks work correctly
+    md_text = re.sub(
+        r'^#\s+(PART\s+\d+.*)$',
+        lambda m: f'## {m.group(1)}',
+        md_text, flags=re.MULTILINE
+    )
 
     # ── 1. Blockquote conversion ──────────────────────────────────────────────
     # Pattern: paragraph that STARTS with *"..."* (italic + leading quote)
@@ -889,14 +914,15 @@ def _preprocess_for_pdf(md_text):
         convert_insight, md_text, flags=re.MULTILINE
     )
 
-    # ── 3. Add page breaks before H2 sections ───────────────────────────────
+    # ── 3. Add page breaks before MAJOR sections only (Part 1, Part 2, etc.)
+    #   Skip page break for non-part H2s (intro, appendix, tools, etc.)
     lines = md_text.split('\n')
     result = []
-    prev_was_h2 = False
     for line in lines:
-        if re.match(r'^##\s+', line):
-            if result:
-                result.append('')
+        # Only break before H2 that is explicitly a "Part N:" section
+        part_match = re.match(r'^##\s+Part\s+\d+', line, re.IGNORECASE)
+        if part_match and result:
+            result.append('')  # blank line before Part sections only
         result.append(line)
     md_text = '\n'.join(result)
 

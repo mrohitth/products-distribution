@@ -15,7 +15,7 @@ body {
     background: #FFFFFF;
     max-width: 6.5in;
     margin: 0 auto;
-    padding: 0.75in 0.85in;
+    padding: 0.9in 1in;
 }
 
 /* --- COVER / TITLE PAGE --- */
@@ -417,7 +417,7 @@ em {
 /* --- PAGE SETUP --- */
 @page {
     size: letter;
-    margin: 0.75in 0.85in;
+    margin: 0.9in 1in;
     @bottom-center {
         content: counter(page);
         font-family: 'Inter', sans-serif;
