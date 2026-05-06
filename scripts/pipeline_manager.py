@@ -59,11 +59,29 @@ def check_existing_skeleton(topic_title, skeletons_dir):
     return None, None
 
 
+def extract_title_from_draft(draft_path):
+    """Extract canonical title from a draft file (frontmatter title: or first H1)."""
+    try:
+        content = draft_path.read_text()
+        # Try frontmatter title: field first
+        for line in content.split('\n')[:20]:
+            if line.strip().startswith('title:'):
+                return line.split('title:', 1)[1].strip().strip('"')
+        # Fallback: first H1 heading
+        for line in content.split('\n')[:30]:
+            if line.startswith('# '):
+                return line[2:].strip()
+    except Exception:
+        pass
+    return None
+
+
 def check_existing_draft(slug, drafts_dir):
     """
     Stage 3 dedup: Check if a draft already exists for this slug.
     Returns (existing_path, "draft") if found, else (None, None).
     Looks for {slug}_V*.md (canonical V1, V2, _FINAL, etc.).
+    Also checks title-level dedup to catch same product with different slug.
     """
     if not drafts_dir.exists():
         return None, None
@@ -73,6 +91,28 @@ def check_existing_draft(slug, drafts_dir):
         base_slug = re.sub(r'_V(\d+|_FINAL|_v\d+)$', '', draft_slug)
         if base_slug == slug:
             return draft_file, "draft"
+    return None, None
+
+
+def check_existing_draft_by_title(trend_title, drafts_dir, min_title_sim=0.75):
+    """
+    Stage 3 title-level dedup: Check if any existing draft has the same title.
+    Handles the case where two skeletons get different slugs but same product.
+    Returns (existing_path, "title_match") if found, else (None, None).
+    Uses Levenshtein-like similarity on normalized titles.
+    """
+    if not drafts_dir.exists():
+        return None, None
+    import difflib
+    # Normalize incoming title
+    norm_incoming = re.sub(r'[^a-z0-9]', '', trend_title.lower())
+    for draft_file in drafts_dir.glob("*.md"):
+        title = extract_title_from_draft(draft_file)
+        if title:
+            norm_existing = re.sub(r'[^a-z0-9]', '', title.lower())
+            sim = difflib.SequenceMatcher(None, norm_incoming, norm_existing).ratio()
+            if sim >= min_title_sim:
+                return draft_file, "title_match"
     return None, None
 
 
@@ -950,13 +990,23 @@ def main():
         print(f"  Skeleton saved: {skeleton_path}")
         skeleton_text = skeleton
 
-    # 3b. Stage 3 dedup check
+    # 3b. Stage 3 dedup check (slug level)
     dup_draft, _ = check_existing_draft(slug, DRAFTS_DIR)
     if dup_draft:
         print(f"  ℹ️  Draft already exists — {dup_draft.name}")
         print(f"      Skipping Stage 3. Use --force-draft to override.")
         if "--force-draft" not in sys.argv:
             print(f"      Pipeline complete (dedup). Run with --force-draft to regenerate.")
+            return 0
+
+    # 3c. Stage 3 dedup check (title level — catches same product, different slug)
+    dup_by_title, match_type = check_existing_draft_by_title(top.get("title", ""), DRAFTS_DIR)
+    if dup_by_title:
+        print(f"  ℹ️  Draft with same title already exists — {dup_by_title.name}")
+        print(f"      This product has a different slug but same title. Archive the existing")
+        print(f"      version first, or use --force-draft to override.")
+        if "--force-draft" not in sys.argv:
+            print(f"      Pipeline blocked (title dedup). Use --force-draft to archive and proceed.")
             return 0
 
     # 4. Stage 3: Generate Draft
