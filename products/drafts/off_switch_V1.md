@@ -1,19 +1,5 @@
 # You First, For Once: The Single Parent's Survival Guide
 
----
-title: "You First, For Once"
-subtitle: "The Single Parent's Survival Guide"
-version: 1.0
-stage: 3 (Draft)
-status: in_progress
-trend: "Single Parent Teen Burnout"
-score: "10/10 — HIGH CONVICTION"
-date: 2026-05-05
-chapters: [1, 2]
----
-
----
-
 ## Introduction: You're Not Broken
 
 *"I am a single parent of a 14 year old. I get in from work, make dinner, help with homework, do chores, try to get them to bed, do more chores, and crash. Then rinse and repeat. I've come to dread weekends."*
@@ -28,9 +14,10 @@ I call it *You First, For Once* because that's the permission this parent was re
 
 Let's find yours.
 
-**Key Takeaway:** You're not failing. You're running a two-person system with one person's resources. This guide gives you the leverage to close the gap.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+You're not failing. You're running a two-person system with one person's resources. This guide gives you the leverage to close the gap.
+</div>
 
----
 
 ## Part 1: The Energy Audit
 
@@ -46,11 +33,13 @@ You maintain your car because if you don't, it breaks down. You maintain your ho
 
 The fix isn't self-care. It's self-maintenance. Same logic, different owner.
 
-**Key Takeaway:** Burnout isn't a character flaw. It's a resource allocation problem. You can't willpower your way out of a deficit—you have to reengineer the system.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+Burnout isn't a character flaw. It's a resource allocation problem. You can't willpower your way out of a deficit—you have to reengineer the system.
+</div>
 
----
 
-### Chapter 1: The "Where Did My Week Go" Audit
+## The "Where Did My Week Go" Audit
+
 
 Before you change anything, you need to see what's actually happening. Not what you think is happening. Not what you tell yourself you "should" be able to handle. The raw data.
 
@@ -72,11 +61,13 @@ When I've walked parents through this exercise, patterns emerge fast:
 - **The guilt acquisitions.** Tasks you took over because your kid struggled once, or because you felt bad, and then never gave back. Helping with math homework that they now understand perfectly well. Packing a lunch they could pack themselves.
 - **The "faster alone" trap.** You do it because teaching them would take twice as long and you're already running late. The problem: you're always running late, so you never teach them, so you're always running late.
 
-**Key Takeaway:** For 72 hours, log everything you do for others. The data will be uncomfortable. That discomfort is the first piece of leverage you have.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+For 72 hours, log everything you do for others. The data will be uncomfortable. That discomfort is the first piece of leverage you have.
+</div>
 
----
 
-### Chapter 2: The 20% Rule
+## The 20% Rule
+
 
 Here's the most important number in this guide: **twenty percent**.
 
@@ -107,11 +98,13 @@ This script works because it does three things: it names your reality without bl
 
 **Week 4: Add Task Two.** One new task, same process. By the end of four weeks, you've permanently offloaded two tasks and reclaimed roughly 20% of your time.
 
-**Key Takeaway:** Don't aim for perfect. Aim for twenty percent. It's the difference between a system you'll actually sustain and one you'll abandon by Thursday.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+Don't aim for perfect. Aim for twenty percent. It's the difference between a system you'll actually sustain and one you'll abandon by Thursday.
+</div>
 
----
 
-### Chapter 3: The No Shame Saturday Protocol
+## The No Shame Saturday Protocol
+
 
 This is the signature move. The feature you're going to tell other single parents about.
 
@@ -137,9 +130,10 @@ No Shame Saturday is your scheduled maintenance. Four hours of planned rest that
 
 **You already know how to maintain things. You just forgot to put yourself on the list.**
 
-**Key Takeaway:** One four-hour block per week when nobody needs you. Not selfish — maintenance. The same logic that keeps your car running keeps you running.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+One four-hour block per week when nobody needs you. Not selfish — maintenance. The same logic that keeps your car running keeps you running.
+</div>
 
----
 
 ### Part 1 Summary: The Energy Audit at a Glance
 
@@ -151,8 +145,6 @@ No Shame Saturday is your scheduled maintenance. Four hours of planned rest that
 
 **The throughline:** You don't need more willpower. You need more leverage. These three tools give it to you.
 
----
-
 ## Part 2: Scripts That Actually Work
 
 ### The "No War" Method
@@ -163,11 +155,13 @@ What actually works isn't firmness or understanding—it's **structure with an e
 
 This isn't therapy. It's triage. And it works because teen brains are still building the circuitry that connects emotion to impulse control. They literally cannot calm themselves down the way you can. When you name the feeling for them, you're doing what their prefrontal cortex can't do yet.
 
-**Key Takeaway:** Teens don't need lectures. They need exit ramps. Give them a way out of the spiral that preserves their dignity and you'll avoid 80% of the fights.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+Teens don't need lectures. They need exit ramps. Give them a way out of the spiral that preserves their dignity and you'll avoid 80% of the fights.
+</div>
 
----
 
-### Chapter 4: The Teen Meltdown Protocol
+## The Teen Meltdown Protocol
+
 
 You know the moment. Your teen goes from zero to nuclear in about four seconds. Something happened at school, or with friends, or with a social media post you haven't seen, and suddenly they're either screaming or sobbing, and everything you say makes it worse.
 
@@ -179,7 +173,10 @@ The meltdown protocol has three steps. They're simple. They're also hard to reme
 
 What this does: It validates the emotion without validating the behavior. You're not saying their reaction is proportionate. You're saying you see them. For a teenager whose brain is flooded with cortisol, being seen is often enough to drop the temperature by a few degrees.
 
-**Don't say:** "Calm down." "It's not that big a deal." "You're overreacting." All of these communicate that you don't get it, which escalates the situation.
+<div class="callout-script"><strong>Don't say</strong>
+"Calm down." "It's not that big a deal." "You're overreacting." All of these communicate that you don't get it, which escalates the situation.
+</div>
+
 
 **Do say:** "You're overwhelmed." "This feels huge right now." "I can see how upset you are." Short, simple, true.
 
@@ -208,11 +205,13 @@ What this does: It separates the emotion from the behavior. Anger is allowed. Di
 | Disrespect | "You can be mad. You can't call me names." | "Don't you talk to me like that." |
 | You need space | "I'm in the living room when you're ready." | "Go to your room." |
 
-**Key Takeaway:** Name the emotion, pause the conflict, boundary the behavior. Three steps, no lectures. Screenshot the cheat sheet.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+Name the emotion, pause the conflict, boundary the behavior. Three steps, no lectures. Screenshot the cheat sheet.
+</div>
 
----
 
-### Chapter 5: The Homework Standoff
+## The Homework Standoff
+
 
 This might be the single most common fight in single-parent households with teenagers. The homework exists. The teen isn't doing it. You're monitoring, reminding, threatening, and eventually either doing it with them or giving up entirely. Everyone's miserable.
 
@@ -243,11 +242,13 @@ The script: *"Let's do the first problem together. Just the first one. Then you 
 
 This is called *body doubling*—the presence of another person working alongside you reduces the activation energy required to start. It's not hand-holding. It's scaffolding that you can eventually remove.
 
-**Key Takeaway:** Homework is your teen's job. Your job is to be available (before 9 PM), not to be the enforcer. For executive function challenges, use body doubling—one problem together, then they decide.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+Homework is your teen's job. Your job is to be available (before 9 PM), not to be the enforcer. For executive function challenges, use body doubling—one problem together, then they decide.
+</div>
 
----
 
-### Chapter 6: The Chore War
+## The Chore War
+
 
 Chores are never about chores. They're about respect, fairness, and the unspoken question of "why do I have to do this when you're the parent?" If you've ever found yourself explaining for the fourth time why dishes need to be done, you know what I mean.
 
@@ -277,11 +278,13 @@ For each recurring chore, there's a three-week transfer cycle:
 
 By week four, it's theirs. Not because you nagged them into it, but because you built the habit with them and then stepped back.
 
-**Key Takeaway:** "I cooked, you clean" beats "because I said so." Give them choice within structure (time, music) and hold the "what." Three-week ownership transfer for every new chore.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+"I cooked, you clean" beats "because I said so." Give them choice within structure (time, music) and hold the "what." Three-week ownership transfer for every new chore.
+</div>
 
----
 
-### Chapter 7: The Screen Time Standoff
+## The Screen Time Standoff
+
 
 This one's different from the others because it's not just about behavior—it's about brain chemistry. Your teen's phone is designed by some of the smartest engineers on the planet to be addictive. You're not competing with "laziness." You're competing with a dopamine optimization machine.
 
@@ -305,11 +308,13 @@ Here's the thing about screens: your teen's phone was built by some of the smart
 
 Every hour spent scrolling is an hour not spent on anything that grows over time: reading something hard, moving their body, being bored enough to have an original thought. The kitchen charging station isn't punishment. It's a decision about what kind of household you're running, and what you're protecting.
 
-**Key Takeaway:** "Phone charges in the kitchen at 9:30 — mine too." Reciprocal modeling beats confiscation every time. You're not taking something away. You're deciding what you're protecting.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+"Phone charges in the kitchen at 9:30 — mine too." Reciprocal modeling beats confiscation every time. You're not taking something away. You're deciding what you're protecting.
+</div>
 
----
 
-### Chapter 8: The Body Image Conversation
+## The Body Image Conversation
+
 
 This chapter is specifically for moms of teen girls, though parts of it apply to any parent navigating body image with any gender.
 
@@ -349,9 +354,10 @@ At some point, when you're not in crisis mode, have this conversation:
 
 You're not demonizing social media. You're teaching media literacy—the exact skill that separates consumers from people who get consumed.
 
-**Key Takeaway:** When she says "I hate my body," say "I remember that feeling—tell me more." Don't fix. Don't dismiss. Listen first, then gently introduce media literacy. Make bra shopping an outing, not a medical exam.
+<div class="callout-takeaway"><strong>Key Takeaway</strong>
+When she says "I hate my body," say "I remember that feeling—tell me more." Don't fix. Don't dismiss. Listen first, then gently introduce media literacy. Make bra shopping an outing, not a medical exam.
+</div>
 
----
 
 ### Part 2 Summary: The Scripts at a Glance
 
@@ -363,8 +369,6 @@ You're not demonizing social media. You're teaching media literacy—the exact s
 | Screen time | "Phone charges at 9:30. Mine too." | Reciprocal modeling |
 | Body image | "I remember that feeling. Tell me more." | Validate, don't fix |
 
----
-
 ## Why This Guide Exists
 
 I wrote this because someone posted on Reddit that she felt like a "servant" in her own home, and 8.2 million people in that community nodded along. Not because they're bad parents. Because the job we ask single parents to do was designed for two people, and nobody handed them the manual for doing it alone.
@@ -374,18 +378,3 @@ This isn't a parenting book. It's not about being a better mom or dad. It's abou
 The strategies in Part 2 aren't parenting tips. They're shortcuts. Cheat codes. Standard operating procedures for the hardest job most people will ever have. They work because they reduce the number of decisions you have to make in the moment, and every decision you don't have to make is energy you get to keep.
 
 If you take nothing else from this guide, take this: you maintain your car. You maintain your home. Start maintaining yourself with the same seriousness. Because the single most important thing in your kid's life isn't a clean kitchen or a homework assignment that got done on time. It's a parent who isn't running on empty.
-
----
-
-### What's Coming in V2
-
-This draft covers Parts 1 and 2—the Energy Audit and the Scripts That Work. The next update will add:
-
-- **Part 3: Identity Recovery** — The "Who Was I Before" exercise, the 15-Minute Reclamation, and the Dating Yourself chapter
-- **Part 4: Community Bridge** — Finding your people, the Village Script, and navigating co-parenting with someone who underdelivers
-- **Part 5: The No Shame Saturday Toolkit** — Printable worksheets, door hanger template, and the 30-day implementation tracker
-
----
-
-*Draft generated 2026-05-05 | Stage 3 (MiniMax M2.7) | Trend: Single Parent Teen Burnout (10/10)*
-*Pipeline: TrendScout → Architect → Draft → Share*

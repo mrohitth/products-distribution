@@ -303,8 +303,9 @@ Structure with clear H2/H3 headings. Bold Key Takeaways after major sections.
 Weave in the "human infrastructure" thesis subtly — managing personal energy and 
 household systems IS infrastructure, just at human scale. 
 
-Target length: 2500-4000 words for Parts 1 and 2. Leave Parts 3-4 as outlines 
-with "Coming in V2" placeholder."""
+Target length: 2500-4000 words per section. Write ALL sections as COMPLETE,
+production-ready chapters. No "Coming in V2" or outline-only language — every
+section must be a finished chapter ready to ship."""
 
     user = f"""Using this skeleton as the foundation, write Parts 1 and 2 of the full 
 guide draft. Expand every bullet into real prose. Follow the 'Off Switch' draft format 
@@ -683,6 +684,7 @@ def cleanup_for_production(md_text, dry_run=False):
     # Regex patterns (compiled once)
     re_version_hdr = _re.compile(r"^###\s+Version\s+\d+\s+Draft", _re.IGNORECASE)
     re_coming_v2 = _re.compile(r"^\*(Coming in V2|What.s coming in V2):", _re.IGNORECASE)
+    re_coming_v2_section = _re.compile(r"Coming in V2", _re.IGNORECASE)
     re_trailing_meta = _re.compile(
         r"^\*(Version\s+\d+\s+Draft|TrendScout|Pipeline:|Next:\s+Stage|"
         r"This draft is matte|Draft generated|Framework:|Top Conviction:)",
@@ -733,6 +735,32 @@ def cleanup_for_production(md_text, dry_run=False):
         if re_coming_v2.match(stripped):
             i += 1
             while i < len(lines) and lines[i].strip() == "":
+                i += 1
+            continue
+
+        # ── "Coming in V2:" italic paragraphs ──
+        if re_coming_v2.match(stripped):
+            i += 1
+            while i < len(lines) and lines[i].strip() == "":
+                i += 1
+            continue
+
+        # ── Any heading containing "Coming in V2" — strip heading + entire section block ──
+        if re_coming_v2_section.search(stripped):
+            i += 1
+            # Skip all content until the next top-level H2 or higher heading
+            while i < len(lines):
+                line_text = lines[i].strip()
+                # Stop at next H2+ heading (section boundary)
+                h_match = re_coming_v2_section.match(line_text)
+                if h_match:
+                    # This is a new "Coming in V2" section — skip it too
+                    i += 1
+                    continue
+                # H2 headings start the next real section — stop before them
+                if line_text.startswith("## "):
+                    break
+                # Skip everything else (bullets, paragraphs, HRs in the V2 block)
                 i += 1
             continue
 

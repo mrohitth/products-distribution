@@ -2,8 +2,6 @@
 
 **Version 1.0 | Draft for Review**
 
----
-
 ## Introduction: You Didn't Sign Up for This
 
 You just brought home what you thought was a calm, grateful rescue. Maybe you found her abandoned near your house. Maybe you drove two hours to meet a foster who described her as "sweet and quiet." Maybe you paid an adoption fee, set up a litter box, bought the premium food, and felt like you were finally doing something right.
@@ -21,8 +19,6 @@ What you did was land in the middle of a biological event that nobody warns you 
 This guide is going to tell you exactly what to do. Not "be patient." Not "cats are independent, they'll figure it out." Not "this too shall pass" with a shrug emoji.
 
 We're going to do this hour by hour if we need to.
-
----
 
 ## Part 1: The First 72 Hours — What to Do Right Now
 
@@ -70,11 +66,7 @@ And you? You need sleep. Sleep deprivation is not a character weakness. It's a l
 
 **The math:** A week of boarding might cost $200-400. That's cheaper than a single panic-day at work where you made a mistake that cost you a client.
 
----
-
 ### **Key Takeaway:** You are not failing her. You are managing a crisis. First step: call your vet and ask about boarding AND temporary medical options. Do it now.
-
----
 
 ### The Vet Call Checklist
 
@@ -87,8 +79,6 @@ When you call the vet — and you should call them today — here are the questi
 - "Can I visit her during boarding if I decide to go that route?"
 
 Write the answers down. Put the numbers in your phone. This is not the time to rely on memory.
-
----
 
 ## Part 2: The Vet Decision — No Guilt, Just Math
 
@@ -113,11 +103,7 @@ This isn't being selfish. This is being honest about the system you're operating
 
 This isn't a suggestion. This is a calculation.
 
----
-
 ### **Key Takeaway:** Your wellbeing is not separable from your ability to care for this cat. If you are falling apart, you cannot help her. The vet isn't a last resort — it's a tool. Use it.
-
----
 
 ### "Should I Board?" Decision Framework
 
@@ -139,8 +125,6 @@ This isn't a suggestion. This is a calculation.
 
 Good vets will help you think through this. They're not trying to upsell you. They see this situation every week.
 
----
-
 ### The Post-Surgery Reality
 
 If you're on track for the spay, here's what the next 48 hours will look like:
@@ -157,11 +141,7 @@ Monitor her: Is she eating? Drinking? Using the litter box? The cone makes eatin
 
 You made it.
 
----
-
 ### **Key Takeaway:** The spay is the finish line. Once she heals, the chaos ends. Everything you're doing now — the vet calls, the boarding decision, the sleep deprivation — is buying you a calm, stable cat for the next decade.
-
----
 
 ## Capital Pilot Interstitial
 
@@ -176,33 +156,6 @@ The market for pet crisis management — guides, tools, digital companions that 
 This product is positioned at the intersection of two trends: the human infrastructure thesis (products that help people manage the emotional and logistical complexity of modern life) and the pet-as-family normalization (cats are no longer "independent pets you can leave for a weekend" — they're full members of the household who require the same attention you'd give a toddler).
 
 The Capital Pilot angle: pet tech is a real investment thesis. Not because pets are "cute" — because the infrastructure supporting them is scaling. Vet telehealth platforms, pet insurance (which is not yet saturated in the US), pet behavior apps, and crisis management guides like this one are all part of the same ecosystem.
-
----
-
-## Part 3: Week by Week — The First Month Calendar (Coming in V2)
-
-The next version of this guide will include a complete week-by-week calendar with:
-
-- **Week 1: Survive the Heat** — Day-by-day checklist, what to expect, when to call the vet
-- **Week 2: The Surgery Appointment** — Pre-op checklist, what to ask, what to prepare at home for her return
-- **Week 3: Post-Surgery Recovery** — Managing the cone, keeping her from jumping, monitoring incision sites
-- **Week 4: The Calm Begins** — What behavioral changes to expect, when to start reintroduction to other pets, when to feel real relief
-
-This section is in development. The core content exists in the skeleton phase — the calendar format and daily checklists are being built out for V2.
-
----
-
-## Part 4: The Identity Shift — You're Not Who You Were (Coming in V2)
-
-The next version will also address the psychological layer:
-
-- **"Why Do I Feel Like I Made a Mistake?"** — Normalizing grief, stress, and overwhelm after a crisis adoption
-- **Building the Routine You Actually Want** — Feeding schedules, play routines, environmental enrichment
-- **Finding Your People** — Cat advice communities that aren't toxic
-
-This section is in development. It requires research into the specific communities (r/CatAdvice is excellent; Facebook groups vary wildly in quality) and testing with real users who've been through the crisis window.
-
----
 
 ## Appendix: The Core Tools (Available Now)
 
@@ -221,7 +174,6 @@ This section is in development. It requires research into the specific communiti
 - Is my household at tension because of the noise? → Boarding recommended
 - Is boarding a genuine financial hardship? → Keep home, reduce stimulation, use Feliway
 
----
 
 *Draft V1 generated 2026-05-05 by TrendScout (MiniMax M2.7) — Stage 3 complete*
 *Awaiting review. Stage 4 (share) pending confirmation.*
