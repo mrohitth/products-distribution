@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ragdoll-first-month_V1 — Editable Draft</title>
+  <style>
+/* ============================================
+   Digital Product — Professional PDF Style
+   Smart-Casual / Matte-Finish Design Language
+   ============================================ */
+
+/* --- FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* --- TYPOGRAPHY --- */
+body {
+    font-family: 'Charter', 'Georgia', 'Bitstream Charter', serif;
+    font-size: 11.5pt;
+    line-height: 1.75;
+    color: #1E1E1E;
+    background: #FFFFFF;
+    max-width: 6.5in;
+    margin: 0 auto;
+    padding: 0.9in 1in;
+}
+
+/* --- COVER / TITLE PAGE --- */
+.cover {
+    text-align: center;
+    /* Push title to ~2/3 of page height */
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 1.5in 0;
+    /* No margin-bottom — content (Introduction) starts right after cover area */
+}
+
+.cover h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.4em;
+    font-weight: 800;
+    color: #1A365D;
+    border: none;
+    padding: 0;
+    margin-bottom: 0.15em;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    /* Underline flush against title text — border at bottom of title, not of cover div */
+    border-bottom: 3px solid #1A365D;
+}
+
+.cover .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 0.5em;
+}
+
+.cover .meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* --- HEADINGS --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+    color: #0F1B2D;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 1.9em;
+    font-weight: 700;
+    color: #1A365D;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid #1A365D;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+    color: #0F1B2D;
+}
+
+h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #1A365D;
+    margin-top: 1.4em;
+    margin-bottom: 0.3em;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #555;
+    margin-top: 1.2em;
+}
+
+h2, h3 {
+    page-break-after: avoid;
+}
+
+/* --- SECTION PARTS (Part 1, Part 2 etc.) --- */
+h2[class*="Part"] {
+    background: #1A365D;
+    color: #FFFFFF !important;
+    padding: 0.4em 0.6em;
+    border-radius: 6px 6px 0 0;
+    margin-top: 1.5em;
+    border-bottom: none;
+}
+
+h2[class*="Part"] + p {
+    margin-top: 0.8em;
+}
+
+/* --- TABLE OF CONTENTS --- */
+nav#TOC {
+    page-break-after: always;
+    margin: 1em 0 2em 0;
+    padding: 1em 0;
+    border-bottom: 2px solid #E8ECF0;
+}
+
+nav#TOC > h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #888;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    border-bottom: none;
+    padding: 0;
+}
+
+nav#TOC ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav#TOC ul ul {
+    padding-left: 1.2em;
+}
+
+nav#TOC li {
+    margin-bottom: 0.35em;
+}
+
+nav#TOC a {
+    color: #1E1E1E;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+}
+
+nav#TOC a:hover {
+    color: #1A365D;
+}
+
+nav#TOC li::before {
+    content: none;
+}
+
+/* TOC dots */
+nav#TOC .toc-entry::after {
+    content: " ";
+    display: inline-block;
+    width: 2em;
+}
+
+/* --- PAGE BREAKS --- */
+/* Page break BEFORE every major h2 heading — content starts on fresh page */
+h2 {
+    page-break-before: auto;
+    page-break-after: avoid;
+}
+h3 {
+    page-break-before: avoid;
+    page-break-after: auto;
+}
+
+/* Explicit page-break div (if used) */
+.page-break {
+    page-break-before: always;
+}
+
+/* --- CALLOUT BOXES --- */
+
+/* Key Insight (inline ### Key Insight: ... style) */
+.callout-insight {
+    background: linear-gradient(135deg, #1A365D 0%, #2D4A7A 100%);
+    color: #FFFFFF;
+    padding: 1em 1.2em;
+    margin: 1.5em 0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+    box-shadow: 0 2px 8px rgba(26, 54, 93, 0.2);
+}
+
+.callout-insight strong {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5em;
+    opacity: 0.85;
+}
+
+.callout-insight strong::before {
+    content: "— ";
+    opacity: 0.6;
+}
+
+.callout-insight p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Key Takeaway (div block) */
+.callout-takeaway {
+    background: #F0F4F8;
+    border-left: 5px solid #1A365D;
+    padding: 1em 1.4em;
+    margin: 1.5em 0;
+    border-radius: 0 8px 8px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+}
+
+.callout-takeaway strong {
+    display: block;
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1A365D;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.callout-takeaway p {
+    margin: 0;
+    color: #1E1E1E;
+}
+
+/* Script callout (Don't say / Do say) */
+.callout-script {
+    background: #F7F9FC;
+    border-left: 4px solid #C0392B;
+    padding: 1em 1.4em;
+    margin: 1.5em 0;
+    border-radius: 0 6px 6px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
+}
+
+.callout-script strong {
+    display: block;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #C0392B;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+/* Audit/calculator callout */
+.callout-audit {
+    background: #FFFFFF;
+    border: 1.5px solid #E0E6ED;
+    padding: 1.2em 1.5em;
+    margin: 1.5em 0;
+    border-radius: 8px;
+}
+
+.callout-audit::before {
+    content: attr(data-label);
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #888;
+    margin-bottom: 0.7em;
+}
+
+/* --- TABLES --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.93em;
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+thead {
+    background: #1A365D;
+    color: #FFFFFF;
+}
+
+thead th {
+    font-weight: 600;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.7em 0.9em;
+    text-align: left;
+}
+
+td {
+    padding: 0.65em 0.9em;
+    border-bottom: 1px solid #EEF0F4;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background: #F8FAFC;
+}
+
+/* --- BLOCKQUOTES (scrip quotes) --- */
+blockquote {
+    border: none;
+    background: linear-gradient(90deg, #F0F4F8 0%, #F8FAFC 100%);
+    margin: 1.5em 0;
+    padding: 1em 1.4em;
+    border-radius: 8px;
+    border-left: 4px solid #1A365D;
+    font-style: normal;
+    color: #2D3748;
+    position: relative;
+}
+
+blockquote p {
+    margin: 0;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+blockquote em {
+    color: #4A5568;
+}
+
+/* --- LISTS --- */
+ul, ol {
+    padding-left: 1.5em;
+    margin: 0.8em 0;
+}
+
+li {
+    margin-bottom: 0.4em;
+    line-height: 1.6;
+}
+
+ul li::marker {
+    color: #1A365D;
+}
+
+ol li::marker {
+    color: #1A365D;
+    font-weight: 600;
+}
+
+/* --- BULLET LISTS (checklists, tools) --- */
+ul.checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.checklist li {
+    position: relative;
+    padding-left: 1.6em;
+}
+
+ul.checklist li::before {
+    content: "▢";
+    position: absolute;
+    left: 0;
+    color: #1A365D;
+    font-size: 0.9em;
+}
+
+/* --- HORIZONTAL RULES --- */
+hr {
+    border: none;
+    border-top: 2px solid #E8ECF0;
+    margin: 2em 0;
+}
+
+/* --- CODE --- */
+code {
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+    font-size: 0.88em;
+    background: #F0F4F8;
+    padding: 0.15em 0.45em;
+    border-radius: 4px;
+    color: #2D4A7A;
+}
+
+/* --- STRONG / EMPHASIS --- */
+strong {
+    font-weight: 700;
+    color: #0F1B2D;
+}
+
+em {
+    font-style: italic;
+    color: #4A5568;
+}
+
+/* --- PAGE SETUP --- */
+@page {
+    size: letter;
+    margin: 0.9in 1in;
+    @bottom-center {
+        content: counter(page);
+        font-family: 'Inter', sans-serif;
+        font-size: 9pt;
+        color: #BBBBBB;
+    }
+}
+
+@page :first {
+    @bottom-center {
+        content: none;
+    }
+}
+
+/* --- PRINT FIXES --- */
+@media print {
+    body {
+        background: #FFFFFF;
+    }
+
+    h2, h3 {
+        page-break-before: avoid;
+        page-break-inside: avoid;
+    }
+
+    .callout-insight, .callout-takeaway, .callout-script, .callout-audit {
+        page-break-inside: avoid;
+        box-shadow: none;
+    }
+
+    table {
+        box-shadow: none;
+    }
+
+    nav#TOC {
+        page-break-after: always;
+    }
+}
+  </style>
+</head>
+<body contenteditable="true">
+<div class="cover">
+<h1 id="ragdoll-first-month-important-protocols">Ragdoll First-Month Important Protocols</h1>
+</div>
+<h3 id="the-first-30-days-that-determine-your-entire-relationship">The First 30 Days That Determine Your Entire Relationship</h3>
+<h3 id="the-floppy-paradox">The Floppy Paradox</h3>
+<p><strong>Your Ragdoll looks like the easiest cat you'll ever own.</strong></p>
+<p>They flop in your arms like a ragdoll — literally, that's where the name comes from. They go limp when you pick them up. They gaze at you with ice-blue eyes that radiate unbothered serenity. They look chill. They look low-maintenance. They look like the cat who will simply exist in your home, demand nothing, and give everything.</p>
+<p><strong>This is the most expensive misconception in Ragdoll ownership.</strong></p>
+<p>Here is what experienced Ragdoll owners know that breeders rarely warn you about, that adoption brochures glide past, and that the Instagram accounts never show you:</p>
+<p>Ragdolls are not low-maintenance. They are genetically wired for attachment — which means they are genetically wired for anxiety when that attachment is disrupted. Their signature flop isn't laziness; it's a breed-specific trust reflex that extinguishes the moment the cat feels unsafe. Their docility isn't independence; it's a reliance on environmental stability so complete that removing that stability triggers a cascade of physiological stress responses — appetite suppression, immune compromise, urinary tract inflammation, compulsive grooming — that can send a healthy kitten to the emergency vet within 72 hours of arriving at your home.</p>
+<p>The floppy paradox is this: the very trait that makes Ragdolls irresistibly endearing — that trusting, limp surrender into your arms — is the same trait that makes them catastrophically vulnerable to a chaotic first month. A Ragdoll who trusts you will melt into your hands. A Ragdoll who doesn't will hide for three weeks, stop eating on day four, and present with stress-induced cystitis by day seven — and you won't know why, because they looked so easy.</p>
+<p><strong>This guide exists because the first 30 days with your Ragdoll are not a "getting to know you" period. They are the foundation on which your cat's entire behavioral and physical health trajectory will be built — or broken.</strong></p>
+<p>Every decision you make in this window compounds: where you place the litter box on day one, how you handle the first alone-time departure on day five, whether you track stool quality daily or "just kind of notice," whether the emergency fund exists before the emergency does.</p>
+<p>There is no rewinding the first month. But if you follow this protocol, you will not need to rewind it. You will give your Ragdoll exactly what they need to become the calm, bonded, thriving cat they were bred to be — and you will stop the anxiety spiral before it starts.</p>
+<p>Let's begin.</p>
+<div style="page-break-before: always;"></div>
+<h2 id="part-1-before-they-arrive-the-sanctuary-setup">Part 1: Before They Arrive — The Sanctuary Setup</h2>
+<h3 id="the-room-that-prevents-the-breakdown">The Room That Prevents the Breakdown</h3>
+<p>If your Ragdoll arrives and the physical environment is not ready, you are starting from a deficit that compounds daily. This is not optional preparation — it is the difference between a cat who decompresses in three days and a cat who decompresses in three weeks.</p>
+<p>Ragdolls process environmental instability through their bodies. Stress suppresses appetite. Appetite suppression in kittens becomes hepatic lipidosis (fatty liver disease) within 48–72 hours. This is not hyperbole — this is the physiological cascade that separates prepared owners from panicked ones standing in an emergency clinic at midnight.</p>
+<h3 id="the-sanctuary-room-requirements-non-negotiable">The Sanctuary Room Requirements (Non-Negotiable)</h3>
+<ul>
+<li><strong>A small to medium room with exactly one door.</strong> Bedrooms are ideal. No open windows the cat can escape through. Minimal foot traffic. This room is your cat's decompression chamber, not a hosting space for visitors.</li>
+<li><strong>Litter box on the opposite side of the room from food and water.</strong> Cats hardwire this separation. Violate it and you will see litter box avoidance within days.</li>
+<li><strong>At least one true hiding space.</strong> Under the bed, inside a cat cave, behind a cardboard box with two openings — this is not optional. A Ragdoll without a retreat point is a Ragdoll in a state of low-grade panic.</li>
+<li><strong>A vertical element.</strong> Cat tree, bookshelf access, or window perch at minimum 3 feet high. Ragdolls feel safer off the ground. A cat who can survey their domain from above is a cat whose stress cortisol is measurably lower.</li>
+<li><strong>A fabric item that smells like the breeder or the cat's mother.</strong> Ask the breeder before pickup. This is scent-anchoring — one of the most underutilized and highest-impact interventions in feline behavioral medicine.</li>
+<li><strong>Soft bedding.</strong> Ragdolls sleep 16–20 hours a day during decompression. Hard surfaces cause callus formation on hocks. This is a slow-developing problem you prevent on day one.</li>
+<li><strong>Wide, shallow water bowl.</strong> Not a bottle. Cats' whiskers are sensory organs — when they hit the sides of a narrow bowl, it causes whisker fatigue, and they drink less. Dehydration in a stressed cat accelerates urinary concentration issues.</li>
+<li><strong>Ceramic or stainless steel food bowls.</strong> Never plastic. Plastic harbors bacteria in micro-scratches and leaches porphyrins that cause feline chin acne — a chronic, painful condition that's entirely preventable.</li>
+</ul>
+<h3 id="shopping-list-pre-arrival">Shopping List — Pre-Arrival</h3>
+<ul>
+<li>[ ] Litter box + hood (Ragdolls strongly prefer privacy) + one backup box in a separate location</li>
+<li>[ ] Non-clumping litter for the first two weeks (clumping litter can cause GI blockages if kittens ingest it while grooming — a $2,000 surgical emergency with a simple $12 prevention)</li>
+<li>[ ] High-quality kitten or adult food — <strong>same exact brand and formula the breeder used.</strong> Buy two weeks' supply before pickup. Food transitions happen later, on a 7-day gradient, not on day one.</li>
+<li>[ ] Two sets of ceramic or stainless steel bowls (one for food, one for water)</li>
+<li>[ ] Cat tree: minimum 3 feet tall, stable base, sisal scratching surface</li>
+<li>[ ] Cat cave or enclosed bed</li>
+<li>[ ] Feliway Classic diffuser — one per room, plugged in a minimum of 24 hours before the cat arrives</li>
+<li>[ ] Enzyme cleaner (Nature's Miracle or equivalent) — standard cleaners don't break down the proteins in cat urine; enzyme cleaners do. If you clean an accident with Windex, your cat will smell the residual marking proteins and re-offend in the same spot.</li>
+<li>[ ] Soft slicker brush + greyhound comb (metal, wide-tooth)</li>
+<li>[ ] Cat-specific nail clippers (not human clippers — they crush the nail rather than cutting it cleanly)</li>
+<li>[ ] Emergency vet fund: <strong>minimum $1,000 accessible within the hour</strong></li>
+</ul>
+<div style="page-break-before: always;"></div>
+<h2 id="part-2-the-first-week-decompression-the-attention-dependency-reality">Part 2: The First Week — Decompression &amp; The Attention Dependency Reality</h2>
+<div style="page-break-before: always;"></div>
+<h2 id="day-1-the-arrival-protocol">Day 1: The Arrival Protocol</h2>
+<p>Your Ragdoll is not a rescue dog who needs firm handling and immediate boundary-setting. Your Ragdoll needs the opposite: quiet, stillness, and the absence of pressure.</p>
+<p><strong>The Protocol:</strong></p>
+<ol>
+<li>Place the carrier in the sanctuary room. Open the door. Walk away and sit on the floor across the room. Do not reach into the carrier. Do not coo. Do not hover over the opening. Your job right now is to be the most boring object in the room.</li>
+<li>Sit. Read a book. Scroll your phone silently. The signal you are sending is: <em>I am here. I am not a threat. I am not even interesting. You are safe to explore.</em></li>
+<li>Do not make direct, prolonged eye contact. To a cat, a sustained stare is a predatory signal. Use slow blinks — close your eyes slowly, hold for a beat, open slowly. This is the universal feline signal for "I am not going to hurt you."</li>
+<li>Wait. This can take 20 minutes. It can take 4 hours. The cat's timeline is the only timeline.</li>
+<li>When the cat approaches and sniffs you, remain still. Let them investigate. Offer one finger — not a hand reaching down, which reads as a grabbing motion. A single extended finger at cat-nose height.</li>
+<li>Speak in a low, calm register. High-pitched baby voice is overstimulating to a disoriented cat.</li>
+</ol>
+<p><strong>Do Not:</strong>
+- Manually remove the cat from the carrier
+- Hover over the carrier or position your face near the opening
+- Have other pets, guests, or children in the sanctuary room
+- Vacuum, run the dishwasher, play loud music, or create sudden loud noises for at least 72 hours
+- Chase the cat if they retreat</p>
+<h3 id="the-attention-dependency-reality-why-tracking-is-medical-compliance">The Attention Dependency Reality — Why Tracking Is Medical Compliance</h3>
+<p>Here is the uncomfortable truth that separates this guide from every generic cat blog you've read:</p>
+<p><strong>Ragdolls are genetically predisposed to separation anxiety and stress-induced urinary tract pathology.</strong></p>
+<p>This is not an opinion. It is a breed-specific vulnerability documented in veterinary literature. Ragdolls form attachment bonds with their owners that are unusually intense for a domestic cat. When that owner disappears — even for a standard 9-to-5 workday — the cat's stress response triggers a physiological cascade: elevated cortisol, suppressed immune function, concentrated urine from reduced water intake, and, in male cats especially, inflammation of the urinary tract that can progress to partial or complete urethral blockage within 24–36 hours.</p>
+<p>A blocked male cat is a surgical emergency. The cost: <strong>$1,500 to $5,000.</strong> The timeline from "he's straining a little" to irreversible kidney damage: <strong>under 48 hours.</strong></p>
+<p><strong>This is why a tracking system is not a nice-to-have. It is a medical compliance tool.</strong></p>
+<p>Consider what the Notion Ragdoll Care Tracker — included with this guide — actually does:</p>
+<ul>
+<li>It logs every litter box visit, every day, so you can detect declining frequency before it becomes a blockage</li>
+<li>It tracks appetite on a 0-to-3 scale, so you catch the 24-hour anorexia threshold that triggers a mandatory vet visit</li>
+<li>It records stool quality on a 1-to-5 scale, because GI distress in the first month is a leading indicator of food intolerance, parasitic infection, or stress colitis</li>
+<li>It maintains a grooming log tied to body-region mapping, so you know exactly where you've brushed and where mats are forming</li>
+</ul>
+<p><strong>If you don't track it, you won't catch the early warning signs until it's a $2,000 emergency vet visit.</strong> The tracker costs less than the copay on that visit. It costs less than the anxiety medication your cat might need if chronic stress goes unaddressed for months. It costs less than the behavioral consultation you'll book when the litter box avoidance becomes entrenched.</p>
+<p>Track daily. The data is your early-warning system. Your Ragdoll cannot tell you they feel a UTI coming on. The log can.</p>
+<h3 id="signs-of-healthy-decompression-days-17">Signs of Healthy Decompression (Days 1–7)</h3>
+<ul>
+<li>The cat eventually moves from the primary hiding spot to a different corner — spatial exploration is a trust signal</li>
+<li>They groom while you're in the room (grooming = feeling safe enough to be vulnerable in your presence)</li>
+<li>They eat when you're not hovering directly over them</li>
+<li>They use the litter box on their own — volume and frequency are more important than location right now</li>
+<li>They begin to observe you with relaxed posture — ears forward, not flattened; tail still or gently swaying, not tucked</li>
+</ul>
+<h3 id="red-flags-vet-visit-within-24-hours">Red Flags — Vet Visit Within 24 Hours</h3>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Concern</th>
+<th>Urgency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Not eating for 24+ hours (kittens) or 48+ hours (adults)</td>
+<td>Hepatic lipidosis risk in kittens</td>
+<td><strong>Immediate</strong></td>
+</tr>
+<tr>
+<td>Straining to urinate, crying in the litter box, frequent unproductive trips</td>
+<td>Urinary blockage — male cat emergency</td>
+<td><strong>Emergency room, now</strong></td>
+</tr>
+<tr>
+<td>Diarrhea with blood or mucus</td>
+<td>Colitis, parasitic infection, or panleukopenia</td>
+<td><strong>Within 24 hours</strong></td>
+</tr>
+<tr>
+<td>Lethargy — Ragdolls are docile, not unconscious</td>
+<td>Systemic illness or advanced dehydration</td>
+<td><strong>Within 12 hours</strong></td>
+</tr>
+<tr>
+<td>Sneezing with nasal discharge, eyes held half-closed</td>
+<td>URI — herpesvirus flare, calicivirus, or bacterial secondary infection</td>
+<td><strong>Within 48 hours</strong></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-before: always;"></div>
+<h2 id="part-3-trust-architecture-weeks-24">Part 3: Trust Architecture — Weeks 2–4</h2>
+<h3 id="the-consent-framework">The Consent Framework</h3>
+<p>By week two, your Ragdoll should be more exploratory. This is when most new owners blow it — they interpret exploration as a green light for unrestricted handling, and they destroy weeks of trust in a single afternoon.</p>
+<p>The principle is simple and absolute: <strong>never reach for your Ragdoll. Let them come to you.</strong></p>
+<p>Every interaction is a negotiation. You are not establishing dominance — you are building a database of positive experiences that your cat will reference for the rest of their life. Each time they approach you voluntarily and nothing bad happens, the trust ledger increments. Each time you grab them when they're walking away, the trust ledger resets.</p>
+<p><strong>The Progression:</strong></p>
+<ol>
+<li><strong>Target training (Days 5–10).</strong> Extend one finger. If the cat sniffs it, that is a "yes." If they pull back or look away, that is a "not yet." Try again tomorrow.</li>
+<li><strong>Chin scritch test (Days 7–14).</strong> Once they're voluntarily approaching, offer a gentle chin scritch. Watch the tail — a twitching or puffy tail means overstimulated. Stop immediately. The lesson you're teaching is: <em>you can opt out at any time, and I will respect that.</em></li>
+<li><strong>Lap invitation (Days 10–21).</strong> Sit on the floor with a treat in your hand. If they climb onto your lap, let them. Do not grab. Do not hold them in place. A cat who learns that being on your lap is a trap will never voluntarily sit on your lap again.</li>
+<li><strong>Holding (Days 14–28).</strong> Once they're reliably choosing your lap, try a brief lift — 10 seconds maximum. If they tense, put them down immediately. The goal is for them to learn that being held does not mean being restrained.</li>
+</ol>
+<p><strong>Why This Matters More Than You Think:</strong></p>
+<p>Ragdolls who are held constantly in week one — without consent — become adult cats who only feel safe when being held. That is not a bonded cat. That is a dependent cat with no emotional resilience. You want a cat who <em>chooses</em> to be near you because your presence is rewarding, not a cat who panics when you're gone because they never learned to self-regulate.</p>
+<h3 id="separation-training-start-in-week-2-even-if-it-hurts">Separation Training — Start in Week 2, Even If It Hurts</h3>
+<p>This is the section that new owners resist most. You will want to spend every possible moment with your new Ragdoll. I understand that impulse. But if you don't teach them that alone-time is safe, you will create a cat who suffers every time you leave the house — and that suffering will manifest as destructive behavior, inappropriate elimination, or compulsive grooming.</p>
+<p><strong>The Protocol:</strong></p>
+<ol>
+<li>Leave the room for 5 minutes. Return. Do this three times per day.</li>
+<li>Do not make a departure ritual. No prolonged goodbyes. No "Mommy will be right back!" Just leave.</li>
+<li>When you return, casual calm acknowledgment only. A slow blink, a quiet word. Do not rush to them with exaggerated emotion — that teaches them that your departure was a crisis that required relief.</li>
+<li>Extend absences by 5-minute increments across the week.</li>
+<li>By the end of week 3, aim for a 2-hour solo stretch. By week 4, a half-day.</li>
+</ol>
+<p>If you have multiple people in the household, <strong>everyone</strong> must practice this. The cat needs to learn that the absence of any single person is survivable.</p>
+<h3 id="weeks-34-integration-and-routine">Weeks 3–4: Integration and Routine</h3>
+<p>By week three, your Ragdoll should be:
+- Eating and drinking on a consistent schedule
+- Using the litter box reliably
+- Seeking human interaction voluntarily — not just tolerating it
+- Exploring the full home environment (if applicable)</p>
+<p><strong>Expansion Protocol:</strong>
+- Open access to one additional room per day, starting with the quietest and least stimulating spaces
+- Keep the sanctuary room intact as a permanent safe zone — do not remove the hiding spots or the familiar-scented bedding
+- Introduce other household cats extremely slowly: 10 minutes of visual contact through a cracked door on day one, then build by 10-minute increments daily. Full integration can take 2–4 weeks. Rushing this creates permanent inter-cat tension.</p>
+<p><strong>Bonding Milestones — What to Watch For:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Meaning</th>
+<th>Your Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Slow blink</strong></td>
+<td>"I trust you. I am not afraid of you."</td>
+<td>Blink back. This is a conversation.</td>
+</tr>
+<tr>
+<td><strong>Kneading on you</strong></td>
+<td>"This is home. You are safety."</td>
+<td>Let it happen. Those claws are a compliment.</td>
+</tr>
+<tr>
+<td><strong>Following you room to room</strong></td>
+<td>"I'm interested in your existence."</td>
+<td>This is breed-appropriate behavior. It's not necessarily anxiety.</td>
+</tr>
+<tr>
+<td><strong>Exposing the belly</strong></td>
+<td>Maximum vulnerability display. "I am testing whether you violate boundaries."</td>
+<td>Do not rub immediately. Acknowledge with a slow blink. Rubbing the exposed belly of a cat who doesn't yet fully trust you is a fast way to get bitten and reset trust to zero.</td>
+</tr>
+<tr>
+<td><strong>Bringing a toy or "gift"</strong></td>
+<td>"I am contributing to our shared territory."</td>
+<td>Accept the gift. Praise calmly. This is a bonding ritual.</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-before: always;"></div>
+<h2 id="part-4-operational-maintenance">Part 4: Operational Maintenance</h2>
+<h3 id="month-one-grooming-protocol">Month-One Grooming Protocol</h3>
+<p>Ragdolls have a semi-long, silky coat that lacks a dense undercoat — which means they mat less than Persians or Himalayans but still require structured grooming. The objective is to turn grooming into a bonding ritual rather than a twice-weekly wrestling match.</p>
+<p><strong>Daily (3–5 minutes):</strong>
+- Wide-tooth metal comb through the chest ruff, behind the ears, hindquarters, and tail base
+- A greyhound comb catches small tangles before they become mats that require cutting
+- Do this at the same time each day — post-breakfast works well. Cats are pattern-recognition machines. What happens predictably becomes safe.</p>
+<p><strong>Weekly (10 minutes):</strong>
+- Nail trim every 7–10 days. Check dew claws specifically — they don't wear down from walking and can grow into the paw pad if neglected.
+- Ear inspection: look for brown debris (ear mites), redness (infection), or odor (yeast). Clean with a vet-approved ear cleaner on a cotton ball only — never a Q-tip, which compacts debris.
+- Eye wipe: warm, damp cloth on the corners. Ragdolls are prone to watery eyes; crust buildup in the tear ducts can cause dermatitis.
+- Tooth check: lift the lip, look for tartar buildup, gum redness, or broken teeth. Dental disease is the most underdiagnosed condition in domestic cats.</p>
+<p><strong>Monthly (15–20 minutes):</strong>
+- Full coat inspection: part the fur with your fingers from neck to tail. Target zones for mat formation are behind the front legs, the armpits, the belly, and around the tail base.
+- If mats are found: do not yank. Spray with a detangling solution and work through with a dematting comb in short, gentle strokes.
+- Bath is optional — Ragdolls rarely need them unless there's a skin condition, toxin exposure, or significant soiling.</p>
+<p><strong>Pro Tip:</strong> Start all grooming with your cat on a towel on your lap. Containment without restraint is the sweet spot. Many Ragdolls will actually fall asleep during brushing if the association is positive enough.</p>
+<h3 id="the-grooming-gear-essentials">The Grooming Gear Essentials</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Product Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wide-tooth metal comb</td>
+<td>Primary detangling, daily maintenance</td>
+<td>Greyhound comb (stainless steel)</td>
+</tr>
+<tr>
+<td>Undercoat rake</td>
+<td>Removing loose undercoat during shedding season</td>
+<td>Deshedding rake with rotating teeth</td>
+</tr>
+<tr>
+<td>Slicker brush</td>
+<td>Finishing, smoothing the topcoat</td>
+<td>Soft-tipped slicker (not wiry)</td>
+</tr>
+<tr>
+<td>Cat nail clippers</td>
+<td>Nail maintenance</td>
+<td>Scissor-style, not guillotine-style</td>
+</tr>
+<tr>
+<td>Ear cleaner</td>
+<td>Weekly ear inspection and cleaning</td>
+<td>Vet-approved, non-alcohol formula</td>
+</tr>
+</tbody>
+</table>
+<h3 id="month-one-health-monitoring-the-daily-log">Month-One Health Monitoring: The Daily Log</h3>
+<p>You are not being paranoid. You are establishing a baseline. A cat who has been in your home for three days has no "normal" yet — the only way to establish normal is to measure consistently from day one.</p>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Appetite (0–3)</th>
+<th>Water Intake</th>
+<th>Litter Box Visits</th>
+<th>Stool Quality (1–5)</th>
+<th>Grooming Observed</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Stool Quality Scale:</strong>
+- <strong>1</strong> — Watery diarrhea (vet if &gt;48 hours)
+- <strong>2</strong> — Soft, no defined shape (monitor; likely food transition stress)
+- <strong>3</strong> — Soft but formed (acceptable during food transitions)
+- <strong>4</strong> — Firm, well-formed, moist (ideal — this is your target)
+- <strong>5</strong> — Hard, dry, crumbly (dehydrated — increase water access immediately)</p>
+<p><strong>The included Notion tracker automates this.</strong> You open it each evening, check five boxes, and it builds your cat's health baseline over time. When the vet asks "how long has this been going on?" you will have data, not a guess.</p>
+<div style="page-break-before: always;"></div>
+<h2 id="part-5-the-real-cost-of-a-ragdoll-first-month">Part 5: The Real Cost Of A Ragdoll First Month</h2>
+<p>This is the section most adoption guides omit because it's uncomfortable to write. It is also the section that will save you the most money, the most stress, and — in a worst-case scenario — your cat's life.</p>
+<p>The market data on pet care costs is fragmented and often misleading. Breeders cite ideal scenarios. Veterinary offices cite worst cases. What you need is a tiered framework that maps the financial reality against common Ragdoll health trajectories.</p>
+<h3 id="tier-1-routine-first-month-setup-410800">Tier 1: Routine First-Month Setup — $410–$800</h3>
+<p>This is what a healthy first month costs when everything goes to plan. It covers the baseline: an initial veterinary exam, the first round of core vaccines, microchipping, preventative deworming, and the first month of flea/heartworm prevention.</p>
+<table>
+<thead>
+<tr>
+<th>Expense</th>
+<th>Low</th>
+<th>High</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial veterinary exam</td>
+<td>$75</td>
+<td>$150</td>
+<td>New-client comprehensive exam</td>
+</tr>
+<tr>
+<td>FVRCP vaccine (core feline series)</td>
+<td>$40</td>
+<td>$100</td>
+<td>First dose + scheduled boosters</td>
+</tr>
+<tr>
+<td>Microchip implantation</td>
+<td>$25</td>
+<td>$50</td>
+<td>Required or strongly recommended in most states</td>
+</tr>
+<tr>
+<td>Deworming (preventative)</td>
+<td>$20</td>
+<td>$60</td>
+<td>Often administered at first visit regardless of stool results</td>
+</tr>
+<tr>
+<td>Flea/heartworm prevention (month 1)</td>
+<td>$20</td>
+<td>$80</td>
+<td>Revolution Plus or equivalent</td>
+</tr>
+<tr>
+<td>Food (high-quality, 2 weeks)</td>
+<td>$30</td>
+<td>$80</td>
+<td>Breeder-matching brand</td>
+</tr>
+<tr>
+<td>Litter + box(es)</td>
+<td>$30</td>
+<td>$80</td>
+<td>Two boxes minimum for sanitary separation</td>
+</tr>
+<tr>
+<td>Feliway diffuser (30-day)</td>
+<td>$35</td>
+<td>$45</td>
+<td>One per occupied room</td>
+</tr>
+<tr>
+<td>Cat tree + cave bed</td>
+<td>$100</td>
+<td>$250</td>
+<td>One-time purchase, multi-year utility</td>
+</tr>
+<tr>
+<td>Grooming tools (comb, brush, clippers)</td>
+<td>$35</td>
+<td>$75</td>
+<td>One-time purchase</td>
+</tr>
+<tr>
+<td><strong>Tier 1 Total Range</strong></td>
+<td><strong>$410</strong></td>
+<td><strong>$800</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This is the floor. If your Ragdoll arrives healthy, adapts within a week, eats normally, and shows no warning signs, this is your first month.</p>
+<h3 id="tier-2-first-health-scare-8002000">Tier 2: First Health Scare — $800–$2,000</h3>
+<p>Here is what happens to a meaningful percentage of Ragdoll owners in month one: the cat develops a URI (upper respiratory infection) triggered by the stress of rehoming, or a stress-induced GI upset that requires diagnostic workup, or a UTI that needs urinalysis, antibiotics, and follow-up.</p>
+<p>Ragdolls are disproportionately vulnerable to stress-induced illness because of their attachment wiring. A cat who stops eating from anxiety for 48 hours needs subcutaneous fluids, appetite stimulants, and possibly hospitalization. A URI that starts as mild sneezing can progress to purulent nasal discharge requiring antibiotics, eye ointment, and steam therapy.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Low</th>
+<th>High</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI — outpatient treatment</td>
+<td>$100</td>
+<td>$500</td>
+<td>Exam + antibiotics + eye medication + follow-up</td>
+</tr>
+<tr>
+<td>URI — hospitalization (dehydration)</td>
+<td>$500</td>
+<td>$1,500</td>
+<td>IV fluids, injectable antibiotics, 24–48h monitoring</td>
+</tr>
+<tr>
+<td>GI upset — diagnostic workup</td>
+<td>$200</td>
+<td>$800</td>
+<td>Fecal testing, abdominal X-ray/ultrasound, probiotics, prescription diet trial</td>
+</tr>
+<tr>
+<td>UTI — urinalysis + antibiotics</td>
+<td>$150</td>
+<td>$400</td>
+<td>Catch it early, treatment is straightforward</td>
+</tr>
+<tr>
+<td>Ear infection</td>
+<td>$100</td>
+<td>$300</td>
+<td>Exam + ear cytology + topical medication</td>
+</tr>
+<tr>
+<td>Conjunctivitis / eye infection</td>
+<td>$50</td>
+<td>$200</td>
+<td>Exam + antibiotic eye drops</td>
+</tr>
+<tr>
+<td><strong>Tier 2 Total Range</strong></td>
+<td><strong>$800</strong></td>
+<td><strong>$2,000</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This tier is not rare. It happens to new Ragdoll owners who did everything "right" — the cat's immune system simply buckles under the stress of relocation. The owners who get through it without financial catastrophe are the ones who budgeted for Tier 2 before they needed it.</p>
+<h3 id="tier-3-emergency-surgery-chronic-condition-20005000">Tier 3: Emergency Surgery / Chronic Condition — $2,000–$5,000</h3>
+<p>This is the tier nobody wants to think about. But if you own a male Ragdoll, you must think about it, because urinary blockage is a breed-associated risk and it does not give you time to figure out financing.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Low</th>
+<th>High</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Urinary blockage (male cat) — catheterization</td>
+<td>$1,500</td>
+<td>$3,000</td>
+<td>Emergency unblocking + 48–72h hospitalization</td>
+</tr>
+<tr>
+<td>Urinary blockage — perineal urethrostomy surgery</td>
+<td>$3,000</td>
+<td>$5,000</td>
+<td>Surgical reconstruction if blockages recur</td>
+</tr>
+<tr>
+<td>HCM diagnostic workup</td>
+<td>$300</td>
+<td>$2,000</td>
+<td>Echocardiogram + cardiologist consult + genetic testing</td>
+</tr>
+<tr>
+<td>Toxic ingestion requiring hospitalization</td>
+<td>$500</td>
+<td>$3,000</td>
+<td>Activated charcoal, IV lipid therapy, 24–72h monitoring</td>
+</tr>
+<tr>
+<td>Foreign body ingestion — surgical removal</td>
+<td>$2,000</td>
+<td>$5,000</td>
+<td>Exploratory laparotomy + enterotomy</td>
+</tr>
+<tr>
+<td><strong>Tier 3 Total Range</strong></td>
+<td><strong>$2,000</strong></td>
+<td><strong>$5,000</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This framing is not fear-mongering. It is a map of the territory. The guide you're reading costs $15. The Notion tracker that catches the early signs costs less than the copay on a single emergency visit. The emergency fund you establish today is the difference between "my cat is blocked and I need to find $3,000" and "my cat is blocked — let's go to the vet now."</p>
+<h3 id="the-emergency-fund-protocol">The Emergency Fund Protocol</h3>
+<ol>
+<li><strong>Right now, before the cat arrives:</strong> Open a dedicated savings account or designate a sub-account with <strong>$2,000 minimum.</strong> Do not touch this for food, toys, or routine vet visits. This is emergency-only money.</li>
+<li><strong>Pet insurance:</strong> Look into it now, before the first vet visit, because pre-existing conditions are not covered once diagnosed. Premiums for a Ragdoll kitten typically run $25–$45/month. Companies to evaluate: Pumpkin, Trupanion, Healthy Paws, Nationwide.</li>
+<li><strong>CareCredit:</strong> A healthcare credit card accepted by most veterinary emergency hospitals. It's not ideal — interest rates are high — but it's better than delaying care while a blocked cat's kidneys deteriorate.</li>
+<li><strong>The tracker as prevention:</strong> Daily logging catches declining litter box frequency, appetite changes, and weight shifts before they become Tier 3 emergencies. The $15 guide + tracker is priced as insurance against the $2,000–$5,000 scenario. This is not accidental. It is the product's thesis.</li>
+</ol>
+<div style="page-break-before: always;"></div>
+<h2 id="part-6-home-safety-the-bosch-cross-sell">Part 6: Home Safety &amp; The Bosch Cross-Sell</h2>
+<h3 id="general-home-safety-for-the-indoor-ragdoll">General Home Safety for the Indoor Ragdoll</h3>
+<p>Ragdolls are indoor-only cats — their docility makes them vulnerable outdoors, and their coat requires protection from environmental debris. But an indoor home is not automatically a safe home.</p>
+<p><strong>Immediate Hazards to Eliminate:</strong>
+- <strong>Strings, yarn, dental floss, hair ties.</strong> Cats swallow linear foreign bodies. These can cause intestinal plication — a condition where the intestine accordions along the string — which is fatal without surgery. If you see a string protruding from your cat's mouth or anus, do not pull it. Go to the emergency vet.
+- <strong>Lilies.</strong> Every part of the lily plant — leaves, petals, pollen, even the water in the vase — is nephrotoxic to cats. Ingestion causes acute kidney failure within 36–72 hours. Do not bring lilies into a home with a cat. Period.
+- <strong>Important oil diffusers.</strong> Many Important oils (tea tree, eucalyptus, peppermint, citrus) are hepatotoxic to cats, whose livers lack the glucuronidation pathway to metabolize phenolic compounds. If you diffuse oils, diffuse in a room the cat does not access.
+- <strong>Open windows without screens.</strong> Ragdolls are not agile jumpers, but a startled cat can clear a surprising distance. Screens on every window.
+- <strong>Reclining chairs.</strong> Cats crawl into the mechanism cavity. Check under recliners before operating them. This kills cats every year.</p>
+<p><strong>Long-Term Infrastructure:</strong>
+- Secure cleaning supplies in latched cabinets — cats can open unlatched doors
+- Cover electrical cords with cord protectors (especially for kittens who chew)
+- Remove small objects that can be swallowed: rubber bands, paper clips, earplugs, batteries
+- Keep toilet lids closed — kittens can fall in and drown</p>
+<h3 id="the-connected-home-a-complementary-maintenance-philosophy">The Connected Home: A Complementary Maintenance Philosophy</h3>
+<p>This guide is built for the Ragdoll owner who tracks their cat's health data systematically — the same owner who probably tracks their home appliance maintenance systematically, because the personality type that logs litter box visits is the personality type that logs dishwasher filter changes.</p>
+<p><strong>Coming soon from the mrohitth Workspace: The Bosch Dishwasher Drain Pump Protocol</strong> — a complementary maintenance system for the home-conscious Ragdoll owner who also wants a machine that works. Bosch dishwashers are the most common premium dishwasher in American kitchens, and their E24/E15 error codes (drain pump obstruction, water inlet failure) are the most common repair triggers — yet no Notion template maps these codes to DIY diagnostic sequences, part numbers, and repair video links.</p>
+<p>If you track your cat's health because you understand that data prevents disaster, you will appreciate tracking your dishwasher's maintenance because you understand the same principle applied to a different system. Same methodology. Same philosophy. Same workspace.</p>
+<p>For now, focus on the creature. The machine can wait.</p>
+<div style="page-break-before: always;"></div>
+<h2 id="part-7-the-thriving-index-is-your-ragdoll-okay">Part 7: The Thriving Index — Is Your Ragdoll Okay?</h2>
+<h3 id="signs-of-a-thriving-ragdoll-benchmark-at-week-4">Signs of a Thriving Ragdoll (Benchmark at Week 4)</h3>
+<ul>
+<li>[ ] Seeks human interaction voluntarily, not just tolerates it when you initiate</li>
+<li>[ ] Eats and drinks on a consistent daily schedule without coaxing</li>
+<li>[ ] Uses the litter box reliably — normal frequency, normal volume</li>
+<li>[ ] Grooms while you're in the room — vulnerability in your presence</li>
+<li>[ ] Slow blinks at you across the room</li>
+<li>[ ] Explores the home with curiosity rather than fear or frantic pacing</li>
+<li>[ ] Sleeps in exposed areas — the middle of the floor, the couch, your bed — not exclusively in hiding spots</li>
+<li>[ ] Adjusts to minor environmental changes without regression</li>
+<li>[ ] Plays — batting at toys, chasing, pouncing, engaging with their environment</li>
+<li>[ ] Approaches new sounds or objects with investigative interest rather than panic</li>
+</ul>
+<h3 id="warning-signs-address-within-the-week">Warning Signs — Address Within the Week</h3>
+<table>
+<thead>
+<tr>
+<th>Warning Sign</th>
+<th>Likely Cause</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hiding for 10+ consecutive days with no improvement</td>
+<td>Environment too stimulating or too unpredictable</td>
+<td>Return to sanctuary room protocol; reduce foot traffic and noise</td>
+</tr>
+<tr>
+<td>Aggression in a previously calm cat</td>
+<td>Pain, fear, or redirected aggression</td>
+<td>Veterinary exam to rule out medical cause; do not punish — fear-based aggression worsens with punishment</td>
+</tr>
+<tr>
+<td>Excessive grooming of one area (barbering)</td>
+<td>Stress, boredom, food allergy, or ectoparasites</td>
+<td>Check for fleas; review food ingredients; assess environmental enrichment</td>
+</tr>
+<tr>
+<td>Not eating for 24+ hours</td>
+<td>Stress, dental pain, systemic illness</td>
+<td>Veterinary visit — urgent in kittens, mandatory in adults beyond 48h</td>
+</tr>
+<tr>
+<td>Urinating outside the litter box</td>
+<td>UTI, stress, litter aversion, or box location</td>
+<td>Veterinary urinalysis first; then experiment with litter type and box placement</td>
+</tr>
+<tr>
+<td>Sudden increase in vocalization</td>
+<td>Anxiety, pain, cognitive change, or routine disruption</td>
+<td>Veterinary visit; also audit whether household routines changed</td>
+</tr>
+<tr>
+<td>Destructive scratching of furniture</td>
+<td>Insufficient scratching surfaces or boredom</td>
+<td>Add scratching posts near target furniture; increase daily play</td>
+</tr>
+<tr>
+<td>Weight loss</td>
+<td>Hyperthyroidism, dental disease, GI malabsorption</td>
+<td>Veterinary visit</td>
+</tr>
+<tr>
+<td>Rapid weight gain</td>
+<td>Overfeeding — Ragdolls gain weight deceptively fast</td>
+<td>Reduce calories; increase structured play; review portion sizes against food label guidelines</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-before: always;"></div>
+<h2 id="part-8-resources-tools-next-steps">Part 8: Resources, Tools &amp; Next Steps</h2>
+<h3 id="recommended-products">Recommended Products</h3>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Price Range</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feliway Classic Diffuser</td>
+<td>$35–$45 (30-day)</td>
+<td>Clinical trials support anxiety reduction in single and multi-cat homes</td>
+</tr>
+<tr>
+<td>Revolution Plus (flea/heartworm)</td>
+<td>$20–$40/month</td>
+<td>Covers fleas, heartworm, roundworm, hookworm, ear mites</td>
+</tr>
+<tr>
+<td>Wyze Cam or Eufy Pet Camera</td>
+<td>$30–$80</td>
+<td>Remote monitoring during alone-time training</td>
+</tr>
+<tr>
+<td>Cat water fountain (stainless steel)</td>
+<td>$25–$50</td>
+<td>Running water increases intake; reduces urinary concentration</td>
+</tr>
+<tr>
+<td>Hard-sided cat carrier</td>
+<td>$40–$80</td>
+<td>Sized for adult Ragdoll (they're big cats — measure before buying)</td>
+</tr>
+<tr>
+<td>Cat tree with sisal posts</td>
+<td>$80–$200</td>
+<td>Solid base, at least 3 feet tall, multiple levels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="free-resources">Free Resources</h3>
+<ul>
+<li><strong>Ragdoll Fanciers Club</strong> — Breed standards, HCM testing requirements, ethical breeder referral</li>
+<li><strong>Indoor Pet Initiative (Ohio State University)</strong> — Evidence-based environmental enrichment protocols</li>
+<li><strong>Fear Free Happy Homes</strong> — Low-stress handling and veterinary visit preparation</li>
+<li><strong>ASPCA Animal Poison Control</strong> — 24/7 emergency hotline: (888) 426-4435</li>
+</ul>
+<h3 id="when-to-escalate-veterinary-behaviorist-referral">When to Escalate: Veterinary Behaviorist Referral</h3>
+<p>If your Ragdoll shows any of the following after Week 3, a board-certified veterinary behaviorist (not a general trainer, not a "cat whisperer") is your next step:</p>
+<ul>
+<li>Persistent aggression toward humans or other pets despite environmental modification</li>
+<li>Pica — eating non-food items (can indicate nutritional deficiency, GI disease, or compulsive disorder)</li>
+<li>Severe separation anxiety — vocalizing, destruction, or inappropriate elimination within 5 minutes of your departure</li>
+<li>Litter box avoidance that persists after veterinary workup has ruled out medical causes (urinalysis, bloodwork, imaging)</li>
+</ul>
+<h3 id="closing-the-foundation-not-the-test">Closing: The Foundation, Not The Test</h3>
+<p>Here is what I need you to hear, because the anxiety you're carrying is real and it matters:</p>
+<p><strong>You are not being judged. Your Ragdoll is not grading you.</strong></p>
+<p>The first month is a foundation. If you set up the sanctuary room correctly, practice consent-based trust building, monitor health daily using the tracker, and budget for the emergency fund before the emergency arrives — you will have done everything within your control. A cat who hides for the first week is not a failure. A cat who doesn't want to be held on day three is not broken. You are building a relationship with a living creature who operates on their own timeline, their own nervous system, their own calculus of safety.</p>
+<p>But — and this is the part the feel-good guides won't tell you — the owners who fail are not the ones who have an anxious kitten in week one. They are the ones who ignore the anxiety, push too hard, skip the vet because "it's probably nothing," or refuse to save the emergency fund until they're standing in an emergency clinic at midnight with a blocked cat and a maxed-out credit card.</p>
+<p>The floppy paradox is real: the limp trust that makes Ragdolls so beloved is the same trait that makes them so vulnerable to a chaotic first month. Your job is to be the steady variable. Consistent. Predictable. Boring. Safe.</p>
+<p>Be the owner who tracks the data. Be the owner who budgets for Tier 2 before Tier 3 activates. Be the owner who practices patience on day 14 the same way they practiced it on day one — because your Ragdoll is not testing you. They are learning you.</p>
+<p>The relationship is not earned in the first week. It is proven across the first month.</p>
+<p>Build the foundation. The bond follows.</p>
+<h3 id="next-steps-action-sequence">Next Steps — Action Sequence</h3>
+<ol>
+<li><strong>Right now:</strong> Plug in the Feliway diffuser in the sanctuary room (needs 24 hours to saturate)</li>
+<li><strong>Before pickup:</strong> Confirm the breeder's food brand and formula — buy two weeks' supply</li>
+<li><strong>Before pickup:</strong> Open a dedicated emergency fund with $2,000 — accessible within the hour</li>
+<li><strong>Day 1:</strong> Follow the arrival protocol exactly as written — no shortcuts, no improvisation</li>
+<li><strong>Week 2:</strong> Begin the separation training protocol — 5 minutes, 3 times daily</li>
+<li><strong>Week 3:</strong> Begin gradual home expansion and supervised inter-pet introductions</li>
+<li><strong>Week 4:</strong> Complete the Thriving Index checklist — if warning signs persist, escalate to your veterinarian or a board-certified veterinary behaviorist</li>
+<li><strong>Ongoing:</strong> Maintain the daily health log in your Notion tracker — it becomes your cat's lifelong medical baseline</li>
+</ol>
+<h3 id="included-with-this-guide">Included with This Guide</h3>
+<p>This strategic protocol is delivered as a <strong>Notion template</strong> with:</p>
+<ul>
+<li><strong>Daily Health Log</strong> — Automated appetite, litter box, stool quality, and grooming tracking with trend visualization</li>
+<li><strong>Vet Visit Scheduler</strong> — Appointment calendar with pre-visit checklist and post-visit summary template</li>
+<li><strong>Emergency Contact Database</strong> — Local emergency vet, poison control, and pet insurance policy storage</li>
+<li><strong>Grooming Calendar</strong> — Recurring task reminders for daily, weekly, and monthly grooming protocol items</li>
+<li><strong>Cost Tracker</strong> — Monthly budget dashboard with emergency fund balance monitoring and insurance premium tracking</li>
+<li><strong>Printable PDF</strong> — Condensed quick-reference version for the refrigerator or cat carrier</li>
+</ul>
+<p><em>Protocol Version: 2.0 — Strategic Rewrite</em>
+<em>DeepSeek V4 Pro · Kitty 🐱 · mrohitth Workspace — KATZEN Product Library</em>
+<em>Last Updated: May 4, 2026</em></p>
+<p><em>This guide is a decision-support framework. Your individual cat is the authority on their own experience. When in doubt, consult your veterinarian. When in emergency, go to the emergency vet — do not re-read the guide.</em></p>
+
+<div class="print-note" style="text-align:center; margin: 2em 0; padding: 1em; background: #F0F4F8; border-radius: 8px; font-family: Inter, sans-serif;">
+  <p style="margin:0 0 0.5em 0; font-size: 0.9em; color: #555;">
+    <strong>Editable HTML</strong> — Click anywhere to edit text.<br>
+    Use Ctrl+P / Cmd+P to print or save as PDF.
+  </p>
+  <button onclick="window.print()" style="padding: 0.5em 1.5em; font-size: 0.85em; cursor: pointer; border-radius: 6px; border: none; background: #1A365D; color: white; font-family: Inter, sans-serif;">
+    Print / Save as PDF
+  </button>
+</div>
+</body>
+</html>
