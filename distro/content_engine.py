@@ -318,6 +318,15 @@ def generate_all(slug):
     output_dir = OUT_DIR / slug
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # Load channel config from manifest
+    import json as _json
+    manifest_state_file = WORKSPACE / "distro" / "manifest" / "state.json"
+    enabled_channels = {}
+    if manifest_state_file.exists():
+        with open(manifest_state_file) as f:
+            m = _json.load(f)
+            enabled_channels = {k: v.get("enabled", False) for k, v in m.get("channels", {}).items()}
+
     generators = [
         ("reddit", generate_reddit_post),
         ("pinterest", lambda creds, n, c, g: generate_pinterest_pins(creds, n, c, g, count=30)),
@@ -326,6 +335,9 @@ def generate_all(slug):
     ]
 
     for platform, gen_fn in generators:
+        if not enabled_channels.get(platform, True):
+            print(f"  Skipping {platform} — disabled in manifest")
+            continue
         print(f"  Generating {platform}...")
         content = gen_fn(creds, product_name, product_copy, category)
         if content:

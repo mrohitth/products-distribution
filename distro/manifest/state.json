@@ -34,22 +34,27 @@
   "channels": {
     "reddit": {
       "enabled": true,
-      "posts_per_week": 2
+      "posts_per_week": 2,
+      "note": "Active \u2014 account exists"
     },
     "pinterest": {
-      "enabled": true,
-      "pins_per_week": 15
+      "enabled": false,
+      "pins_per_week": 15,
+      "note": "Planned \u2014 no account yet"
     },
     "tiktok": {
-      "enabled": true,
-      "scripts_per_week": 3
+      "enabled": false,
+      "scripts_per_week": 3,
+      "note": "Planned \u2014 no account yet"
     },
     "linkedin": {
-      "enabled": true,
-      "posts_per_week": 2
+      "enabled": false,
+      "posts_per_week": 2,
+      "note": "Not planned"
     },
     "email_list": {
-      "enabled": true
+      "enabled": true,
+      "note": "Active \u2014 highest ROI channel"
     }
   },
   "email_leads": 0,

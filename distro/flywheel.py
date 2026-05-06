@@ -74,15 +74,26 @@ def run_flywheel(slug=None):
     print(f"  DISTRO FLYWHEEL — {datetime.now(ET).strftime('%Y-%m-%d %H:%M ET')}")
     print("=" * 60)
 
+    # Load channel config
+    import json as _json
+    manifest_state_file = WORKSPACE / "distro" / "manifest" / "state.json"
+    enabled_channels = {}
+    if manifest_state_file.exists():
+        with open(manifest_state_file) as f:
+            m = _json.load(f)
+            enabled_channels = {k: v.get("enabled", False) for k, v in m.get("channels", {}).items()}
+
     for product_slug in targets:
         if product_slug not in products:
             print(f"[SKIP] '{product_slug}' not in manifest")
             continue
 
         p = products[product_slug]
+        active_channels = [k for k, v in enabled_channels.items() if v]
         print(f"\n{'─' * 60}")
         print(f"  📦 {product_slug}")
         print(f"     Category: {p['category']} | Price: ${p['price']}")
+        print(f"     Active channels: {active_channels}")
         print(f"     Current: reddit={p['reddit_posted']} pins={p['pinterest_pins']} tiktok={p['tiktok_scripts']} linkedin={p['linkedin_posts']}")
         print(f"{'─' * 60}")
 
