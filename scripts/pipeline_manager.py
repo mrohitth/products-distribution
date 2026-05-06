@@ -911,11 +911,8 @@ def _preprocess_for_pdf(md_text):
         result_lines.append(line)
     md_text = '\n'.join(result_lines)
 
-    # ── Title page: content starts on page 2 naturally ──────────────────────
-    # The title H1 renders at top of page 1. With .cover {{ min-height: 67vh }}
-    # and flex centering, the title sits at ~2/3 page height.
-    # Content flows onto page 2 automatically — no explicit page-break div needed.
-
+    # ── Title page: cover div is added at HTML output stage (stage5) ────────
+    # This avoids the markdown preprocessing complexities.
     # Demote non-Part, non-Day H2s to H3 (these are conceptual openers, not chapters)
     major_section_pattern = re.compile(r'^##\s+(Part\s+\d+|Day\s+\d+|Step\s+\d+)', re.IGNORECASE)
     lines = md_text.split('\n')
@@ -1006,6 +1003,14 @@ def stage5_production_weasyprint(draft_path, css_path=None):
 
     # Read CSS
     css_text = CSS_PATH.read_text()
+
+    # ── Wrap first h1 in div.cover at HTML level ─────────────────────────────
+    # This is the cleanest approach: wrap the first H1 element in the HTML
+    # with a div.cover so the title-page CSS rules apply.
+    first_h1_match = re.search(r'(<h1[^>]*>.*?</h1>)', html_body, re.DOTALL)
+    if first_h1_match:
+        wrapped = f'<div class="cover">\n{first_h1_match.group(1)}\n</div>'
+        html_body = html_body[:first_h1_match.start()] + wrapped + html_body[first_h1_match.end():]
 
     # Build full HTML document
     html_doc = f"""<!DOCTYPE html>

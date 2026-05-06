@@ -446,12 +446,9 @@ em {
         background: #FFFFFF;
     }
 
-    h2 {
-        page-break-before: always;
-    }
-
-    h3 {
+    h2, h3 {
         page-break-before: avoid;
+        page-break-inside: avoid;
     }
 
     .callout-insight, .callout-takeaway, .callout-script, .callout-audit {
