@@ -94,6 +94,31 @@ def check_existing_draft(slug, drafts_dir):
     return None, None
 
 
+def check_existing_draft_by_trend(trend_title, drafts_dir):
+    """
+    Stage 3 trend-level dedup: Check if any existing draft was generated from
+    the same trend. Same trend = same product (regardless of title or slug).
+    Returns (existing_path, "trend_match") if found, else (None, None).
+    """
+    if not drafts_dir.exists():
+        return None, None
+    for draft_file in drafts_dir.glob("*.md"):
+        try:
+            content = draft_file.read_text()
+            for line in content.split('\n')[:30]:
+                if line.strip().startswith('trend:'):
+                    existing_trend = line.split('trend:', 1)[1].strip().strip('"')
+                    # Normalize both for comparison
+                    norm_existing = re.sub(r'[^a-z0-9]', '', existing_trend.lower())
+                    norm_incoming = re.sub(r'[^a-z0-9]', '', trend_title.lower())
+                    if norm_existing == norm_incoming:
+                        return draft_file, "trend_match"
+                    break
+        except Exception:
+            pass
+    return None, None
+
+
 def check_existing_draft_by_title(trend_title, drafts_dir, min_title_sim=0.75):
     """
     Stage 3 title-level dedup: Check if any existing draft has the same title.
@@ -1007,6 +1032,15 @@ def main():
         print(f"      version first, or use --force-draft to override.")
         if "--force-draft" not in sys.argv:
             print(f"      Pipeline blocked (title dedup). Use --force-draft to archive and proceed.")
+            return 0
+
+    # 3d. Stage 3 dedup check (trend level — primary dedup for same product)
+    dup_by_trend, trend_match = check_existing_draft_by_trend(top.get("title", ""), DRAFTS_DIR)
+    if dup_by_trend:
+        print(f"  ℹ️  Draft from same trend already exists — {dup_by_trend.name}")
+        print(f"      Same trend = same product. Skipping Stage 3.")
+        print(f"      Use --force-draft to override.")
+        if "--force-draft" not in sys.argv:
             return 0
 
     # 4. Stage 3: Generate Draft
