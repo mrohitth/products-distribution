@@ -893,13 +893,16 @@ def _preprocess_for_pdf(md_text):
     #  - H1 that starts with "Part N:" or "Day N" or "Step N" → H2 (major section, gets page break)
     #  - All other H1 (conceptual section openers like "The Floppy Paradox") → H2
     #  - After processing: any H2 that is NOT a "Part N:" or "Day N" section → H3 (subsection)
+    #  - First H1 (title) → add page break after so content starts on page 2
     lines = md_text.split('\n')
     first_h1_done = False
     result_lines = []
+    title_idx = None
     for line in lines:
         is_h1 = re.match(r'^#\s+\S', line)
         if is_h1 and not first_h1_done:
             first_h1_done = True
+            title_idx = len(result_lines)
         elif is_h1 and first_h1_done:
             # Demote to H2 and title-case
             heading_text = line.lstrip('#').strip()
@@ -907,6 +910,13 @@ def _preprocess_for_pdf(md_text):
             line = f'## {title_cased}'
         result_lines.append(line)
     md_text = '\n'.join(result_lines)
+
+    # ── Page break after title (cover page) ──────────────────────────────────
+    # Insert page-break div AFTER the first H1 so content starts on page 2
+    if title_idx is not None:
+        title_lines = md_text.split('\n')
+        title_lines.insert(title_idx + 1, '<div style="page-break-after: always;"></div>')
+        md_text = '\n'.join(title_lines)
 
     # Demote non-Part, non-Day H2s to H3 (these are conceptual openers, not chapters)
     major_section_pattern = re.compile(r'^##\s+(Part\s+\d+|Day\s+\d+|Step\s+\d+)', re.IGNORECASE)
@@ -1254,6 +1264,57 @@ def main():
     return 0
 
 
+
+def stage5_production_docx(draft_path):
+    """
+    Stage 5b: Generate editable DOCX from draft markdown using pandoc.
+    Output: output/final_products/{draft_name}.docx
+    DOCX is fully editable — Mathew can make direct formatting tweaks.
+    """
+    import subprocess
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent.parent))
+    from scripts.pipeline_manager import cleanup_for_production
+
+    draft_path = Path(draft_path)
+    output_dir = Path("output/final_products")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_path = output_dir / f"{draft_path.stem}.docx"
+
+    md_content = draft_path.read_text()
+    md_content = cleanup_for_production(md_content)
+
+    # Write cleaned markdown to temp file for pandoc
+    import tempfile
+    with tempfile.NamedTemporaryFile(suffix=".md", mode="w", delete=False, encoding="utf-8") as tmp:
+        tmp.write(md_content)
+        tmp_path = tmp.name
+
+    # Convert to DOCX using pandoc
+    cmd = [
+        "pandoc", tmp_path,
+        "-o", str(output_path),
+        "--from=markdown",
+        "--to=docx",
+        "--standalone",
+        "--highlight-style=tango",
+    ]
+
+    result = subprocess.run(cmd, capture_output=True, text=True)
+
+    import os
+    os.unlink(tmp_path)
+
+    if result.returncode == 0 and output_path.exists():
+        size_kb = output_path.stat().st_size // 1024
+        print(f"✅ DOCX generated: {output_path} ({size_kb} KB)")
+        return str(output_path)
+    else:
+        print(f"❌ DOCX failed: {result.stderr[:300]}")
+        return None
+
+
+
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--pdf-only":
         # Production mode: clean + PDF + GitHub on latest draft (no MiniMax call)
@@ -1276,6 +1337,23 @@ if __name__ == "__main__":
                 create_github_release(pdf)
             else:
                 print("  ⚠️  GH_TOKEN not set — skipping GitHub sync/release")
+        sys.exit(0)
+    elif len(sys.argv) > 1 and sys.argv[1] == "--docx-only":
+        # Generate DOCX from latest draft
+        if not DRAFTS_DIR.exists():
+            print("No drafts directory")
+            sys.exit(1)
+        drafts = sorted(DRAFTS_DIR.glob("*_V1.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+        if not drafts:
+            drafts = sorted(DRAFTS_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+        if not drafts:
+            print("No drafts found")
+            sys.exit(1)
+        latest_draft = drafts[0]
+        print(f"Generating DOCX: {latest_draft.name}")
+        docx = stage5_production_docx(str(latest_draft))
+        if docx:
+            print(f"✅ {docx}")
         sys.exit(0)
     elif len(sys.argv) > 1 and sys.argv[1] == "--dry-run":
         # Preview mode: show cleaned markdown for latest draft without generating PDF

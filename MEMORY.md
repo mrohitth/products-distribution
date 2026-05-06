@@ -242,6 +242,7 @@ Human Infrastructure: [1-sentence scale thesis]
 | Stage 3 | ✅ Done (manual) | `off_switch_V1.md` |
 | Stage 4 | ✅ Done | `products/assets/` — Lemon Squeezy copy, insight post, order bump |
 | Stage 5 | ✅ Active | `scripts/pipeline_manager.py` + `products/assets/pdf_style.css` — WeasyPrint PDF with professional styling |
+| Stage 5b | ✅ Active | `stage5_production_docx()` — pandoc → editable DOCX for manual tweaks by Mathew |
 
 ### Stage 5 — PDF Production Standards
 
