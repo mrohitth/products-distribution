@@ -449,7 +449,9 @@ def sync_to_github(file_path, repo="mrohitth/products-distribution", branch="mai
         print(f"  Cloning {repo} into {REPO_DIR}...")
         try:
             clone_result = _subprocess.run(
-                ["git", "clone", f"https://github.com/{repo}.git", str(REPO_DIR)],
+                ["git", "clone",
+                 _subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True).stdout.strip(),
+                 str(REPO_DIR)],
                 capture_output=True, text=True, timeout=60,
             )
             if clone_result.returncode != 0:
@@ -458,6 +460,13 @@ def sync_to_github(file_path, repo="mrohitth/products-distribution", branch="mai
         except Exception as e:
             print(f"  ❌ sync_to_github: clone failed: {e}")
             return False
+
+    # Ensure push works: sync remote URL to match workspace (which has token embedded)
+    _subprocess.run(
+        ["git", "-C", str(REPO_DIR), "remote", "set-url", "origin",
+         _subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True).stdout.strip()],
+        capture_output=True, text=True,
+    )
 
     # Copy PDF into the repo working tree
     dest = REPO_DIR / pdf_path.name
