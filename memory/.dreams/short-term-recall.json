@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-04T04:34:51.380Z",
+  "updatedAt": "2026-05-06T14:04:09.920Z",
   "entries": {
     "memory:memory/2026-05-03.md:57:71": {
       "key": "memory:memory/2026-05-03.md:57:71",
@@ -93,6 +93,130 @@
         "swan",
         "none",
         "detected"
+      ]
+    },
+    "memory:memory/2026-05-05.md:26:54": {
+      "key": "memory:memory/2026-05-05.md:26:54",
+      "path": "memory/2026-05-05.md",
+      "startLine": 26,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "| Stage | Action | Output | |-------|--------|--------| | 1. Scout | Reddit/Quora trend hunting | `wiki/trends/YYYY-MM-DD.md` | | 2. Architect | Skeleton generation | `products/skeletons/[SLUG]_SKELETON.md` | | 3. Draft | Full V1 draft | `products/drafts/[SLUG]_V1.md` | | 4. Share | Telegram document delivery | Chat message with file paths | | 5. Production | cleanup_for_production() → WeasyPrint PDF → GitHub Release | `*.pdf` | | 6. Announce | Stage-by-stage completion with file paths + release URL | Telegram message | ### TrendScout Daily Result — 2026-05-05 (10 AM ET) - **Model:** MiniMax M2.7 · 47,569 tokens · 712 seconds · $0 marginal cost - **3 trends found:** - New Cat Heat Chaos (",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.517949166893959,
+      "maxScore": 0.517949166893959,
+      "firstRecalledAt": "2026-05-06T14:04:09.920Z",
+      "lastRecalledAt": "2026-05-06T14:04:09.920Z",
+      "queryHashes": [
+        "80ab5093d8ec"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "reddit/quora",
+        "wiki/trends/yyyy-mm-dd.md",
+        "products/skeletons",
+        "skeleton.md",
+        "products/drafts",
+        "v1.md",
+        "cleanup-for-production",
+        "stage-by-stage"
+      ]
+    },
+    "memory:memory/2026-05-04.md:39:69": {
+      "key": "memory:memory/2026-05-04.md:39:69",
+      "path": "memory/2026-05-04.md",
+      "startLine": 39,
+      "endLine": 69,
+      "source": "memory",
+      "snippet": "- [x] [T] PDF product template scaffold created - [x] [M] TrendScout ran (10:52 AM ET) — found 3 trends: 1. **Homeowner Cleaning Overwhelm** (r/Homeowners: 492↑, 682💬) — full-time workers feeling shame about never having a properly clean house 2. **Cat Bonding Imbalance** (r/CatAdvice: 445↑) — wife does everything, cat only bonds with passive husband 3. **Baby Sleep Anxiety — \"Too Good\" Sleeper** (r/Parenting: 571↑, 473💬) — parent worried baby doesn't cry when waking - Quora blocked (Cloudflare 403) — Reddit-only this cycle - Saved to wiki/trends/2026-05-04.md - `/home/mathew/.openclaw/workspace/products/template/PRODUCT_TEMPLATE.md` — 20-page digital product outline (16.7KB)",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5159127175807953,
+      "maxScore": 0.5159127175807953,
+      "firstRecalledAt": "2026-05-06T14:04:09.920Z",
+      "lastRecalledAt": "2026-05-06T14:04:09.920Z",
+      "queryHashes": [
+        "80ab5093d8ec"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "r/homeowners",
+        "full-time",
+        "r/catadvice",
+        "r/parenting",
+        "reddit-only",
+        "wiki/trends/2026-05-04.md",
+        "home/mathew",
+        "20-page"
+      ]
+    },
+    "memory:memory/2026-05-04.md:24:43": {
+      "key": "memory:memory/2026-05-04.md:24:43",
+      "path": "memory/2026-05-04.md",
+      "startLine": 24,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "- [x] [W] Influencer outreach drafts complete — 5 personalized emails in wiki/outreach/influencer_drafts.md - 5 micro-influencer archetypes analyzed (TYPE 1–5) with engagement signals and hook angles - Personalized email drafts for each using Floppy Paradox hook + observation-framing technique - Note: web_search unavailable; verified searches not possible this pass - [x] [T] Ragdoll First-Month guide drafted - `/home/mathew/.openclaw/workspace/products/drafts/ragdoll-first-month.md` — Full 3,000-5,000 word field manual (~23KB) - Emotional Hook framing: leads with fear of failure (\"Your Ragdoll deserves better than an anxious first month\") - Includes: First-week setup checklist,",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5035630732774734,
+      "maxScore": 0.5035630732774734,
+      "firstRecalledAt": "2026-05-06T14:04:09.920Z",
+      "lastRecalledAt": "2026-05-06T14:04:09.920Z",
+      "queryHashes": [
+        "80ab5093d8ec"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "micro-influencer",
+        "observation-framing",
+        "web-search",
+        "first-month",
+        "home/mathew",
+        "000-5",
+        "first-week",
+        "influencer"
+      ]
+    },
+    "memory:memory/2026-05-05.md:1:31": {
+      "key": "memory:memory/2026-05-05.md:1:31",
+      "path": "memory/2026-05-05.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "## Tasks - [x] [M] TrendScout ran — found 3 trends ## Audit Findings - [MITTY] 2026-05-05T01:17:47-04:00: RAM compaction ✅ | Consistency: PASSED | SSH fails: 0 N/A | Cron: 3 | RAM: 4390MB used / 1218MB free | ## Session Log — 2026-05-05 ### Model Switch Mid-Session - Session started on DeepSeek V4 Pro (session inherited model from before config change) - Switched to MiniMax M2.7 mid-session at 12:43 PM ET — confirmed in runtime - **Lesson:** OpenClaw picks model at session start; config changes don't hot-swap running sessions - **Fix applied:** Session model override set to `minimax/MiniMax-M2.7` explicitly ### Config Changes Applied - DeepSeek removed from gateway fallbacks (empty arr",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49725737571716305,
+      "maxScore": 0.49725737571716305,
+      "firstRecalledAt": "2026-05-06T14:04:09.920Z",
+      "lastRecalledAt": "2026-05-06T14:04:09.920Z",
+      "queryHashes": [
+        "80ab5093d8ec"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "gateway",
+        "2026-05-05t01",
+        "47-04",
+        "n/a",
+        "mid-session",
+        "m2.7",
+        "hot-swap",
+        "minimax/minimax-m2.7"
       ]
     }
   }
