@@ -1293,19 +1293,133 @@ def main():
 
 
 
+def _preprocess_for_docx(md_text):
+    """
+    DOCX-specific preprocessing: same structural normalization as PDF
+    but strips page-break divs (Word handles its own page breaks).
+    Returns the preprocessed markdown string.
+    """
+    import re
+    md_text = cleanup_for_production(md_text)
+    md_text = _preprocess_for_pdf(md_text)
+    # Strip page-break divs - Word's pagination is handled by section breaks
+    md_text = re.sub(r'<div style="[^"]*page-break[^"]*">[\s\S]*?</div>', "", md_text)
+    return md_text
+
+
+def _docx_apply_styling(doc):
+    """
+    Post-process a python-docx Document to apply visual formatting that
+    pandoc cannot handle from CSS (borders, paragraph shading, run colors).
+
+    Identification is by paragraph position + content patterns:
+      CoverTitle  - first paragraph matching document title pattern
+      PartHeading - paragraphs starting with "Part N:"
+      InsightBox  - paragraphs whose first bold run starts with "Key Takeaway/Insight"
+      QuoteBox    - paragraphs in blockquote style
+    """
+    import re
+    from docx import Document as _Doc
+    from docx.shared import Pt, RGBColor
+    from docx.oxml.ns import qn
+    from docx.oxml import OxmlElement
+
+    W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+
+    def _border_bottom(para, sz=24, color_hex="1A365D"):
+        """Add bottom border to a paragraph."""
+        pPr = para._element.get_or_add_pPr()
+        existing = pPr.find(qn("w:pBdr"))
+        if existing is not None:
+            pPr.remove(existing)
+        pBdr = OxmlElement("w:pBdr")
+        bottom = OxmlElement("w:bottom")
+        bottom.set(qn("w:val"), "single")
+        bottom.set(qn("w:sz"), str(sz))
+        bottom.set(qn("w:space"), "1")
+        bottom.set(qn("w:color"), color_hex)
+        pBdr.append(bottom)
+        pPr.append(pBdr)
+
+    def _shading(para, fill_hex):
+        """Apply paragraph background shading."""
+        pPr = para._element.get_or_add_pPr()
+        existing = pPr.find(qn("w:shd"))
+        if existing is not None:
+            pPr.remove(existing)
+        shd = OxmlElement("w:shd")
+        shd.set(qn("w:val"), "clear")
+        shd.set(qn("w:color"), "auto")
+        shd.set(qn("w:fill"), fill_hex)
+        pPr.append(shd)
+
+    def _runs_white(para):
+        for run in para.runs:
+            run.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
+
+    def _run_is_bold(run):
+        """Check if run has explicit w:b (not just style-inherited)."""
+        rPr = run._element.find(qn("w:rPr"))
+        if rPr is None:
+            return False
+        return rPr.find(qn("w:b")) is not None
+
+    PART_PAT    = re.compile(r"^Part\s+\d+:", re.IGNORECASE)
+    INSIGHT_PAT = re.compile(r"^(Key\s+(?:Takeaway|Insight))")
+
+    # CoverTitle: first non-empty Heading 1 paragraph (universal — works for all drafts)
+    applied_cover = False
+    for para in doc.paragraphs:
+        text = para.text.strip()
+        if not text:
+            continue
+
+        # 1. CoverTitle — first non-empty Heading 1 paragraph
+        if not applied_cover and para.style.name == "Heading 1":
+            para.style = doc.styles["CoverTitle"]
+            _border_bottom(para, sz=24, color_hex="1A365D")
+            applied_cover = True
+            continue
+
+        # 2. PartHeading - "Part N:" chapters
+        if PART_PAT.match(text):
+            para.style = doc.styles["PartHeading"]
+            _shading(para, "1A365D")
+            _runs_white(para)
+            for run in para.runs:
+                run.font.bold = True
+            continue
+
+        # 3. InsightBox - first bold run starts with "Key Takeaway/Insight"
+        if para.runs:
+            first = para.runs[0]
+            if _run_is_bold(first) and INSIGHT_PAT.match(first.text):
+                para.style = doc.styles["InsightBox"]
+                _shading(para, "1A365D")
+                _runs_white(para)
+                continue
+
+        # 4. QuoteBox - blockquote paragraphs from pandoc
+        if para.style.name in ("Quote", "Block Text", "QuoteBlock"):
+            para.style = doc.styles["QuoteBox"]
+            _shading(para, "F0F4F8")
+
+
 def stage5_production_docx(draft_path):
     """
-    Stage 5b: Generate editable DOCX matching the PDF structure.
-    Uses pandoc HTML→DOCX + python-docx post-processing for Word-native heading styles.
-    Heading styles applied by text matching against known heading patterns.
+    Stage 5b: Generate editable DOCX matching the PDF layout.
+
+    Pipeline:
+      1. _preprocess_for_docx() - structural normalization (same as PDF)
+      2. markdown -> HTML (markdown library)
+      3. pandoc HTML->DOCX (with reference.docx for base styles)
+      4. python-docx post-processing - XML-level borders, shading, colors
+
+    Font parity: Charter (body) + Inter (headings) via reference.docx styles.
     """
     import subprocess, tempfile, re, markdown
-    from docx import Document
-    from docx.shared import Pt
-    from docx.enum.text import WD_ALIGN_PARAGRAPH
 
     sys.path.insert(0, str(Path(__file__).parent.parent))
-    from scripts.pipeline_manager import cleanup_for_production
 
     draft_path = Path(draft_path)
     output_dir = Path("output/final_products")
@@ -1315,27 +1429,38 @@ def stage5_production_docx(draft_path):
     with open(draft_path, "r", encoding="utf-8") as f:
         md_content = f.read()
 
-    md_content = cleanup_for_production(md_content)
-    md_content = _preprocess_for_pdf(md_content)
+    # 1. Preprocess
+    md_content = _preprocess_for_docx(md_content)
 
+    # 2. Markdown -> HTML
     md = markdown.Markdown(extensions=["extra", "meta", "toc"])
     html_body = md.convert(md_content)
 
-    # Strip div.cover wrapper and page-break divs (not needed in DOCX)
-    html_body = re.sub(r'<div class="cover">\s*', '', html_body)
-    html_body = re.sub(r'\s*</div>', '', html_body)
-    html_body = re.sub(r'<div style="[^"]*page-break[^"]*">[\s\S]*?</div>', '', html_body)
+    # Strip cover div (applied by post-processing, not needed in raw HTML)
+    html_body = re.sub(r'<div class="cover">\s*', "", html_body)
+    html_body = re.sub(r'\s*</div>', "", html_body)
 
-    # Build HTML for pandoc — minimal CSS, font specs only for visual structure
-    css_text = """body { font-family: Calibri; font-size: 11pt; line-height: 1.6; }
-blockquote { font-style: italic; margin-left: 0.25in; border-left: 3pt solid #555; padding-left: 8pt; }
+    # 3. Build HTML for pandoc
+    css_text = """body {
+    font-family: Charter, Georgia, serif;
+    font-size: 11pt;
+    line-height: 1.75;
+}
+h1, h2, h3, h4 {
+    font-family: Inter, sans-serif;
+}
+blockquote {
+    font-style: italic;
+}
 """
 
     html_doc = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <style>\n{css_text}\n</style>
+  <style>
+{css_text}
+</style>
 </head>
 <body>
 {html_body}
@@ -1345,7 +1470,8 @@ blockquote { font-style: italic; margin-left: 0.25in; border-left: 3pt solid #55
     REF_DOC = WORKSPACE / "products" / "assets" / "reference.docx"
     ref_arg = ["--reference-doc", str(REF_DOC)] if REF_DOC.exists() else []
 
-    with tempfile.NamedTemporaryFile(suffix=".html", mode="w", delete=False, encoding="utf-8") as tmp:
+    with tempfile.NamedTemporaryFile(suffix=".html", mode="w",
+                                    delete=False, encoding="utf-8") as tmp:
         tmp.write(html_doc)
         tmp_path = tmp.name
 
@@ -1357,91 +1483,15 @@ blockquote { font-style: italic; margin-left: 0.25in; border-left: 3pt solid #55
     os.unlink(tmp_path)
 
     if result.returncode != 0 or not output_path.exists():
-        print(f"❌ DOCX pandoc failed: {result.stderr[:300]}")
+        print(f"DOCX pandoc failed: {result.stderr[:300]}")
         return None
 
-    # ── Post-process with python-docx to apply Word-native heading styles ────
-    # The reference DOCX structure: Title(centered) > Heading1(Part chaps) >
-    #   Heading2(sections) > Heading3(ALL CAPS sub-subs) > Heading4(mixed sub-subs)
+    # 4. python-docx post-processing
+    from docx import Document
     doc = Document(str(output_path))
-
-    # Known heading text sets (all-caps normalized for matching)
-    def norm(t):
-        return t.strip().upper()
-
-    # Heading 1: Part chapter headings
-    H1_PATTERNS = {
-        norm(p) for p in [
-            "Part 1: The Energy Audit", "Part 2: Scripts That Actually Work",
-            "Part 3:", "Part 4:", "Part 5:", "Part 6:"
-        ]
-    }
-    # Heading 2: major section headings
-    H2_PATTERNS = {
-        norm(p) for p in [
-            "Introduction: You're Not Broken", "You First, For Once",
-            'The "Where Did My Week Go" Audit', "The 20% Rule",
-            "The No Shame Saturday Protocol", "Part 1 Summary: The Energy Audit at a Glance",
-            'The "No War" Method', "The Teen Meltdown Protocol",
-            "The Homework Standoff", "The Chore War",
-            "The Screen Time Standoff", "The Body Image Conversation",
-            "Part 2 Summary: The Scripts at a Glance", "Why This Guide Exists",
-        ]
-    }
-    # Heading 3: ALL CAPS sub-section headings
-    H3_PATTERNS = {
-        norm(p) for p in [
-            "THE 72-HOUR GRID", "WHAT THE DATA USUALLY SHOWS",
-            "THE WEEK-BY-WEEK ROLLOUT", "WHY THIS WORKS",
-            "STEP 1: NAME IT", "STEP 2: PAUSE IT", "STEP 3: BOUNDARY IT",
-            "FULL PROTOCOL CHEAT SHEET", "THE CORE SCRIPT",
-            'WHEN THEY SAY "I DON\'T CARE ABOUT SCHOOL"',
-            "WHEN THEY HAVE ADHD OR EXECUTIVE FUNCTION ISSUES",
-            'THE "ONCE" RULE', "THE LONG GAME: OWNERSHIP TRANSFER",
-            "WHEN THEY PUSH BACK", "SCREEN TIME AS SELF-PROTECTION",
-            'THE FIRST "I HATE MY BODY" SCRIPT', "WHAT NOT TO SAY (AND WHY)",
-            "THE BRA SHOPPING SCRIPT", "LONG-TERM: THE MEDIA LITERACY CONVERSATION",
-        ]
-    }
-    def is_h4_heading(text):
-        """Heading 4 classification: short THIS IS / THIS ISN'T, RULE:, etc."""
-        n = text.strip().upper()
-        if n.startswith('RULE:'):  return True
-        if n.startswith(("HERE'S HOW", "THE RULES:", "YOU ALREADY KNOW")):  return True
-        # Short "This is..." — must be brief, no em-dash, no "called" pattern
-        if n.startswith('THIS IS') and len(text) <= 70 and '—' not in text and ' called ' not in text.lower():
-            return True
-        # Short "This isn't..." — must be brief, no em-dash
-        if n.startswith("THIS ISN'T") and len(text) <= 65 and '—' not in text:
-            return True
-        return False
-
-    title_applied = False
-    for para in doc.paragraphs:
-        text = para.text.strip()
-        if not text:
-            continue
-
-        n = norm(text)
-
-        # Title: first paragraph starting with document title phrase
-        if not title_applied and n.startswith("YOU FIRST"):
-            para.style = doc.styles["Title"]
-            para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            title_applied = True
-        elif n in H1_PATTERNS:
-            para.style = doc.styles["Heading 1"]
-        elif n in H2_PATTERNS:
-            para.style = doc.styles["Heading 2"]
-        elif n in H3_PATTERNS:
-            para.style = doc.styles["Heading 3"]
-        elif is_h4_heading(text):
-            para.style = doc.styles["Heading 4"]
-
+    _docx_apply_styling(doc)
     doc.save(str(output_path))
+
     size_kb = output_path.stat().st_size // 1024
-    print(f"✅ DOCX generated: {output_path} ({size_kb} KB)")
+    print(f"DOCX generated: {output_path} ({size_kb} KB)")
     return str(output_path)
-
-
-
