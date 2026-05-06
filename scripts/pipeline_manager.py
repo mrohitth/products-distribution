@@ -37,6 +37,66 @@ def get_minimax_credentials(cfg):
     }
 
 
+def check_existing_skeleton(topic_title, skeletons_dir):
+    """
+    Stage 2 dedup: Check if a skeleton already exists for this topic.
+    Returns (existing_path, "skeleton") if found, else (None, None).
+    Uses topic title similarity via slug overlap.
+    """
+    import difflib
+    if not skeletons_dir.exists():
+        return None, None
+    incoming_slug = slugify(topic_title)
+    for existing in skeletons_dir.glob("*_SKELETON.md"):
+        existing_slug = existing.stem.replace("_SKELETON", "")
+        # Exact slug match
+        if incoming_slug == existing_slug:
+            return existing, "skeleton"
+        # Fuzzy title match (Levenshtein-like)
+        sim = difflib.SequenceMatcher(None, incoming_slug, existing_slug).ratio()
+        if sim > 0.75:
+            return existing, "skeleton"
+    return None, None
+
+
+def check_existing_draft(slug, drafts_dir):
+    """
+    Stage 3 dedup: Check if a draft already exists for this slug.
+    Returns (existing_path, "draft") if found, else (None, None).
+    Looks for {slug}_V*.md (canonical V1, V2, _FINAL, etc.).
+    """
+    if not drafts_dir.exists():
+        return None, None
+    for draft_file in drafts_dir.glob("*.md"):
+        draft_slug = draft_file.stem
+        # Strip version suffixes to get base slug
+        base_slug = re.sub(r'_V(\d+|_FINAL|_v\d+)$', '', draft_slug)
+        if base_slug == slug:
+            return draft_file, "draft"
+    return None, None
+
+
+def normalize_to_canonical(drafts_dir, slug, source_path):
+    """
+    Move any existing canonical version of this slug to archive/.
+    Renames _FINAL, _V2, _v2 → _V1 as the canonical form.
+    archive/ is created inside drafts_dir.
+    """
+    archive_dir = drafts_dir / "archive"
+    archive_dir.mkdir(parents=True, exist_ok=True)
+
+    # Find all versions of this slug
+    for existing in drafts_dir.glob(f"{slug}_*.md"):
+        stem = existing.stem
+        # Already canonical
+        if re.search(r'_V\d+$', stem):
+            # Archive it (newer version coming)
+            dest = archive_dir / existing.name
+            import shutil
+            shutil.move(str(existing), str(dest))
+            print(f"  Archive: {existing.name} → archive/")
+
+
 def find_latest_trends():
     """Find the most recent status: scored trends file."""
     if not TRENDS_DIR.exists():
@@ -857,27 +917,59 @@ def main():
     top["score"] = top.get("score", "8")
     print(f"  Top trend: {top['title']} ({top['score']}/10)")
     
+    # 2b. Stage 2 dedup check
+    dup_skeleton, dup_type = check_existing_skeleton(top["title"], SKELETONS_DIR)
+    if dup_skeleton:
+        print(f"  ℹ️  Skeleton already exists for '{top['title']}' — {dup_skeleton.name}")
+        print(f"      Skipping Stage 2. Use --force-skeleton to override.")
+        if "--force-skeleton" not in sys.argv:
+            # Skip to Stage 3 if skeleton exists, but check for draft too
+            dup_draft, _ = check_existing_draft(slug, DRAFTS_DIR)
+            if dup_draft:
+                print(f"  ℹ️  Draft also exists — {dup_draft.name}")
+                print(f"      Nothing to do. Exiting.")
+                return 0
+            skeleton_text = dup_skeleton.read_text()
+        else:
+            skeleton_text = None
+    else:
+        skeleton_text = None
+
     # 3. Stage 2: Generate Skeleton
-    print(f"  Stage 2: Generating skeleton...")
-    skeleton = generate_skeleton(creds, top)
-    if not skeleton:
-        print("  ERROR: Skeleton generation failed")
-        return 1
-    
-    slug = slugify(top["title"])
-    skeleton_path = SKELETONS_DIR / f"{slug}_SKELETON.md"
-    SKELETONS_DIR.mkdir(parents=True, exist_ok=True)
-    skeleton_path.write_text(skeleton)
-    print(f"  Skeleton saved: {skeleton_path}")
-    
+    if not skeleton_text:
+        print(f"  Stage 2: Generating skeleton...")
+        skeleton = generate_skeleton(creds, top)
+        if not skeleton:
+            print("  ERROR: Skeleton generation failed")
+            return 1
+
+        slug = slugify(top["title"])
+        skeleton_path = SKELETONS_DIR / f"{slug}_SKELETON.md"
+        SKELETONS_DIR.mkdir(parents=True, exist_ok=True)
+        skeleton_path.write_text(skeleton)
+        print(f"  Skeleton saved: {skeleton_path}")
+        skeleton_text = skeleton
+
+    # 3b. Stage 3 dedup check
+    dup_draft, _ = check_existing_draft(slug, DRAFTS_DIR)
+    if dup_draft:
+        print(f"  ℹ️  Draft already exists — {dup_draft.name}")
+        print(f"      Skipping Stage 3. Use --force-draft to override.")
+        if "--force-draft" not in sys.argv:
+            print(f"      Pipeline complete (dedup). Run with --force-draft to regenerate.")
+            return 0
+
     # 4. Stage 3: Generate Draft
     print(f"  Stage 3: Generating draft...")
-    draft = generate_draft(creds, top, skeleton)
+    draft = generate_draft(creds, top, skeleton_text)
     if not draft:
         print("  WARNING: Draft generation failed — skeleton available")
-        send_report(top, str(skeleton_path), "FAILED")
+        send_report(top, str(skeleton_path if 'skeleton_path' in dir() else SKELETONS_DIR / f"{slug}_SKELETON.md"), "FAILED")
         return 1
-    
+
+    # Normalize: archive any existing canonical version before writing new one
+    normalize_to_canonical(DRAFTS_DIR, slug, None)
+
     draft_path = DRAFTS_DIR / f"{slug}_V1.md"
     DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
     draft_path.write_text(draft)
