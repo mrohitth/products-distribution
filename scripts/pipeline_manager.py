@@ -1295,15 +1295,11 @@ def main():
 
 def stage5_production_docx(draft_path):
     """
-    Stage 5b: Generate editable DOCX from the EXACT same HTML used for the PDF.
-    This ensures DOCX formatting matches PDF exactly — same heading styles,
-    same cover layout, same page breaks. Uses pandoc to convert HTML→DOCX.
+    Stage 5b: Generate editable DOCX using the EXACT same HTML as the PDF.
+    Uses pandoc --reference-doc to apply Word-native heading styles.
+    Heading mapping: h1→Title(Heading1) h2→Heading2 h3→Heading3 h4→Heading4
     """
-    import subprocess
-    import tempfile
-    import re
-    import markdown
-    import weasyprint
+    import subprocess, tempfile, re, markdown
     sys.path.insert(0, str(Path(__file__).parent.parent))
     from scripts.pipeline_manager import cleanup_for_production
 
@@ -1312,7 +1308,6 @@ def stage5_production_docx(draft_path):
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{draft_path.stem}.docx"
 
-    # ── Build the EXACT same HTML as stage5_production_weasyprint ──────────────
     with open(draft_path, "r", encoding="utf-8") as f:
         md_content = f.read()
 
@@ -1322,15 +1317,21 @@ def stage5_production_docx(draft_path):
     md = markdown.Markdown(extensions=["extra", "meta", "toc"])
     html_body = md.convert(md_content)
 
-    # ── Wrap first h1 in div.cover (same as PDF stage5) ───────────────────────
-    first_h1_match = re.search(r'(<h1[^>]*>.*?</h1>)', html_body, re.DOTALL)
-    if first_h1_match:
-        wrapped = f'<div class="cover">\n{first_h1_match.group(1)}\n</div>'
-        html_body = html_body[:first_h1_match.start()] + wrapped + html_body[first_h1_match.end():]
+    # ── Strip div.cover wrapper (not needed for DOCX, keep the h1) ────────────
+    html_body = re.sub(r'<div class="cover">\s*', '', html_body)
+    html_body = re.sub(r'\s*</div>', '', html_body)
 
-    # ── Read CSS and build full HTML document ──────────────────────────────────
-    CSS_PATH = WORKSPACE / "products" / "assets" / "pdf_style.css"
-    css_text = CSS_PATH.read_text()
+    # ── Build HTML for pandoc conversion ──────────────────────────────────────
+    # Font specs only — pandoc applies reference.docx heading styles for hierarchy
+    css_text = """body { font-family: Calibri; font-size: 11pt; line-height: 1.6; }
+h1 { font-family: Tahoma; font-size: 28pt; font-weight: bold; text-align: center; }
+h2 { font-family: Tahoma; font-size: 16pt; font-weight: bold; color: #1A365D; }
+h3 { font-family: Tahoma; font-size: 14pt; font-weight: bold; }
+h4 { font-family: Tahoma; font-size: 12pt; font-weight: bold; }
+blockquote { font-style: italic; margin-left: 0.25in; border-left: 3pt solid #555; padding-left: 8pt; }
+.callout-insight, .callout-takeaway { font-weight: bold; }
+"""
+
     html_doc = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1342,16 +1343,17 @@ def stage5_production_docx(draft_path):
 </body>
 </html>"""
 
-    # ── Write HTML to temp file and convert to DOCX via pandoc ────────────────
+    REF_DOC = WORKSPACE / "products" / "assets" / "reference.docx"
+    ref_arg = ["--reference-doc", str(REF_DOC)] if REF_DOC.exists() else []
+
     with tempfile.NamedTemporaryFile(suffix=".html", mode="w", delete=False, encoding="utf-8") as tmp:
         tmp.write(html_doc)
         tmp_path = tmp.name
 
-    result = subprocess.run(
-        ["pandoc", tmp_path, "-o", str(output_path), "--from=html", "--to=docx"],
-        capture_output=True, text=True
-    )
+    cmd = ["pandoc", tmp_path, "-o", str(output_path),
+           "--from=html", "--to=docx"] + ref_arg
 
+    result = subprocess.run(cmd, capture_output=True, text=True)
     import os
     os.unlink(tmp_path)
 
@@ -1365,85 +1367,3 @@ def stage5_production_docx(draft_path):
 
 
 
-if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "--pdf-only":
-        # Production mode: clean + PDF + GitHub on latest draft (no MiniMax call)
-        if not DRAFTS_DIR.exists():
-            print("No drafts directory")
-            sys.exit(1)
-        drafts = sorted(DRAFTS_DIR.glob("*_V1.md"), key=lambda p: p.stat().st_mtime, reverse=True)
-        if not drafts:
-            drafts = sorted(DRAFTS_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
-        if not drafts:
-            print("No drafts found")
-            sys.exit(1)
-        latest_draft = drafts[0]
-        print(f"Processing: {latest_draft.name}")
-        pdf = stage5_production_weasyprint(str(latest_draft))
-        if pdf:
-            gh_token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
-            if gh_token:
-                sync_to_github(pdf)
-                create_github_release(pdf)
-            else:
-                print("  ⚠️  GH_TOKEN not set — skipping GitHub sync/release")
-        sys.exit(0)
-    elif len(sys.argv) > 1 and sys.argv[1] == "--docx-only":
-        # Generate DOCX from latest draft
-        if not DRAFTS_DIR.exists():
-            print("No drafts directory")
-            sys.exit(1)
-        drafts = sorted(DRAFTS_DIR.glob("*_V1.md"), key=lambda p: p.stat().st_mtime, reverse=True)
-        if not drafts:
-            drafts = sorted(DRAFTS_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
-        if not drafts:
-            print("No drafts found")
-            sys.exit(1)
-        latest_draft = drafts[0]
-        print(f"Generating DOCX: {latest_draft.name}")
-        docx = stage5_production_docx(str(latest_draft))
-        if docx:
-            print(f"✅ {docx}")
-        sys.exit(0)
-    elif len(sys.argv) > 1 and sys.argv[1] == "--dry-run":
-        # Preview mode: show cleaned markdown for latest draft without generating PDF
-        if not DRAFTS_DIR.exists():
-            print("No drafts directory")
-            sys.exit(1)
-        drafts = sorted(DRAFTS_DIR.glob("*_V1.md"), key=lambda p: p.stat().st_mtime, reverse=True)
-        if not drafts:
-            drafts = sorted(DRAFTS_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
-        if not drafts:
-            print("No drafts found")
-            sys.exit(1)
-        latest = drafts[0]
-        raw = latest.read_text()
-        cleaned = cleanup_for_production(raw, dry_run=True)
-        out = WORKSPACE / "output" / "final_products" / f"PREVIEW_{latest.stem}.md"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(cleaned)
-        print(f"  Preview saved: {out}")
-        print(f"  Original: {len(raw)} bytes → Cleaned: {len(cleaned)} bytes")
-        print(f"  Lines: {cleaned.count(chr(10))}")
-        sys.exit(0)
-    elif len(sys.argv) > 1 and sys.argv[1] == "--share-only":
-        # Share mode: find latest draft and send via Telegram
-        if not DRAFTS_DIR.exists():
-            print("No drafts directory")
-            sys.exit(1)
-        drafts = sorted(DRAFTS_DIR.glob("*_V1.md"), key=lambda p: p.stat().st_mtime, reverse=True)
-        if not drafts:
-            print("No drafts found")
-            sys.exit(1)
-        latest = drafts[0]
-        cfg = load_config()
-        creds = get_minimax_credentials(cfg)
-        result = send_draft_via_telegram(str(latest), creds)
-        if result:
-            print(f"✅ Shared: {latest.name}")
-            sys.exit(0)
-        else:
-            print(f"❌ Failed to share: {latest.name}")
-            sys.exit(1)
-    else:
-        sys.exit(main())
