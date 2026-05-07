@@ -618,8 +618,8 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
             print(f"  ✅ Asset uploaded: {asset_url}")
     except urllib.error.HTTPError as e:
         err_body = e.read().decode("utf-8")
-        if e.code == 422:
-            # Asset exists — delete and re-upload
+        if e.code == 422 and "already exists" in err_body.lower():
+            # Same 422 retry as above
             list_req = urllib.request.Request(
                 f"{api_base}/releases/{release_data['id']}/assets",
                 headers=headers,
@@ -636,7 +636,6 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
                         except Exception:
                             pass
                         break
-            # Retry
             upload_req = urllib.request.Request(
                 f"{upload_url}?name={pdf.name}",
                 data=file_bytes,
@@ -644,6 +643,7 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
                     "Authorization": f"Bearer {gh_token}",
                     "Content-Type": "application/octet-stream",
                     "Content-Length": str(file_size),
+                    "Accept": "application/vnd.github.v3+json",
                 },
                 method="POST",
             )
