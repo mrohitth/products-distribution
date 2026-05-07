@@ -406,18 +406,16 @@ def send_draft_via_telegram(draft_path, creds):
         return None
 
 
-def sync_to_github(file_path, repo="mrohitth/products-distribution", branch="main"):
+def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-distribution", branch="main"):
     """
-    Phase 1: Git integration for versioned release archival.
-    Runs after Stage 5 Pandoc conversion.
+    Push both PDF and HTML products to the products-distribution repo.
 
-    Logic:
-      - Stages the PDF via git add
-      - Commits with annotated message: "prod: release v{version} for {slug}"
-      - Pushes to the target repository
+    Both files land in: products/{slug}/
+    No GitHub releases, no tags. Just files committed to the repo.
 
     Args:
-        file_path: Absolute path to the generated PDF
+        pdf_path: Absolute path to the PDF file
+        html_path: Absolute path to the HTML file (optional — skips if not found)
         repo: Target GitHub repo in "owner/repo" format
         branch: Target branch (default: main)
 
@@ -425,74 +423,94 @@ def sync_to_github(file_path, repo="mrohitth/products-distribution", branch="mai
         True on success, False on failure
     """
     import subprocess as _subprocess
+    import shutil
 
-    pdf_path = Path(file_path)
-    if not pdf_path.exists():
-        print(f"  ❌ sync_to_github: file not found: {file_path}")
+    pdf_file = Path(pdf_path)
+    if not pdf_file.exists():
+        print(f"  ❌ sync_products_to_github: PDF not found: {pdf_path}")
         return False
 
-    slug = pdf_path.stem  # e.g. "off_switch_V1"
-    # Extract version from slug (expects *_V{n} format)
+    slug = pdf_file.stem  # e.g. "off_switch_V1"
     version_match = re.search(r'_V(\d+)$', slug)
     version = version_match.group(1) if version_match else "1"
 
-    # Build commit message
-    commit_msg = f"prod: release v{version} for {slug}"
-
-    # Use GIT_WORK_TREE to push from output dir to the target repo
-    # Assumes the repo is cloned at OUTPUT_DIR/repos/products-distribution
     OUTPUT_DIR = WORKSPACE / "output"
     REPO_DIR = OUTPUT_DIR / "repos" / repo.replace("/", "_")
 
-    # Ensure the bare repo checkout exists
-    if not REPO_DIR.exists():
-        print(f"  Cloning {repo} into {REPO_DIR}...")
-        try:
-            clone_result = _subprocess.run(
-                ["git", "clone",
-                 _subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True).stdout.strip(),
-                 str(REPO_DIR)],
+    # Clone or update the repo
+    try:
+        if REPO_DIR.exists():
+            _subprocess.run(
+                ["git", "-C", str(REPO_DIR), "fetch", "origin", branch],
+                capture_output=True, text=True, timeout=30,
+            )
+        else:
+            remote_url = _subprocess.run(
+                ["git", "remote", "get-url", "origin"], capture_output=True, text=True
+            ).stdout.strip()
+            _subprocess.run(
+                ["git", "clone", "--filter=blob:none", "--no-checkout", remote_url, str(REPO_DIR)],
                 capture_output=True, text=True, timeout=60,
             )
-            if clone_result.returncode != 0:
-                print(f"  ⚠️  Clone failed: {clone_result.stderr[:200]}")
-                return False
-        except Exception as e:
-            print(f"  ❌ sync_to_github: clone failed: {e}")
-            return False
+        remote_url = _subprocess.run(
+            ["git", "remote", "get-url", "origin"], capture_output=True, text=True
+        ).stdout.strip()
+        _subprocess.run(
+            ["git", "-C", str(REPO_DIR), "remote", "set-url", "origin", remote_url],
+            capture_output=True, text=True,
+        )
+    except Exception as e:
+        print(f"  ❌ sync_products_to_github: clone/fetch failed: {e}")
+        return False
 
-    # Ensure push works: sync remote URL to match workspace (which has token embedded)
-    _subprocess.run(
-        ["git", "-C", str(REPO_DIR), "remote", "set-url", "origin",
-         _subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True).stdout.strip()],
-        capture_output=True, text=True,
-    )
+    # Copy files into products/{slug}/ subfolder
+    products_dir = REPO_DIR / "products" / slug
+    products_dir.mkdir(parents=True, exist_ok=True)
 
-    # Copy PDF into the repo working tree
-    dest = REPO_DIR / pdf_path.name
-    import shutil
-    shutil.copy2(str(pdf_path), str(dest))
+    shutil.copy2(str(pdf_file), str(products_dir / pdf_file.name))
+    files_synced = [pdf_file.name]
 
-    # Stage, commit, push
-    cmds = [
-        ["git", "-C", str(REPO_DIR), "add", pdf_path.name],
-        ["git", "-C", str(REPO_DIR), "commit", "-m", commit_msg],
-        ["git", "-C", str(REPO_DIR), "push", "origin", branch],
-    ]
-    for cmd in cmds:
-        result = _subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+    if html_path:
+        html_file = Path(html_path)
+        if html_file.exists():
+            shutil.copy2(str(html_file), str(products_dir / html_file.name))
+            files_synced.append(html_file.name)
+        else:
+            print(f"  ⚠️  HTML not found — skipping: {html_path}")
+
+    commit_msg = f"prod: release v{version} for {slug} — {', '.join(files_synced)}"
+    try:
+        _subprocess.run(
+            ["git", "-C", str(REPO_DIR), "add"] + [str(products_dir / f) for f in files_synced],
+            capture_output=True, text=True,
+        )
+        result = _subprocess.run(
+            ["git", "-C", str(REPO_DIR), "commit", "-m", commit_msg],
+            capture_output=True, text=True,
+        )
+        if "nothing to commit" in (result.stdout + result.stderr):
+            print(f"  ℹ️  No changes — {slug} already synced")
+            return True
+        result = _subprocess.run(
+            ["git", "-C", str(REPO_DIR), "push", "origin", branch],
+            capture_output=True, text=True, timeout=30,
+        )
         if result.returncode != 0:
-            # Check if it's a "nothing to commit" case — not an error
-            if "nothing to commit" in result.stdout or "nothing to commit" in result.stderr:
-                print(f"  ℹ️  Nothing to commit — {slug} already synced")
-                return True
-            print(f"  ❌ sync_to_github failed: {' '.join(cmd)}")
-            print(f"     {result.stderr[:200]}")
+            print(f"  ❌ sync_products_to_github push failed: {result.stderr[:200]}")
             return False
+    except Exception as e:
+        print(f"  ❌ sync_products_to_github commit/push failed: {e}")
+        return False
 
-    print(f"  ✅ Synced {pdf_path.name} → {repo}:{branch} | commit: {commit_msg}")
+    products_url = f"https://github.com/{repo}/tree/main/products/{slug}"
+    print(f"  ✅ Synced {', '.join(files_synced)} → products/{slug}/ | {products_url}")
     return True
 
+
+# Alias for backward compatibility
+def sync_to_github(file_path, repo="mrohitth/products-distribution", branch="main"):
+    """Alias: forwards to sync_products_to_github (no HTML in old single-file path)."""
+    return sync_products_to_github(file_path, None, repo, branch)
 
 def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=None, title=None, body=None):
     """
@@ -1498,11 +1516,12 @@ def main():
         # Fallback to Pandoc if WeasyPrint fails
         pdf_path = stage5_production(str(draft_path))
 
-    # 5b. Phase 1: GitHub archival + Release (versioned permanent URL)
+    # 5b. Push products to GitHub (both PDF + HTML in products/{slug}/)
     if pdf_path:
-        print(f"  Phase 1: Archiving to GitHub...")
-        sync_to_github(pdf_path)
-        create_github_release(pdf_path)
+        print(f"  Phase 1: Syncing products to GitHub...")
+        # HTML shares the same slug: off_switch_V1_editable.html
+        html_path = str(Path(pdf_path).parent / (Path(pdf_path).stem + "_editable.html"))
+        sync_products_to_github(pdf_path, html_path)
     else:
         print(f"  Phase 1: Skipped — no PDF generated")
 

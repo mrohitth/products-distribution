@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-06T14:04:09.920Z",
+  "updatedAt": "2026-05-07T15:10:27.612Z",
   "entries": {
     "memory:memory/2026-05-03.md:57:71": {
       "key": "memory:memory/2026-05-03.md:57:71",
@@ -102,18 +102,21 @@
       "endLine": 54,
       "source": "memory",
       "snippet": "| Stage | Action | Output | |-------|--------|--------| | 1. Scout | Reddit/Quora trend hunting | `wiki/trends/YYYY-MM-DD.md` | | 2. Architect | Skeleton generation | `products/skeletons/[SLUG]_SKELETON.md` | | 3. Draft | Full V1 draft | `products/drafts/[SLUG]_V1.md` | | 4. Share | Telegram document delivery | Chat message with file paths | | 5. Production | cleanup_for_production() → WeasyPrint PDF → GitHub Release | `*.pdf` | | 6. Announce | Stage-by-stage completion with file paths + release URL | Telegram message | ### TrendScout Daily Result — 2026-05-05 (10 AM ET) - **Model:** MiniMax M2.7 · 47,569 tokens · 712 seconds · $0 marginal cost - **3 trends found:** - New Cat Heat Chaos (",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.517949166893959,
+      "totalScore": 1.4002841144800184,
       "maxScore": 0.517949166893959,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-06T14:04:09.920Z",
+      "lastRecalledAt": "2026-05-07T15:10:27.612Z",
       "queryHashes": [
-        "80ab5093d8ec"
+        "80ab5093d8ec",
+        "b3681c4771d8",
+        "ea19aa0c9aae"
       ],
       "recallDays": [
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-07"
       ],
       "conceptTags": [
         "reddit/quora",
@@ -133,15 +136,16 @@
       "endLine": 69,
       "source": "memory",
       "snippet": "- [x] [T] PDF product template scaffold created - [x] [M] TrendScout ran (10:52 AM ET) — found 3 trends: 1. **Homeowner Cleaning Overwhelm** (r/Homeowners: 492↑, 682💬) — full-time workers feeling shame about never having a properly clean house 2. **Cat Bonding Imbalance** (r/CatAdvice: 445↑) — wife does everything, cat only bonds with passive husband 3. **Baby Sleep Anxiety — \"Too Good\" Sleeper** (r/Parenting: 571↑, 473💬) — parent worried baby doesn't cry when waking - Quora blocked (Cloudflare 403) — Reddit-only this cycle - Saved to wiki/trends/2026-05-04.md - `/home/mathew/.openclaw/workspace/products/template/PRODUCT_TEMPLATE.md` — 20-page digital product outline (16.7KB)",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5159127175807953,
+      "totalScore": 0.96810764670372,
       "maxScore": 0.5159127175807953,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-06T14:04:09.920Z",
+      "lastRecalledAt": "2026-05-07T01:33:48.391Z",
       "queryHashes": [
-        "80ab5093d8ec"
+        "80ab5093d8ec",
+        "b3681c4771d8"
       ],
       "recallDays": [
         "2026-05-06"
@@ -217,6 +221,162 @@
         "m2.7",
         "hot-swap",
         "minimax/minimax-m2.7"
+      ]
+    },
+    "memory:memory/2026-05-04.md:109:128": {
+      "key": "memory:memory/2026-05-04.md:109:128",
+      "path": "memory/2026-05-04.md",
+      "startLine": 109,
+      "endLine": 128,
+      "source": "memory",
+      "snippet": "- [x] [K] CrossRef backlog clear: fixed model allowlist, ran TrendScout_Daily ✅ (10:52 AM ET, 3 trends) - [x] [K] 11:15 AM Rule executed: CrossRef timed out → Bitty fallback triggered ✅ - [x] [B] Baby Sleep Decoder — naming + draft complete (362 lines, 16KB) via llama3.2:3b local ## Budget Sentinel — Deployed - **Script:** `bitty_budget_sentinel.py` — polls KATZEN `/api/usage/sessions` every 5 min - **Alert threshold:** 15M input tokens/session/rolling 60 min → Telegram alert (30-min cooldown) - **Auto-compact threshold:** 10M input tokens/session → `sessions_send` compact trigger (10-min cooldown) - **New KATZEN endpoint:** `/api/usage/sessions` — returns per-session token breakdown - **Co",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9129891663789749,
+      "maxScore": 0.4673651903867721,
+      "firstRecalledAt": "2026-05-07T01:33:48.391Z",
+      "lastRecalledAt": "2026-05-07T02:15:53.553Z",
+      "queryHashes": [
+        "b3681c4771d8",
+        "3396403eb553"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "trendscout-daily",
+        "llama3.2",
+        "bitty-budget-sentinel.py",
+        "api/usage/sessions",
+        "tokens/session/rolling",
+        "30-min",
+        "auto-compact",
+        "tokens/session"
+      ]
+    },
+    "memory:memory/2026-05-05.md:69:79": {
+      "key": "memory:memory/2026-05-05.md:69:79",
+      "path": "memory/2026-05-05.md",
+      "startLine": 69,
+      "endLine": 79,
+      "source": "memory",
+      "snippet": "**Note:** Health pulse log has only 3 entries — Mitty's VRAM monitor cron may not be running at expected frequency. Not a Kaizen item yet — would need >2 occurrences to trigger. ### MarketBot v2 — Live Verified ✅ (2026-05-05 Evening) - **Portfolio:** All 10 holdings (VTI, NVDA, VOO, QQQ, SMH, SCHG, VXUS, SCHD, SPYD, ASTS) - **Macro fetched:** SPY, QQQ, TLT, GLD (DXY failed — fallback to last-known) - **Sector sweep:** 20 semi/tech stocks for Profit Maximizer - **Data source:** Yahoo Finance via yahoo-finance2 (no API key needed) - **Live test output:** 10 portfolio tickers + 4 macro + 20 sector all fetched; 9 rebalance recommendations generated; Profit Maximizer: no setups (normal) - **File",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4600136160850525,
+      "maxScore": 0.4600136160850525,
+      "firstRecalledAt": "2026-05-07T02:15:53.553Z",
+      "lastRecalledAt": "2026-05-07T02:15:53.553Z",
+      "queryHashes": [
+        "3396403eb553"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "last-known",
+        "semi/tech",
+        "yahoo-finance2",
+        "health",
+        "pulse",
+        "log",
+        "has",
+        "only"
+      ]
+    },
+    "memory:memory/2026-05-03.md:49:71": {
+      "key": "memory:memory/2026-05-03.md:49:71",
+      "path": "memory/2026-05-03.md",
+      "startLine": 49,
+      "endLine": 71,
+      "source": "memory",
+      "snippet": "- [x] [K] MarketBot portfolio.json updated with real share counts and prices (2026-05-03T16:41:49.297421Z) - [x] [K] OPERATING.md updated to reflect Telegram delivery (not WhatsApp) (2026-05-03T16:41:49.297421Z) - [x] [K] USER.md portfolio section updated with all 10 positions (2026-05-03T16:41:49.297421Z) - [x] [K] Trigger Capital Pilot cron job manually for testing (2026-05-03T16:41:49.297421Z) - [x] [K] Update portfolio.json with real positions from Fidelity screenshot (2026-05-03T16:41:49.297421Z) - [x] [K] Update portfolio-context.md with full baseline (2026-05-03T16:41:49.297421Z) - [x] [K] Fix MarketBot to send via Telegram (not WhatsApp) (2026-05-03T16:41:49.297421Z) - [x] [K] Update",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4480383545160293,
+      "maxScore": 0.4480383545160293,
+      "firstRecalledAt": "2026-05-07T02:15:53.553Z",
+      "lastRecalledAt": "2026-05-07T02:15:53.553Z",
+      "queryHashes": [
+        "3396403eb553"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "portfolio.json",
+        "2026-05-03t16",
+        "49.297421z",
+        "operating.md",
+        "user.md",
+        "portfolio-context.md",
+        "marketbot",
+        "updated"
+      ]
+    },
+    "memory:memory/2026-05-05.md:48:74": {
+      "key": "memory:memory/2026-05-05.md:48:74",
+      "path": "memory/2026-05-05.md",
+      "startLine": 48,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "3. **Kaizen/Katzen** — if a pattern repeats 3+ times, automate it; fix root causes not symptoms 4. **Surface problems early** — report failures with error + attempted fix + next scheduled attempt ### Memory Flush - **Time:** 2026-05-05T12:43:00-04:00 (America/New_York) - **Session:** Compacted summary stored; workspace reference files preserved as read-only ## Kaizen Analysis (Evening — 2026-05-05 6:05 PM EDT) **KITTY: No Kaizen ideas — alerts were clean yesterday (May 4).** Alerts reviewed: Health pulse log (3 entries, all HEALTH_OK), yesterday's memory log (2026-05-04.md), session audit for DeepSeek cost. - **Health pulse:** Only 3 entries logged in last 24h (RAM=46-49%, no spikes >85",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.44150367975234983,
+      "maxScore": 0.44150367975234983,
+      "firstRecalledAt": "2026-05-07T02:15:53.553Z",
+      "lastRecalledAt": "2026-05-07T02:15:53.553Z",
+      "queryHashes": [
+        "3396403eb553"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "kaizen/katzen",
+        "2026-05-05t12",
+        "00-04",
+        "america/new-york",
+        "read-only",
+        "health-ok",
+        "46-49",
+        "kaizen"
+      ]
+    },
+    "memory:memory/2026-05-07.md:76:107": {
+      "key": "memory:memory/2026-05-07.md:76:107",
+      "path": "memory/2026-05-07.md",
+      "startLine": 76,
+      "endLine": 107,
+      "source": "memory",
+      "snippet": "**DeepSeek Audit:** ❌ **PAYG BURN ALERT** — Capital Pilot (id: 3276d08a-d2df-416c-a2d8-8addd81453ed) still specifies `deepseek/deepseek-chat-v4-flash` in its cron payload despite AGENTS.md v5 routing rules routing all cloud to MiniMax-M2.7. This is legacy config burning PAYG credits. **Kaizen Idea #1 (Repeat Errors > 2 occurrences):** | Field | Value | |-------|-------| | **Title** | Stale Session State Causes MarketBot Multi-File Edit Collisions | | **Root Cause** | 3 simultaneous edit failures in MarketBot files — consistent with stale session state or concurrent edits. The `edit` tool calls encountered text mismatches because the session had outdated file content. | | **Proposed Fix** |",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4858928173780441,
+      "maxScore": 0.4858928173780441,
+      "firstRecalledAt": "2026-05-07T14:16:16.363Z",
+      "lastRecalledAt": "2026-05-07T14:16:16.363Z",
+      "queryHashes": [
+        "b320ecedc506"
+      ],
+      "recallDays": [
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "deepseek/deepseek-chat-v4-flash",
+        "agents.md",
+        "minimax-m2.7",
+        "multi-file",
+        "deepseek",
+        "audit",
+        "payg",
+        "burn"
       ]
     }
   }

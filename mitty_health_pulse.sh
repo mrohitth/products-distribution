@@ -7,7 +7,7 @@ LOG="/home/mathew/.cache/health_pulse.log"
 SESSIONS_DIR="/home/mathew/.openclaw/agents/main/sessions"
 ALERT_RAM=75
 ALERT_DISK=85
-ALERT_SESS_MB=100
+ALERT_SESS_MB=150
 
 TIMESTAMP=$(date +%Y-%m-%dT%H:%M:%S%z)
 
