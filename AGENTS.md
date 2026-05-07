@@ -111,11 +111,56 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 | Job | Schedule | Agent | Purpose |
 |-----|----------|-------|---------|
 | Capital Pilot Daily Brief | 0 8 * * * ET | MarketBot (Node.js) | Portfolio summary to Telegram |
-| Kitty Morning Kaizen | 0 9 * * * ET | DeepSeek V4 Pro | Kaizen idea generation from alerts |
-| TrendScout Daily | 0 10 * * * ET | DeepSeek V4 Flash (Mitty) | Reddit/Quora trend scouting |
-| Witty Manifest Updater | every 15min | Python (Witty) | Katzen wiki sync |
-| Mitty VRAM Monitor | every 5min | Shell (Mitty) | GPU monitoring |
-| Mitty Security Audit | 0 23 * * * ET | Shell (Mitty) | Daily security audit |
+| Kitty Morning Kaizen | 0 9 * * * ET | MiniMax-M2.7 (isolated) | Kaizen idea generation from alerts |
+| TrendScout Daily | 0 10 * * * ET | MiniMax-M2.7 (isolated) | Reddit/Quora trend scouting -> PDF+HTML to products/ |
+| MarketBot Opportunity Scanner | every 30min | Shell (MarketBot Node) | Sector sweep, alerts on critical/high only |
+| Witty Manifest Updater | every 15min | Python (Witty) | Katzen wiki sync to manifest.json |
+| Mitty Health Pulse | every 5min | Shell (Mitty) | RAM >75%, Disk >85%, Sessions >150MB check |
+| Mitty Security Audit | 0 23 * * * ET | Shell (Mitty) | SSH, firewall, gateway, cron, RAM, disk audit |
+| Session BAK Auto-Clean | 0 2 * * * ET | Shell | Purge stale session .bak files |
+
+---
+
+## Multi-Agent Dispatch — Proper Pattern
+
+> **Core principle: Kitty dispatches sub-agents before compiling anything.**
+> Never run everything in one isolated agentTurn session.
+
+### Capital Pilot — Kitty dispatches then synthesizes
+```
+Kitty (main session)
+  -> Spawn Titty (isolated): fetch all market data, compute RSI
+  -> Spawn Witty (isolated): check market wiki for overnight catalysts
+  -> Wait for both results
+  -> Kitty synthesizes: positions + drift + setups + investor filters
+  -> Announce to Telegram
+```
+**Current:** One monolithic isolated agentTurn (Kitty does everything alone).
+**Problem:** No parallel data fetch, no inter-agent signal passing, stale file state.
+
+### TrendScout — Restore parallel sub-agent dispatch
+```
+Phase 4 dispatched simultaneously:
+  Bitty (local Ollama)  -> naming pass
+  Witty (DeepSeek Flash) -> email sequence
+  Titty (MiniMax M2.7)  -> full draft generation
+  Kitty (DeepSeek Pro)  -> checkout success page
+  PATCH /api/alerts between each step
+```
+**Current:** Single-pass TrendScout_Daily is sequential and slow.
+**Fix needed:** Restore Phase 4 parallel dispatch (TrendScout_CrossRef was the ref impl).
+
+### Witty — Market wiki post-mortem (underutilized)
+After every Capital Pilot brief, Witty should log outcomes to `wiki/market-patterns/`:
+- Setup hit target / stopped out / expired
+- RSI thresholds triggered or missed
+- Pattern to track: RSI_OVERSOLD_BOUNCE on ASTS hit in 3 days at 2.1 R/R
+
+### Mitty — Pre-market health check (underutilized)
+Add 6 AM ET scan (before 8 AM Capital Pilot):
+- Check for overnight news that might flip signals
+- Flag positions approaching black-swan thresholds to Kitty
+- Output: "NVDA approaching RSI_OVERBOUGHT — take profit window today"
 
 ---
 
