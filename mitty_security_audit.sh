@@ -94,6 +94,31 @@ else
   log "Sessions dir: ${SESS_SIZE}MB ✅"
 fi
 
+# ─── 9. Git remote embedded credential check
+check_git_creds() {
+  local repo="$1" name="$2"
+  [[ -d "$repo/.git" ]] || { log "Git creds [$name]: not a repo"; return; }
+  remote=$(git -C "$repo" remote get-url origin 2>/dev/null || echo "")
+  # Pattern: https://user:TOKEN@github.com — embedded in URL = exposed
+  if [[ -n "$remote" ]] && [[ "$remote" == *@*github.com* ]] && [[ "$remote" != git@*github.com* ]]; then
+    if [[ "$remote" =~ ://[^/]+:.+@ ]]; then
+      crit "Git creds [$name]: EMBEDDED TOKEN in remote URL"
+      crit "  Fix: git -C $repo remote set-url origin https://github.com/OWNER/REPO.git"
+    else
+      log "Git creds [$name]: HTTPS remote clean"
+    fi
+  elif [[ "$remote" == git@*github.com* ]]; then
+    log "Git creds [$name]: SSH remote clean"
+  else
+    log "Git creds [$name]: no remote configured"
+  fi
+}
+log "Git creds check: scanning workspace repos..."
+for repo_dir in /home/mathew/.openclaw/workspace /home/mathew/workspace/oasis-redesign /home/mathew/workspace/katzen /home/mathew/MarketBot; do
+  [[ -d "$repo_dir" ]] || continue
+  check_git_creds "$repo_dir" "$(basename "$repo_dir")"
+done
+
 # ─── Summary ────────────────────────────────────────────────────────────────
 log "🔒 Mitty Security Audit — END. Issues found: $FOUND_ISSUES"
 
