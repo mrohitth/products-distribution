@@ -214,17 +214,6 @@ Real-time reflection of workspace state. Tasks from `## Tasks` checkbox syntax. 
 
 ---
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 5.0 | 2026-05-05 | DeepSeek moved to PAYG — removed from auto-fallback chain. MiniMax M2.7 is sole cloud primary. Llama 3.2 3B (Bitty) replaces DeepSeek Flash for bridge operations. Heartbeat disabled (0m interval). |
-| 4.0 | 2026-05-05 | MiniMax Professional Subscription. Highspeed purged. New hierarchy: M2.7 default workhorse. DeepSeek V4 Flash as Sentinel/T3. Routing rules for >5K tokens, 121s retry, RAM gating. |
-| 3.3 | 2026-05-03 | RAM threshold 80%→70%. DeepSeek provider added. Hybrid Pro-Mini stack. |
-| 3.0 | 2026-05-03 | Full roster: Kitty (DeepSeek Pro), Witty (DeepSeek Flash), Mitty (Gemini Flash), Bitty (Llama 3.2 3B), Titty (MiniMax M2.7). |
-| 2.0 | 2026-05-03 | Full hierarchy, PoW logging, swarm coordination. |
-| 1.0 | 2026-05-03 | Initial bootstrap. |
-
 ---
 
 _Update when the crew evolves._

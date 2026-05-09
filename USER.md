@@ -53,29 +53,37 @@ _Complete profile — authoritative source for all agent context_
 ### Philosophy
 **High-conviction, research-driven, long-term horizon.** Mathew doesn't chase trends — he identifies structural shifts and positions accordingly.
 
-### Portfolio (from Fidelity screenshot — May 3, 2026)
+### Portfolio (from Fidelity — May 9, 2026)
 
-**Total Value: $43,757.84 | Total G/L: +$3,027.95 (+7.44%)**
+**Total Value: $50,102.63 | Total G/L: +$3,483.82 (+7.47%)**
 
 | Ticker | Shares | Avg Cost | Current | Market Value | G/L | Weight |
 |--------|--------|----------|---------|--------------|-----|--------|
-| VTI | 34 | $230.97 | $260.00 | $8,826.82 | +12.57% | 20.2% |
-| NVDA | 41.6 | $203.11 | $198.45 | $8,255.52 | -2.39% | 18.9% |
-| VOO | 17.1 | $402.90 | $450.00 | $7,709.08 | +11.69% | 17.6% |
-| QQQ | 9.4 | $596.86 | $674.15 | $6,309.36 | +13.14% | 14.4% |
-| SMH | 8.1 | $503.28 | $509.82 | $4,152.99 | +1.30% | 9.5% |
-| SCHG | 102.4 | $30.01 | $33.14 | $3,392.04 | +5.15% | 7.8% |
-| VXUS | 29.7 | $73.16 | $82.97 | $2,464.54 | +13.41% | 5.6% |
-| SCHD | 75.2 | $29.35 | $31.86 | $2,394.47 | +8.57% | 5.5% |
-| SPYD | 3.7 | $40.72 | $45.00 | $165.55 | +10.51% | 0.4% |
-| ASTS | 8.7 | $11.42 | $10.00 | $87.47 | -12.46% | 0.2% |
+| NVDA | 41.853 | $203.59 | $215.20 | $9,006.76 | +5.70% | 18.0% |
+| VTI | 19.984 | $322.70 | $362.87 | $7,251.59 | +12.44% | 14.5% |
+| QQQ | 8.859 | $615.71 | $711.23 | $6,300.78 | +15.51% | 12.6% |
+| VOO | 7.636 | $609.44 | $678.04 | $5,177.51 | +11.25% | 10.3% |
+| SCHG | 128.865 | $31.98 | $34.12 | $4,396.87 | +6.69% | 8.8% |
+| XLE | 66 | $55.77 | $55.70 | $3,676.20 | -0.13% | 7.3% |
+| SMH | 6.241 | $515.58 | $566.54 | $3,535.77 | +9.88% | 7.1% |
+| XLV | 22 | $143.68 | $143.49 | $3,156.78 | -0.14% | 6.3% |
+| VXUS | 29.704 | $73.16 | $85.43 | $2,537.61 | +16.77% | 5.1% |
+| SCHD | 67.156 | $29.78 | $31.62 | $2,123.47 | +6.17% | 4.2% |
+| AMGN | 6 | $328.57 | $331.70 | $1,990.20 | +0.95% | 4.0% |
+| SPYD | 11.533 | $45.42 | $46.69 | $538.47 | +2.79% | 1.1% |
+| ASTS | 1.234 | $80.97 | $75.05 | $92.61 | -7.32% | 0.2% |
 
-### Investment Thesis
-- Broad index investing (VTI 20%, VOO 18%) forms the core foundation — not just NVDA/SMH/SCHG
-- NVDA at 19% is the largest single conviction bet, but portfolio is more balanced than originally documented
-- AI/Semi sector concentration (NVDA + SMH = 28.4%) still reflects the core thesis
-- QQQ (14%) provides tech/growth exposure; SCHG, SCHD, VXUS add factor diversity
-- SPYD and ASTS are small tactical/speculative positions
+**Cash:** SPAXX $4,547.58 (9.1%)
+
+**Notable changes since May 3:**
+- NVDA +0.86% — now above average cost, recovered from earlier drawdown
+- SMH +9.88% — extended run; position trimmed from 8.1 → 6.241 shares
+- VTI trimmed: 34 → 19.984 shares
+- QQQ trimmed: 9.4 → 8.859 shares
+- SCHG increased: 102.4 → 128.865 shares
+- New positions: XLE (energy), XLV (healthcare) — sector rotation in progress
+- ASTS shares reduced: 8.7 → 1.234 (heavily trimmed)
+- Pending activity: -$4,175.06 (likely a buy/sell settling)
 
 ---
 
