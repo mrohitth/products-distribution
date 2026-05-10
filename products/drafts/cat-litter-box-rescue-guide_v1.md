@@ -176,3 +176,23 @@ If your cat has zero history of box use, start with the ASPCA's housetraining gu
 ---
 
 *Sources: AVMA, Cornell University Feline Health Center, ASPCA, Journal of Feline Medicine and Surgery (Feliway efficacy studies).*
+
+---
+
+## Next Steps: Free Checklist + Full Product
+
+You've got the framework. Now here's the fast track to implementation.
+
+**Free Download: The 7-Day Litter Box Reset Checklist**
+A one-page printable that sequences everything in this guide — vet visit prep, box audit, litter swap schedule, stress assessment, and cleaning protocol. Tick through it once a day for a week and you'll know exactly what's working and what isn't.
+
+👉 [Get the free checklist →](https://yourlittlesqueezy.lemonsqueezy.com/checklist)
+
+**The Complete Cat Litter Box Rescue Guide (PDF + Editable)**
+Includes the full guide above plus printable tracking sheets, a multi-cat tension assessment tool, and a vet communication template so you walk into the appointment knowing exactly what to ask for.
+
+👉 [Buy the full guide →](https://yourlittlesqueezy.lemonsqueezy.com/guide)
+
+---
+
+*Built for cats who deserve better than guesswork.*
