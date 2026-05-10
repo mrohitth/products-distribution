@@ -556,14 +556,13 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
         f"*Human Infrastructure — Human-scale systems, maintained.*"
     )
 
-    # Read GitHub token from env (set by caller or git-credentials fallback)
+    # Read GitHub token from env (set by caller or git-credentials fallback or gh auth)
     gh_token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
     if not gh_token:
         cred_path = Path.home() / ".git-credentials"
         if cred_path.exists():
             for line in cred_path.read_text().strip().split("\n"):
                 if "github.com" in line:
-                    # Extract token from URL after ://
                     try:
                         token_start = line.index("://") + 3
                         token_end = line.index("@", token_start)
@@ -571,6 +570,14 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
                         break
                     except ValueError:
                         pass
+    if not gh_token:
+        # Fallback to gh CLI auth
+        try:
+            gh_token = subprocess.run(
+                ["gh", "auth", "token"], capture_output=True, text=True, timeout=10
+            ).stdout.strip()
+        except Exception:
+            pass
     if not gh_token:
         print("  ❌ No GitHub token found — set GH_TOKEN or GITHUB_TOKEN")
         return False

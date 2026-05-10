@@ -29,6 +29,21 @@
       "lemon_squeezy_url": null,
       "created_at": "2026-05-06T00:35:38.257945-04:00",
       "last_content_run": "2026-05-06T00:35:42.238915-04:00"
+    },
+    "trend_1:_cat-proofing_the_home_office": {
+      "name": "Trend 1: Cat-Proofing the Home Office",
+      "price": 27,
+      "draft_path": "/home/mathew/.openclaw/workspace/products/drafts/trend_1:_cat-proofing_the_home_office_V1.md",
+      "category": "trendscout",
+      "reddit_posted": 0,
+      "pinterest_pins": 0,
+      "tiktok_scripts": 0,
+      "linkedin_posts": 0,
+      "email_capture_count": 0,
+      "notion_upsell_sent": 0,
+      "lemon_squeezy_url": null,
+      "created_at": "2026-05-10T18:35:16.497161-04:00",
+      "last_content_run": "2026-05-10T18:35:16.624436-04:00"
     }
   },
   "channels": {
@@ -58,6 +73,6 @@
     }
   },
   "email_leads": 0,
-  "last_full_run": "2026-05-06T00:37:18.832627-04:00",
-  "flywheel_runs": 2
+  "last_full_run": "2026-05-10T18:35:16.624861-04:00",
+  "flywheel_runs": 3
 }
