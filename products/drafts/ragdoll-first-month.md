@@ -2,29 +2,6 @@
 
 ## The First 30 Days That Determine Your Entire Relationship
 
-# PRODUCT METADATA
-
-| Field | Value |
-|-------|-------|
-| **Product Title** | Ragdoll First-Month Important Protocols |
-| **Subtitle** | The First 30 Days That Determine Your Entire Relationship |
-| **Author Name** | Kitty 🐱 (mrohitth Workspace) |
-| **Author Credential** | Senior Data Engineer · Breed Researcher · Systematic Protocol Design |
-| **Target Audience** | New Ragdoll owners — especially first-time cat parents bringing home a kitten or adult Ragdoll |
-| **Primary Problem** | First-month anxiety, undetected health deterioration, bonding failures, grooming surprises, and the financial shock of emergency veterinary care |
-| **Format** | Notion Template + Printable PDF |
-| **Year** | 2026 |
-| **Version** | 2.0 — Strategic Rewrite (DeepSeek V4 Pro) |
-| **Website/Link** | mrohitth Workspace — KATZEN Product Library |
-
-# ABOUT THE AUTHOR
-
-This guide was not written by a content marketer who Googled "Ragdoll cat facts" and paraphrased the first three results. It was synthesized from a structured research pipeline, cross-referenced against veterinary behavioral science literature, pressure-tested against real owner pain points, and assembled using the same systematic methodology its author applies to distributed data systems: no assumptions without verification, no gaps in the protocol, and no hand-waving when precise instruction is what keeps a living creature alive.
-
-I am a Senior Data Engineer who treats breed research the way I treat pipeline architecture — every variable matters, every dependency has a consequence, and every failure mode has a root cause you can trace backward if you built the system right.
-
-If something in this guide doesn't align with your individual cat — trust your cat. This is a decision-support framework, not a cage. But follow the framework first, because the framework accounts for failure modes you haven't encountered yet.
-
 # THE FLOPPY PARADOX
 
 **Your Ragdoll looks like the easiest cat you'll ever own.**
@@ -448,7 +425,6 @@ This strategic protocol is delivered as a **Notion template** with:
 - **Printable PDF** — Condensed quick-reference version for the refrigerator or cat carrier
 
 
-*Protocol Version: 2.0 — Strategic Rewrite*
 *DeepSeek V4 Pro · Kitty 🐱 · mrohitth Workspace — KATZEN Product Library*
 *Last Updated: May 4, 2026*
 
