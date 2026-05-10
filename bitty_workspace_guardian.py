@@ -221,7 +221,7 @@ def check_uncommitted():
                 oldest_sec = int(oldest_ts.strip())
                 age_hours = (datetime.datetime.now().timestamp() - oldest_sec) / 3600
                 if age_hours > 72:  # 3 days
-                    run('git add -A && git commit -m "Bitty: auto-commit stale changes"', cwd=path)
+                    run('git add -A && git commit --author="mrohitth <mrohitth@alumni.cmu.edu>" -m "Bitty: auto-commit stale changes"', cwd=path)
                     actions.append(f"{name}: auto-committed ({age_hours:.0f}h stale)")
                     continue
             except ValueError:
@@ -230,7 +230,7 @@ def check_uncommitted():
         actions.append(f"{name}: {out.strip()[:80]}")
         # Still do daily workspace MEMORY syncs
         if name == "workspace" and "MEMORY.md" in out:
-            run('git add MEMORY.md && git commit -m "Bitty: daily memory sync"', cwd=path)
+            run('git add MEMORY.md && git commit --author="mrohitth <mrohitth@alumni.cmu.edu>" -m "Bitty: daily memory sync"', cwd=path)
     
     if actions:
         return "Changes: " + " | ".join(actions)

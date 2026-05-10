@@ -431,6 +431,7 @@ def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-di
         return False
 
     slug = pdf_file.stem  # e.g. "catproof_home_office" (no version suffix)
+    version = "1"  # single-file overwrite model, always v1
 
     OUTPUT_DIR = WORKSPACE / "output"
     REPO_DIR = OUTPUT_DIR / "repos" / repo.replace("/", "_")
