@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-09T21:37:48.053Z",
+  "updatedAt": "2026-05-10T22:05:09.242Z",
   "entries": {
     "memory:memory/2026-05-03.md:57:71": {
       "key": "memory:memory/2026-05-03.md:57:71",
@@ -298,18 +298,20 @@
       "endLine": 71,
       "source": "memory",
       "snippet": "- [x] [K] MarketBot portfolio.json updated with real share counts and prices (2026-05-03T16:41:49.297421Z) - [x] [K] OPERATING.md updated to reflect Telegram delivery (not WhatsApp) (2026-05-03T16:41:49.297421Z) - [x] [K] USER.md portfolio section updated with all 10 positions (2026-05-03T16:41:49.297421Z) - [x] [K] Trigger Capital Pilot cron job manually for testing (2026-05-03T16:41:49.297421Z) - [x] [K] Update portfolio.json with real positions from Fidelity screenshot (2026-05-03T16:41:49.297421Z) - [x] [K] Update portfolio-context.md with full baseline (2026-05-03T16:41:49.297421Z) - [x] [K] Fix MarketBot to send via Telegram (not WhatsApp) (2026-05-03T16:41:49.297421Z) - [x] [K] Update",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4480383545160293,
-      "maxScore": 0.4480383545160293,
+      "totalScore": 0.9652426570653914,
+      "maxScore": 0.5172043025493621,
       "firstRecalledAt": "2026-05-07T02:15:53.553Z",
-      "lastRecalledAt": "2026-05-07T02:15:53.553Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
       "queryHashes": [
-        "3396403eb553"
+        "3396403eb553",
+        "b497cef4e379"
       ],
       "recallDays": [
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-10"
       ],
       "conceptTags": [
         "portfolio.json",
@@ -391,18 +393,20 @@
       "endLine": 191,
       "source": "memory",
       "snippet": "1. Pipeline manager: Added `Accept: application/vnd.github.v3+json` header to asset upload retry logic 2. Manually pushed toddler_vacation_confidence_guide_V1.pdf to GitHub + created release **Token:** Stored in git credential store (`~/.git-credentials`) as embedded URL: `https://mrohitth:github_pat_...@github.com` Pipeline reads it automatically — no env var needed. **Files changed:** `scripts/pipeline_manager.py` (fix pushed to workspace GitHub) **GitHub releases now confirmed working:** - https://github.com/mrohitth/products-distribution/releases/tag/v1-toddler_vacation_confidence_guide_V1 --- ## MarketBot Refinement Session — 2026-05-07 ~3:45 PM ET ### Finnhub API Key Wired - Key:",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8040289962632626,
+      "totalScore": 1.2721103871209591,
       "maxScore": 0.8040289962632626,
       "firstRecalledAt": "2026-05-09T04:46:53.101Z",
-      "lastRecalledAt": "2026-05-09T04:46:53.101Z",
+      "lastRecalledAt": "2026-05-10T20:46:13.667Z",
       "queryHashes": [
-        "476020dfe650"
+        "476020dfe650",
+        "67dbf173b2f6"
       ],
       "recallDays": [
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "application/vnd.github.v3",
@@ -453,18 +457,20 @@
       "endLine": 162,
       "source": "memory",
       "snippet": "Fixed 4 infrastructure issues found during heartbeat audit: 1. **mitty_health_pulse.sh** — Sessions threshold 100MB→150MB (was spamming HEALTH_WARN at normal 118MB) 2. **witty_manifest_updater.py** — RECREATED (file was deleted but cron still referenced it). Now scans wiki changes every 15min and updates katzen manifest.json. Verified working ✅ 3. **mitty_security_audit.sh** — RECREATED (file was deleted). Pure-shell security audit: SSH, Firewall, Gateway, Cron errors, RAM, Disk, failed logins, sessions size. Verified working ✅ 4. **Kaizen cron payload** — Changed from `edit` tool to `python3 exec` append pattern (fixes stale session state causing edit failures). Also cleared model override",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.48995257318019864,
+      "totalScore": 0.947455033659935,
       "maxScore": 0.48995257318019864,
       "firstRecalledAt": "2026-05-09T04:46:53.101Z",
-      "lastRecalledAt": "2026-05-09T04:46:53.101Z",
+      "lastRecalledAt": "2026-05-10T20:46:13.667Z",
       "queryHashes": [
-        "476020dfe650"
+        "476020dfe650",
+        "67dbf173b2f6"
       ],
       "recallDays": [
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gateway",
@@ -608,18 +614,20 @@
       "endLine": 19,
       "source": "memory",
       "snippet": "# 2026-05-03 | Sunday | 10:28 UTC (6:28 AM EST) ## Tasks - [x] [Witty] Katzen-Sync: manifest.json updated — no new changes detected (latest: katzen-sync-validation.md modified, manifest healthy at 19:16 UTC) - [x] [Witty] Katzen-Sync: manifest.json updated — Gateway_Router_Implementation.md [modified] - [x] [K] Investigate portfolio drift severity (NVDA -15%, SMH -43%, SCHG -30%) (2026-05-03T17:35:00.000Z) - [x] [Witty] Katzen-Sync: manifest.json no changes — wiki files stable (2026-05-03T19:27:00.000Z) - [x] [Witty] Katzen-Sync: manifest.json updated — no new changes, manifest healthy at 19:16 UTC - [x] [Witty] Katzen-Sync: manifest.json updated — no new changes detected (2026-05-03T19:23",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5048322945833206,
-      "maxScore": 0.5048322945833206,
+      "totalScore": 1.0120210140943526,
+      "maxScore": 0.5071887195110321,
       "firstRecalledAt": "2026-05-09T19:12:25.494Z",
-      "lastRecalledAt": "2026-05-09T19:12:25.494Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
       "queryHashes": [
-        "fedb8e3b162a"
+        "fedb8e3b162a",
+        "b497cef4e379"
       ],
       "recallDays": [
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gateway",
@@ -639,18 +647,20 @@
       "endLine": 326,
       "source": "memory",
       "snippet": "| wiki/projects/index.md update | ✅ Done | CDC_Warehouse corrected + batch + data-observer added | | wiki/index.md update | ✅ Done | Data_Engineering_Stack corrected with Correction Ledger | | Cross-link CDC_Warehouse into patterns | ✅ Done | scd-type2.md + cdc-pipeline.md updated | | Create wiki/decisions/memory-purge.md | ✅ Done | Full decision log of what was removed | | Create wiki/decisions/wiki-grounding.md | ✅ Done | /wiki as authoritative source | | Add memory-purge + wiki-grounding to decisions/index | ✅ Done | | | OPERATING.md portfolio total | ✅ Done | $850K → $43,757.84, all 10 real positions | | Resolve IN PROGRESS stale tasks | ✅ Done | Artifacts from dedup cleanup — no action",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5021348863840103,
-      "maxScore": 0.5021348863840103,
+      "totalScore": 1.0188554286956788,
+      "maxScore": 0.5167205423116684,
       "firstRecalledAt": "2026-05-09T19:12:25.494Z",
-      "lastRecalledAt": "2026-05-09T19:12:25.494Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
       "queryHashes": [
-        "fedb8e3b162a"
+        "fedb8e3b162a",
+        "b497cef4e379"
       ],
       "recallDays": [
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "wiki/projects/index.md",
@@ -670,18 +680,21 @@
       "endLine": 99,
       "source": "memory",
       "snippet": "- [x] [K] Memory digest fixed to parse all ## Tasks sections (2026-05-03T16:41:49.297421Z) - [x] [K] KATZEN build verified clean (npm run build) (2026-05-03T16:41:49.297421Z) --- ## PoW: Daily Log Final Cleanup **Timestamp:** 2026-05-03 | 12:55 PM UTC (8:55 AM EST) **Logged by:** Kitty [K] **Type:** Proof of Work (PoW) ### Root Cause Confirmed The daily log had 25 duplicate `## Tasks` sections from aggressive PoW appends. All sections were scanned for pending tasks, but done tasks from early sections got deduped correctly. The real problem: **\"IN PROGRESS\" task suffixes were creating unique-but-stale pending entries** that had already been done in earlier sections. ### What Was Done",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5006134063005447,
-      "maxScore": 0.5006134063005447,
+      "totalScore": 1.445583778619766,
+      "maxScore": 0.5029569596052169,
       "firstRecalledAt": "2026-05-09T19:12:25.494Z",
-      "lastRecalledAt": "2026-05-09T19:12:25.494Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
       "queryHashes": [
-        "fedb8e3b162a"
+        "fedb8e3b162a",
+        "67dbf173b2f6",
+        "b497cef4e379"
       ],
       "recallDays": [
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "2026-05-03t16",
@@ -701,18 +714,21 @@
       "endLine": 350,
       "source": "memory",
       "snippet": "- `[Witty] Index and Link → task dedup pattern as wiki/decisions/task-dedup.md` — Not created. The dedup pattern is documented inline in this daily log. Creating a separate wiki entry for workspace logistics (task checkbox parsing) is low value. If Witty or Titty need it later, they can create it from context. --- ## PoW: Scheduled Column Added + All KATZEN Pages Verified **Timestamp:** 2026-05-03 | 1:45 PM EST **Logged by:** Kitty [K] **Type:** Proof of Work (PoW) ### task-board.tsx — 3-Column Kanban Added a **Scheduled** column (violet accent) showing all cron jobs fetched from `/api/scheduler`: - Bitty Wiki Correction Monitor — every 15m — next run in ~15min - Mitty Security Aud",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.49965083003044125,
-      "maxScore": 0.49965083003044125,
+      "totalScore": 1.4505400419235228,
+      "maxScore": 0.5053959965705871,
       "firstRecalledAt": "2026-05-09T19:12:25.494Z",
-      "lastRecalledAt": "2026-05-09T19:12:25.494Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
       "queryHashes": [
-        "fedb8e3b162a"
+        "fedb8e3b162a",
+        "67dbf173b2f6",
+        "b497cef4e379"
       ],
       "recallDays": [
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "wiki/decisions/task-dedup.md",
@@ -785,6 +801,317 @@
         "public/sitemap-0.xml",
         "marketbot",
         "scan"
+      ]
+    },
+    "memory:memory/2026-05-03.md:342:367": {
+      "key": "memory:memory/2026-05-03.md:342:367",
+      "path": "memory/2026-05-03.md",
+      "startLine": 342,
+      "endLine": 367,
+      "source": "memory",
+      "snippet": "| `/api/scheduler` | 3 jobs (Bitty, Mitty, Capital Pilot) ✅ | | `/api/usage` | $0.24/23.9% of $1 budget ✅ | | `/api/market/signal` | 11 quotes (NVDA/SMH/SCHG/QQQ/SCHD/VXUS/VOOG/VTI/VOO/SPYD/ASTS) ✅ | | `/api/memory/digest` | Today's log (2026-05-03), 42 done, 0 pending ✅ | ### Git Push Summary | Commit | Description | |--------|-------------| | `3bb3ee0` | feat: /api/projects now scans wiki/ — returns 8 projects | | `3f190ea` | feat: task-board — Scheduled column + Clock import | ### Memory Flush Note File is large (multiple flushes). Task checkbox section is clean and canonical. - [x] [K] Katzen scheduler: CRON_DESCRIPTIONS — 1-liner for each cron job (2026-05-03T17:50:00.000Z) - [x]",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9402315706014632,
+      "maxScore": 0.49086787700653073,
+      "firstRecalledAt": "2026-05-10T20:46:13.667Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "67dbf173b2f6",
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "api/scheduler",
+        "api/usage",
+        "0.24/23.9",
+        "api/market/signal",
+        "api/memory/digest",
+        "api/projects",
+        "task-board",
+        "cron-descriptions"
+      ]
+    },
+    "memory:memory/2026-05-03.md:37:52": {
+      "key": "memory:memory/2026-05-03.md:37:52",
+      "path": "memory/2026-05-03.md",
+      "startLine": 37,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "- [x] [K] Create wiki/decisions/wiki-grounding.md — /wiki as authoritative source decision (2026-05-03T17:30:00.000Z) - [x] [K] Add memory-purge + wiki-grounding to wiki/decisions/index.md (2026-05-03T17:30:00.000Z) - [x] [K] Run Capital Pilot daily brief — 8:00 AM EST (2026-05-03T16:41:25.584Z) - [x] [K] Update Portfolio Health card to focus on P/L (not per-share prices) (2026-05-03T16:41:49.297421Z) - [x] [K] Update heartbeat countdown to show hours when > 60 minutes (2026-05-03T16:41:49.297421Z) - [x] [K] Capital Pilot cron triggered and brief delivered to Telegram (2026-05-03T16:41:49.297421Z) - [x] [K] Portfolio Health updated with all 10 real positions (2026-05-03T16:41:49.297421Z) -",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5017097473144531,
+      "maxScore": 0.5017097473144531,
+      "firstRecalledAt": "2026-05-10T22:05:09.242Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "wiki/decisions/wiki-grounding.md",
+        "2026-05-03t17",
+        "00.000z",
+        "memory-purge",
+        "wiki-grounding",
+        "wiki/decisions/index.md",
+        "2026-05-03t16",
+        "25.584z"
+      ]
+    },
+    "memory:memory/2026-05-10.md:1:28": {
+      "key": "memory:memory/2026-05-10.md:1:28",
+      "path": "memory/2026-05-10.md",
+      "startLine": 1,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "## Tasks - [x] [K] MarketBot scan — 0 alerts (0 critical, 0 high, 0 medium, 0 discovery) — market closed (Sunday). `no_alert` delivered. Scanner skipped. - [2026-05-10 05:00 PM ] [Bitty Guardian] Workspace Guardian running - [2026-05-10 05:00 PM ] [Bitty Guardian] AGENTS.md: 9653 chars (80% of 12000 limit) - [2026-05-10 05:00 PM ] [Bitty Guardian] AGENTS.md: flagged for manual review (80% full) - [2026-05-10 05:00 PM ] [Bitty Guardian] MEMORY.md: 6442 chars (54% of 12000 limit) - [2026-05-10 05:00 PM ] [Bitty Guardian] Uncommitted changes in workspace: M memory/.dreams/events.jsonl M memory/.dreams/short-term-recall.json M memory/2026-05-09.md M memory/2026-05-10.md - [2026-05-10 05:0",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5000823110342025,
+      "maxScore": 0.5000823110342025,
+      "firstRecalledAt": "2026-05-10T22:05:09.242Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "no-alert",
+        "agents.md",
+        "memory.md",
+        "dreams/events.jsonl",
+        "dreams/short-term-recall.json",
+        "memory/2026-05-09.md",
+        "memory/2026-05-10.md",
+        "tasks"
+      ]
+    },
+    "memory:memory/2026-05-03.md:89:119": {
+      "key": "memory:memory/2026-05-03.md:89:119",
+      "path": "memory/2026-05-03.md",
+      "startLine": 89,
+      "endLine": 119,
+      "source": "memory",
+      "snippet": "5. Update heartbeat countdown — IN PROGRESS (actually DONE, was duplicate) 6. MEMORY.md update — full 5-agent roster 7. Portfolio P/L card redesign 8. Heartbeat hours format fix 9. MEMORY.md update (already done, duplicate) 10. [Witty] Index and Link → security_baseline.md **Done (22):** All with timestamps. Clean. ### Next Steps - [x] [K] Resolve IN PROGRESS tasks — no longer applicable (stale dedup artifact, tasks already done earlier) (2026-05-03T17:40:00.000Z) - [x] [K] Resolve duplicate MEMORY.md update task — already done (2026-05-03T17:40:00.000Z) - [x] [K] Fix /api/projects — now scans wiki/ for .md project entries, returns 8 projects (was 0) (2026-05-03T17:30:00.000Z) - [x] [K] V",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4997996777296066,
+      "maxScore": 0.4997996777296066,
+      "firstRecalledAt": "2026-05-10T22:05:09.242Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "5-agent",
+        "p/l",
+        "security-baseline.md",
+        "2026-05-03t17",
+        "00.000z",
+        "api/projects",
+        "update"
+      ]
+    },
+    "memory:memory/2026-05-03.md:27:41": {
+      "key": "memory:memory/2026-05-03.md:27:41",
+      "path": "memory/2026-05-03.md",
+      "startLine": 27,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "- [x] [K] Purge Snowflake/PySpark/Kafka/EMR/Spark from MEMORY.md, USER.md, AGENTS.md, wiki/people/*.md (2026-05-03T17:20:00.000Z) - [x] [K] Update all agent hard boundaries to \"verify against /wiki first\" (2026-05-03T17:20:00.000Z) - [x] [K] Activate Bitty Wiki Guardian — cron eb7e20dc, 15-min scan for Correction Ledger contradictions (2026-05-03T17:20:00.000Z) - [x] [K] Verify Correction Ledger intact in CDC_Warehouse_SCD2.md and Data_Engineering_Stack.md (2026-05-03T17:20:00.000Z) - [x] [K] Update wiki/projects/index.md — correct CDC_Warehouse_SCD2 description + add batch-analytics + data-observability entries (2026-05-03T17:30:00.000Z) - [x] [K] Update wiki/index.md — correct Data_Enginee",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4943995416164398,
+      "maxScore": 0.4943995416164398,
+      "firstRecalledAt": "2026-05-10T22:05:09.242Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "user.md",
+        "agents.md",
+        "wiki/people",
+        "2026-05-03t17",
+        "00.000z",
+        "15-min",
+        "cdc-warehouse-scd2.md"
+      ]
+    },
+    "memory:memory/2026-05-03.md:649:677": {
+      "key": "memory:memory/2026-05-03.md:649:677",
+      "path": "memory/2026-05-03.md",
+      "startLine": 649,
+      "endLine": 677,
+      "source": "memory",
+      "snippet": "- Witty Katzen-Sync: `agents[] synced — 5 agents | Bitty: online` ✅ - Mitty Security Audit: CONSISTENCY CHECK: PASSED ✅ | COMPACT OK ✅ - Capital Pilot: graceful degradation on missing .env/data files ✅ ### KP-003: Smart Alert Aggregation — Implemented (2026-05-03T23:26 UTC) **Backend** (`app/api/alerts/route.ts` — `groupAlerts()`): - Threshold lowered: count >= 2 (was 5) — any duplicate [agent+status_code] within consecutive run rolls up - `lastTs` tracking: rolled-up card shows most-recent timestamp (not first) - Message unchanged: shows original message from first occurrence in the run - Exit path: single unique alert → `grouped: false` (no badge) **Frontend** (`app/(main)/alerts/page.t",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49262882769107813,
+      "maxScore": 0.49262882769107813,
+      "firstRecalledAt": "2026-05-10T22:05:09.242Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "katzen-sync",
+        "env/data",
+        "kp-003",
+        "2026-05-03t23",
+        "app/api/alerts/route.ts",
+        "status-code",
+        "rolled-up",
+        "most-recent"
+      ]
+    },
+    "memory:memory/2026-05-09.md:1:24": {
+      "key": "memory:memory/2026-05-09.md:1:24",
+      "path": "memory/2026-05-09.md",
+      "startLine": 1,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "# 2026-05-09 — Daily Session Log ## Market Activity - MarketBot scan ran at 22:19 UTC (6:19 PM ET Saturday) - 17 alerts detected (4 critical, 7 high, 6 medium) - All alerts failed evidence threshold — scanner returned no output - Cron stayed silent (no_alert output) ## Tasks - [x] [K] MarketBot scan — 17 alerts (4 critical, 7 high, 6 medium — all below evidence threshold, no output delivered) - [2026-05-09 06:49 PM ET] [K] MarketBot scan — 17 alerts (4 critical, 7 high, 6 medium — all below evidence threshold, no output delivered)- [2026-05-09 06:30 PM ] [Bitty Guardian] Workspace Guardian running - [2026-05-09 06:30 PM ] [Bitty Guardian] AGENTS.md: 9653 chars (80% of 12000 limit) - [2026-",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4924952089786529,
+      "maxScore": 0.4924952089786529,
+      "firstRecalledAt": "2026-05-10T22:05:09.242Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "no-alert",
+        "agents.md",
+        "log",
+        "market",
+        "activity",
+        "marketbot",
+        "scan",
+        "ran"
+      ]
+    },
+    "memory:memory/2026-05-03.md:381:406": {
+      "key": "memory:memory/2026-05-03.md:381:406",
+      "path": "memory/2026-05-03.md",
+      "startLine": 381,
+      "endLine": 406,
+      "source": "memory",
+      "snippet": "- [x] [K] Dynamic Multi-Model Identity activated: Gateway Router (v4-Flash L1 → Titty L2 → V4 Pro L3), MEMORY_THRESHOLD=70%, $25/mo budget lock, Correction Ledger sweep (all wiki clean), Mitty 11PM confirmed (8h). Dynamic_Swarm_Activated.md logged. (2026-05-03T18:55:00.000Z) - [x] [Witty] Katzen-Sync: manifest.json updated — no change file to process (wiki queue empty) - [x] [Witty] Katzen-Sync: no new wiki changes — manifest.json unchanged (2026-05-03T19:14:00.000Z) - [x] [K] KP-001 VRAM Pulse + KP-002 Alerts Hub + KP-003 Smart Alert Grouping: VRAMPulse live (GPU 0%, healthy), vram_service.ts + /api/vram, Mitty throttle monitor (iowait > 100j → 30s→120s), alert grouping (≥5 consecutive s",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49111473262310024,
+      "maxScore": 0.49111473262310024,
+      "firstRecalledAt": "2026-05-10T22:05:09.242Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "gateway",
+        "router",
+        "multi-model",
+        "v4-flash",
+        "memory-threshold",
+        "25/mo",
+        "dynamic-swarm-activated.md",
+        "2026-05-03t18"
+      ]
+    },
+    "memory:memory/2026-05-03.md:670:707": {
+      "key": "memory:memory/2026-05-03.md:670:707",
+      "path": "memory/2026-05-03.md",
+      "startLine": 670,
+      "endLine": 707,
+      "source": "memory",
+      "snippet": "- Timestamp: `05/03/2026 19:25:22 EDT` (not ISO/UTC) ✅ - Build: clean ✅ ### KP-001 v2 — VRAM Watchdog 2.0 (2026-05-03T23:35 UTC) **Telemetry upgrade** (`lib/vram_service.ts`): - nvidia-smi query now includes: `memory.used,memory.total,temperature.gpu,utilization.gpu` - Added `computeApps` sub-query → PID, process_name, used_memory per active GPU process - `isIdle` flag: percentage < 1% → Sleep status - Thresholds: WARNING_THRESHOLD=70%, TEMP_THRESHOLD=80°C, IDLE_THRESHOLD=1%, PEAK_THRESHOLD=10% **Fiscal Guardrail** (`app/api/vram/route.ts`): - Alerts ONLY fire on: VRAM_PEAK (>10%) or THERMAL_WARN (>80°C) - 5-min dedup window on each alert type - Sleep state (<1%) → no alert, no log entry",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4902220636606216,
+      "maxScore": 0.4902220636606216,
+      "firstRecalledAt": "2026-05-10T22:05:09.242Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "05/03/2026",
+        "iso/utc",
+        "kp-001",
+        "2.0",
+        "2026-05-03t23",
+        "lib/vram-service.ts",
+        "nvidia-smi",
+        "memory.used"
+      ]
+    },
+    "memory:memory/2026-05-08.md:1:23": {
+      "key": "memory:memory/2026-05-08.md:1:23",
+      "path": "memory/2026-05-08.md",
+      "startLine": 1,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "# Memory — 2026-05-08 ## Daily Log ### Session: MarketBot Opportunity Scanner **Time:** 2026-05-09 02:45 UTC (10:45 PM ET, Friday) ## Tasks - [x] [K] MarketBot scan — 17 alerts (4 critical, 7 high, 6 medium) → no actionable BUY/SELL signals, scanner silent per design2026-05-08: ## Audit Findings SSH: inactive inactive inactive | Firewall: active | Gateway: systemd OK Cron consecutive errors: 0 | RAM: 57% | Disk: 49% Sessions: 158MB | Failed logins (24h): 0 0 ## Tasks - [x] [K] MarketBot scan — 17 alerts (4 critical, 7 high, 6 medium) — formatOpportunityAlert returned empty, no Telegram output sent - [x] [K] MarketBot scan — 17 alerts (4 critical, 7 high, 6 medium) — formatter returned",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.48916967809200285,
+      "maxScore": 0.48916967809200285,
+      "firstRecalledAt": "2026-05-10T22:05:09.242Z",
+      "lastRecalledAt": "2026-05-10T22:05:09.242Z",
+      "queryHashes": [
+        "b497cef4e379"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "gateway",
+        "buy/sell",
+        "design2026-05-08",
+        "log",
+        "marketbot",
+        "opportunity",
+        "scanner",
+        "time"
       ]
     }
   }

@@ -1,11 +1,11 @@
-# MarketBot — The Capital Pilot
+# MarketBot - The Capital Pilot
 
-**Owner:** [K] Kitty  
-**Type:** Node.js Financial Strategist  
-**Status:** ✅ VERIFIED — Brief delivered to Telegram 2026-05-03  
-**Delivery:** telegram:5607383477 (via OpenClaw cron announce)  
-**Schedule:** Daily at 8:00 AM EST (via OpenClaw cron)  
-**Repos:** `mrohitth/MarketBot`  
+**Owner:** [K] Kitty
+**Type:** Node.js Financial Strategist
+**Status:** ✅ VERIFIED - Brief delivered to Telegram 2026-05-03
+**Delivery:** telegram:5607383477 (via OpenClaw cron announce)
+**Schedule:** Daily at 8:00 AM EST (via OpenClaw cron)
+**Repos:** `mrohitth/MarketBot`
 **Operating Cost:** $0/month (all free tiers)
 
 ---
@@ -24,14 +24,14 @@ Daily Morning Brief bridging budget + portfolio. Delivers to Telegram, no WhatsA
 |------------|-------------|
 | Budget Pacing | Discover CSV import → spending vs $8,500/month net income |
 | Portfolio Drift | Detects deviation from target allocation (NVDA 40%, SMH 30%, SCHG 20%) |
-| Profit Maximizer | Semi/tech sector scanner — flags setups |
-| Black Swan Rule | 8% loss threshold — requires [CONFIRMED] before alerting |
+| Profit Maximizer | Semi/tech sector scanner - flags setups |
+| Black Swan Rule | 8% loss threshold - requires [CONFIRMED] before alerting |
 | Gmail/Fidelity Scan | Extracts trade confirmations from Fidelity emails |
 | Telegram Delivery | Direct to telegram:5607383477 via OpenClaw announce |
 
 ---
 
-## Portfolio (Real Positions — May 9, 2026)
+## Portfolio (Real Positions - May 9, 2026)
 
 **Total:** $50,102.63 | **G/L:** +$3,483.82 (+7.47%) | **14 positions (incl. cash)**
 
@@ -54,11 +54,11 @@ Daily Morning Brief bridging budget + portfolio. Delivers to Telegram, no WhatsA
 **Cash:** SPAXX $4,547.58 (9.1%)
 
 **Key changes since May 3:**
-- NVDA: +5.70% — back above avg cost
-- SMH: +9.88% — trimmed 8.1→6.241 shares (taking profit)
+- NVDA: +5.70% - back above avg cost
+- SMH: +9.88% - trimmed 8.1→6.241 shares (taking profit)
 - VTI/QQQ: trimmed from 34/9.4 to 19.984/8.859
 - SCHG: increased 102.4→128.865 shares
-- NEW: XLE (energy), XLV (healthcare) — sector rotation
+- NEW: XLE (energy), XLV (healthcare) - sector rotation
 - ASTS: heavily trimmed 8.7→1.234 shares
 - Pending: -$4,175.06 (settling trades)
 
@@ -80,8 +80,41 @@ Daily Morning Brief bridging budget + portfolio. Delivers to Telegram, no WhatsA
 
 ---
 
+---
+
+## Market Discovery (2026-05-10)
+
+Three-layer discovery engine integrated into the 30-min opportunity scanner:
+
+### 1. Tag-Along Logic
+- Parses Finnhub news headlines for known WATCHLIST_TICKER + unknown ticker co-occurrences
+- Example: "NVDA partners with Nokia" → surfaces NOK for technical screen
+- Fetches RSI, MA50, MA200, volume, 52w high for strangers
+
+### 2. Volume/Momentum Screen
+- Scans 40 broad-market tickers (sector ETFs + liquid caps like AAPL, TSLA, GE, NOK)
+- Flags: volume >= 2x 10-week avg OR daily move >= 4%
+- Gated: max once per 4 hours (respects Yahoo Finance rate limits)
+
+### 3. Warm Bench Queue
+- Persisted to `data/discovery-queue.json`
+- Status lifecycle: new → reviewed → promoted → dismissed
+- Auto-expires entries > 30 days old
+- Reply `DISCOVER /ticker` to promote, `DISMISS /ticker` to remove
+
+### Key Files
+| File | Purpose |
+|------|---------|
+| `src/lib/market_discovery.ts` | Discovery engine (Tag-Along, volume screen, queue) |
+| `data/discovery-queue.json` | Warm Bench — persistents tickers awaiting review |
+| `data/discovery-volume-gate.txt` | Time gate for volume screen (4h cooldown) |
+
+### Cost
+- Tag-along: 1 Finnhub API call + ~1-5 quote fetches = negligible ($0, free tiers)
+- Volume screen: ~40 quote fetches every 4h ≈ 240/day. Same free-tier Yahoo Finance as main scanner.
+
 **Cross-links:**
-→ [../index.md](../index.md) — Wiki central  
-→ [./index.md](./index.md) — Projects index  
-→ [katzen.md](./katzen.md) — Related project: KATZEN  
+→ [../index.md](../index.md) — Wiki central
+→ [./index.md](./index.md) — Projects index
+→ [katzen.md](./katzen.md) — Related project: KATZEN
 → [../decisions/telegram-delivery.md](../decisions/telegram-delivery.md) — Delivery channel decision

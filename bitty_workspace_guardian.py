@@ -34,20 +34,18 @@ def run(cmd, cwd=None):
         return str(e), 1
 
 def check_agents_md():
-    """Trim verbose changelog tables in AGENTS.md if >80% capacity."""
+    """Trim verbose changelog tables in AGENTS.md if >80% capacity. Returns action string or None."""
     file = WORKSPACE / "AGENTS.md"
     if not file.exists():
-        return
+        return None
 
     raw = file.read_text()
     size = len(raw)
     limit = MAX_PER_FILE_CHARS
     pct = size / limit * 100
 
-    log(f"AGENTS.md: {size} chars ({pct:.0f}% of {limit} limit)")
-
     if pct < 80:
-        return
+        return None  # silent — no action needed
 
     # Remove verbose Version History changelog tables — keep header row only
     # Pattern: tables with many " | " columns and "---" rows (changelog entries)
@@ -91,25 +89,23 @@ def check_agents_md():
     saved = size - new_size
     if saved > 500:
         file.write_text(new_raw)
-        log(f"AGENTS.md trimmed: -{saved} chars ({new_size} remain, {new_size/limit*100:.0f}% of limit)")
+        return f"AGENTS.md trimmed: -{saved} chars ({new_size} remain)"
     else:
-        log(f"AGENTS.md: flagged for manual review ({pct:.0f}% full)")
+        return f"AGENTS.md at {pct:.0f}% — needs manual review"
 
 def check_memory_md():
-    """Archive old events in MEMORY.md to keep it under bootstrap threshold."""
+    """Archive old events in MEMORY.md to keep it under bootstrap threshold. Returns action string or None."""
     file = WORKSPACE / "MEMORY.md"
     if not file.exists():
-        return
+        return None
 
     raw = file.read_text()
     size = len(raw)
     limit = MAX_PER_FILE_CHARS
     pct = size / limit * 100
 
-    log(f"MEMORY.md: {size} chars ({pct:.0f}% of {limit} limit)")
-
     if pct < 85:
-        return
+        return None
 
     # Archive the "## Memory Events" section entries older than 30 days
     # Move old event blocks to a compressed summary
@@ -117,6 +113,7 @@ def check_memory_md():
     kept = []
     archived_count = 0
     in_events = False
+    result = None
     cutoff = datetime.datetime.now() - datetime.timedelta(days=30)
     event_pat = re.compile(r"^###\s+\[([\d-]+)\]")
 
@@ -147,7 +144,7 @@ def check_memory_md():
         new_size = len(new_raw)
         saved = size - new_size
         file.write_text(new_raw)
-        log(f"MEMORY.md archived: {archived_count} old events removed, -{saved} chars")
+        result = f"MEMORY.md archived: {archived_count} events pruned, -{saved} chars"
 
     # If still oversized, do a deeper trim — collapse older sections to single-line summaries
     if len(file.read_text()) > MAX_PER_FILE_CHARS:
@@ -179,13 +176,14 @@ def check_memory_md():
         new_raw2 = "\n".join(compressed)
         if len(new_raw2) < len(raw2) - 200:
             file.write_text(new_raw2)
-            log(f"MEMORY.md deep-compressed: {len(raw2) - len(new_raw2)} chars saved")
+            result = f"MEMORY.md deep-compressed: {len(raw2) - len(new_raw2)} chars saved"
+    return result  # will be None if no action or a string if action taken
 
 def clean_session_baks():
-    """Remove stale .bak session files."""
+    """Remove stale .bak session files. Returns action string or None."""
     bak_files = list(Path.home().glob(".openclaw/agents/**/*/*.bak"))
     if not bak_files:
-        return
+        return None
     count = 0
     total_size = 0
     for f in bak_files[:50]:  # cap per run
@@ -199,10 +197,12 @@ def clean_session_baks():
         except Exception:
             pass
     if count:
-        log(f"Session BAK cleanup: {count} files, {total_size/1024:.0f} KB freed")
+        return f"Session BAK cleanup: {count} files, {total_size/1024:.0f} KB freed"
+    return None
 
 def check_uncommitted():
-    """Check key repos for uncommitted changes."""
+    """Check key repos for uncommitted changes. Auto-commit if stale (>3 days). Returns action string or None."""
+    actions = []
     repos = {
         "oasis-redesign": "/home/mathew/workspace/oasis-redesign",
         "katzen": "/home/mathew/workspace/katzen",
@@ -211,32 +211,49 @@ def check_uncommitted():
     }
     for name, path in repos.items():
         out, rc = run("git status --porcelain", cwd=path)
-        if rc == 0 and out.strip():
-            log(f"Uncommitted changes in {name}: {out.strip()[:120]}")
-            # Auto-commit workspace changes
-            if name == "workspace" and "MEMORY.md" in out:
-                run('git add MEMORY.md && git commit -m "Bitty: daily memory sync"', cwd=path)
-
-def check_ram_disk():
-    """Quick health ping — delegate to mitty_health_pulse if available."""
-    pulse = Path.home() / ".openclaw" / "workspace" / "mitty_health_pulse.sh"
-    if pulse.exists():
-        out, _ = run(f"bash {pulse}", cwd=str(pulse.parent))
-        if "⚠️" in out:
-            log(f"Health Alert: {out}")
-        elif "✅" in out or "OK" in out:
-            pass  # all clear, no log needed
-        else:
-            log(f"RAM/DISK check: {out[:100]}")
+        if rc != 0 or not out.strip():
+            continue
+        
+        # Check if oldest uncommitted change is >3 days old
+        oldest_ts, _ = run('git log -1 --format=%ct 2>/dev/null || echo 0', cwd=path)
+        if oldest_ts.strip() and oldest_ts.strip() != '0':
+            try:
+                oldest_sec = int(oldest_ts.strip())
+                age_hours = (datetime.datetime.now().timestamp() - oldest_sec) / 3600
+                if age_hours > 72:  # 3 days
+                    run('git add -A && git commit -m "Bitty: auto-commit stale changes"', cwd=path)
+                    actions.append(f"{name}: auto-committed ({age_hours:.0f}h stale)")
+                    continue
+            except ValueError:
+                pass
+        
+        actions.append(f"{name}: {out.strip()[:80]}")
+        # Still do daily workspace MEMORY syncs
+        if name == "workspace" and "MEMORY.md" in out:
+            run('git add MEMORY.md && git commit -m "Bitty: daily memory sync"', cwd=path)
+    
+    if actions:
+        return "Changes: " + " | ".join(actions)
+    return None
 
 def main():
-    log("Workspace Guardian running")
-    check_agents_md()
-    check_memory_md()
-    clean_session_baks()
-    check_uncommitted()
-    check_ram_disk()
-    log("Workspace Guardian complete")
+    actions_taken = []
+    
+    r1 = check_agents_md()
+    if r1: actions_taken.append(r1)
+    r2 = check_memory_md()
+    if r2: actions_taken.append(r2)
+    r3 = clean_session_baks()
+    if r3: actions_taken.append(r3)
+    r4 = check_uncommitted()
+    if r4: actions_taken.append(r4)
+    
+    # Only log to daily memory if something actually happened
+    if actions_taken:
+        log("Actions: " + " | ".join(actions_taken))
+    else:
+        # Silent — no log entry for routine clean sweeps
+        pass
 
 if __name__ == "__main__":
     main()
