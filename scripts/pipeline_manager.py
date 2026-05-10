@@ -541,8 +541,9 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
         return False
 
     slug = pdf.stem
-    # No version suffix — use slug as tag for single-file overwrite model
-    release_tag = tag or f"v1-{slug}"
+    # Strip _v[N] suffix from slug for clean tag (e.g. cat_guide_v1 -> v1-cat_guide not v1-cat_guide_v1)
+    display_slug = re.sub(r'_v\d+$', '', slug) if re.search(r'_v\d+$', slug) else slug
+    release_tag = tag or f"v1-{display_slug}"
     release_title = title or slug
     release_body = body or (
         f"## Release\n\n"

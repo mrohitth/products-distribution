@@ -1,0 +1,49 @@
+{
+  "trends": [
+    {
+      "trend_id": 1,
+      "audience": "Cat owners experiencing inappropriate elimination (peeing/pooping outside the litter box), especially multi-cat households",
+      "raw_quote": "We've tried everything — vet visits, different litter, different boxes, enzyme cleaners. My 6-year-old cat won't consistently use the litter box. I am at my wit's end and it's destroying my relationship with my cat.",
+      "emotional_trigger": "Helplessness + guilt — the owner feels like a failure, the cat is suffering, and the bond is fracturing",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "End-to-end litter box diagnosis guide: vet-first protocol, litter box optimization, stress reduction"
+    },
+    {
+      "trend_id": 2,
+      "audience": "First-time homeowners 1-6 months post-purchase experiencing overwhelm, regret, or 'new owner penalty'",
+      "raw_quote": "I regretted it at first. I was overwhelmed. handle safety stuff first, then chip away at the rest. it won't feel this overwhelming forever",
+      "emotional_trigger": "Buyer's remorse + paralysis by analysis — they don't know where to start and feel trapped",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 1,
+        "Recurrence": 2
+      },
+      "total_score": 8,
+      "solvable_10_page_guide": true,
+      "product_direction": "New homeowner triage guide: prioritize repairs, build a 90-day maintenance cadence, normalize the regret"
+    },
+    {
+      "trend_id": 3,
+      "audience": "Burned-out parents of toddlers and preschoolers, especially 'touched out' mothers",
+      "raw_quote": "My kids have broke me today. I feel like a failure for treating parenting like a chore.",
+      "emotional_trigger": "Shame + exhaustion — they know they're struggling but feel guilty admitting it",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 1,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Boundary-setting guide for emotionally exhausted parents: practical reset strategies, permission structures"
+    }
+  ]
+}
