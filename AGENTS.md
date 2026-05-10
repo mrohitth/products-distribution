@@ -19,7 +19,7 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 | Tier | Model | Cost | Task Type |
 |-------|-------|------|-----------|
 | **T1 — Primary** | MiniMax-M2.7 | $0 (subscription) | ALL cloud tasks — research, drafts, code, strategy, cron |
-| **T2 — Light** | Llama 3.2 3B (Local) | $0 (local) | PII scrubbing, lightweight file ops, gateway-fallback bridge |
+| **T2 — Light** | Llama 3.2 3B (Local) | $0 (local) | PII scrubbing, workspace guardian (systemEvent), gateway-fallback bridge |
 | **T3 — Overflow** | DeepSeek V4 Pro | PAYG ⚠️ | Explicit override only — never auto-routed |
 | **T4 — Overflow** | DeepSeek V4 Flash | PAYG ⚠️ | Explicit override only — never auto-routed |
 
