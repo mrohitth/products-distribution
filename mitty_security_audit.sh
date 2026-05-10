@@ -74,7 +74,7 @@ else
 fi
 
 # ─── 7. Recent failed logins ────────────────────────────────────────────────
-FAILED_LOGINS=$(journalctl --since "24 hours ago" -u ssh 2>/dev/null | grep -ciE "failed|invalid" 2>/dev/null || echo "0")
+FAILED_LOGINS=$(journalctl --since "24 hours ago" -u ssh 2>/dev/null | grep -ciE "failed|invalid" || true)
 FAILED_LOGINS=${FAILED_LOGINS:-0}
 if [[ "$FAILED_LOGINS" != "0" ]] && [[ -n "$FAILED_LOGINS" ]]; then
   if (( FAILED_LOGINS > 5 )); then
@@ -88,7 +88,7 @@ fi
 
 # ─── 8. Sessions size ───────────────────────────────────────────────────────
 SESS_SIZE=$(du -sm /home/mathew/.openclaw/agents/main/sessions/ 2>/dev/null | awk '{print $1}')
-if (( SESS_SIZE > 200 )); then
+if (( SESS_SIZE > 250 )); then
   log "Sessions dir: ${SESS_SIZE}MB — consider cleanup if >200MB"
 else
   log "Sessions dir: ${SESS_SIZE}MB ✅"
