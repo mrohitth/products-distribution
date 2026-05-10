@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T22:39:23.533Z",
+  "updatedAt": "2026-05-10T22:55:54.174Z",
   "entries": {
     "memory:memory/2026-05-03.md:57:71": {
       "key": "memory:memory/2026-05-03.md:57:71",
@@ -102,19 +102,20 @@
       "endLine": 54,
       "source": "memory",
       "snippet": "| Stage | Action | Output | |-------|--------|--------| | 1. Scout | Reddit/Quora trend hunting | `wiki/trends/YYYY-MM-DD.md` | | 2. Architect | Skeleton generation | `products/skeletons/[SLUG]_SKELETON.md` | | 3. Draft | Full V1 draft | `products/drafts/[SLUG]_V1.md` | | 4. Share | Telegram document delivery | Chat message with file paths | | 5. Production | cleanup_for_production() → WeasyPrint PDF → GitHub Release | `*.pdf` | | 6. Announce | Stage-by-stage completion with file paths + release URL | Telegram message | ### TrendScout Daily Result — 2026-05-05 (10 AM ET) - **Model:** MiniMax M2.7 · 47,569 tokens · 712 seconds · $0 marginal cost - **3 trends found:** - New Cat Heat Chaos (",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.314021483063698,
+      "totalScore": 2.7814282923936844,
       "maxScore": 0.517949166893959,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-10T22:39:19.566Z",
+      "lastRecalledAt": "2026-05-10T22:55:54.174Z",
       "queryHashes": [
         "80ab5093d8ec",
         "b3681c4771d8",
         "ea19aa0c9aae",
         "ba5e0eb39834",
-        "91c359473343"
+        "91c359473343",
+        "747a52503816"
       ],
       "recallDays": [
         "2026-05-06",
@@ -139,18 +140,19 @@
       "endLine": 69,
       "source": "memory",
       "snippet": "- [x] [T] PDF product template scaffold created - [x] [M] TrendScout ran (10:52 AM ET) — found 3 trends: 1. **Homeowner Cleaning Overwhelm** (r/Homeowners: 492↑, 682💬) — full-time workers feeling shame about never having a properly clean house 2. **Cat Bonding Imbalance** (r/CatAdvice: 445↑) — wife does everything, cat only bonds with passive husband 3. **Baby Sleep Anxiety — \"Too Good\" Sleeper** (r/Parenting: 571↑, 473💬) — parent worried baby doesn't cry when waking - Quora blocked (Cloudflare 403) — Reddit-only this cycle - Saved to wiki/trends/2026-05-04.md - `/home/mathew/.openclaw/workspace/products/template/PRODUCT_TEMPLATE.md` — 20-page digital product outline (16.7KB)",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.8711305677890777,
+      "totalScore": 2.3314689993858337,
       "maxScore": 0.5159127175807953,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-10T22:39:19.566Z",
+      "lastRecalledAt": "2026-05-10T22:55:54.174Z",
       "queryHashes": [
         "80ab5093d8ec",
         "b3681c4771d8",
         "ba5e0eb39834",
-        "91c359473343"
+        "91c359473343",
+        "747a52503816"
       ],
       "recallDays": [
         "2026-05-06",
@@ -174,16 +176,17 @@
       "endLine": 43,
       "source": "memory",
       "snippet": "- [x] [W] Influencer outreach drafts complete — 5 personalized emails in wiki/outreach/influencer_drafts.md - 5 micro-influencer archetypes analyzed (TYPE 1–5) with engagement signals and hook angles - Personalized email drafts for each using Floppy Paradox hook + observation-framing technique - Note: web_search unavailable; verified searches not possible this pass - [x] [T] Ragdoll First-Month guide drafted - `/home/mathew/.openclaw/workspace/products/drafts/ragdoll-first-month.md` — Full 3,000-5,000 word field manual (~23KB) - Emotional Hook framing: leads with fear of failure (\"Your Ragdoll deserves better than an anxious first month\") - Includes: First-week setup checklist,",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9491403192281722,
+      "totalScore": 1.4032415211200713,
       "maxScore": 0.5035630732774734,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-10T22:39:15.522Z",
+      "lastRecalledAt": "2026-05-10T22:55:54.174Z",
       "queryHashes": [
         "80ab5093d8ec",
-        "ba5e0eb39834"
+        "ba5e0eb39834",
+        "747a52503816"
       ],
       "recallDays": [
         "2026-05-06",
@@ -403,19 +406,20 @@
       "endLine": 191,
       "source": "memory",
       "snippet": "1. Pipeline manager: Added `Accept: application/vnd.github.v3+json` header to asset upload retry logic 2. Manually pushed toddler_vacation_confidence_guide_V1.pdf to GitHub + created release **Token:** Stored in git credential store (`~/.git-credentials`) as embedded URL: `https://mrohitth:github_pat_...@github.com` Pipeline reads it automatically — no env var needed. **Files changed:** `scripts/pipeline_manager.py` (fix pushed to workspace GitHub) **GitHub releases now confirmed working:** - https://github.com/mrohitth/products-distribution/releases/tag/v1-toddler_vacation_confidence_guide_V1 --- ## MarketBot Refinement Session — 2026-05-07 ~3:45 PM ET ### Finnhub API Key Wired - Key:",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.673051726256129,
+      "totalScore": 3.124954196248767,
       "maxScore": 0.8040289962632626,
       "firstRecalledAt": "2026-05-09T04:46:53.101Z",
-      "lastRecalledAt": "2026-05-10T22:39:23.533Z",
+      "lastRecalledAt": "2026-05-10T22:55:54.174Z",
       "queryHashes": [
         "476020dfe650",
         "67dbf173b2f6",
         "ba5e0eb39834",
         "91c359473343",
-        "a38ebf9d9784"
+        "a38ebf9d9784",
+        "747a52503816"
       ],
       "recallDays": [
         "2026-05-09",
@@ -439,18 +443,20 @@
       "endLine": 460,
       "source": "memory",
       "snippet": "**No hallucinated Kafka/Spark tags found.** The pipeline scanned `.md` files in `/wiki` and correctly filtered out metadata files (`.` prefix). The heuristic fallback runs cost-free when RAM > 70%. --- ### Correction Ledger — FULL SWEEP COMPLETE | File | Spark/Kafka/Snowflake | |------|----------------------| | CDC_Warehouse_SCD2.md | ✅ Correction Ledger active (Python/Bash only) | | Data_Engineering_Stack.md | ✅ Correction Ledger active | | batch-analytics-platform.md | ✅ Clean — never misattributed | | data-observability-platform.md | ✅ Clean — never misattributed | | Dynamic_Swarm_Activated.md | ✅ No violations | **All 5 GitHub repos clean:** - `mrohitth/cdc-historical-warehouse-platf",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.7295864530406164,
+      "totalScore": 1.1830003060898946,
       "maxScore": 0.7295864530406164,
       "firstRecalledAt": "2026-05-09T04:46:53.101Z",
-      "lastRecalledAt": "2026-05-09T04:46:53.101Z",
+      "lastRecalledAt": "2026-05-10T22:55:54.174Z",
       "queryHashes": [
-        "476020dfe650"
+        "476020dfe650",
+        "747a52503816"
       ],
       "recallDays": [
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "kafka/spark",
@@ -470,18 +476,19 @@
       "endLine": 162,
       "source": "memory",
       "snippet": "Fixed 4 infrastructure issues found during heartbeat audit: 1. **mitty_health_pulse.sh** — Sessions threshold 100MB→150MB (was spamming HEALTH_WARN at normal 118MB) 2. **witty_manifest_updater.py** — RECREATED (file was deleted but cron still referenced it). Now scans wiki changes every 15min and updates katzen manifest.json. Verified working ✅ 3. **mitty_security_audit.sh** — RECREATED (file was deleted). Pure-shell security audit: SSH, Firewall, Gateway, Cron errors, RAM, Disk, failed logins, sessions size. Verified working ✅ 4. **Kaizen cron payload** — Changed from `edit` tool to `python3 exec` append pattern (fixes stale session state causing edit failures). Also cleared model override",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.84405457675457,
+      "totalScore": 2.2936334580183027,
       "maxScore": 0.48995257318019864,
       "firstRecalledAt": "2026-05-09T04:46:53.101Z",
-      "lastRecalledAt": "2026-05-10T22:39:19.566Z",
+      "lastRecalledAt": "2026-05-10T22:55:54.174Z",
       "queryHashes": [
         "476020dfe650",
         "67dbf173b2f6",
         "ba5e0eb39834",
-        "91c359473343"
+        "91c359473343",
+        "747a52503816"
       ],
       "recallDays": [
         "2026-05-09",
@@ -1136,16 +1143,17 @@
       "endLine": 95,
       "source": "memory",
       "snippet": "- Pages 3-4: Problem Diagnosis (emotionally-charged) - Pages 5-7: Solution Overview (3 pillars + module roadmap) - Pages 8-18: Core Content (11 modules — 10 standard + 1 bonus) - Page 19: Resources & Tools - Page 20: Next Steps / Call to Action **placeholder_guide.md** covers: - Section-by-section fill guide - Content planning worksheet - Emotional triggers checklist - Brand voice reminders - Final reminders for launch readiness --- ## Status **Kitty [K]** — Task complete. Scaffold ready for trend-based product drafting. - [x] [K] 10 social teasers generated — marketing/social_teasers.md - [x] [K] Meta description (158 chars) — marketing/storefront_meta.md - [x] [K] Thank You email draft",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8874370962381363,
+      "totalScore": 1.3381134450435637,
       "maxScore": 0.45296770632266997,
       "firstRecalledAt": "2026-05-10T22:39:19.566Z",
-      "lastRecalledAt": "2026-05-10T22:39:23.533Z",
+      "lastRecalledAt": "2026-05-10T22:55:54.174Z",
       "queryHashes": [
         "91c359473343",
-        "a38ebf9d9784"
+        "a38ebf9d9784",
+        "747a52503816"
       ],
       "recallDays": [
         "2026-05-10"

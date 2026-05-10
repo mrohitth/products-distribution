@@ -722,6 +722,10 @@ def cleanup_for_production(md_text, dry_run=False):
         r"This draft is matte|Framework:|Top Conviction:)",
         _re.IGNORECASE,
     )
+    re_brief_outline = _re.compile(r"Brief Outline|Full chapter in production|in active development|Part \d+.*— Brief Outline$", _re.IGNORECASE)
+    re_outline_hdr = _re.compile(r"^# Part \d+: .* — Brief Outline$", _re.IGNORECASE)
+    re_active_dev = _re.compile(r"^\*This guide is in active development.*\*$", _re.IGNORECASE)
+    re_full_chapter = _re.compile(r"\(Full chapter in production version\)", _re.IGNORECASE)
     re_ai_marker = _re.compile(r"\[(AI-GENERATED|FIRST.DRAFT|TEMP|DRAFT ONLY)\]", _re.IGNORECASE)
     re_key_takeaway = _re.compile(r"^\*\*Key Takeaway:\*\*\s*(.*)")
     re_script_block = _re.compile(r"^\*\*(Say|Don't\s+say):\*\*\s*(.*)")
@@ -783,16 +787,36 @@ def cleanup_for_production(md_text, dry_run=False):
             # Skip all content until the next top-level H2 or higher heading
             while i < len(lines):
                 line_text = lines[i].strip()
-                # Stop at next H2+ heading (section boundary)
                 h_match = re_coming_v2_section.match(line_text)
                 if h_match:
-                    # This is a new "Coming in V2" section — skip it too
                     i += 1
                     continue
-                # H2 headings start the next real section — stop before them
                 if line_text.startswith("## "):
                     break
-                # Skip everything else (bullets, paragraphs, HRs in the V2 block)
+                i += 1
+            continue
+
+        # ── "Part X: ... — Brief Outline" headings — strip heading + entire section ──
+        if re_outline_hdr.match(stripped):
+            i += 1
+            # Skip all content until the next H1+ heading
+            while i < len(lines):
+                line_text = lines[i].strip()
+                if line_text.startswith("# "):
+                    break
+                i += 1
+            continue
+
+        # ── "(Full chapter in production version)" lines ──
+        if re_full_chapter.search(stripped):
+            i += 1
+            continue
+
+        # ── "This guide is in active development..." footer ──
+        if re_active_dev.match(stripped):
+            i += 1
+            # Skip empty lines after the footer
+            while i < len(lines) and lines[i].strip() == "":
                 i += 1
             continue
 
