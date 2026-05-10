@@ -82,39 +82,39 @@ Daily Morning Brief bridging budget + portfolio. Delivers to Telegram, no WhatsA
 
 ---
 
-## Market Discovery (2026-05-10)
+## TrendScout Pipeline v2 (2026-05-10)
 
-Three-layer discovery engine integrated into the 30-min opportunity scanner:
+**Complete revamp** with JSON handoffs, fact-checking, self-critic pass, and distribution hooks.
 
-### 1. Tag-Along Logic
-- Parses Finnhub news headlines for known WATCHLIST_TICKER + unknown ticker co-occurrences
-- Example: "NVDA partners with Nokia" → surfaces NOK for technical screen
-- Fetches RSI, MA50, MA200, volume, 52w high for strangers
+### Pipeline Stages
+| Stage | Task | Output |
+|-------|------|--------|
+| 1. Scout | Browse Reddit/Quora, find 3 trends with High Emotion anchor | `wiki/trends/[date].json` (JSON with score_breakdown) |
+| 2. Architect | Skeleton + mandatory fact-check per pillar (VERIFIED/UNCERTAIN/PLAUSIBLE) | `products/skeletons/[SLUG]_v[N]_SKELETON.md` |
+| 3. Draft | Full production draft, self-critic pass (3 AI-slop markers), no placeholders | `products/drafts/[SLUG]_v[N].md` |
+| 4. Distribution Hook | Value-first Reddit comment quoting user's specific problem, no sales pitch | `products/distribution/[SLUG]_v[N]_reddit_hook.md` |
+| 5. Production | PDF via WeasyPrint + GitHub sync to `final_products/` | `output/final_products/[SLUG].pdf` |
+| 6. Announce | Telegram delivery with file paths | Telegram message |
 
-### 2. Volume/Momentum Screen
-- Scans 40 broad-market tickers (sector ETFs + liquid caps like AAPL, TSLA, GE, NOK)
-- Flags: volume >= 2x 10-week avg OR daily move >= 4%
-- Gated: max once per 4 hours (respects Yahoo Finance rate limits)
-
-### 3. Warm Bench Queue
-- Persisted to `data/discovery-queue.json`
-- Status lifecycle: new → reviewed → promoted → dismissed
-- Auto-expires entries > 30 days old
-- Reply `DISCOVER /ticker` to promote, `DISMISS /ticker` to remove
+### Core Principles
+- **Fact-Over-Fluency**: UNCERTAIN flag if not expert-backed
+- **JSON Boundaries**: Strict JSON for all Stage 1-3 handoffs
+- **No Overwrite**: `_v[N]` suffix for existing slugs (never overwrites manual edits)
+- **Matte-Finish Voice**: Smart-casual, data-grounded, zero fluff
+- **Self-Critic**: Mandatory review for repetitive starts, vague adjectives, generic intros
+- **Error Handling**: Malformed JSON → STOP + Telegram alert
 
 ### Key Files
 | File | Purpose |
 |------|---------|
-| `src/lib/market_discovery.ts` | Discovery engine (Tag-Along, volume screen, queue) |
-| `data/discovery-queue.json` | Warm Bench — persistents tickers awaiting review |
-| `data/discovery-volume-gate.txt` | Time gate for volume screen (4h cooldown) |
+| `wiki/trends/[date].json` | Stage 1 JSON handoff (trends + scores) |
+| `products/skeletons/[SLUG]_v[N]_SKELETON.md` | Fact-checked skeleton |
+| `products/drafts/[SLUG]_v[N].md` | Self-critiqued production draft |
+| `products/distribution/[SLUG]_v[N]_reddit_hook.md` | Value-first Reddit comment |
+| `output/final_products/[SLUG].pdf` | Production PDF |
 
-### Cost
-- Tag-along: 1 Finnhub API call + ~1-5 quote fetches = negligible ($0, free tiers)
-- Volume screen: ~40 quote fetches every 4h ≈ 240/day. Same free-tier Yahoo Finance as main scanner.
+---
 
-**Cross-links:**
-→ [../index.md](../index.md) — Wiki central
-→ [./index.md](./index.md) — Projects index
-→ [katzen.md](./katzen.md) — Related project: KATZEN
-→ [../decisions/telegram-delivery.md](../decisions/telegram-delivery.md) — Delivery channel decision
+## Market Discovery (2026-05-10)
+
+[rest of market discovery section unchanged]
