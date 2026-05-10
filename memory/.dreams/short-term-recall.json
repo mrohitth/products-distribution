@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T22:05:09.242Z",
+  "updatedAt": "2026-05-10T22:39:23.533Z",
   "entries": {
     "memory:memory/2026-05-03.md:57:71": {
       "key": "memory:memory/2026-05-03.md:57:71",
@@ -102,21 +102,24 @@
       "endLine": 54,
       "source": "memory",
       "snippet": "| Stage | Action | Output | |-------|--------|--------| | 1. Scout | Reddit/Quora trend hunting | `wiki/trends/YYYY-MM-DD.md` | | 2. Architect | Skeleton generation | `products/skeletons/[SLUG]_SKELETON.md` | | 3. Draft | Full V1 draft | `products/drafts/[SLUG]_V1.md` | | 4. Share | Telegram document delivery | Chat message with file paths | | 5. Production | cleanup_for_production() → WeasyPrint PDF → GitHub Release | `*.pdf` | | 6. Announce | Stage-by-stage completion with file paths + release URL | Telegram message | ### TrendScout Daily Result — 2026-05-05 (10 AM ET) - **Model:** MiniMax M2.7 · 47,569 tokens · 712 seconds · $0 marginal cost - **3 trends found:** - New Cat Heat Chaos (",
-      "recallCount": 3,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.4002841144800184,
+      "totalScore": 2.314021483063698,
       "maxScore": 0.517949166893959,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-07T15:10:27.612Z",
+      "lastRecalledAt": "2026-05-10T22:39:19.566Z",
       "queryHashes": [
         "80ab5093d8ec",
         "b3681c4771d8",
-        "ea19aa0c9aae"
+        "ea19aa0c9aae",
+        "ba5e0eb39834",
+        "91c359473343"
       ],
       "recallDays": [
         "2026-05-06",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-10"
       ],
       "conceptTags": [
         "reddit/quora",
@@ -136,19 +139,22 @@
       "endLine": 69,
       "source": "memory",
       "snippet": "- [x] [T] PDF product template scaffold created - [x] [M] TrendScout ran (10:52 AM ET) — found 3 trends: 1. **Homeowner Cleaning Overwhelm** (r/Homeowners: 492↑, 682💬) — full-time workers feeling shame about never having a properly clean house 2. **Cat Bonding Imbalance** (r/CatAdvice: 445↑) — wife does everything, cat only bonds with passive husband 3. **Baby Sleep Anxiety — \"Too Good\" Sleeper** (r/Parenting: 571↑, 473💬) — parent worried baby doesn't cry when waking - Quora blocked (Cloudflare 403) — Reddit-only this cycle - Saved to wiki/trends/2026-05-04.md - `/home/mathew/.openclaw/workspace/products/template/PRODUCT_TEMPLATE.md` — 20-page digital product outline (16.7KB)",
-      "recallCount": 2,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.96810764670372,
+      "totalScore": 1.8711305677890777,
       "maxScore": 0.5159127175807953,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-07T01:33:48.391Z",
+      "lastRecalledAt": "2026-05-10T22:39:19.566Z",
       "queryHashes": [
         "80ab5093d8ec",
-        "b3681c4771d8"
+        "b3681c4771d8",
+        "ba5e0eb39834",
+        "91c359473343"
       ],
       "recallDays": [
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-10"
       ],
       "conceptTags": [
         "r/homeowners",
@@ -168,18 +174,20 @@
       "endLine": 43,
       "source": "memory",
       "snippet": "- [x] [W] Influencer outreach drafts complete — 5 personalized emails in wiki/outreach/influencer_drafts.md - 5 micro-influencer archetypes analyzed (TYPE 1–5) with engagement signals and hook angles - Personalized email drafts for each using Floppy Paradox hook + observation-framing technique - Note: web_search unavailable; verified searches not possible this pass - [x] [T] Ragdoll First-Month guide drafted - `/home/mathew/.openclaw/workspace/products/drafts/ragdoll-first-month.md` — Full 3,000-5,000 word field manual (~23KB) - Emotional Hook framing: leads with fear of failure (\"Your Ragdoll deserves better than an anxious first month\") - Includes: First-week setup checklist,",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5035630732774734,
+      "totalScore": 0.9491403192281722,
       "maxScore": 0.5035630732774734,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-06T14:04:09.920Z",
+      "lastRecalledAt": "2026-05-10T22:39:15.522Z",
       "queryHashes": [
-        "80ab5093d8ec"
+        "80ab5093d8ec",
+        "ba5e0eb39834"
       ],
       "recallDays": [
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-10"
       ],
       "conceptTags": [
         "micro-influencer",
@@ -199,18 +207,20 @@
       "endLine": 31,
       "source": "memory",
       "snippet": "## Tasks - [x] [M] TrendScout ran — found 3 trends ## Audit Findings - [MITTY] 2026-05-05T01:17:47-04:00: RAM compaction ✅ | Consistency: PASSED | SSH fails: 0 N/A | Cron: 3 | RAM: 4390MB used / 1218MB free | ## Session Log — 2026-05-05 ### Model Switch Mid-Session - Session started on DeepSeek V4 Pro (session inherited model from before config change) - Switched to MiniMax M2.7 mid-session at 12:43 PM ET — confirmed in runtime - **Lesson:** OpenClaw picks model at session start; config changes don't hot-swap running sessions - **Fix applied:** Session model override set to `minimax/MiniMax-M2.7` explicitly ### Config Changes Applied - DeepSeek removed from gateway fallbacks (empty arr",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.49725737571716305,
+      "totalScore": 0.9574917078018188,
       "maxScore": 0.49725737571716305,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-06T14:04:09.920Z",
+      "lastRecalledAt": "2026-05-10T22:39:15.522Z",
       "queryHashes": [
-        "80ab5093d8ec"
+        "80ab5093d8ec",
+        "ba5e0eb39834"
       ],
       "recallDays": [
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gateway",
@@ -393,16 +403,19 @@
       "endLine": 191,
       "source": "memory",
       "snippet": "1. Pipeline manager: Added `Accept: application/vnd.github.v3+json` header to asset upload retry logic 2. Manually pushed toddler_vacation_confidence_guide_V1.pdf to GitHub + created release **Token:** Stored in git credential store (`~/.git-credentials`) as embedded URL: `https://mrohitth:github_pat_...@github.com` Pipeline reads it automatically — no env var needed. **Files changed:** `scripts/pipeline_manager.py` (fix pushed to workspace GitHub) **GitHub releases now confirmed working:** - https://github.com/mrohitth/products-distribution/releases/tag/v1-toddler_vacation_confidence_guide_V1 --- ## MarketBot Refinement Session — 2026-05-07 ~3:45 PM ET ### Finnhub API Key Wired - Key:",
-      "recallCount": 2,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.2721103871209591,
+      "totalScore": 2.673051726256129,
       "maxScore": 0.8040289962632626,
       "firstRecalledAt": "2026-05-09T04:46:53.101Z",
-      "lastRecalledAt": "2026-05-10T20:46:13.667Z",
+      "lastRecalledAt": "2026-05-10T22:39:23.533Z",
       "queryHashes": [
         "476020dfe650",
-        "67dbf173b2f6"
+        "67dbf173b2f6",
+        "ba5e0eb39834",
+        "91c359473343",
+        "a38ebf9d9784"
       ],
       "recallDays": [
         "2026-05-09",
@@ -457,16 +470,18 @@
       "endLine": 162,
       "source": "memory",
       "snippet": "Fixed 4 infrastructure issues found during heartbeat audit: 1. **mitty_health_pulse.sh** — Sessions threshold 100MB→150MB (was spamming HEALTH_WARN at normal 118MB) 2. **witty_manifest_updater.py** — RECREATED (file was deleted but cron still referenced it). Now scans wiki changes every 15min and updates katzen manifest.json. Verified working ✅ 3. **mitty_security_audit.sh** — RECREATED (file was deleted). Pure-shell security audit: SSH, Firewall, Gateway, Cron errors, RAM, Disk, failed logins, sessions size. Verified working ✅ 4. **Kaizen cron payload** — Changed from `edit` tool to `python3 exec` append pattern (fixes stale session state causing edit failures). Also cleared model override",
-      "recallCount": 2,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.947455033659935,
+      "totalScore": 1.84405457675457,
       "maxScore": 0.48995257318019864,
       "firstRecalledAt": "2026-05-09T04:46:53.101Z",
-      "lastRecalledAt": "2026-05-10T20:46:13.667Z",
+      "lastRecalledAt": "2026-05-10T22:39:19.566Z",
       "queryHashes": [
         "476020dfe650",
-        "67dbf173b2f6"
+        "67dbf173b2f6",
+        "ba5e0eb39834",
+        "91c359473343"
       ],
       "recallDays": [
         "2026-05-09",
@@ -1112,6 +1127,69 @@
         "opportunity",
         "scanner",
         "time"
+      ]
+    },
+    "memory:memory/2026-05-04.md:61:95": {
+      "key": "memory:memory/2026-05-04.md:61:95",
+      "path": "memory/2026-05-04.md",
+      "startLine": 61,
+      "endLine": 95,
+      "source": "memory",
+      "snippet": "- Pages 3-4: Problem Diagnosis (emotionally-charged) - Pages 5-7: Solution Overview (3 pillars + module roadmap) - Pages 8-18: Core Content (11 modules — 10 standard + 1 bonus) - Page 19: Resources & Tools - Page 20: Next Steps / Call to Action **placeholder_guide.md** covers: - Section-by-section fill guide - Content planning worksheet - Emotional triggers checklist - Brand voice reminders - Final reminders for launch readiness --- ## Status **Kitty [K]** — Task complete. Scaffold ready for trend-based product drafting. - [x] [K] 10 social teasers generated — marketing/social_teasers.md - [x] [K] Meta description (158 chars) — marketing/storefront_meta.md - [x] [K] Thank You email draft",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8874370962381363,
+      "maxScore": 0.45296770632266997,
+      "firstRecalledAt": "2026-05-10T22:39:19.566Z",
+      "lastRecalledAt": "2026-05-10T22:39:23.533Z",
+      "queryHashes": [
+        "91c359473343",
+        "a38ebf9d9784"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "3-4",
+        "emotionally-charged",
+        "5-7",
+        "8-18",
+        "placeholder-guide.md",
+        "section-by-section",
+        "trend-based",
+        "marketing/social-teasers.md"
+      ]
+    },
+    "memory:memory/2026-05-03.md:551:578": {
+      "key": "memory:memory/2026-05-03.md:551:578",
+      "path": "memory/2026-05-03.md",
+      "startLine": 551,
+      "endLine": 578,
+      "source": "memory",
+      "snippet": "- `ab1be4b3` (LLM security audit, no runs recorded) → `618c0a1c` (shell script, daily 11 PM Eastern) ## Audit Findings - [MITTY] 2026-05-03 17:41 EDT: RAM Preservation: log compaction complete prior to audit. SSH failed logins: 0 | Cron known jobs: 1 | RAM: 4045MB used / 2049MB free | Gateway: 2 ✅ ## Audit Findings - [MITTY] 2026-05-03 17:41 EDT: RAM Preservation: log compaction complete prior to audit. SSH failed logins: 0 | Cron known jobs: 1 | RAM: 4083MB used / 2010MB free | Gateway: 2 ✅ ### Agent Sync Repair — Witty + Katzen-Sync (2026-05-03T23:05 UTC) **Discovery:** Katzen-Sync (Witty) cron `eb7e4f11` was failing with `FailoverError: LLM request failed` — 5 consecutive errors. Th",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4264468222856521,
+      "maxScore": 0.4264468222856521,
+      "firstRecalledAt": "2026-05-10T22:39:19.566Z",
+      "lastRecalledAt": "2026-05-10T22:39:19.566Z",
+      "queryHashes": [
+        "91c359473343"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "failover",
+        "gateway",
+        "katzen-sync",
+        "2026-05-03t23",
+        "ab1be4b3",
+        "llm",
+        "security",
+        "audit"
       ]
     }
   }

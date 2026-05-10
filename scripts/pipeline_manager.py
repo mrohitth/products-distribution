@@ -430,9 +430,7 @@ def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-di
         print(f"  ❌ sync_products_to_github: PDF not found: {pdf_path}")
         return False
 
-    slug = pdf_file.stem  # e.g. "off_switch_V1"
-    version_match = re.search(r'_V(\d+)$', slug)
-    version = version_match.group(1) if version_match else "1"
+    slug = pdf_file.stem  # e.g. "catproof_home_office" (no version suffix)
 
     OUTPUT_DIR = WORKSPACE / "output"
     REPO_DIR = OUTPUT_DIR / "repos" / repo.replace("/", "_")
@@ -542,15 +540,12 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
         return False
 
     slug = pdf.stem
-    # Parse version from slug
-    version_match = re.search(r'_V(\d+)$', slug)
-    version = version_match.group(1) if version_match else "1"
-    release_tag = tag or f"v{version}"
-    release_title = title or f"prod: {slug} v{version}"
+    # No version suffix — use slug as tag for single-file overwrite model
+    release_tag = tag or f"v1-{slug}"
+    release_title = title or slug
     release_body = body or (
-        f"## Release {release_tag}\n\n"
+        f"## Release\n\n"
         f"**Product:** {slug}\n"
-        f"**Version:** {version}\n"
         f"**Generated:** {datetime.now().date()}\n\n"
         f"---\n\n"
         f"*Human Infrastructure — Human-scale systems, maintained.*"
@@ -1511,7 +1506,7 @@ def main():
     # Normalize: archive any existing canonical version before writing new one
     normalize_to_canonical(DRAFTS_DIR, slug, None)
 
-    draft_path = DRAFTS_DIR / f"{slug}_V1.md"
+    draft_path = DRAFTS_DIR / f"{slug}.md"
     DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
     draft_path.write_text(draft)
     print(f"  Draft saved: {draft_path}")
@@ -1527,7 +1522,7 @@ def main():
     if pdf_path:
         print(f"  Phase 1: Syncing products to GitHub...")
         # HTML shares the same slug: off_switch_V1_editable.html
-        html_path = str(Path(pdf_path).parent / (Path(pdf_path).stem + "_editable.html"))
+        html_path = str(Path(pdf_path).parent / (slug + "_editable.html"))
         sync_products_to_github(pdf_path, html_path)
     else:
         print(f"  Phase 1: Skipped — no PDF generated")
