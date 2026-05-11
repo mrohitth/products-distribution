@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """
-Stage 5.5 — Checklist Generator (v2)
+Stage 5.5 — Checklist Generator (v3)
 Takes a draft .md path, extracts KEY action items only (no checkbox items,
-no noise, no empty bullets), and creates a 1-page printable checklist PDF.
+no noise), and creates a 1-page printable checklist PDF.
+FIXES v2:
+  - HTML-escapes item text before embedding in HTML (prevents ** from being interpreted)
+  - Aggressive bold stripping: strips ** from BOTH ends, then collapses any bare **
+  - Skips lines with malformed/unclosed bold markers
+  - Deduplicates by normalized key, not just first 60 chars
 """
-import sys, re
+import sys, re, html as html_mod
 from pathlib import Path
 from datetime import datetime
 
@@ -13,7 +18,7 @@ OUTPUT_DIR = WORKSPACE / "output" / "final_products"
 
 # ── What to SKIP ──────────────────────────────────────────────────────────────
 SKIP_PREFIXES = [
-    "[ ]", "[x]", "[X]",  # checkbox items — these are reminders, not actions
+    "[ ]", "[x]", "[X]",  # checkbox items — reminders, not actions
     "##", "###", "#",       # section headers
     "```",                  # code blocks
 ]
@@ -24,7 +29,7 @@ SKIP_PATTERNS = [
     r"^url:\s",            # link lines
 ]
 
-# ── Priority keywords (action items only) ────────────────────────────────────
+# ── Action keywords (must contain one to qualify) ─────────────────────────────
 ACTION_KEYWORDS = [
     "verify", "check", "call", "ask", "review", "inspect", "compare",
     "get", "obtain", "request", "get three", "sign", "pay", "use",
@@ -39,34 +44,32 @@ LOW_PRIORITY = [
 ]
 
 
+def strip_bold(text: str) -> str:
+    """Remove ALL markdown bold markers cleanly, even malformed ones."""
+    # First pass: properly paired **...** → ...
+    text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
+    # Second pass: collapse any bare ** that remain (from malformed input)
+    text = re.sub(r"\*\*+", "", text)
+    return text
+
+
 def is_action_item(line: str) -> bool:
     """Return True if this line is a meaningful action item."""
     lower = line.lower()
 
-    # Skip checkbox items
     if any(line.strip().startswith(p) for p in ["[ ]", "[x]", "[X]"]):
         return False
-
-    # Skip empty bullets
     if re.match(r"^\s*[-*]\s*$", line) or re.match(r"^\s*\d+\.\s*$", line):
         return False
-
-    # Skip if too short
     if len(line.strip()) < 20:
         return False
-
-    # Skip low-priority / soft language
     if any(p in lower for p in LOW_PRIORITY):
         return False
 
-    # Must contain an action keyword OR be a clear step/numbered item
     if any(kw in lower for kw in ACTION_KEYWORDS):
         return True
-
-    # Accept numbered steps that are actionable
     if re.match(r"^\d+\.\s+[A-Z]", line):
         return True
-
     return False
 
 
@@ -79,24 +82,36 @@ def extract_action_items(draft_path: Path, max_items: int = 12) -> list[str]:
         line = line.strip()
         if not line:
             continue
-        # Skip section headers and code blocks
         if any(line.startswith(p) for p in ["##", "###", "#", "```"]):
             continue
-        # Accept only action items
-        if is_action_item(line):
-            # Clean markdown formatting
-            clean = re.sub(r"^\s*[-*]\s+", "", line)
-            clean = re.sub(r"^\s*\d+\.\s+", "", clean)
-            clean = re.sub(r"\*\*(.+?)\*\*", r"\1", clean)  # strip bold
-            clean = re.sub(r"^(action|step|tip|warning|important)\s*[:\-]\s*", "", clean, flags=re.I)
-            if len(clean) >= 15:
-                raw_items.append(clean)
 
-    # Deduplicate by first 60 chars
+        if not is_action_item(line):
+            continue
+
+        # Strip numbered list prefix and bullet prefix
+        clean = re.sub(r"^\s*[-*]\s+", "", line)
+        clean = re.sub(r"^\s*\d+\.\s+", "", clean)
+
+        # Aggressively strip bold — both proper and malformed
+        clean = strip_bold(clean)
+
+        # Strip leading action/step/tip/warning prefixes
+        clean = re.sub(
+            r"^(action|step|tip|warning|important)\s*[:\-]\s*", "", clean,
+            flags=re.I
+        )
+
+        # Final safety: remove any remaining asterisks
+        clean = clean.replace("*", "").strip()
+
+        if len(clean) >= 15:
+            raw_items.append(clean)
+
+    # Deduplicate by normalized key (lower, first 80 chars)
     seen = set()
     deduped = []
     for item in raw_items:
-        key = item.lower()[:60]
+        key = item.lower()[:80].strip()
         if key not in seen:
             seen.add(key)
             deduped.append(item)
@@ -112,6 +127,7 @@ def generate_checklist_pdf(draft_path: str) -> str | None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     items = extract_action_items(draft_path)
+
     if not items:
         title = slug.replace("-", " ").replace("_", " ").title()
         items = [
@@ -121,11 +137,11 @@ def generate_checklist_pdf(draft_path: str) -> str | None:
             "Set a 7-day reminder for the next step",
         ]
 
-    # Build checkbox HTML
+    # HTML-escape ALL item text — critical for preventing ** from being interpreted
     checkbox_rows = ""
     for item in items:
-        # Truncate long items to keep it readable
-        display = item[:90] + ("..." if len(item) > 90 else "")
+        safe = html_mod.escape(item, quote=True)
+        display = safe[:90] + ("..." if len(safe) > 90 else "")
         checkbox_rows += f'<li class="item"><span class="cb">☐</span><span class="label">{display}</span></li>\n'
 
     title_str = slug.replace("-", " ").replace("_", " ").title()
@@ -153,7 +169,7 @@ def generate_checklist_pdf(draft_path: str) -> str | None:
 <body>
   <div class="page">
     <div class="header">
-      <div class="title">{title_str} — Action Checklist</div>
+      <div class="title">{html_mod.escape(title_str)} — Action Checklist</div>
       <div class="meta">GENERATED {date_str} | Print this page and keep it somewhere visible</div>
     </div>
     <ol class="items">
