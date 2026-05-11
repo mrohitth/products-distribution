@@ -179,20 +179,16 @@ If your cat has zero history of box use, start with the ASPCA's housetraining gu
 
 ---
 
-## Next Steps: Free Checklist + Full Product
+## Your Bonus: 7-Day Litter Box Reset Checklist Included
 
-You've got the framework. Now here's the fast track to implementation.
+You've got the framework. The checklist is your fast track to implementation — a one-page printable that sequences everything in this guide: vet visit prep, box audit, litter swap schedule, stress assessment, and cleaning protocol.
 
-**Free Download: The 7-Day Litter Box Reset Checklist**
-A one-page printable that sequences everything in this guide — vet visit prep, box audit, litter swap schedule, stress assessment, and cleaning protocol. Tick through it once a day for a week and you'll know exactly what's working and what isn't.
+**Already a buyer?** Your companion checklist is waiting in your Lemon Squeezy library along with any future updates to this guide.
+👉 [Access your library →](https://yourlittlesqueezy.lemonsqueezy.com/library)
 
-👉 [Get the free checklist →](https://yourlittlesqueezy.lemonsqueezy.com/checklist)
-
-**The Complete Cat Litter Box Rescue Guide (PDF + Editable)**
-Includes the full guide above plus printable tracking sheets, a multi-cat tension assessment tool, and a vet communication template so you walk into the appointment knowing exactly what to ask for.
-
-👉 [Buy the full guide →](https://yourlittlesqueezy.lemonsqueezy.com/guide)
+**New here?** The full guide includes the checklist as a bundled bonus — two files, one purchase.
+👉 [Buy the bundle →](https://yourlittlesqueezy.lemonsqueezy.com/buy/cat-litter-box-rescue-guide)
 
 ---
 
-*Built for cats who deserve better than guesswork.*
+*Built for cats who deserve better than guesswork. Bundle includes main guide + companion checklist.*
