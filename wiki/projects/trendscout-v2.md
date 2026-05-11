@@ -90,7 +90,7 @@ workspace/
 | Script | Location | Purpose |
 |--------|----------|---------|
 | `pipeline_manager.py` | `scripts/pipeline_manager.py` | PDF generation, GitHub sync, distro registration |
-| `bitty_wiki_guardian.py` | `bitty_wiki_guardian.py` | Correction Ledger enforcement (no Spark/Kafka/Snowflake in wiki) |
+| `bitty_wiki_guardian.py` | `bitty_wiki_guardian.py` | Correction Ledger enforcement (banned stack: Spark, Kafka, Snowflake) |
 | `pipeline_chain.sh` | `scripts/pipeline_chain.sh` | Manual off-schedule pipeline runner |
 
 ## GitHub Release Tags

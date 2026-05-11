@@ -680,6 +680,222 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
     return True
 
 
+# ═══════════════════════════════════════════════════════════════════════════════
+# LEMON SQUEEZY — Product Manifest + File Upload
+# ═══════════════════════════════════════════════════════════════════════════════
+# Lemon Squeezy API is read-only for products/variants (creation via dashboard).
+# This module generates a product manifest for manual creation and supports
+# uploading files to existing variants via the Files API.
+
+LS_API_BASE = "https://api.lemonsqueezy.com/v1"
+LS_STORE_ID = "371709"  # mrohitth store
+LS_STORE_URL = "https://mrohitth.lemonsqueezy.com"
+
+def _ls_api_key():
+    """Read Lemon Squeezy API key from env var or restricted file."""
+    key = os.environ.get("LEMONSQUEEZY_API_KEY", "")
+    if not key:
+        cred_path = Path.home() / ".lemonsqueezy" / "api_key"
+        if cred_path.exists():
+            key = cred_path.read_text().strip()
+    return key
+
+
+def _ls_headers():
+    key = _ls_api_key()
+    if not key:
+        return None
+    return {
+        "Authorization": f"Bearer {key}",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+    }
+
+
+def _ls_request(method, path, data=None):
+    """Generic Lemon Squeezy API request."""
+    headers = _ls_headers()
+    if not headers:
+        print("  ❌ No Lemon Squeezy API key found -- set LEMONSQUEEZY_API_KEY")
+        return None
+    import urllib.request, urllib.error
+    url = f"{LS_API_BASE}/{path}"
+    body = json.dumps(data).encode() if data else None
+    req = urllib.request.Request(url, data=body, headers=headers, method=method)
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            return json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        err_body = e.read().decode()
+        print(f"  ❌ LS API error ({e.code}): {err_body[:200]}")
+        return None
+    except Exception as e:
+        print(f"  ❌ LS API exception: {e}")
+        return None
+
+
+def generate_ls_manifest(slug, title, pdf_path, checklist_path=None, price=1499):
+    """
+    Generate a Lemon Squeezy Product Manifest JSON.
+    Products/variants must be created through the LS dashboard (API is read-only).
+    This manifest contains all the info you need to copy-paste into the dashboard.
+    
+    Once the product exists, run:
+      upload_ls_files(variant_id, pdf_path, checklist_path)
+    to attach the PDFs.
+    """
+    price_dollars = price / 100
+    manifest = {
+        "store_id": LS_STORE_ID,
+        "store_url": LS_STORE_URL,
+        "product": {
+            "name": title,
+            "slug": slug,
+            "description": f"A comprehensive guide to {slug.replace('-', ' ')}.",
+            "price": f"${price_dollars:.2f}",
+            "price_cents": price,
+            "variant_name": "Standard Edition",
+        },
+        "files": [
+            {
+                "name": f"{slug}.pdf",
+                "path": str(pdf_path),
+                "size_bytes": Path(pdf_path).stat().st_size if Path(pdf_path).exists() else 0,
+            }
+        ],
+        "checkout_url": f"{LS_STORE_URL}/checkout/buy/{slug}",
+        "manual_steps": [
+            "1. Go to app.lemonsqueezy.com > Products > Create Product",
+            f"2. Name: {title}",
+            f"3. Slug: {slug}",
+            f"4. Price: ${price_dollars:.2f} (Standard Edition variant)",
+            f"5. Upload PDFs from: output/final_products/",
+            "6. Publish the product",
+            f"7. Checkout URL will be: {LS_STORE_URL}/checkout/buy/{slug}",
+        ]
+    }
+    
+    if checklist_path and Path(checklist_path).exists():
+        manifest["files"].append({
+            "name": f"{slug}_CHECKLIST.pdf",
+            "path": str(checklist_path),
+            "size_bytes": Path(checklist_path).stat().st_size,
+        })
+        manifest["manual_steps"].insert(5, f"    - {slug}_CHECKLIST.pdf (companion)")
+    
+    manifest_path = Path(f"output/final_products/{slug}_ls_manifest.json")
+    manifest_path.write_text(json.dumps(manifest, indent=2))
+    print(f"  🍋 LS Manifest: {manifest_path}")
+    return manifest
+
+
+def upload_ls_files(variant_id, pdf_path, checklist_path=None):
+    """
+    Upload PDF files to an existing Lemon Squeezy variant.
+    Requires variant_id from a product already created in the dashboard.
+    """
+    if not variant_id:
+        print("  ❌ upload_ls_files requires a variant_id")
+        return False
+
+    pdf = Path(pdf_path)
+    if not pdf.exists():
+        print(f"  ❌ PDF not found: {pdf_path}")
+        return False
+
+    success = True
+
+    # Upload main PDF
+    print(f"  📎 Uploading {pdf.name} to variant {variant_id}...")
+    upload_data = _ls_request("POST", "files", {
+        "data": {
+            "type": "files",
+            "attributes": {
+                "name": pdf.name,
+                "size": pdf.stat().st_size,
+            },
+            "relationships": {
+                "variant": {
+                    "data": {"type": "variants", "id": str(variant_id)}
+                }
+            }
+        }
+    })
+    if upload_data and "data" in upload_data:
+        up_url = upload_data["data"]["attributes"].get("upload_url", "")
+        if up_url:
+            import urllib.request as _ur
+            with open(pdf_path, "rb") as f:
+                req = _ur.Request(up_url, data=f, method="PUT")
+                req.add_header("Content-Type", "application/pdf")
+                try:
+                    with _ur.urlopen(req, timeout=120): pass
+                    print(f"  ✅ {pdf.name} uploaded")
+                except Exception as e:
+                    print(f"  ⚠️  Upload failed: {e}")
+                    success = False
+        else:
+            print("  ⚠️  No upload URL")
+            success = False
+    else:
+        err = upload_data.get("errors", "no data") if upload_data else "no response"
+        print(f"  ⚠️  File registration failed: {err}")
+        success = False
+
+    # Upload checklist if provided
+    if checklist_path:
+        check = Path(checklist_path)
+        if check.exists():
+            print(f"  📎 Uploading {check.name}...")
+            check_data = _ls_request("POST", "files", {
+                "data": {
+                    "type": "files",
+                    "attributes": {
+                        "name": check.name,
+                        "size": check.stat().st_size,
+                    },
+                    "relationships": {
+                        "variant": {
+                            "data": {"type": "variants", "id": str(variant_id)}
+                        }
+                    }
+                }
+            })
+            if check_data and "data" in check_data:
+                cu = check_data["data"]["attributes"].get("upload_url", "")
+                if cu:
+                    import urllib.request as _cr
+                    with open(check_path, "rb") as f:
+                        r2 = _cr.Request(cu, data=f, method="PUT")
+                        r2.add_header("Content-Type", "application/pdf")
+                        try:
+                            with _cr.urlopen(r2, timeout=120): pass
+                            print(f"  ✅ {check.name} uploaded")
+                        except Exception as e:
+                            print(f"  ⚠️  Upload failed: {e}")
+                            success = False
+
+    return success
+
+
+def update_cta_with_ls_url(draft_path, checkout_url):
+    """Replace placeholder Lemon Squeezy URLs in the draft with live checkout URL."""
+    if not checkout_url:
+        return False
+    draft = Path(draft_path)
+    if not draft.exists():
+        return False
+    text = draft.read_text()
+    # Replace placeholder patterns
+    for placeholder in ["https://yourlittlesqueezy.lemonsqueezy.com", "https://yourstore.lemonsqueezy.com"]:
+        text = text.replace(placeholder, LS_STORE_URL)
+    # Replace generic buy links with product-specific checkout
+    text = text.replace("/buy/", f"/checkout/buy/")
+    draft.write_text(text)
+    print(f"  🍋 CTA URLs updated in {draft.name}")
+    return True
+
+
 def cleanup_for_production(md_text, dry_run=False):
     r"""
     Strip draft artifacts from markdown before PDF generation.
