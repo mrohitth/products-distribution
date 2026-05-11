@@ -1,0 +1,14 @@
+[Mon May 11 04:14:39 PM EDT 2026] Cleaning /tmp...
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-fwupd.service-1HN7fG’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-power-profiles-daemon.service-3moxpc’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-geoclue.service-U0Uy9d’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-upower.service-X2At2J’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-colord.service-7aPxUh’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-ModemManager.service-CA3xBt’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-systemd-logind.service-qodOqR’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-switcheroo-control.service-qR1PzL’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-polkit.service-KlbFCm’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-chrony.service-Clyosz’: Permission denied
+find: ‘/tmp/systemd-private-0dc81080471c4fdc9ae4ba9870556f70-bluetooth.service-4NIogf’: Permission denied
+find: ‘/tmp/snap-private-tmp’: Permission denied
+[Mon May 11 04:14:39 PM EDT 2026] Done

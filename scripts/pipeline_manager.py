@@ -406,7 +406,7 @@ def send_draft_via_telegram(draft_path, creds):
         return None
 
 
-def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-distribution", branch="main"):
+def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-distribution", branch="main", checklist_path=None):
     """
     Push both PDF and HTML products to the products-distribution repo.
 
@@ -468,6 +468,15 @@ def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-di
 
     shutil.copy2(str(pdf_file), str(products_dir / pdf_file.name))
     files_synced = [pdf_file.name]
+
+    if checklist_path:
+        check_file = Path(checklist_path)
+        if check_file.exists():
+            shutil.copy2(str(check_file), str(products_dir / check_file.name))
+            files_synced.append(check_file.name)
+            print(f"  ℹ️  Checklist synced: {check_file.name}")
+        else:
+            print(f"  ⚠️  Checklist not found: {checklist_path}")
 
     if html_path:
         html_file = Path(html_path)
@@ -555,18 +564,6 @@ def create_github_release(pdf_path, repo="mrohitth/products-distribution", tag=N
 
     # Read GitHub token from env (set by caller or git-credentials fallback or gh auth)
     gh_token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
-    if not gh_token:
-        cred_path = Path.home() / ".git-credentials"
-        if cred_path.exists():
-            for line in cred_path.read_text().strip().split("\n"):
-                if "github.com" in line:
-                    try:
-                        token_start = line.index("://") + 3
-                        token_end = line.index("@", token_start)
-                        gh_token = line[token_start:token_end].split(":")[-1]
-                        break
-                    except ValueError:
-                        pass
     if not gh_token:
         # Fallback to gh CLI auth
         try:
@@ -1763,9 +1760,9 @@ def main():
     # 5b. Push products to GitHub (both PDF + HTML in products/{slug}/)
     if pdf_path:
         print(f"  Phase 1: Syncing products to GitHub...")
-        # HTML shares the same slug: off_switch_V1_editable.html
         html_path = str(Path(pdf_path).parent / (slug + "_editable.html"))
-        sync_products_to_github(pdf_path, html_path)
+        checklist_path = str(Path(pdf_path).parent / f"{slug}_CHECKLIST.pdf")
+        sync_products_to_github(pdf_path, html_path, checklist_path=checklist_path if Path(checklist_path).exists() else None)
     else:
         print(f"  Phase 1: Skipped — no PDF generated")
 
