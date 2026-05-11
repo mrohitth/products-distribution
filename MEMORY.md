@@ -116,6 +116,7 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 - CDC pipelines → Python/Bash only. No Spark, Kafka, Snowflake, EMR, PySpark.
 - DeepSeek → PAYG. Manual `model=` override required. Never auto-routed.
 - MiniMax M2.7 → sole cloud primary (subscription, $0 marginal cost).
+- **Credentials** → System keyring only. No `.git-credentials` files, no PATs in remote URLs, no API keys in source files. `gh auth login --with-token` + `gh auth setup-git` for all GitHub access. Enforced by bitty_credential_leak_scanner.sh every 6h.
 ## 📚 Model Specifications
 
 > **→ SOURCE OF TRUTH: [MODEL_SPECS.md](MODEL_SPECS.md)**

@@ -182,6 +182,17 @@ Add 6 AM ET scan (before 8 AM Capital Pilot):
 
 CDC pipelines and data warehouse code must use **Python/Bash only** — no Spark, Kafka, Snowflake, or EMR in pipeline logic.
 
+## Credential Security Rule (Non-Negotiable)
+
+**Never embed credentials in code, files, URLs, or git history.** All GitHub authentication must use the system keyring via `gh auth login --with-token` + `gh auth setup-git`. No `.git-credentials` files, no PATs in remote URLs, no API keys in source files.
+
+API keys and tokens must be:
+- Stored in **system keyring** (gnome-keyring, macOS Keychain, etc.) via `gh auth login --with-token`
+- Or injected via **environment variables** at runtime (never hardcoded)
+- Or read from **OpenClaw's config vault** (`openclaw config set`)
+
+The `bitty_credential_leak_scanner.sh` runs every 6 hours to enforce this. If it finds anything, stop and fix it before any push.
+
 ---
 
 ## Conventions

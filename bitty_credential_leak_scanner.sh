@@ -45,6 +45,15 @@ for repo_dir in \
        -o -path "*/.env" \) -prune -o \
     -type f -print0 2>/dev/null)
 
+  # Check for .git-credentials files (flat-file credential store — should not exist)
+  for git_cred_file in ~/.git-credentials ~/.config/git/credentials; do
+    if [[ -s "$git_cred_file" ]]; then
+      crit "LEAK: $name — $git_cred_file exists with plaintext credentials (use gh auth setup-git instead)"
+      ISSUES="${ISSUES}GIT_CRED_FILE $git_cred_file; "
+      FOUND=1
+    fi
+  done
+
   # Check git remotes for embedded tokens
   remote=$(git -C "$repo_dir" remote get-url origin 2>/dev/null || echo "")
   if [[ -n "$remote" ]] && [[ "$remote" != git@*github.com* ]] && [[ "$remote" == *@*github.com* ]]; then
