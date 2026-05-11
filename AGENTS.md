@@ -23,16 +23,7 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 | **T3 — Overflow** | DeepSeek V4 Pro | PAYG ⚠️ | Explicit override only — never auto-routed |
 | **T4 — Overflow** | DeepSeek V4 Flash | PAYG ⚠️ | Explicit override only — never auto-routed |
 
-**Routing Logic (revised May 2026):**
-- **All cloud tasks → MiniMax-M2.7** (Professional subscription, $0 marginal cost)
-- **Lightweight local tasks → Llama 3.2 3B** (Bitty, via Ollama) — replaces DeepSeek Flash for cheap bridge operations
-- **DeepSeek is PAYG** — blocked from automatic fallback chain. Manual `model=` override required for any DeepSeek usage
-- RAM-gated escalation: Before cloud requests, check 70% threshold. If exceeded, fall back to local Llama
-
-**RAM-Gated Escalation:** Before escalating to cloud models (Bitty inference, Ollama), check 70% RAM threshold. If exceeded, queue task until RAM drops.
-
----
-
+**Routing Logic:** All cloud tasks → MiniMax-M2.7. DeepSeek is PAYG — blocked from fallback chain. RAM >70% → fall back to local Llama.
 ## Tier 1: Kitty 🐱 — Chief of Staff / Lead Orchestrator
 
 **Model:** DeepSeek V4 Pro | **Tier:** T1 (Architect) | **Status:** ACTIVE | **Emoji:** 🧠
@@ -123,47 +114,24 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 
 ## Multi-Agent Dispatch — Proper Pattern
 
-> **Core principle: Kitty dispatches sub-agents before compiling anything.**
-> Never run everything in one isolated agentTurn session.
+> **Core principle:** Kitty dispatches sub-agents before compiling anything.
 
-### Capital Pilot — Kitty dispatches then synthesizes
+### Capital Pilot — Parallel Dispatch Model
 ```
 Kitty (main session)
-  -> Spawn Titty (isolated): fetch all market data, compute RSI
+  -> Spawn Titty (isolated): fetch market data, compute RSI
   -> Spawn Witty (isolated): check market wiki for overnight catalysts
   -> Wait for both results
   -> Kitty synthesizes: positions + drift + setups + investor filters
   -> Announce to Telegram
 ```
-**Current:** One monolithic isolated agentTurn (Kitty does everything alone).
-**Problem:** No parallel data fetch, no inter-agent signal passing, stale file state.
 
-### TrendScout — Restore parallel sub-agent dispatch
-```
-Phase 4 dispatched simultaneously:
-  Bitty (local Ollama)  -> naming pass
-  Witty (DeepSeek Flash) -> email sequence
-  Titty (MiniMax M2.7)  -> full draft generation
-  Kitty (DeepSeek Pro)  -> checkout success page
-  PATCH /api/alerts between each step
-```
-**Current:** Single-pass TrendScout_Daily is sequential and slow.
-**Fix needed:** Restore Phase 4 parallel dispatch (TrendScout_CrossRef was the ref impl).
+### TrendScout — Single-Pass Pipeline
+Daily 10 AM ET. Scout → Architect → Draft → Distribution → Production → Announce. JSON handoffs, Brave Search, fact-checking.
 
-### Witty — Market wiki post-mortem (underutilized)
-After every Capital Pilot brief, Witty should log outcomes to `wiki/market-patterns/`:
-- Setup hit target / stopped out / expired
-- RSI thresholds triggered or missed
-- Pattern to track: RSI_OVERSOLD_BOUNCE on ASTS hit in 3 days at 2.1 R/R
-
-### Mitty — Pre-market health check (underutilized)
-Add 6 AM ET scan (before 8 AM Capital Pilot):
-- Check for overnight news that might flip signals
-- Flag positions approaching black-swan thresholds to Kitty
-- Output: "NVDA approaching RSI_OVERBOUGHT — take profit window today"
-
----
-
+### Capital Pilot Brief Enhancement (Planned)
+- **Pre-market health check** (6 AM ET): scan overnight news that might flip signals
+- **Witty market wiki post-mortem:** log trade outcomes to `wiki/market-patterns/` after each brief
 ## Delegation Matrix
 
 | Task Type | Route To |
