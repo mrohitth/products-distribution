@@ -184,10 +184,10 @@ If your cat has zero history of box use, start with the ASPCA's housetraining gu
 You've got the framework. The checklist is your fast track to implementation — a one-page printable that sequences everything in this guide: vet visit prep, box audit, litter swap schedule, stress assessment, and cleaning protocol.
 
 **Already a buyer?** Your companion checklist is waiting in your Lemon Squeezy library along with any future updates to this guide.
-👉 [Access your library →](https://yourlittlesqueezy.lemonsqueezy.com/library)
+👉 [Access your library →](https://mrohitth.lemonsqueezy.com/library)
 
 **New here?** The full guide includes the checklist as a bundled bonus — two files, one purchase.
-👉 [Buy the bundle →](https://yourlittlesqueezy.lemonsqueezy.com/buy/cat-litter-box-rescue-guide)
+👉 [Buy the bundle →](https://mrohitth.lemonsqueezy.com/buy/cat-litter-box-rescue-guide)
 
 ---
 

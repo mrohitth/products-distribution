@@ -37,27 +37,27 @@ Before you sign anything — before you pay anything — run these five checks. 
 Every state has a Contractors State License Board (CSLB) or equivalent. Search "[your state] contractor license lookup" or go to your state's Department of Consumer Affairs website.
 
 What to verify:
-- **License number** — Ask the contractor for their license number. Cross-reference it on the CSLB website.
-- **Business name match** — The name on the license must match the name on the contract. Scammers use names similar to legitimate firms.
-- **License status** — Active, expired, or suspended? An expired license means they're operating illegally.
-- **License classifications** — Contractors are licensed for specific types of work. A general contractor can't do electrical work without the right classification.
-- **Bonding status** — A contractor's bond is a financial guarantee. If they fail to complete work, the bond can compensate you. Verify the bond is current and sufficient for your project size.
+• **License number** — Ask the contractor for their license number. Cross-reference it on the CSLB website.
+• **Business name match** — The name on the license must match the name on the contract. Scammers use names similar to legitimate firms.
+• **License status** — Active, expired, or suspended? An expired license means they're operating illegally.
+• **License classifications** — Contractors are licensed for specific types of work. A general contractor can't do electrical work without the right classification.
+• **Bonding status** — A contractor's bond is a financial guarantee. If they fail to complete work, the bond can compensate you. Verify the bond is current and sufficient for your project size.
 
 California example: cslb.ca.gov — you can search by name or license number. For other states, search "contractor license board [state]."
 
 ### 2.2 Insurance Verification
 
 Contractors must carry liability insurance and workers' compensation. Ask for:
-- **Certificate of Insurance (COI)** — The contractor's insurer can email this directly to you. If they say they "have insurance" but can't produce a COI within 24 hours, that's a red flag.
-- **Policy limits** — Minimum recommended: $1M general liability. For large projects, get the policy reviewed.
-- **Your name as additionally insured** — This is optional but recommended. It means you're covered if something goes wrong on your property.
+• **Certificate of Insurance (COI)** — The contractor's insurer can email this directly to you. If they say they "have insurance" but can't produce a COI within 24 hours, that's a red flag.
+• **Policy limits** — Minimum recommended: $1M general liability. For large projects, get the policy reviewed.
+• **Your name as additionally insured** — This is optional but recommended. It means you're covered if something goes wrong on your property.
 
 ### 2.3 Business Registration
 
 Check with your Secretary of State or county clerk:
-- Is the business registered?
-- How long has it been operating?
-- Who is the registered agent?
+• Is the business registered?
+• How long has it been operating?
+• Who is the registered agent?
 
 A company that was registered six months ago with no track record is a higher risk than one operating for ten years.
 
@@ -88,17 +88,17 @@ Every home improvement contract should include:
 California's CSLB sets the maximum down payment for residential work at $1,000 or 10% of the contract price, whichever is less — unless materials are already purchased and staged.
 
 The correct payment schedule:
-- 1/3 at contract signing (or less, if materials aren't involved)
-- 1/3 at project midpoint (withhold until verified progress)
-- 1/3 at completion and sign-off
+• 1/3 at contract signing (or less, if materials aren't involved)
+• 1/3 at project midpoint (withhold until verified progress)
+• 1/3 at completion and sign-off
 
 Never pay in cash. Use check, credit card, or a payment platform with fraud protection. If the contractor insists on cash, walk away.
 
 ### 3.3 Never Sign These Documents
 
-- **Assignment of benefits agreements** — These give the contractor authority to deal directly with your insurance company and collect payment. You lose visibility and control.
-- **Blank change orders** — A change order must be signed before extra work begins, not after.
-- **Waivers releasing the contractor from liability** — If presented, stop and consult a lawyer.
+• **Assignment of benefits agreements** — These give the contractor authority to deal directly with your insurance company and collect payment. You lose visibility and control.
+• **Blank change orders** — A change order must be signed before extra work begins, not after.
+• **Waivers releasing the contractor from liability** — If presented, stop and consult a lawyer.
 
 ---
 
@@ -137,12 +137,12 @@ If you've already paid and things went wrong, here's what to do — in order.
 ### Step 1: Document Everything (Right Now)
 
 Open a folder — physical or digital. Add:
-- The contract (signed and unsigned versions)
-- All receipts and payment records (bank statements, credit card transactions)
-- Photos of the work done (before, during, after)
-- All written communications (texts, emails)
-- Voicemails (transcribed)
-- Notes on all phone calls (date, time, what was said)
+• The contract (signed and unsigned versions)
+• All receipts and payment records (bank statements, credit card transactions)
+• Photos of the work done (before, during, after)
+• All written communications (texts, emails)
+• Voicemails (transcribed)
+• Notes on all phone calls (date, time, what was said)
 
 This documentation is the foundation of every recovery path.
 
@@ -226,14 +226,14 @@ Print this. Keep it by your home files.
 8. [ ] No cash payments — check, credit card, or protected payment platform only
 
 **Red Flags That Kill the Deal:**
-- License doesn't verify
-- More than 33% upfront
-- Cash only
-- No written contract
-- Door-to-door solicitation
-- "Today's the last day for this price"
-- Assignment of benefits requested
-- Business registered less than 1 year ago with no verifiable track record
+• License doesn't verify
+• More than 33% upfront
+• Cash only
+• No written contract
+• Door-to-door solicitation
+• "Today's the last day for this price"
+• Assignment of benefits requested
+• Business registered less than 1 year ago with no verifiable track record
 
 ---
 
