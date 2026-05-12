@@ -41,7 +41,10 @@ def sync_to_github(pdf_path, checklist_path=None, branch=None):
     subprocess.run(["git", "-C", str(CLONE_DIR), "fetch", "origin", "--quiet"],
                     capture_output=True, timeout=30)
 
-    # Checkout remote HEAD
+    subprocess.run(
+        ["git", "-C", str(CLONE_DIR), "checkout", "-b", branch, f"origin/{branch}"],
+        capture_output=True, timeout=15
+    )
     subprocess.run(
         ["git", "-C", str(CLONE_DIR), "reset", "--hard", f"origin/{branch}"],
         capture_output=True, timeout=15

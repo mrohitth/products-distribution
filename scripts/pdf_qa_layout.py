@@ -95,13 +95,13 @@ def check_margin_padding(css_text: str, pdf_name: str) -> list:
     body_match = re.search(r'body\s*\{([^}]+)\}', css_text, re.DOTALL)
     if body_match:
         props = body_match.group(1)
-        padding_match = re.search(r'padding:\s*(\d+(?:\.\d+)?)(pt|px|em)', props)
+        padding_match = re.search(r'padding:\s*(\d+(?:\.\d+)?)(pt|px|em|in)', props)
         if not padding_match:
-            issues.append(f"  ℹ️  {pdf_name}: body has no explicit padding")
+            issues.append(f"  ❌ {pdf_name}: body has no explicit padding")
         else:
             val = float(padding_match.group(1))
             unit = padding_match.group(2)
-            pt_val = val if unit == "pt" else val / 1.5 if unit == "px" else val * 12
+            pt_val = val if unit == "pt" else val / 1.5 if unit == "px" else val * 12 if unit == "em" else val * 72
             if pt_val < 50:
                 issues.append(f"  ℹ️  {pdf_name}: body padding is {pt_val:.0f}pt — tight but acceptable")
     return issues
@@ -194,11 +194,12 @@ def check_external_links(md_text: str, pdf_name: str) -> list:
 # ════════════════════════════════════════════════════════════════════════════
 
 def check_ai_isms(text: str, pdf_name: str) -> list:
-    """Flag AI-slop language patterns."""
+    """Flag AI-slop language patterns. Uses word-boundary regex to avoid
+    false positives like 'dynamic' inside 'dynamics'."""
     issues = []
     text_lower = text.lower()
     for phrase in AI_ISMS:
-        count = text_lower.count(phrase)
+        count = len(re.findall(r'\b' + re.escape(phrase) + r'\b', text_lower))
         if count >= 3:
             issues.append(f"  ⚠️  {pdf_name}: '{phrase}' appears {count}x — consider rewriting")
     return issues

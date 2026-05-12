@@ -1,5 +1,5 @@
 ---
-title: "Holistic guide"
+title: "A Whole-Animal Approach to Cat Aggression as a Health Signal"
 slug: "cat-aggression-health-signal-guide"
 trend: "Holistic guide: cat aggression as a health signal - covering medical causes, human hormone changes affecting pets, and reintroduction strategies"
 audience: "Multi-cat owners whose cats exhibit sudden behavioral changes; includes people experiencing pregnancy or hormone changes themselves"
