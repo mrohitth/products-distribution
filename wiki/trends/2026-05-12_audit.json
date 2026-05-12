@@ -1,21 +1,45 @@
 {
-  "scouted_at": "2026-05-12T03:39:19.093312-04:00",
-  "source_channels": [
-    "reddit.com",
-    "quora.com"
+  "scouted_at": "2026-05-12T03:39:19.094572-04:00",
+  "date": "2026-05-12",
+  "queries": [
+    [
+      "overwhelmed new caregiver feel hopeless Reddit caregiving",
+      "reddit"
+    ],
+    [
+      "desperate freelance client refuses to pay Reddit",
+      "reddit"
+    ],
+    [
+      "remote work burnt out isolated frustrated Reddit",
+      "reddit"
+    ],
+    [
+      "student loan debt trapped overwhelmed Quora",
+      "quora"
+    ],
+    [
+      "home renovation disaster regret frustrated Reddit homeimprovement",
+      "reddit"
+    ],
+    [
+      "pet health emergency vet bill shocked Reddit askvet",
+      "reddit"
+    ],
+    [
+      "technology overwhelmed frustrated senior citizens Reddit",
+      "reddit"
+    ],
+    [
+      "relationship feeling alone disconnected Reddit relationships",
+      "reddit"
+    ],
+    [
+      "divorce after long marriage lost scared Reddit",
+      "reddit"
+    ]
   ],
-  "queries_used": [
-    "overwhelmed new caregiver feel hopeless Reddit caregiving",
-    "desperate freelance client refuses to pay Reddit",
-    "remote work burnt out isolated frustrated Reddit",
-    "student loan debt trapped overwhelmed Quora",
-    "home renovation disaster regret frustrated Reddit homeimprovement",
-    "pet health emergency vet bill shocked Reddit askvet",
-    "technology overwhelmed frustrated senior citizens Reddit",
-    "relationship feeling alone disconnected Reddit relationships",
-    "divorce after long marriage lost scared Reddit"
-  ],
-  "trends": [
+  "accepted": [
     {
       "trend_id": 6,
       "audience": "Freelancers across design, development, writing, and creative fields who face payment disputes with clients",
@@ -617,8 +641,65 @@
       "source_platform": "reddit"
     }
   ],
-  "stage1_status": "COMPLETE",
-  "high_score_trends": 30,
-  "total_scored": 30,
-  "version": "v3"
+  "rejected": [
+    {
+      "title": "r/HomeImprovement on Reddit: Going on 2 years of full home reno. Feeling burnout",
+      "description": "We\u2019re frustrated with where we\u2019re at and feeling regret about buying this home. While we know we\u2019ll be happy with it in the end, it\u2019s hard not to feel some resentment. Any words of wisdom? Or sympathy",
+      "rejection_reason": "Too short to analyze or AI error",
+      "source_query": "home renovation disaster regret frustrated Reddit homeimprovement"
+    },
+    {
+      "source_query": "technology overwhelmed frustrated senior citizens Reddit",
+      "title": "r/AskReddit on Reddit: What technology do the senior citizens in your life strug",
+      "description": "I don&#x27;t think it&#x27;s technology so much as change. My mum uses a computer full time for her job, she&#x27;s just turned 70 and doesn&#x27;t want to retire yet. She can do her job fine. But whe",
+      "rejection_reason": "This is an AskReddit discussion thread (gathering opinions) not a problem statement from someone seeking a solution. The actual audience experiencing the pain (seniors) is unlikely to search for or buy a guide themselves. Monetization depends on convincing caregivers to buy it. The topic is too broad (all technology) rather than one specific solvable problem.",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 9
+    },
+    {
+      "source_query": "technology overwhelmed frustrated senior citizens Reddit",
+      "title": "r/slatestarcodex on Reddit: Why do many older people struggle with computers? Wh",
+      "description": "<strong>Older people seem to be overwhelmed by the constant presence of options</strong>. My father used to draw tree diagrams of all the menu and sub-menu choices of his tax software, so he would kno",
+      "rejection_reason": "While recurrence is strong, monetization is weak \u2014 this content is widely available for free (YouTube tutorials, senior center materials, AARP resources). The question is also too broad and philosophical rather than a specific, actionable problem. A digital product needs a tighter niche (e.g., 'Setting Up iPad for Dementia Patients' or 'Simplified Windows 11 for Seniors').",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 1,
+        "Recurrence": 3
+      },
+      "total_score": 8
+    },
+    {
+      "title": "r/BoomersBeingFools on Reddit: Is anyone else completely frustrated with the lac",
+      "description": "Even the boomer that runs it gets frustrated with them. ... I have a buddy who is so on top of his shit. He\u2019s 80 and uses Apple Pay and has a smartwatch and is always letting me know about ios updates",
+      "rejection_reason": "Too short to analyze or AI error",
+      "source_query": "technology overwhelmed frustrated senior citizens Reddit"
+    },
+    {
+      "source_query": "relationship feeling alone disconnected Reddit relationships",
+      "title": "[Mature Content] r/AskWomen on Reddit: When was the time you realised you're lon",
+      "description": "It made me feel disconnected from him during the weekdays, and I found myself wishing the time away so the weekend could come and I could feel connected again. Periodically throughout our relationship",
+      "rejection_reason": "While the emotion is high and audience moderate, monetization is unlikely (this is perceived as needing personal advice/therapy, not a checklist). More critically, a 10-page guide is not a solvable approach for this deeply relational, emotionally complex problem that requires personal communication, couple's work, or professional help \u2014 not a downloadable resource.",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 1,
+        "Recurrence": 2
+      },
+      "total_score": 8
+    },
+    {
+      "title": "r/Divorce on Reddit: People who got divorced after 20+ years: How long were thin",
+      "description": "I think that\u2019s what worries me the most, not on some jealousy stuff but we coulda called it a long time ago and she could have been then. I care about her to much to see her unhappy. ... 7 years of go",
+      "rejection_reason": "Too short to analyze or AI error",
+      "source_query": "divorce after long marriage lost scared Reddit"
+    }
+  ],
+  "total_accepted": 30,
+  "total_rejected": 6
 }

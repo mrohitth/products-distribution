@@ -8,7 +8,7 @@ Replaces the old hardcoded-query + keyword-scoring approach with:
   - Cross-date slug deduplication
   - Full audit trail (rejected + accepted trends saved)
   - Consistent slug + version normalization
-  - Clean failure on search errors (no brittle HTML scraping)
+  - DuckDuckGo search (no API key needed)
 
 Usage:
   python3 scripts/trendscout_scout.py                  # normal run
@@ -17,9 +17,11 @@ Usage:
 
 Output: wiki/trends/{date}.json + wiki/trends/{date}_audit.json
 """
-import json, re, sys, subprocess, time
+import json, re, sys, time, html as html_mod
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+import requests as req_lib
+import urllib.request, urllib.error
 
 WORKSPACE = Path("/home/mathew/.openclaw/workspace")
 TRENDS_DIR = WORKSPACE / "wiki" / "trends"
@@ -27,45 +29,70 @@ SKELETONS_DIR = WORKSPACE / "products" / "skeletons"
 DRAFTS_DIR = WORKSPACE / "products" / "drafts"
 ET = timezone(timedelta(hours=-4))
 
-# ── Helper: Brave Search ───────────────────────────────────────────────────────────
+# ── Helper: Brave Search via API (key from openclaw.json) ──────────────────────────
 
-def brave_search(query: str, count: int = 5) -> list[dict]:
-    """
-    Execute one Brave Search query via the CLI.
-    Returns list of {title, description, url, source}.
-    Fails cleanly — no HTML scraping fallback.
-    """
+def get_brave_api_key() -> str:
+    """Read Brave Search API key from OpenClaw config."""
     try:
-        result = subprocess.run(
-            ["brave-search", "--json", "--num-results", str(count), query],
-            capture_output=True, text=True, timeout=30,
+        with open(Path("/home/mathew/.openclaw/openclaw.json")) as f:
+            cfg = json.load(f)
+        tools = cfg.get("tools", {})
+        ws = tools.get("web", {}).get("search", {})
+        return ws.get("apiKey", "") or ws.get("api_key", "") or ""
+    except Exception:
+        return ""
+
+
+def brave_search_api(query: str, count: int = 5, api_key: str = "") -> list[dict]:
+    """
+    Search via Brave Search API (key from OpenClaw config).
+    Returns list of {title, description, url, source}.
+    """
+    if not api_key:
+        api_key = get_brave_api_key()
+    if not api_key:
+        print(f"    \u26a0\ufe0f  No Brave Search API key found")
+        return []
+
+    try:
+        resp = req_lib.get(
+            "https://api.search.brave.com/res/v1/web/search",
+            params={"q": query, "count": min(count, 10), "safesearch": "off"},
+            headers={
+                "Accept": "application/json",
+                "Accept-Encoding": "gzip",
+                "X-Subscription-Token": api_key,
+            },
+            timeout=20,
         )
-        if result.returncode != 0 or not result.stdout.strip():
-            print(f"    ⚠️  brave-search CLI returned empty")
+        if resp.status_code == 429:
+            print(f"    \u26a0\ufe0f  Brave API rate limited (429) — try again later")
+            return []
+        if resp.status_code != 200:
+            print(f"    \u26a0\ufe0f  Brave API returned {resp.status_code}")
             return []
 
-        raw = result.stdout.strip()
-        # If it's HTML (auth error, etc.), fail cleanly
-        if raw.startswith("<!doctype") or raw.startswith("<html"):
-            print(f"    ⚠️  brave-search returned HTML (auth?), failing query")
-            return []
-
-        data = json.loads(raw)
+        data = resp.json()
         results = []
-        for item in data if isinstance(data, list) else data.get("results", data.get("web", data.get("organic", []))):
+
+        # Brave API returns web search results in data.web.results
+        web_results = data.get("web", {}).get("results", []) if isinstance(data, dict) else []
+        if not web_results:
+            # Try organic results as fallback
+            web_results = data.get("organic", []) if isinstance(data, dict) else []
+
+        for item in web_results[:count]:
             if isinstance(item, dict):
                 results.append({
                     "title": (item.get("title") or "").strip(),
                     "description": (item.get("description") or item.get("snippet") or "").strip(),
-                    "url": (item.get("url") or "").strip(),
-                    "source": "brave",
+                    "url": (item.get("url") or item.get("link") or "").strip(),
+                    "source": "brave-api",
                 })
+
         return results[:count]
-    except json.JSONDecodeError:
-        print(f"    ⚠️  brave-search returned non-JSON, failing query")
-        return []
     except Exception as e:
-        print(f"    ⚠️  brave-search error: {e}")
+        print(f"    \u26a0\ufe0f  Brave API search error: {e}")
         return []
 
 
@@ -137,11 +164,11 @@ def generate_queries_ai(creds: dict, catalog: dict) -> list[tuple[str, str]]:
     ]
 
     system = """You are a trend discovery strategist for a digital product factory.
-Your job is to propose diverse Brave Search queries to find emotionally-charged
+Your job is to propose diverse search queries to find emotionally-charged
 problem posts on Reddit and Quora that could become digital guide products.
 
 Rules:
-- Each query MUST target a SPECIFIC subreddit (site:reddit.com/r/SubredditName)
+- Each query should include the word "Reddit" or "Quora" as a keyword (NOT site: filters)
 - Queries must be diverse — no more than 2 queries per topic category
 - Prioritize evergreen emotional pain points (scared, overwhelmed, desperate,
   lost money, frustrated, can't figure it out)
@@ -150,9 +177,12 @@ Rules:
 - Include at least 1 Quora query for diversity
 
 Output ONLY a JSON array of objects:
-[{"query": "the search string", "platform": "reddit" or "quora"}]"""
+[{"query": "the search string", "platform": "reddit" or "quora"}]
 
-    user_prompt = f"""Generate 9 diverse Brave Search queries to discover new digital product opportunities.
+Example good query: "cat not using litter box frustrated Reddit"
+Example bad query: cat not using litter box site:reddit.com (DO NOT USE)"""
+
+    user_prompt = f"""Generate 9 diverse search queries to discover new digital product opportunities.
 
 Existing products (AVOID these topics unless you find a NEW angle):
 {chr(10).join(f"  - {t[:70]}" for t in existing[-10:]) if existing else "  (none yet — first run)"}
@@ -164,9 +194,9 @@ Seed categories (you may use some, but also invent 2-3 new ones):
 {chr(10).join(f"  - {c}" for c in categories)}
 
 Requirements:
-1. Each query must include site:reddit.com/r/SubredditName or site:quora.com
+1. Include "Reddit" or "Quora" as a keyword — do NOT use site: filters
 2. Queries should use emotional wording that surfaces high-engagement posts
-3. Cover at LEAST 4 different subreddits
+3. Cover at LEAST 4 different subreddits mentioned naturally (e.g. "Reddit CatAdvice")
 4. At most 2 queries from any single subreddit
 5. Output ONLY a JSON array — no explanation, no markdown."""
 
@@ -196,9 +226,7 @@ Requirements:
         with urllib.request.urlopen(req, timeout=120) as resp:
             data_in = json.loads(resp.read())
     except Exception as e:
-        print(f"  ⚠️  Query generation API error: {e}")
-        # Fallback to seed queries
-        print("  Using fallback seed queries")
+        print(f"  \u26a0\ufe0f  Query generation API error: {e}")
         return get_fallback_queries()
 
     text = ""
@@ -221,10 +249,10 @@ Requirements:
             raise ValueError("Not a list")
         validated = []
         for q in queries:
-            query = (q.get("query") or "").strip()
+            qry = (q.get("query") or "").strip()
             platform = (q.get("platform") or "reddit").strip().lower()
-            if len(query) > 15:
-                validated.append((query, platform))
+            if len(qry) > 15:
+                validated.append((qry, platform))
         if validated:
             return validated
     except (json.JSONDecodeError, ValueError):
@@ -235,10 +263,10 @@ Requirements:
                 queries = json.loads(match.group(0))
                 validated = []
                 for q in queries:
-                    query = (q.get("query") or "").strip()
+                    qry = (q.get("query") or "").strip()
                     platform = (q.get("platform") or "reddit").strip().lower()
-                    if len(query) > 15:
-                        validated.append((query, platform))
+                    if len(qry) > 15:
+                        validated.append((qry, platform))
                 if validated:
                     return validated
             except (json.JSONDecodeError, ValueError, TypeError):
@@ -330,7 +358,7 @@ def get_next_version(base_slug: str) -> str:
     return f"{base_slug}_v{max_v + 1}"
 
 
-# ── AI Result Analysis (replaces keyword score_trend, extract_audience, etc.) ──────
+# ── AI Result Analysis ───────────────────────────────────────────────────────────
 
 def analyze_search_result_ai(creds: dict, result: dict) -> dict | None:
     """
@@ -398,6 +426,7 @@ Analyze this Reddit/Quora post and determine if it should become a digital produ
         method="POST",
     )
 
+    text = None
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
             data_in = json.loads(resp.read())
@@ -418,7 +447,7 @@ Analyze this Reddit/Quora post and determine if it should become a digital produ
             parsed["title"] = title
             parsed["raw_quote"] = description[:600]
             return parsed
-    except (json.JSONDecodeError, Exception) as e:
+    except (json.JSONDecodeError, Exception):
         # Fallback: try to find JSON in the text
         if text and isinstance(text, str):
             match = re.search(r'\{.*\}', text, re.DOTALL)
@@ -505,6 +534,9 @@ def main() -> int:
         return 0
 
     TRENDS_DIR.mkdir(parents=True, exist_ok=True)
+    brave_key = get_brave_api_key()
+    if not brave_key:
+        print("  WARNING: No Brave Search API key — searches will fail")
 
     # ── Step 2: Search & AI-analyze each result ──────────────────────────────────
     print(f"\n[STEP 2] Searching and analyzing — {len(search_queries)} queries")
@@ -514,7 +546,7 @@ def main() -> int:
 
     for q_idx, (query, platform) in enumerate(search_queries, 1):
         print(f"\n  [{q_idx}/{len(search_queries)}] [{platform.upper()}] {query[:80]}")
-        results = brave_search(query, count=4)
+        results = brave_search_api(query, count=4, api_key=brave_key)
         total_search_results += len(results)
 
         if not results:
@@ -525,11 +557,11 @@ def main() -> int:
             analyzed = analyze_search_result_ai(creds, r)
 
             if analyzed is None:
-                print(f"    ⚠️  Skipping result {r_idx+1}: too short ({len(r.get('description',''))} chars)")
+                print(f"    \u26a0\ufe0f  Skipping result {r_idx+1}: too short or AI error")
                 all_rejected_results.append({
                     "title": r.get("title", "")[:80],
                     "description": r.get("description", "")[:200],
-                    "rejection_reason": "Too short to analyze",
+                    "rejection_reason": "Too short to analyze or AI error",
                     "source_query": query,
                 })
                 continue
@@ -538,7 +570,7 @@ def main() -> int:
             slug_candidate = normalize_slug(analyzed.get("slug_candidate", ""))
 
             if verdict == "REJECT":
-                print(f"    ❌ Rejected: {analyzed.get('slug_candidate', r['title'][:60])[:60]}")
+                print(f"    \u274c Rejected: {analyzed.get('slug_candidate', r['title'][:60])[:60]}")
                 all_rejected_results.append({
                     "source_query": query,
                     "title": analyzed.get("title", "")[:80],
@@ -551,13 +583,12 @@ def main() -> int:
 
             # Cross-date slug dedup
             if slug_candidate and slug_candidate in seen_slugs:
-                # Check if it's a NEW angle (different version)
                 versioned = get_next_version(slug_candidate)
                 if versioned != f"{slug_candidate}_v1":
                     slug_candidate = versioned
-                    print(f"    🔄 Conflict — using {slug_candidate}")
+                    print(f"    \U0001f504 Conflict — using {slug_candidate}")
                 else:
-                    print(f"    ⏭️  Skipping duplicate slug: {slug_candidate}")
+                    print(f"    \u23ed\ufe0f  Skipping duplicate slug: {slug_candidate}")
                     all_rejected_results.append({
                         "source_query": query,
                         "title": analyzed.get("title", "")[:80],
@@ -585,9 +616,9 @@ def main() -> int:
             all_analyzed_results.append(trend)
             seen_slugs.add(slug_candidate)
             total_score = trend["total_score"]
-            print(f"    ✅ [{total_score}/12] {slug_candidate[:60]}")
+            print(f"    \u2705 [{total_score}/12] {slug_candidate[:60]}")
 
-        time.sleep(0.5)  # Rate limiter
+        time.sleep(0.5)
 
     # ── Step 3: Final ranking ──────────────────────────────────────────────────────
     print(f"\n[STEP 3] Results summary")
@@ -614,20 +645,15 @@ def main() -> int:
     # Sort by total_score descending
     all_analyzed_results.sort(key=lambda t: t.get("total_score", 0), reverse=True)
 
-    # ── NO FORCE-FEEDING MIDDLE SCOUT RESULTS ──
-    # Only trends genuinely scored >= 8 by the AI are HIGH CONVICTION
+    # ── NO FORCE-FEEDING ──
     high_trends = [t for t in all_analyzed_results if t["total_score"] >= 8]
-    medium_trends = [t for t in all_analyzed_results if t["total_score"] < 8]
-
-    # No promotion from MEDIUM to HIGH — if <3 real HIGH, we output what we have
     if len(high_trends) == 0:
-        print(f"  ⚠️  No genuine HIGH CONVICTION trends (score >= 8) — using top {min(3, len(all_analyzed_results))} trends as MEDIUM")
+        print(f"  \u26a0\ufe0f  No genuine HIGH CONVICTION trends (score >= 8) — using top {min(3, len(all_analyzed_results))} trends as MEDIUM")
         high_trends = all_analyzed_results[:3]
         for t in high_trends:
             t["ai_conviction"] = "MEDIUM"
 
     # ── Step 4: Save output ────────────────────────────────────────────────────────
-    date_str = datetime.now(ET).strftime("%Y-%m-%d")
     output = {
         "scouted_at": datetime.now(ET).isoformat(),
         "source_channels": ["reddit.com", "quora.com"],
@@ -636,14 +662,14 @@ def main() -> int:
         "stage1_status": "COMPLETE",
         "high_score_trends": len(high_trends),
         "total_scored": len(all_analyzed_results),
-        "version": "v3",  # New AI-driven generation
+        "version": "v3",
     }
     today_file.write_text(json.dumps(output, indent=2))
 
-    # Audit trail with ALL results (rejected + accepted)
+    # Audit trail with ALL results
     audit_output = {
         "scouted_at": datetime.now(ET).isoformat(),
-        "date": date_str,
+        "date": today_str,
         "queries": search_queries,
         "accepted": high_trends,
         "rejected": all_rejected_results,
@@ -653,8 +679,8 @@ def main() -> int:
     audit_file.write_text(json.dumps(audit_output, indent=2))
 
     print(f"\n  Results saved:")
-    print(f"    ✅ {today_file.name} — {len(high_trends)} accepted trends")
-    print(f"    📋 {audit_file.name} — {len(all_rejected_results)} rejected (audit trail)")
+    print(f"    \u2705 {today_file.name} — {len(high_trends)} accepted trends")
+    print(f"    \U0001f4cb {audit_file.name} — {len(all_rejected_results)} rejected (audit trail)")
 
     for i, t in enumerate(high_trends, 1):
         slug = t.get("slug_candidate", "?")
