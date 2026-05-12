@@ -1,0 +1,20 @@
+{
+  "date": "2026-05-12",
+  "trends": [
+    {
+      "slug_candidate": "cat-litter-box-rescue-guide_v1",
+      "ai_conviction": "HIGH CONVICTION",
+      "total_score": 10
+    },
+    {
+      "slug_candidate": "contractor-scam-protection-guide_v1",
+      "ai_conviction": "HIGH CONVICTION",
+      "total_score": 10
+    },
+    {
+      "slug_candidate": "new-cat-first-weeks-survival-guide_v1",
+      "ai_conviction": "HIGH CONVICTION",
+      "total_score": 10
+    }
+  ]
+}

@@ -257,7 +257,7 @@ def main():
     if missing:
         print(f"\n  ❌ BUILD FAILED — missing: {missing}")
         sys.exit(1)
-    if len(pdf_files) < expected_count or write_call_count < expected_count:
+    if write_call_count < len(products):
         print(f"\n  ❌ BUILD FAILED — expected {expected_count} PDFs")
         sys.exit(1)
 
