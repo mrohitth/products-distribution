@@ -1,267 +1,124 @@
 {
-  "scouted_at": "2026-05-12T03:59:03.998301-04:00",
+  "scouted_at": "2026-05-12T04:05:06.384936-04:00",
   "source_channels": [
     "reddit.com",
     "quora.com"
   ],
-  "queries": [
-    [
-      "overwhelmed starting new job first week Reddit r/careerguidance",
-      "reddit"
-    ],
-    [
-      "roommate moved out didn't pay their share utilities desperate Reddit r/roommates",
-      "reddit"
-    ],
-    [
-      "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice",
-      "reddit"
-    ],
-    [
-      "first car ever bought terrified getting ripped off Reddit r/askcarsales",
-      "reddit"
-    ],
-    [
-      "quitting job without another lined up terrified regret Reddit r/careeradvice",
-      "reddit"
-    ],
-    [
-      "parent treating me like a child at 30 frustrated Reddit Quora",
-      "quora"
-    ],
-    [
-      "diy project went wrong completely lost how to fix Reddit r/HomeImprovement",
-      "reddit"
-    ],
-    [
-      "student loans payoff strategy overwhelmed Reddit r/personalfinance",
-      "reddit"
-    ],
-    [
-      "procrastinating everything terrified life falling apart Reddit r/getdisciplined",
-      "reddit"
-    ]
+  "queries_used": [
+    "horrified contractor ghosted me mid-renovation Reddit",
+    "devastated cat suddenly aggressive after years Reddit",
+    "furious client refuses to pay freelance work Reddit",
+    "terrified new puppy barking all night Reddit",
+    "desperate 6 months unemployed depressed Reddit",
+    "lost dealing with difficult employees small business Reddit",
+    "first-time homebuyer regrets panic attacks Quora",
+    "divorced dad overwhelmed paperwork logistics Reddit",
+    "burned out career change 40s can't start over Reddit"
   ],
-  "total_search_results": 36,
-  "trends": [],
-  "rejected": [
+  "trends": [
     {
-      "title": "r/HomeImprovement on Reddit: What's your worst DIY project mistake story?",
-      "description": "Went to Home Depot. The weirdest thing that day ... I got out of my car once I arrived and I overheard on the parking lot exterior speakers: \u201cattention all Home Depot shoppers - come join our workshop",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "diy project went wrong completely lost how to fix Reddit r/HomeImprovement"
+      "trend_id": 1,
+      "audience": "Divorced fathers navigating post-divorce logistics, emotional disconnect from ex, and stalled legal processes",
+      "raw_quote": "Once you&#x27;re out she gets what I call a &#x27;soft&#x27; divorce - in her mind with you gone, you&#x27;re done, and its only a matter of paperwork. <strong>The process will slow and she will have no reason to move things along</strong>. She needs to FEEL it.",
+      "emotional_trigger": "Deep betrayal and abandonment - feeling 'done' in her mind while the paperwork drags, making him feel powerless and obsolete",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Practical + emotional guide for divorced dads to navigate the 'soft divorce' reality, maintain legal momentum, and protect parental rights",
+      "slug_candidate": "divorced-dads-playbook-soft-divorce",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/DivorcedDads/comments/1j1t475/is_there_a_future_as_a_divorced_dad/",
+      "source_query": "divorced dad overwhelmed paperwork logistics Reddit",
+      "source_platform": "reddit"
     },
     {
-      "title": "r/HomeImprovement on Reddit: How do you move on from DIY failures?",
-      "description": "<strong>Call it an &#x27;After Action Report&#x27; Call it &#x27;What went RIGHT and what went WRONG&#x27; Take an honest look at what you did, how you did it, and what both good and bad things you di",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "diy project went wrong completely lost how to fix Reddit r/HomeImprovement"
+      "trend_id": 2,
+      "audience": "Multi-cat households where cats who lived peacefully together suddenly become aggressive enemies",
+      "raw_quote": "This exact same thing happened to me. Came home, my cats were suddenly enemies after 4 years of coexisting peacefully. Ended up being a redirected aggression problem and it took me 3 months to reintroduce them (following jackson galaxy strategies)",
+      "emotional_trigger": "Watching beloved cats suddenly become violent enemies after years of harmony - terrifying, helpless, and potentially facing euthanasia/rehoming decisions",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 1
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Step-by-step reintroduction protocol for suddenly aggressive cats based on Jackson Galaxy methods - with troubleshooting for redirected aggression triggers",
+      "slug_candidate": "cat-reintroduction-methods-sudden-aggression",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/CatTraining/comments/1gq8hck/cat_suddenly_aggressive_towards_the_other_after_4/",
+      "source_query": "devastated cat suddenly aggressive after years Reddit",
+      "source_platform": "reddit"
     },
     {
-      "title": "6 Reddit Stories of Home Improvement Mistakes\u2014and How to Fix Them",
-      "description": "They attempted to take matters into their own hands by spending weeks <strong>peeling, scraping, sanding, and cleaning down the original wood to smooth it out, then using a primer and painting it over",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "diy project went wrong completely lost how to fix Reddit r/HomeImprovement"
+      "trend_id": 3,
+      "audience": "Multi-cat households experiencing sudden, terrifying aggression between longtime companions",
+      "raw_quote": "A couple minutes later, all tails puffed up, and one of my cats absolutely laid into the other. They\u2019ve been together for 9 years, no issue past normally playing and little spats, and he\u2019s tearing fur out and screaming. We locked them in separate rooms for 10 minutes and they started grooming each other the moment we let them out, it was the strangest thing. Learned about misplaced aggression that day",
+      "emotional_trigger": "Years of peaceful cats suddenly tearing fur out and screaming - owners feel like strangers in their own home watching 'strangest thing' unfold",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 1
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Troubleshooting guide for sudden inter-cat aggression: common medical triggers, environmental causes, and proper reintroduction timing",
+      "slug_candidate": "cat-sudden-aggression-reintroduction-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/cats/comments/1dlt3mv/please_help_cat_completely_went_terrifyingly/",
+      "source_query": "devastated cat suddenly aggressive after years Reddit",
+      "source_platform": "reddit"
     },
     {
-      "title": "r/HomeImprovement on Reddit: what's a DIY project that didn't go as planned?",
-      "description": "I had the same problem with the ball fitting where the pop-up arm went into the drain. Had to play with it a bit to get it put together properly. While doing that, the trap for the sink turned out to ",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "diy project went wrong completely lost how to fix Reddit r/HomeImprovement"
+      "trend_id": 4,
+      "audience": "Multi-cat owners whose cats exhibit sudden behavioral changes; includes people experiencing pregnancy or hormone changes themselves",
+      "raw_quote": "Usually one of the animals is sick ... be you - are you sick or pregnant? <strong>Hormone changes in humans can affect pet behavior, causing them to become clingy, protective, or aggressive</strong>....",
+      "emotional_trigger": "Mysterious aggression in formerly peaceful cats linked to human health changes - creates double worry (pet AND family member health)",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Holistic guide: cat aggression as a health signal - covering medical causes, human hormone changes affecting pets, and reintroduction strategies",
+      "slug_candidate": "cat-aggression-health-signal-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Pets/comments/zsbd1k/one_cat_suddenly_really_aggressive_toward_the/",
+      "source_query": "devastated cat suddenly aggressive after years Reddit",
+      "source_platform": "reddit"
     },
     {
-      "title": "r/roommateproblems on Reddit: Roommate moved out early and is refusing to contri",
-      "description": "Roommate refuses to pay rent, won\u2019t leave and after freaking out when I found meth in the bathroom and packing up her stuff and yelling at her to move out - I just found out that I\u2019m the only one who ",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "roommate moved out didn't pay their share utilities desperate Reddit r/roommates"
-    },
-    {
-      "title": "r/AmItheAsshole on Reddit: AITA for not paying utilities while I'm not living in",
-      "description": "I am a 21F college student and I\u2019ve been in an apartment lease with 2 other girls who are really good roommates. My hometown is 30 minutes away and I dont really like to stay in my college town when I",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "roommate moved out didn't pay their share utilities desperate Reddit r/roommates"
-    },
-    {
-      "title": "r/badroommates on Reddit: Found out my roommate hasn\u2019t been paying utilities!! A",
-      "description": "Share ... <strong>Ask you landlord if he&#x27;d be willing to let this irresponsible ass out of his lease</strong>. If he says yes, you and the landlord can start looking for someone to fill his space",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "roommate moved out didn't pay their share utilities desperate Reddit r/roommates"
-    },
-    {
-      "title": "r/legaladvice on Reddit: [MI] Roommate refuses to pay utilities.",
-      "description": "Just to clarify, this means that <strong>each resident is responsible for the full payment of utilities, but also implies that the utility bill should be split</strong>. One or more of you has to pay ",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "roommate moved out didn't pay their share utilities desperate Reddit r/roommates"
-    },
-    {
-      "title": "r/personalfinance on Reddit: Student Loan Debt Payoff Strategies",
-      "description": "<strong>You can deduct federal student loan interest up to 2500 per year if your MAGI qualifies</strong>, which functionally reduces the interest rate. ... I am a bot, and this action was performed au",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "student loans payoff strategy overwhelmed Reddit r/personalfinance"
-    },
-    {
-      "title": "r/personalfinance on Reddit: Aggressively payoff student loans or save/invest",
-      "description": "Figure out what percentage of future savings needs to be allocated to student loans. That decision is kind of a style choice. Some people are more aggressive about debt. ... Yeah, keeping the emergenc",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "student loans payoff strategy overwhelmed Reddit r/personalfinance"
-    },
-    {
-      "title": "r/personalfinance on Reddit: Help with student loans and what to do!",
-      "description": "Well do what works for you. My strategy for paying mine off was to <strong>pay more than the minimum payment and to throw all my extra $$ at them</strong>. Paid them off early that way.",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "student loans payoff strategy overwhelmed Reddit r/personalfinance"
-    },
-    {
-      "title": "r/personalfinance on Reddit: Paying off student loans vs investing - what would ",
-      "description": "... I would absolutely <strong>focus on maxing your 401K contributions before paying extra toward your loans</strong>. It\u2019s hard to do but once you get there you\u2019ll have more money to pay off the stud",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "student loans payoff strategy overwhelmed Reddit r/personalfinance"
-    },
-    {
-      "title": "r/getdisciplined on Reddit: Procrastination is ruining my life, can someone help",
-      "description": "Best of luck, and <strong>try to speak gently to yourself</strong>! Going from finding things simple to feeling like things are falling apart is really hard, and I&#x27;ve definitely been there. Take ",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "procrastinating everything terrified life falling apart Reddit r/getdisciplined"
-    },
-    {
-      "title": "r/getdisciplined on Reddit: [Need Advice] My life is falling apart due to procra",
-      "description": "72 votes, 35 comments. Here&#x27;s the thing, I procrastinate the hell out of every damn thing. Until yesterday I would blame it on whatever recently\u2026",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "procrastinating everything terrified life falling apart Reddit r/getdisciplined"
-    },
-    {
-      "title": "r/getdisciplined on Reddit: I'm so tired of procrastination and feeling like shi",
-      "description": "Parent commenter can delete this message to hide from others. ... School sucks. Daily life tasks suck. <strong>Procrastination is not the problem, but the consequences of spending all day doing things",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "procrastinating everything terrified life falling apart Reddit r/getdisciplined"
-    },
-    {
-      "title": "r/getdisciplined on Reddit: I am procrastinating on everything in life [Advice]",
-      "description": "If you&#x27;re happy to stay exactly where you are in life, you don&#x27;t need to worry about it. If not, well, you know what you need to do. ... Bruh ive been procrastinating and I keep moving up in",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "procrastinating everything terrified life falling apart Reddit r/getdisciplined"
-    },
-    {
-      "title": "r/PetAdvice on Reddit: What to do if I can\u2019t afford emergency vet care?",
-      "description": "ER is expensive and if she isn\u2019t actively having symptoms I would <strong>wait until the next day to bring her to a walk-in clinic or a local vet who has appointments available</strong>. As you said y",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice"
-    },
-    {
-      "title": "r/DogAdvice on Reddit: How do you stay calm while you wait to call the vet in th",
-      "description": "If things get worse, go to the ER. But <strong>call the emergency vet and ask because they see pets based on triage</strong> so if it\u2019s a busy night there, there is a chance you won\u2019t get seen.",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice"
-    },
-    {
-      "title": "r/PetAdvice on Reddit: Emergency Vet Questions",
-      "description": "A community for pet owners to share tips, ask questions, and seek advice on pet care, behavior, health, and training for all types of animals. \ud83d\udc3e ... This may be above reddits pay grade but I am not su",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice"
-    },
-    {
-      "title": "Emergency Vet or Wait Until Morning? How to Decide",
-      "description": "This is one of the hardest decisions pet owners face, especially in the middle of the night when you\u2019re scared, tired, and alone with your worry. There\u2019s no shame in feeling torn. You love your pet. Y",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice"
-    },
-    {
-      "title": "r/careeradvice on Reddit: Has quitting without another opportunity lined up work",
-      "description": "Others post here a year later still unemployed and feeling unemployable and massively regret the decision. And the market right now makes the worse case slightly more likely. If it were me, I wouldn\u2019t",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "quitting job without another lined up terrified regret Reddit r/careeradvice"
-    },
-    {
-      "title": "r/careeradvice on Reddit: Quitting a job in 2025 with nothing lined up",
-      "description": "It eventually got to be too much and I snapped and quit one day. It\u2019s been 7 years and I\u2019ve had two wonderful long term jobs since. <strong>I regret staying in that toxic job and it took me a long tim",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "quitting job without another lined up terrified regret Reddit r/careeradvice"
-    },
-    {
-      "title": "r/careerguidance on Reddit: Did you regret quitting with nothing lined up?",
-      "description": "I don&#x27;t regret it. The thing I regret, both times is that <strong>I kept thinking things would get better and stayed and hoped</strong>. Next time, the moment when things get shitty I&#x27;m goin",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "quitting job without another lined up terrified regret Reddit r/careeradvice"
-    },
-    {
-      "title": "r/careeradvice on Reddit: Quitting job without having another one lined up?",
-      "description": "<strong>I couldnot take the stress caused by the toxic workplace politics and quit w/o anything else been lined up</strong>. As soon as I did that the stress vanished and I could concentrate on using ",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "quitting job without another lined up terrified regret Reddit r/careeradvice"
-    },
-    {
-      "title": "r/askcarsales on Reddit: Never bought a car from a dealer, I\u2019m paranoid about be",
-      "description": "I\u2019d be more concerned about getting ripped off doing a street purchase than getting a shit car from a dealer.",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "first car ever bought terrified getting ripped off Reddit r/askcarsales"
-    },
-    {
-      "title": "r/askcarsales on Reddit: How many people have really been \u201cscrewed over\u201d by a de",
-      "description": "Absolutely. I tried to buy a <strong>Kia stinger</strong> for the exact price advertised and on their lot. Made every excuse for why that vin wasn&#x27;t available. The manager came out and asked what",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "first car ever bought terrified getting ripped off Reddit r/askcarsales"
-    },
-    {
-      "title": "r/askcarsales on Reddit: What happens to vehicles that don't sell?",
-      "description": "Only 8k off sticker? You&#x27;re getting ripped off. They should be paying you on the 30th/31st to take the car!",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "first car ever bought terrified getting ripped off Reddit r/askcarsales"
-    },
-    {
-      "title": "r/whatcarshouldIbuy on Reddit: How do you avoid getting ripped off at a dealersh",
-      "description": "If you don\u2019t want to do that, I would take your brother up on his very-kind offer. Buying a car is like one of the most stressful life experiences because dealers can basically make up costs and bill ",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "first car ever bought terrified getting ripped off Reddit r/askcarsales"
-    },
-    {
-      "title": "r/careerguidance on Reddit: Started a new job 2 months ago and feel completely s",
-      "description": "I feel similar to you too. At my role we got a new manager. I got this demanding project with a client where he wanted to do a video meeting every Friday to go over parts of the project for 45 mins. I",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "overwhelmed starting new job first week Reddit r/careerguidance"
-    },
-    {
-      "title": "r/careerguidance on Reddit: Anyone ever feel overwhelmed by new job?",
-      "description": "I don\u2019t feel overwhelmed but I am not getting to learn something properly before they teach me on something else. They want me up to speed ASAP so I can do the job, I get that, but only 4 Inc me in th",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "overwhelmed starting new job first week Reddit r/careerguidance"
-    },
-    {
-      "title": "r/careerguidance on Reddit: Is it normal to be overwhelmed at a new job and regr",
-      "description": "I think I could be good at the job itself and it could be rewarding, so I want to do whatever I can to succeed. I just want to know how long will I feel so overwhelmed and anxious until I feel comfort",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "overwhelmed starting new job first week Reddit r/careerguidance"
-    },
-    {
-      "title": "r/careerguidance on Reddit: How do I cope with feeling lost and overwhelmed on m",
-      "description": "We&#x27;ve all been there. No one is good at anything the first time they do it. <strong>Get evaluated for depression and anxiety, maybe ADHD</strong>. It sounds like treatment would help. ... It&#x27",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "overwhelmed starting new job first week Reddit r/careerguidance"
-    },
-    {
-      "title": "r/raisedbynarcissists on Reddit: If you\u2019re over 30, do your parents still treat ",
-      "description": "She wants to take us tubing over break and go see the Christmas lights. We are all 30 plus. <strong>My husband gets very frustrated I told him explain to her that we can do all these things when we ha",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "parent treating me like a child at 30 frustrated Reddit Quora"
-    },
-    {
-      "title": "r/Adulting on Reddit: Does anyone else still feel like their parents treat them ",
-      "description": "I hope you have a good plan to retire in the future without your children caring for you because they will treat you like a child when you can no longer do everything yourself too. ... I am almost 30 ",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "parent treating me like a child at 30 frustrated Reddit Quora"
-    },
-    {
-      "title": "I'm 27 years old. My parents still treat me like a child; what can I do about th",
-      "description": "<strong>Don&#x27;t let up until they get it</strong>. Don&#x27;t be arrogant or yell &amp; scream but just stand your ground. Eventually, they should get it. Otherwise, like me for example, you&#x27;l",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "parent treating me like a child at 30 frustrated Reddit Quora"
-    },
-    {
-      "title": "r/Adulting on Reddit: Do parents ever stop treating you like a kid?",
-      "description": "Ok, to some degree, yes, parents will &quot;always&quot; treat you like you are their child, as in their offspring, their beloved family member; in that they&#x27;ll be affectionate and embarassing, a",
-      "rejection_reason": "Too short or AI analysis failed",
-      "source_query": "parent treating me like a child at 30 frustrated Reddit Quora"
+      "trend_id": 5,
+      "audience": "Cat owners facing severe, long-term displaced aggression issues who feel trapped between euthanasia and rehoming",
+      "raw_quote": "After that, he acts perfectly normal, like nothing at all happened. I learned to anticipate the attacks at night, so usually, he can\u2019t inflict too much harm. It is the random and unexpected attacks that cause the most harm. ... I am going through this\u2026..three years now. Little tiny stray ended up at my house and i took her in. She has displaced aggression.if she sees another cat or anything at all that\u2019s scares her, she attacks me.,Loud noises also cause her to attack.,when she has one of these fits, it will take her two days to calm down.",
+      "emotional_trigger": "Years of living in fear of unpredictable attacks, constant vigilance, seeing no end in sight - existential level of despair about a beloved pet",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 3,
+        "Recurrence": 1
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Crisis management guide for severe displaced aggression: environmental controls, calming techniques, safety protocols, and knowing when to seek behaviorist help",
+      "slug_candidate": "displaced-aggression-cat-survival-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Pets/comments/1echt0/aggressive_cat_coming_down_to_euthanasia_or_a/",
+      "source_query": "devastated cat suddenly aggressive after years Reddit",
+      "source_platform": "reddit"
     }
   ],
-  "stage1_status": "COMPLETE_NO_TRENDS",
-  "high_score_trends": 0
+  "stage1_status": "COMPLETE",
+  "high_score_trends": 5,
+  "total_scored": 5,
+  "version": "v3"
 }

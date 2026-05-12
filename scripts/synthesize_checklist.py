@@ -71,7 +71,7 @@ def call_minimax(creds: dict, system_prompt: str, user_prompt: str, max_tokens: 
     )
 
     try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with urllib.request.urlopen(req, timeout=900) as resp:
             data = json.loads(resp.read())
             for block in data.get("content", []):
                 if block.get("type") == "text":

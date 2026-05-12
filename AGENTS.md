@@ -126,6 +126,44 @@ Kitty (main session)
   -> Announce to Telegram
 ```
 
+### TrendScout Daily — Automated Content Pipeline (v3.3+)
+
+**Automated daily at 10 AM ET via cron** — no manual intervention required after the initial setup.
+
+```
+10:00 AM ET (cron: 1e85c944) → TrendScout Scout (isolated MiniMax-M2.7)
+    ↓ writes → wiki/trends/YYYY-MM-DD.json
+    ↓ triggers → trendscout_gen.py (via cron auto-kick)
+    ↓ generates → products/drafts/*.md + products/skeletons/*.md
+    ↓ triggers → run_daily_pipeline.py (Stage 2-7)
+    ↓ synthesize_checklist.py → _CHECKLIST.pdf files
+    ↓ polish_pdfs.py → main guide .pdf files
+    ↓ pdf_qa_layout.py → QA gate (warnings OK, exit 0 required)
+    ↓ sync_product.py → GitHub mrohitth/products-distribution/final_products/
+    ↓ generate_distribution.py → Reddit hooks + Pinterest pins
+    ↓ announces → Telegram 5607383477
+```
+
+**Script roles:**
+| Script | Role | Timeout fixed |
+|--------|------|---------------|
+| `trendscout_scout.py` | Scout trends from Reddit/Quora → JSON | n/a |
+| `trendscout_gen.py` | Skeleton + Draft generation (MiniMax) | 180s → 600s |
+| `synthesize_checklist.py` | AI checklist synthesis | 120s → 900s |
+| `polish_pdfs.py` | WeasyPrint guide + checklist PDFs | n/a |
+| `pdf_qa_layout.py` | QA gate | n/a |
+| `sync_product.py` | GitHub sync | n/a |
+| `generate_distribution.py` | Reddit + Pinterest content | n/a |
+| `run_daily_pipeline.py` | Master orchestrator (Stage 1-7) | 120s → 1200s |
+
+**Key fixes applied (2026-05-12):**
+- `trendscout_gen.py`: URL timeout 180s → 600s (MiniMax large output needs time)
+- `synthesize_checklist.py`: URL timeout 120s → 900s (12-item generation is token-heavy)
+- `run_daily_pipeline.py`: Stage 2 timeout 120s → 1200s (matches synthesize_checklist)
+- `generate_distribution.py`: Added missing `from concurrent.futures import ThreadPoolExecutor`
+
+**No manual steps required** — full flow runs autonomously from cron trigger to GitHub push.
+
 ### TrendScout — Single-Pass Pipeline
 Daily 10 AM ET. Scout → Architect → Draft → Distribution → Production → Announce. JSON handoffs, Brave Search, fact-checking.
 

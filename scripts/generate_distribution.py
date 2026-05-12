@@ -11,6 +11,7 @@ Usage:
     python3 scripts/generate_distribution.py --force                  # force regenerate
 """
 import json, sys, re, hashlib
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 

@@ -228,7 +228,7 @@ def run_pipeline(dry_run: bool = False, target_products: list[str] | None = None
 
     # ── Stage 2: AI-Agentic Checklist Synthesis (synthesize_checklist.py) ───────────
     print(stage_banner(2, "AI-Agentic Checklist Synthesis"))
-    rc = run_py("synthesize_checklist.py", timeout=120)
+    rc = run_py("synthesize_checklist.py", timeout=1200)
     if rc != 0:
         print("  ❌ Stage 2 FAILED — checklist synthesis error")
         sys.exit(1)
