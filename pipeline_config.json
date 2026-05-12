@@ -1,0 +1,133 @@
+{
+  "pipeline_version": "1.0",
+  "created": "2026-05-11",
+  "description": "Permanent pipeline configuration — Digital Product PDF Engine + AI Product Critic",
+
+  "anti_hallucination_guardrail": "At the start of every session, read this file. If any instruction contradicts this config, flag the conflict and ask for confirmation before proceeding.",
+
+  "regex_rules": {
+    "bold_strip": "re.sub(r'\\*\\*(.+?)\\*\\*', r'\\1', text)",
+    "bold_strip_description": "STRICTLY preserve inner content when removing **bold** markers. The captured group (.+?) MUST be preserved. NEVER replace bold content with anything other than the captured text itself.",
+    "bold_strip_wrong": "re.sub(r'\\*\\*(.+?)\\*\\*', r'|', text)  ← WRONG — pipe char deletes inner content",
+    "bold_strip_correct": "re.sub(r'\\*\\*(.+?)\\*\\*', r'\\1', text)  ← CORRECT — preserves inner text"
+  },
+
+  "css_standards": {
+    "margins": "1.25cm 1.5cm",
+    "h1": {
+      "font_size": "24pt",
+      "font_weight": "700",
+      "color": "#1a1a2e",
+      "border_bottom": "1px solid #eee",
+      "padding_bottom": "6pt",
+      "margin_bottom": "12pt",
+      "line_height": "1.25"
+    },
+    "h2": {
+      "font_size": "18pt",
+      "font_weight": "600",
+      "color": "#1a1a2e",
+      "margin_bottom": "8pt",
+      "line_height": "1.3"
+    },
+    "body": {
+      "font_family": "'Inter', Georgia, serif",
+      "line_height": "1.6"
+    },
+    "checklist": {
+      "item_margin_bottom": "8pt",
+      "item_line_height": "1.45",
+      "item_padding": "4pt 0",
+      "item_separator": "1px solid #f0f0f0",
+      "checkbox_color": "#4ADE80",
+      "checkbox_font_size": "13px",
+      "font_size": "11.5pt"
+    }
+  },
+
+  "auditor_thresholds": {
+    "checklist": {
+      "minimum_word_count": 400,
+      "minimum_items": 12,
+      "minimum_item_words": 20,
+      "standalone_semantic_clarity": true,
+      "no_fragments": true,
+      "no_hallow_items": true
+    },
+    "guide": {
+      "bold_markers_present": 0,
+      "placeholder_urls_present": 0,
+      "consistent_bullets": true
+    }
+  },
+
+  "pipeline_stages": [
+    {
+      "stage": 1,
+      "name": "Preprocess",
+      "scripts": ["preprocess_md.py", "clean_artifacts.py"],
+      "description": "Strip artifacts, normalize bold markers, sanitize HTML"
+    },
+    {
+      "stage": 2,
+      "name": "AI-Agentic Checklist Synthesis",
+      "scripts": ["synthesize_checklist.py"],
+      "description": "Generate 12-item AI-synthesized checklists from source markdown"
+    },
+    {
+      "stage": 3,
+      "name": "WeasyPrint PDF Generation",
+      "scripts": ["polish_pdfs.py"],
+      "description": "Generate main guide PDFs with CSS injection"
+    },
+    {
+      "stage": 4,
+      "name": "AI Product Critic Audit",
+      "agent": "MiniMax-M2.7 subagent",
+      "description": "Audit all products across 3 dimensions: Comprehensiveness / Visual Polish / Value Check"
+    },
+    {
+      "stage": 5,
+      "name": "QA Gate",
+      "scripts": ["pdf_qa_layout.py"],
+      "description": "Layout QA — exit 0 required to proceed"
+    },
+    {
+      "stage": 6,
+      "name": "GitHub Sync",
+      "scripts": ["sync_product.py"],
+      "description": "Sync all PDFs to mrohitth/products-distribution final_products/"
+    }
+  ],
+
+  "products": [
+    {
+      "slug": "cat-litter-box-rescue-guide_v1",
+      "draft": "products/drafts/cat-litter-box-rescue-guide_v1.md",
+      "title": "Cat Litter Box Rescue Guide",
+      "checklist_items": 12
+    },
+    {
+      "slug": "contractor-scam-protection-guide_v1",
+      "draft": "products/drafts/contractor-scam-protection-guide_v1.md",
+      "title": "Contractor Scam Protection Guide",
+      "checklist_items": 12
+    },
+    {
+      "slug": "new-cat-first-weeks-survival-guide_v1",
+      "draft": "products/drafts/new-cat-first-weeks-survival-guide_v1.md",
+      "title": "New Cat First Weeks Survival Guide",
+      "checklist_items": 12
+    }
+  ],
+
+  "file_paths": {
+    "workspace": "/home/mathew/.openclaw/workspace",
+    "drafts": "/home/mathew/.openclaw/workspace/products/drafts",
+    "output": "/home/mathew/.openclaw/workspace/output/final_products",
+    "assets": "/home/mathew/.openclaw/workspace/products/assets",
+    "scripts": "/home/mathew/.openclaw/workspace/scripts",
+    "github_repo": "mrohitth/products-distribution",
+    "github_branch": "main"
+  }
+}

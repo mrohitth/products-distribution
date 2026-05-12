@@ -3,3 +3,15 @@ output/repos/
 __pycache__/
 *.pyc
 __pycache__/
+
+# WeasyPrint and Pipeline Artifacts
+output/final_products/*.html
+output/final_products/*.json
+output/final_products/*.log
+
+# Python
+scripts/__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

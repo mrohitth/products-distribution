@@ -2,18 +2,20 @@
 """
 sync_product.py — Sync PDF + Checklist to GitHub products-distribution repo
 Uses gh CLI (keyring auth) — no PATs or credentials stored in files.
-Usage: python3 sync_product.py <pdf_path> <checklist_path>
+
+FIX v2: Content-level diff check. If the local file bytes differ from the
+git HEAD version, we commit and push. If they're byte-identical, skip
+with "already synced" message. Never do a wasteful empty commit.
+
+Usage: python3 sync_product.py <pdf_path> [checklist_path]
 """
-import sys, subprocess, shutil
+import sys, subprocess, hashlib
 from pathlib import Path
 
 REPO = "mrohitth/products-distribution"
 WORKSPACE = Path("/home/mathew/.openclaw/workspace")
 CLONE_DIR = WORKSPACE / "output" / "repos" / "mrohitth_products-distribution"
 
-def gh(args):
-    result = subprocess.run(["gh", "api", "--header", "X-GitHub-Api-Version:2022-11-28"] + args, capture_output=True, text=True)
-    return result
 
 def sync_to_github(pdf_path, checklist_path=None):
     pdf_path = Path(pdf_path)
@@ -21,57 +23,90 @@ def sync_to_github(pdf_path, checklist_path=None):
         print(f"  ❌ PDF not found: {pdf_path}")
         return False
 
-    slug = pdf_path.stem.replace("_v1", "")  # strip _v1 suffix for clean folder name
+    local_pdf_hash = hashlib.md5(pdf_path.read_bytes()).hexdigest()
 
-    # Clone or update repo
-    if CLONE_DIR.exists():
-        subprocess.run(["git", "-C", str(CLONE_DIR), "fetch", "origin"], capture_output=True, timeout=30)
-    else:
-        remote = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True, cwd=str(CLONE_DIR.parent)).stdout.strip() if CLONE_DIR.exists() else None
-        if not remote:
-            remote = subprocess.run(["gh", "repo", "view", REPO, "--json", "url", "-q", ".url"], capture_output=True, text=True).stdout.strip()
-            remote = f"https://github.com/{REPO}.git"
-        subprocess.run(["git", "clone", "--filter=blob:none", "--no-checkout", remote, str(CLONE_DIR)], capture_output=True, timeout=60)
+    # Clone or use existing clone
+    if not CLONE_DIR.exists():
+        remote_url = f"https://github.com/{REPO}.git"
+        r = subprocess.run(
+            ["git", "clone", "--filter=blob:none", "--no-checkout", remote_url, str(CLONE_DIR)],
+            capture_output=True, text=True, timeout=60
+        )
+        if r.returncode != 0:
+            print(f"  ❌ Clone failed: {r.stderr[:200]}")
+            return False
 
-    # Ensure clean remote URL
-    subprocess.run(["git", "-C", str(CLONE_DIR), "remote", "set-url", "origin", f"https://github.com/{REPO}.git"], capture_output=True)
+    subprocess.run(["git", "-C", str(CLONE_DIR), "fetch", "origin", "--quiet"],
+                    capture_output=True, timeout=30)
+
+    # Checkout remote HEAD
+    subprocess.run(
+        ["git", "-C", str(CLONE_DIR), "reset", "--hard", "origin/main"],
+        capture_output=True, timeout=15
+    )
 
     final_dir = CLONE_DIR / "final_products"
     final_dir.mkdir(parents=True, exist_ok=True)
 
-    # Copy PDFs
-    import shutil
+    # ── PDF ──────────────────────────────────────────────────────────────────────────
     dest_pdf = final_dir / pdf_path.name
-    shutil.copy2(str(pdf_path), str(dest_pdf))
-    print(f"  ✅ Synced: {pdf_path.name} → final_products/")
+    remote_has_pdf = (CLONE_DIR / pdf_path.name).exists()
+    remote_pdf_hash = None
+    if remote_has_pdf:
+        remote_pdf_hash = hashlib.md5((CLONE_DIR / pdf_path.name).read_bytes()).hexdigest()
 
-    checklist_pdf = None
+    pdf_changed = (not remote_has_pdf) or (local_pdf_hash != remote_pdf_hash)
+    if pdf_changed:
+        import shutil
+        shutil.copy2(str(pdf_path), str(dest_pdf))
+        print(f"  ✅ {pdf_path.name} → final_products/ ({pdf_path.stat().st_size // 1024} KB)")
+    else:
+        print(f"  ℹ️  {pdf_path.name} — byte-identical to remote, skipping")
+
+    # ── Checklist ─────────────────────────────────────────────────────────────────
+    cl_changed = False
     if checklist_path:
         cl = Path(checklist_path)
         if cl.exists():
             dest_cl = final_dir / cl.name
-            shutil.copy2(str(cl), str(dest_cl))
-            checklist_pdf = cl.name
-            print(f"  ✅ Synced: {cl.name} → final_products/")
-        else:
-            print(f"  ⚠️  Checklist not found: {cl}")
+            local_cl_hash = hashlib.md5(cl.read_bytes()).hexdigest()
+            remote_cl_hash = None
+            if (CLONE_DIR / cl.name).exists():
+                remote_cl_hash = hashlib.md5((CLONE_DIR / cl.name).read_bytes()).hexdigest()
+            cl_changed = (not (CLONE_DIR / cl.name).exists()) or (local_cl_hash != remote_cl_hash)
+            if cl_changed:
+                import shutil
+                shutil.copy2(str(cl), str(dest_cl))
+                print(f"  ✅ {cl.name} → final_products/ ({cl.stat().st_size // 1024} KB)")
+            else:
+                print(f"  ℹ️  {cl.name} — byte-identical to remote, skipping")
 
-    # Commit and push
-    subprocess.run(["git", "-C", str(CLONE_DIR), "add", "."], capture_output=True)
-    msg = f"prod: {slug} — {'+ checklist' if checklist_pdf else 'PDF only'}"
-    result = subprocess.run(["git", "-C", str(CLONE_DIR), "commit", "-m", msg], capture_output=True, text=True)
-    if "nothing to commit" in result.stdout + result.stderr:
-        print(f"  ℹ️  No changes to push")
+    # ── Commit + Push ─────────────────────────────────────────────────────────────
+    if not pdf_changed and not cl_changed:
+        print(f"  ℹ️  No changes to push — all files byte-identical")
         return True
-    # Pull first (handle non-fast-forward from concurrent runs or rebased remote)
-    subprocess.run(["git", "-C", str(CLONE_DIR), "pull", "--rebase", "origin", "main"], capture_output=True, timeout=30)
-    push = subprocess.run(["git", "-C", str(CLONE_DIR), "push", "origin", "main"], capture_output=True, timeout=30)
+
+    subprocess.run(["git", "-C", str(CLONE_DIR), "add", "."],
+                   capture_output=True)
+    slug = pdf_path.stem.replace("_v1", "")
+    msg = f"prod: {slug} — {'+ checklist' if cl_changed else 'PDF only'}"
+    r = subprocess.run(["git", "-C", str(CLONE_DIR), "commit", "-m", msg],
+                       capture_output=True, text=True)
+    if r.returncode != 0 and "nothing to commit" not in r.stdout + r.stderr:
+        print(f"  ❌ Commit failed: {r.stderr[:200]}")
+        return False
+
+    push = subprocess.run(
+        ["git", "-C", str(CLONE_DIR), "push", "origin", "main"],
+        capture_output=True, text=True, timeout=30
+    )
     if push.returncode != 0:
         print(f"  ❌ Push failed: {push.stderr[:200]}")
         return False
 
     print(f"  ✅ GitHub push complete — https://github.com/{REPO}/tree/main/final_products")
     return True
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 """
-Polished PDF Generator — WeasyPrint with enhanced CSS injection
-================================================================
-Applies the full CSS payload including dynamic product title per PDF.
-Generates both main guide PDF + checklist PDF for each product.
+polish_pdfs.py — Dynamic WeasyPrint PDF Generator
+=================================================
+Reads today's TrendScout JSON → discovers products → generates guide PDFs.
+Also generates checklist PDFs via synthesize_checklist.py.
+
+Manifest Check: Verifies 2 PDFs per product (guide + checklist).
+Dynamic — handles 1, 2, or 3 products per run.
 
 Usage:
-    python3 polish_pdfs.py [--products cat-litter contractor-scam new-cat]
+    python3 scripts/polish_pdfs.py                      # all from trends JSON
+    python3 scripts/polish_pdfs.py --products slug1 slug2  # specific (partial match)
 """
-import sys, os, re, html as html_mod
+import sys, os, re, html as html_mod, subprocess, json
 from pathlib import Path
 from datetime import datetime
 
@@ -16,21 +20,61 @@ WORKSPACE = Path("/home/mathew/.openclaw/workspace")
 OUTPUT_DIR = WORKSPACE / "output" / "final_products"
 CSS_BASE = WORKSPACE / "products" / "assets" / "pdf_style.css"
 
-# ── Base CSS (loaded from pdf_style.css) ────────────────────────────────────
+
+# ── Load dynamic product list from TrendScout JSON ─────────────────────────────────────
+def load_products_from_trends() -> list[dict]:
+    """Read wiki/trends/YYYY-MM-DD.json → return list of {slug, draft, title}."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    trends_file = WORKSPACE / "wiki" / "trends" / f"{today}.json"
+
+    if not trends_file.exists():
+        print(f"  [ERROR] No trends file: {trends_file}")
+        print(f"  Run TrendScout first: python3 scripts/trendscout_scout.py")
+        sys.exit(1)
+
+    data = json.loads(trends_file.read_text())
+    products = []
+    for t in data.get("trends", []):
+        slug = t.get("slug_candidate", "")
+        if not slug:
+            continue
+        # Try {slug}_v1.md first, then bare {slug}.md
+        draft_candidates = [
+            WORKSPACE / "products" / "drafts" / f"{slug}_v1.md",
+            WORKSPACE / "products" / "drafts" / f"{slug}.md",
+        ]
+        draft_path = next((d for d in draft_candidates if d.exists()), None)
+        if not draft_path:
+            print(f"  [WARN] No draft for '{slug}' — skipping")
+            continue
+        direction = t.get("product_direction", "")
+        title = direction.split(":")[0].strip() if ":" in direction else direction.strip()
+        if not title:
+            title = slug.replace("-", " ").title()
+        products.append({
+            "slug": draft_path.stem,
+            "draft": str(draft_path),
+            "title": title,
+        })
+
+    if not products:
+        print(f"  [ERROR] No valid products from trends JSON")
+        sys.exit(1)
+    return products
+
+
+# ── CSS helpers ─────────────────────────────────────────────────────────────────────
 def load_base_css() -> str:
     if CSS_BASE.exists():
         return CSS_BASE.read_text()
     return ""
 
-# ── Extra CSS payload (appended to base CSS) ────────────────────────────────
 def extra_css(product_title: str) -> str:
-    # Escape the product title for use in CSS string content
     safe_title = html_mod.escape(product_title, quote=False)
     return f"""
-/* ── POLISHED PDF ENHANCEMENTS ────────────────────────────────────────── */
 @page {{
     size: A4;
-    margin: 2cm;
+    margin: 1.25cm 1.5cm;
     @bottom-right {{ content: "Page " counter(page); font-family: 'Inter', Georgia, serif; font-size: 9pt; color: #666; }}
     @bottom-left {{ content: "{safe_title}"; font-family: 'Inter', Georgia, serif; font-size: 9pt; color: #666; }}
 }}
@@ -38,38 +82,40 @@ def extra_css(product_title: str) -> str:
 img {{ max-width: 100%; height: auto; display: block; margin: 1.5rem auto; }}
 table {{ width: 100%; border-collapse: collapse; table-layout: fixed; margin-bottom: 1rem; }}
 td, th {{ overflow-wrap: break-word; word-break: break-word; padding: 8pt; border: 1px solid #eee; }}
-h1, h2, h3 {{ page-break-after: avoid; }}
+h1 {{ font-size: 24pt; font-weight: 700; color: #1a1a2e; border-bottom: 1px solid #eee; padding-bottom: 6pt; margin-bottom: 12pt; line-height: 1.25; page-break-after: avoid; }}
+h2 {{ font-size: 18pt; font-weight: 600; color: #1a1a2e; margin-bottom: 8pt; line-height: 1.3; page-break-after: avoid; }}
+h3 {{ font-size: 14pt; font-weight: 600; color: #2d2d4a; margin-bottom: 6pt; page-break-after: avoid; }}
 table, blockquote {{ page-break-inside: avoid; }}
 body {{ font-family: 'Inter', Georgia, serif; line-height: 1.6; }}
 """
 
-# ── Markdown to HTML conversion (same as pipeline_manager.py) ───────────────
+
+# ── Markdown → HTML ──────────────────────────────────────────────────────────────────
 def md_to_html(md_content: str) -> str:
     import markdown
     md = markdown.Markdown(extensions=["extra", "meta", "toc"])
     return md.convert(md_content)
 
-# ── Preprocess markdown (same as _preprocess_for_web in pipeline_manager.py) ─
+
 def preprocess_md(md_text: str) -> str:
-    """Normalize markdown for PDF/HTML output. Preserves structure."""
+    """Strip artifact lines, normalize HR, clean headings."""
     lines = md_text.split("\n")
     result = []
     i = 0
     while i < len(lines):
         line = lines[i]
-        # Normalize horizontal rules
         if re.match(r"^---+$", line.strip()):
             result.append("---")
             i += 1
             continue
-        # Normalize ATX headings
-        line = re.sub(r"^(#{1,6})\s*(.*?)(\s*#*)$", lambda m: m.group(1) + " " + m.group(2).rstrip(), line)
-        # Skip purely computational lines (trend:, score:, etc.)
+        line = re.sub(r"^(#{1,6})\s*(.*?)(\s*#*)$",
+                      lambda m: m.group(1) + " " + m.group(2).rstrip(), line)
         stripped = line.strip()
+        # Strip artifact metadata lines
         if re.match(r"^(trend|score|date|from|subject|to|reply-to):\s*", stripped, re.I):
             i += 1
             continue
-        # Skip HTML comment blocks
+        # Strip HTML comments
         if stripped.startswith("<!--") and stripped.endswith("-->"):
             i += 1
             continue
@@ -82,7 +128,7 @@ def preprocess_md(md_text: str) -> str:
         i += 1
     return "\n".join(result)
 
-# ── Wrap first h1 in cover div ────────────────────────────────────────────────
+
 def wrap_cover(html_body: str) -> str:
     first_h1_match = re.search(r"(<h1[^>]*>.*?</h1>)", html_body, re.DOTALL)
     if first_h1_match:
@@ -90,127 +136,133 @@ def wrap_cover(html_body: str) -> str:
         html_body = html_body[:first_h1_match.start()] + wrapped + html_body[first_h1_match.end():]
     return html_body
 
-# ── Build full HTML doc ───────────────────────────────────────────────────────
-def build_html(body_content: str, css: str) -> str:
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <style>\n{css}\n</style>
-</head>
-<body>
-{body_content}
-</body>
-</html>"""
 
-# ── Generate polished PDF ─────────────────────────────────────────────────────
-def generate_polished_pdf(
-    draft_path: Path,
-    product_title: str,
-    output_pdf: Path
-) -> bool:
-    """Generate a polished PDF with enhanced CSS. Returns True on success."""
+def build_html(body_content: str, css: str) -> str:
+    return f"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <style>\n{css}\n</style>\n</head>\n<body>\n{body_content}\n</body>\n</html>"
+
+
+def generate_polished_pdf(draft_path: Path, product_title: str, output_pdf: Path) -> bool:
     try:
         import weasyprint
     except ImportError:
         print("  ⚠️  WeasyPrint not available")
         return False
 
-    # Read and preprocess markdown
     md_content = draft_path.read_text(encoding="utf-8")
     md_content = preprocess_md(md_content)
-
-    # Convert to HTML
     html_body = md_to_html(md_content)
     html_body = wrap_cover(html_body)
 
-    # Build CSS: base + extra
     base_css = load_base_css()
     extra = extra_css(product_title)
     full_css = base_css + extra
 
-    # Generate PDF
     html_doc = build_html(html_body, full_css)
     wp_doc = weasyprint.HTML(string=html_doc)
     wp_doc.write_pdf(str(output_pdf))
     return True
 
 
-# ── Product definitions ────────────────────────────────────────────────────────
-PRODUCTS = {
-    "cat-litter": {
-        "draft": "products/drafts/cat-litter-box-rescue-guide_v1.md",
-        "title": "Cat Litter Box Rescue Guide",
-        "slug": "cat-litter-box-rescue-guide_v1",
-    },
-    "contractor-scam": {
-        "draft": "products/drafts/contractor-scam-protection-guide_v1.md",
-        "title": "Contractor Scam Protection Guide",
-        "slug": "contractor-scam-protection-guide_v1",
-    },
-    "new-cat": {
-        "draft": "products/drafts/new-cat-first-weeks-survival-guide_v1.md",
-        "title": "New Cat First Weeks Survival Guide",
-        "slug": "new-cat-first-weeks-survival-guide_v1",
-    },
-}
-
-
+# ── Main ──────────────────────────────────────────────────────────────────────────────
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="Polished PDF Generator")
+    parser = argparse.ArgumentParser(description="Dynamic Polished PDF Generator")
     parser.add_argument("--products", nargs="+",
-                        choices=["cat-litter", "contractor-scam", "new-cat"],
-                        help="Specific products to process (default: all)")
+                        help="Specific products to process (default: all from trends JSON)")
     args = parser.parse_args()
 
-    targets = args.products if args.products else ["cat-litter", "contractor-scam", "new-cat"]
+    # Load products dynamically from TrendScout JSON
+    all_products = load_products_from_trends()
+
+    if args.products:
+        # Filter by partial slug match
+        products = [p for p in all_products if any(t in p["slug"] for t in args.products)]
+        if not products:
+            print(f"  [ERROR] None of {args.products} found in today's trends")
+            print(f"  Available: {[p['slug'] for p in all_products]}")
+            sys.exit(1)
+    else:
+        products = all_products
 
     print("=" * 60)
-    print("Polished PDF Generator")
-    print(f"Products: {targets}")
+    print("  Polished PDF Generator — Dynamic")
+    print(f"  Products: {[p['slug'] for p in products]}")
+    print(f"  Source:   wiki/trends/{datetime.now().strftime('%Y-%m-%d')}.json")
     print("=" * 60)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    for key in targets:
-        if key not in PRODUCTS:
-            print(f"❌ Unknown product: {key}")
-            continue
+    # ── Stage 1: Generate all checklist PDFs first (via synthesize_checklist.py) ────
+    print("\n  Stage 2 (pre-flight): Generating checklists...")
+    cl_result = subprocess.run(
+        ["python3", str(WORKSPACE / "scripts" / "synthesize_checklist.py")],
+        capture_output=True, text=True, timeout=120
+    )
+    if cl_result.returncode != 0:
+        print(f"  ❌ Checklist synthesis failed: {cl_result.stderr[:200]}")
+        sys.exit(1)
+    for line in cl_result.stdout.split("\n"):
+        if line.strip():
+            print(f"    {line}")
 
-        prod = PRODUCTS[key]
+    # ── Stage 2: Generate guide PDFs ─────────────────────────────────────────────
+    generated = []
+    write_call_count = 0
+
+    for prod in products:
+        slug = prod["slug"]
         draft_path = WORKSPACE / prod["draft"]
+        title = prod["title"]
 
         if not draft_path.exists():
-            print(f"❌ Draft not found: {draft_path}")
+            print(f"  ❌ Draft not found: {draft_path}")
             continue
 
-        print(f"\n  Processing: {prod['title']}")
+        print(f"\n  Processing: {title}")
 
-        # ── Main PDF ────────────────────────────────────────────────────
-        main_pdf = OUTPUT_DIR / f"{prod['slug']}.pdf"
-        ok = generate_polished_pdf(draft_path, prod["title"], main_pdf)
+        main_pdf = OUTPUT_DIR / f"{slug}.pdf"
+        ok = generate_polished_pdf(draft_path, title, main_pdf)
         if ok and main_pdf.exists():
             size = main_pdf.stat().st_size / 1024
-            print(f"  ✅ {main_pdf.name} ({size:.0f} KB)")
+            mtime = datetime.fromtimestamp(main_pdf.stat().st_mtime).strftime("%H:%M:%S")
+            print(f"  ✅ {main_pdf.name} ({size:.0f} KB) @ {mtime}")
+            generated.append(main_pdf.name)
+            write_call_count += 1
         else:
             print(f"  ❌ Failed: {main_pdf}")
 
-        # ── Checklist PDF ───────────────────────────────────────────────
-        import subprocess as sp
-        cl_result = sp.run(
-            ["python3", str(WORKSPACE / "scripts" / "generate_checklist.py"), str(draft_path)],
-            capture_output=True, text=True, timeout=60
-        )
-        if cl_result.returncode == 0:
-            cl_pdf = OUTPUT_DIR / f"{prod['slug']}_CHECKLIST.pdf"
-            if cl_pdf.exists():
-                size = cl_pdf.stat().st_size / 1024
-                print(f"  ✅ {cl_pdf.name} ({size:.0f} KB)")
-        else:
-            print(f"  ⚠️  Checklist gen failed: {cl_result.stderr[:100]}")
+    # ── MANIFEST CHECK ───────────────────────────────────────────────────────────
+    expected_count = 2 * len(products)  # guide + checklist per product
+    pdf_files = sorted(OUTPUT_DIR.glob("*.pdf"))
 
     print("\n" + "=" * 60)
+    print("  MANIFEST CHECK")
+    print(f"  PDF count: {len(pdf_files)} / expected {expected_count}")
+    print(f"  write_pdf() calls: {write_call_count} / expected {expected_count}")
+    print()
+    print("  Files in final_products/:")
+    for f in pdf_files:
+        mtime = datetime.fromtimestamp(f.stat().st_mtime).strftime("%H:%M:%S %Y-%m-%d")
+        print(f"    {f.name:55s} {f.stat().st_size//1024:4d} KB  {mtime}")
+
+    # Verify every product has both guide + checklist
+    missing = []
+    for prod in products:
+        slug = prod["slug"]
+        if not (OUTPUT_DIR / f"{slug}.pdf").exists():
+            missing.append(f"{slug}.pdf")
+        if not (OUTPUT_DIR / f"{slug}_CHECKLIST.pdf").exists():
+            missing.append(f"{slug}_CHECKLIST.pdf")
+
+    if missing:
+        print(f"\n  ❌ BUILD FAILED — missing: {missing}")
+        sys.exit(1)
+    if len(pdf_files) < expected_count or write_call_count < expected_count:
+        print(f"\n  ❌ BUILD FAILED — expected {expected_count} PDFs")
+        sys.exit(1)
+
+    print(f"\n  ✅ MANIFEST PASSED — all {expected_count} PDFs present and distinct")
+    print("=" * 60)
     print("All PDFs generated.")
 
 

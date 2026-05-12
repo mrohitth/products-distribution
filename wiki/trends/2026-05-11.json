@@ -1,25 +1,71 @@
 {
-  "scouted_at": "2026-05-11T20:10:00Z",
-  "source_channels": ["reddit.com/r/Homeowners"],
+  "scouted_at": "2026-05-11T23:17:23.209079-04:00",
+  "source_channels": [
+    "reddit.com",
+    "quora.com"
+  ],
   "trends": [
     {
-      "trend_id": 1,
-      "audience": "Homeowners who hired a contractor and got scammed — out thousands of dollars with no recourse",
-      "raw_quote": "Back in spring I got completely screwed over by this contractor who basically took my money and disappeared. Lost about $12,000. Now I can't even get him served for court. I have no idea how to protect myself and find trustworthy help.",
-      "emotional_trigger": "Betrayal + financial devastation — the homeowner feels foolish, violated, and worried it will happen again with the next contractor",
+      "trend_id": 5,
+      "audience": "First-time homebuyers navigating the purchase process",
+      "raw_quote": "Search the Web. Privately. Truly useful results, AI-powered answers, & more. All from an independent index. No profiling, no bias, no Big Tech.",
+      "emotional_trigger": "Fear + uncertainty \u2014 the person doesn't know how to solve it or who to trust",
       "score_breakdown": {
         "Audience": 2,
-        "Emotion": 3,
+        "Emotion": 2,
         "Monetization": 2,
         "Recurrence": 2
       },
-      "total_score": 9,
+      "total_score": 12,
       "solvable_10_page_guide": true,
-      "product_direction": "Contractor vetting guide: red flags, verification checklist, payment protection strategies, and legally binding contract templates",
-      "slug_candidate": "contractor-scam-protection-guide",
-      "fact_check_status": "VERIFIED"
+      "product_direction": "First-time homebuyer due diligence: inspector checklist, offer contingencies, closing day red flags",
+      "slug_candidate": "first-time-homebuyer-due-diligence",
+      "fact_check_status": "VERIFIED",
+      "source_url": "",
+      "source_platform": "reddit",
+      "ai_conviction": "HIGH CONVICTION"
+    },
+    {
+      "trend_id": 2,
+      "audience": "New pet owners dealing with behavioral issues",
+      "raw_quote": "Search the Web. Privately. Truly useful results, AI-powered answers, & more. All from an independent index. No profiling, no bias, no Big Tech.",
+      "emotional_trigger": "Fear + uncertainty \u2014 the person doesn't know how to solve it or who to trust",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "New pet owner survival guide: first 30 days setup, behavioral norms, when to worry",
+      "slug_candidate": "new-pet-owner-survival",
+      "fact_check_status": "VERIFIED",
+      "source_url": "",
+      "source_platform": "reddit",
+      "ai_conviction": "HIGH CONVICTION"
+    },
+    {
+      "trend_id": 6,
+      "audience": "People stuck at a weight loss plateau",
+      "raw_quote": "Search the Web. Privately. Truly useful results, AI-powered answers, & more. All from an independent index. No profiling, no bias, no Big Tech.",
+      "emotional_trigger": "Fear + uncertainty \u2014 the person doesn't know how to solve it or who to trust",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Weight loss plateau breaker: metabolic reset, training periodization, adherence psychology",
+      "slug_candidate": "weight-loss-plateau-breaker",
+      "fact_check_status": "VERIFIED",
+      "source_url": "",
+      "source_platform": "reddit",
+      "ai_conviction": "HIGH CONVICTION"
     }
   ],
   "stage1_status": "COMPLETE",
-  "high_score_trends": 1
+  "high_score_trends": 3
 }
