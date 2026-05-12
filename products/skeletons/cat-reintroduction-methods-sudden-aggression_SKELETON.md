@@ -1,83 +1,113 @@
-# Product Skeleton: Sudden Cat Aggression Reintroduction Protocol
+## Product Skeleton: Cat Reintroduction Protocol
 
 ---
 
-## 1. Product Title
-
-**"Enemy in the House: A 6-Week Reintroduction Protocol for Sudden Cat Aggression"**
+# Enemy to Allies: The Reintroduction Protocol
 
 ---
 
-## 2. Emotional Hook
+## Emotional Hook
 
-You're holding your phone, watching two cats you adopted together snarl and attack each other over a doorway. Three weeks ago, they groomed each other. Now one is living in the bathroom and you don't know how this happened — or if it can be undone.
+You've lived with them for four years. Four years of curled-up sleep piles, mutual grooming, the casual leg-walking that means "I trust you enough to ignore you." Then one day you come home and find blood on the carpet. Your cats are screaming at each other through closed doors, pilo-erection up to their spines, and you have no idea what happened.
 
-This is not a behavioral problem you caused by being a bad cat parent. It's called **redirected aggression**, and it is one of the most misunderstood and mishandled feline emergencies in existence. It starts with a trigger — a fight outside the window, a loud noise, a new cat smell on your clothes — and cascades into a real, neurobiological grudge that can last months or, in extreme cases, permanently.
+This isn't a personality clash. This is a relationship collapse. And the terrifying question you're asking yourself right now — *will I have to rehome one of them?* — has a structured answer that doesn't end in despair.
 
-The good news: cats don't hold grudges the way we think. They hold **fear associations**, and fear associations can be systematically broken down. That's exactly what this product does.
+You're not a bad cat parent. You didn't do this. But there is work ahead, and this guide gives you the protocol that works.
 
-**By the end of this guide, you will have a day-by-day reintroduction protocol grounded in proven, incremental exposure methods — not just vague "keep them separated" advice that leaves you guessing for months. You will know how to identify the trigger, restore safety, and rebuild your multi-cat household without professional behaviorist fees or surrendering to a shelter.**
+The system you'll follow is based on Jackson Galaxy's reintroduction methodology, but streamlined for the crisis moment you're in right now — when you need a clear next action, not a philosophy lecture. Week by week, you'll move from full separation to supervised proximity to genuine coexistence. Every phase has a "advance or pause" checkpoint, because recovery isn't linear and the cats will tell you when they're ready.
 
----
-
-## 3. Product Architecture
-
-### Part 1: Understanding What Just Happened (The Diagnostic Foundation)
-
-**Chapter 1: Map Your Cat's Threat History**
-You will create a **timeline of the incident** — identifying the window of time between the trigger event and the first act of aggression. You'll understand that redirected aggression has a specific signature: a calm cat suddenly reacting to something, redirecting that energy onto the nearest available cat, and then associating that cat with danger going forward.
-
-**Chapter 2: Identify the Trigger Chain**
-You will use the **Trigger Inventory Worksheet** to systematically evaluate possible redirect sources: other animals outside, construction sounds, new smells (litter mat replacement, new cleaning product, your clothing from another home), veterinary visits, or a cat fight with a household member. You'll learn to distinguish true redirected aggression from status aggression and resource-based aggression — because the protocol differs.
-
-**Chapter 3: Assess Fear Threshold and Safety State**
-You will calculate each cat's current **fear threshold score** using a simple 1–10 rubric based on behaviors (hissing, hiding, stalking, full attack). You'll determine whether the household is currently in crisis mode (Level 7–10) requiring full separation, or whether limited supervised contact is viable — and you'll know the difference.
+By the end of this guide, you will have a rebuilt relationship between your cats, or a clear-eyed management plan for multi-cat peace under the same roof. Either outcome is success.
 
 ---
 
-### Part 4: The 6-Week Reintroduction Protocol (Chapters 7–9)
+## Product Architecture
 
-**Chapter 7: Phase 1 — Separated Scent Exchange and Sensory Re-Introduction (Weeks 1–2)**
-You will perform **scent swapping rituals** using rotating blankets and socks to re-habituate each cat to the other's olfactory signature. You will run the **feeding-at-barrier protocol** — placing food bowls on opposite sides of a closed door to create positive associations with the other's presence. You'll know exactly when to advance and what failure looks like.
+### Part 1: The First 48 Hours — Contain and Decode
 
-**Chapter 8: Phase 2 — Controlled Visual Contact with Resource Management (Weeks 3–4)**
-You will set up a **baby gate + screen barrier setup** for supervised visual contact sessions. You'll learn the "**treat chain**" method — feeding high-value treats at increasing proximity through the barrier while tracking body language markers. You'll know the exact visual cues that indicate readiness to progress (slow blinking, relaxed ears, forward-facing posture).
+**Chapter 1: Execute Full Separation Immediately**
 
-**Chapter 9: Phase 3 — Unsupervised Reintroduction and Troubleshooting Regression (Weeks 5–6)**
-You will execute **controlled full-access reintroductions** using the step-stool method — one cat enters a shared room via a step-stool, stays for 10 seconds, exits, then the other cat gets the same. You'll implement the **"emergency reset" protocol** for regression episodes: a calm, verbal redirect without physical intervention, and what to do if a fight breaks out without worsening the association.
+You will physically divide your home into two zones and move the aggressor (or more stressed cat) to one, the victim to the other. You will set up resources on opposite ends of the home — food, water, litterboxes, resting spots — so neither cat feels cornered. You will understand why simultaneous separation is critical: every encounter while they're amped up deepens the grudge, and the neurochemistry of a cat in a high-arousal state takes 72+ hours to normalize.
 
----
+**Chapter 2: Read the Aggression Type**
 
-### Part 5: Long-Term Management and When to Escalate (Chapters 10–11)
+You will identify whether you're dealing with status aggression, fear-based aggression, territorial aggression, or redirected aggression (the most common trigger after outdoor cats, construction noise, or vet visits). You will complete a diagnostic worksheet that asks you about context, body language during the event, and what changed in the 48 hours prior. The worksheet's output is a classification that determines your protocol intensity — because a redirected aggression incident has a different recovery timeline than a territorial dispute.
 
-**Chapter 10: Environmental Architecture for Peace**
-You will redesign your home's **resource geography** — food stations, litter boxes, resting perches — to eliminate competition zones and create **parallel escape routes** so no cat can be cornered. You'll learn to map "high-value real estate" in your home and distribute resources to eliminate status competition.
+**Chapter 3: Understand Redirected Aggression Specifically**
 
-**Chapter 11: Feline Medication and Professional Escalation Pathway**
-You will understand when pharmaceutical intervention (fluoxetine, gabapentin) is appropriate and how to discuss it with your vet. You'll learn the **Red Flags Protocol** — specific warning signs that indicate this is beyond behavioral management (severe ongoing injury, extreme litter-box aversion, cats under 1 year old, household with immunocompromised members) and exactly how to find and vet a veterinary behaviorist.
+You will know the three most common triggers for redirected aggression in multi-cat homes: outdoor cats seen through windows, household disruptions (moves, renovations, new pets), and redirected play drive. You will audit your home for these triggers and create a mitigation list. You will also understand why the victim cat's fear response often persists long after the original trigger is gone — and why that matters for reintroduction pacing.
 
 ---
 
-## 4. Key Human Touch Elements
+### Part 2: Scent Work — The Foundation Phase
 
-**The "3AM Lying Awake" opener** — readers find this guide at 2AM on day 8 of separation, already exhausted and hopeless. The emotional entry point must acknowledge that desperation without dramatizing it. They don't need to be scared more — they need to feel like someone has been there.
+**Chapter 4: Run the Scent Exchange Protocol**
 
-**The "This is not your fault" section** — placed after Part 1 — validates without being saccharine. Redirected aggression is neurobiological, not a relationship failure. This framing is what separates this from generic cat advice and what keeps buyers from refunding out of shame.
+You will swap bedding between cats every 24 hours for a minimum of 10 days. You will track each cat's response to the other's scent using a simple +0/- rubric (positive = relaxed, neutral = indifferent, negative = hiss, pilo-erection, or hiding). At the end of 10 days, you will have a data log showing whether the cats are neutralizing to each other's scent or escalating — and this log becomes your reintroduction speedometer.
 
-**The "Scent Story" anecdote** — use a real-feeling scenario: a reader's cat attacked the other after smelling a feral cat on the owner's jacket. The reintroduction required 3 weeks of scent work alone before any visual contact. Illustrate how the invisible becomes the obstacle.
+**Chapter 5: Build a Scent-Familiarity Routine**
 
-**The "Regression is not failure" callout box** — every reintroduction guide buyer hits a wall around Week 3. They need to be warned and emotionally prepared before it happens, not when they're in the moment panicking.
+You will use the glove-rubbing technique: rub a cloth on one cat's face (where the friendly pheromones are produced), then present it to the other cat in a neutral zone. You will do this daily and log responses. You will understand why facial pheromones are the "friendly" signal and why starting with body-rubbing scent (often more aggressive) is a mistake many owners make.
 
----
+**Chapter 6: Create a Scent-Happy Zone**
 
-## 5. Format & Pricing
-
-**Format:** 28-page PDF + printable worksheets (Trigger Inventory, Fear Threshold Tracker, Weekly Protocol Log, Scent Swap Schedule, Emergency Reset Checklist)
-
-**Price point rationale:** $39. Target audience is mid-funnel — they've already Googled "suddenly aggressive cats" and found Jackson Galaxy videos. They want an organized, sequential plan, not another video playlist. They are desperate enough to pay for certainty. Comparable products in pet behavior space sit at $27–47. At $39, this is positioned above free resources but below the cost of a single veterinary behaviorist consult ($150–400+). Value anchor: "The protocol costs less than one behaviorist session and takes you through every day."
+You will learn that synthetic Feliway in the separation zones reduces baseline stress, but that the real work is creating positive associations with the other cat's scent. You will introduce feeding time 30 minutes after presenting the other cat's scent-swapped blanket, creating a "good thing happens when I smell them" association. You will document this with a daily log template.
 
 ---
 
-## 6. Market Intel Angle
+### Part 3: Visual Access — Controlled Introduction
 
-This product connects to the broader **pet-as-family infrastructure** thesis: multi-cat households are at historic highs (over 60% of cat owners own two or more), and owners increasingly treat behavioral crises as medical events requiring structured intervention — not just something to "wait out." The cat behaviorist space, previously dominated by free YouTube content, is entering a premium-info phase where owners want downloadable, portable, step-by-step frameworks they can implement without a webcam. The redirected aggression subset is particularly high-intent: these buyers have already experienced the worst and are operating under time pressure — the cats are currently separated, stress is escalating daily, and rehoming or euthanasia conversations are already happening in their heads. That's a conversion-ready state.
+**Chapter 7: Build the Baby Gate Setup**
+
+You will install a baby gate with a cloth draped over it (so the cats can see but not charge), or use a tall baby gate with no cloth, depending on their stress level. You will feed them on opposite sides of the gate simultaneously. You will watch for pre-pouncing behavior (crouching, stalking, ear rotation) versus neutral behavior (eating, blinking, slow tail movement). You will know exactly when to end the session and when to continue.
+
+**Chapter 8: Run the Door-Slant Exercise**
+
+You will crack the door between zones 2 inches and observe the response. If both cats are curious-but-neutral, you'll advance to 4 inches the next day. If either cat shows ambulation (moving toward the door with intent), you close it immediately. You will use the "do not react, do not comfort, do not punish" protocol during these windows — because your body language and voice tone will contaminate the exercise.
+
+**Chapter 9: Pass the 30-Second Baseline Test**
+
+You will run a full visual introduction — baby gate up, no cloth, 30 seconds — and score it using the included rubric: 0 = attack/hiss, 1 = one cat reactive, 2 = both alert but calm, 3 = slow blinking and neutral. You will know that passing the 30-second test at a score of 2+ means you're cleared to advance to parallel proximity in Part 4. If you score below 2, you return to Part 2 and extend the scent-work phase.
+
+---
+
+### Part 4: Controlled Proximity and Parallel Reintroduction
+
+**Chapter 10: Execute Parallel Feeding Sessions**
+
+You will place food bowls 10 feet apart with the baby gate between the cats, and feed both simultaneously for 5 minutes. If either cat finishes and the other hasn't, you don't move the finished cat closer — you end the session. You will advance by 2 feet per successful session until they're eating 10 feet from each other with the gate open. You will document each session with a simple "passed/failed/demoted" log.
+
+**Chapter 11: Run the Play-Hunt Reset**
+
+You will use Jackson Galaxy's "play therapy" protocol: engage the aggressor cat in an intense play session with a wand toy, then switch to engaging the victim cat, then attempt a supervised parallel play session with both. The neuroscience here is that predatory drive resets emotional state — you can't stalk-and-pounce if you're relaxed. You will know exactly when to intervene (any pilo-erection or direct staring) and when to let the session run.
+
+**Chapter 12: Pass the Full Coexistence Test and Build the Maintenance Plan**
+
+You will run a 20-minute supervised session with both cats loose in the same room, with escape routes clear and no resources in competition. You will score it on the full rubric. If you pass at a score of 2+, you have achieved managed coexistence — not necessarily the same relationship they had before, but a peaceful, non-violent household. You will receive a maintenance checklist: how to keep stress low, how to monitor for relapse (which is common around environmental changes), and when to call a vet or behaviorist.
+
+---
+
+## Key Human Touch Elements
+
+**The Grief Frame.** The Jackson Galaxy "grief" framing lands hard here: your cats have lost the relationship they had, and they're grieving it separately. That loss is what drives the hostility — not malice. You'll frame every reintroduction step as helping them find each other again, not forcing compliance.
+
+**The "3 Months" Callback.** The verbatim quote owner took 3 months following these strategies. You'll position the 8-12 week protocol as the real timeline, and you'll be honest that "faster" often means "relapse." This sets accurate expectations and prevents the panic when week 2 doesn't look like week 4 in the YouTube video.
+
+**The "My Cat Is Fine Now" Trap.** You'll include a section on why stopping the protocol at "they seem better" leads to relapse — because stress hormones take longer to normalize than visible behavior. This is where most owners fail, and naming it explicitly prevents the most common burnout of the process.
+
+**The Body Language Cheat Sheet.** A printable one-page reference showing "this = escalate," "this = proceed," "this = abort." This is the thing people need at 2am when they hear a hiss from the other room.
+
+---
+
+## Format & Pricing
+
+**PDF Download + Printable Worksheets**
+
+The guide is approximately 28-35 pages. The worksheets are separate files for printing:
+
+- Aggression Type Diagnostic Worksheet
+- Scent Exchange Log (10-day)
+- Parallel Feeding Session Tracker
+- Full Coexistence Test Rubric
+- Maintenance Checklist
+
+**Price Point Rationale:** $27-37. This is a high-stakes purchase — people facing euthanasia or rehoming decisions will pay for a structured protocol. The price also signals credibility: $9 guides feel

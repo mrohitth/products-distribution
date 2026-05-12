@@ -1,129 +1,126 @@
-# Product Skeleton: Crisis Management for Severe Displaced Aggression in Cats
+# Product Skeleton
+
+## Displaced Aggression in Cats: A Crisis Management Guide
 
 ---
 
 ## 1. PRODUCT TITLE
 
-**Surviving Your Volatile Cat** *(28 characters)*
-
-Alternative: **The Aggressive Cat Safety Guide** *(32 characters)*
+**Surviving Your Cat's Rage**
+*(24 characters)*
 
 ---
 
 ## 2. EMOTIONAL HOOK
 
-*(200 words)*
+You've Googled everything. You've tried every supplement, every "miracle" collar, every calming spray. You've slept with one eye open for months—maybe years. You've been bitten hard enough to need medical attention, more than once. And the hardest part isn't the physical damage. It's the confusion: this is the same animal you adopted, the one you love, who sometimes still looks at you with those soft eyes. Then the switch flips.
 
-You love her. That's what makes this unbearable.
+You feel trapped between two impossible choices: rehome a cat with a biting history (who might not survive the shelter system) or euthanize a pet who isn't "sick" in any normal sense. Maybe you've even been told by a vet that there's nothing medically wrong—suggesting it's somehow *your fault*.
 
-The 3am ambush. The perfectly calm cat who becomes something unrecognizable the moment something sets her off—another cat outside, a sound, nothing at all. You've been bitten hard enough to need urgent care. You've learned to sleep in different rooms. You've researched everything and found nothing that addresses *this*.
+This guide won't insult you with optimism. Displaced aggression is one of the most neurologically stubborn behavioral conditions in domestic cats. But "difficult to treat" and "impossible to manage" are different things. What follows is a structured, realistic framework for protecting yourself, improving your cat's quality of life, and making clear-eyed decisions about what comes next—whether that's continued management, professional intervention, or the harder conversations some owners eventually need to have.
 
-You've probably also had people tell you to rehome her, or worse. You've probably wondered if you're a bad person for thinking about it. You haven't rehomed her because no shelter would take her. You haven't euthanized her because she's fine 90% of the time and you can't stop hoping.
-
-You are not failing her. Displaced aggression is one of the most misunderstood and under-addressed behavioral issues in cats. Most resources were written for the cat who knocked over a vase.
-
-This guide was written for you.
-
-Over the next pages, you'll build a concrete safety system for your home, learn to read her pre-attack signals with actual precision, get real de-escalation techniques that work in the moment, and finally have a framework for the medical, behavioral, and quality-of-life decisions ahead. This isn't about fixing her. It's about making the next three years survivable—for both of you.
+You will learn how to predict, prevent, and survive attacks. You will learn what actually works in severe cases. And you will learn how to stop blaming yourself for a neurological condition neither of you chose.
 
 ---
 
 ## 3. PRODUCT ARCHITECTURE
 
-### PART 1: Environmental Safety Architecture
+### PART ONE: SAFETY SYSTEMS FIRST
 
-*Goal: Transform your home from an unpredictable battlefield into a system with predictable risk zones.*
+*The foundational layer: crisis protocols and structural defenses before anything else*
 
-**Chapter 1: Map Your Home for Risk** *(Real output: A hand-drawn or templated room-by-room "threat assessment" identifying high-risk zones, narrow hallways where ambushes happen, and your current safe rooms)*
+**Chapter 1: The Night Protocol**
+You will build and implement a specific nighttime routine that accounts for the highest-risk period. This includes a door-based barrier system, a secondary "panic room" area, and a verbal/physical self-defense toolkit that doesn't escalate your cat's arousal. You will know exactly what to do in the 30 seconds between hearing your cat's pre-attack vocalization and contact.
 
-After reading this, you will be able to identify every location in your home where an attack is statistically likely to occur. You'll understand why bathrooms and narrow corridors are the most dangerous spaces and which rooms you can designate as defensible.
+**Chapter 2: Reading the 15-Minute Warning Window**
+You will identify your cat's specific pre-attack sequence—pinpointing the micro-behaviors (pupil dilation, tail lashing, skin rippling, ambient monitoring) that reliably precede an episode. You will create a personal "attack log" that helps you distinguish displacement triggers unique to your cat's environment.
 
-**Chapter 2: Build Your Safe Room Infrastructure** *(Real output: A checklist of supplies for at least one fully cat-proofed room where you can retreat with a lock that works from both sides)*
-
-After reading this, you will know exactly what your safe room needs—no locks that can be defeated by a determined cat, a way to block under-door access, and a protocol for entering and exiting without triggering a chase response.
-
-**Chapter 3: Install Your Early Alert System** *(Real output: A short daily log template capturing behavioral patterns, triggers, and timing cycles that help you predict attacks before they happen)*
-
-After reading this, you will have a system for tracking attack patterns that surfaces predictability. Most displaced aggression has rhythm. You'll learn to spot the 24-48 hour cycles and the environmental precursors most owners miss until it's too late.
+**Chapter 3: The Safe Room Framework**
+You will establish a dedicated cat room that is predator-deprived of visual stimuli, structurally simple, and equipped with vertical space. You will understand the difference between a room that contains your cat versus a room that genuinely calms your cat. You will implement the room as both prevention and post-incident decompression space.
 
 ---
 
-### PART 2: Real-Time De-escalation Protocol
+### PART TWO: ENVIRONMENTAL ARCHITECTURE
 
-*Goal: Give you an actual script for the moment you see it starting.*
+*The structural layer: rebuilding the physical environment to reduce neurological triggers*
 
-**Chapter 4: Read the Escalation Ladder** *(Real output: A visual reference card of 5-7 pre-attack body language markers specific to displaced aggression, formatted as a laminated pocket guide)*
+**Chapter 4: The Territorial Map**
+You will audit your entire home through the lens of your cat's sensory reality—window sightlines, door thresholds, acoustic echo points. You will identify "ambush geometry" (spaces where your cat can stalk or corner you) and reconfigure furniture and barriers to eliminate them.
 
-After reading this, you will be able to identify the difference between "agitated" and "about to attack" in your specific cat. Most owners know *after* the attack that signs were there. You'll know them during.
+**Chapter 5: Stimulus Control at the Source**
+You will implement window blocking strategies, outdoor cat deterrent systems, and visual barrier placement that reduces the environmental input driving aggression cycles. You will understand why "calming" the environment is less effective than "de-stimulating" it in severe cases.
 
-**Chapter 5: Interrupt Without Escalating** *(Real output: A ranked list of 5 intervention techniques with exact instructions: what to do, what never to do, and the specific verbal/nonverbal cues that de-escalate vs. trigger further aggression)*
-
-After reading this, you will have a personal playbook. Not "stay calm" (useless) but specific: the 6-foot rule, which surfaces work, what food sounds trigger vs. soothe, and the one response pattern owners unknowingly repeat that perpetuates the cycle.
-
-**Chapter 6: Execute the Safe Exit** *(Real output: A memorized 3-step exit protocol for leaving a room when your cat is in pre-attack state without triggering pursuit)*
-
-After reading this, you will know exactly how to exit a space in under 8 seconds without making eye contact, without your back to her, and without cornering yourself. This is the chapter that prevents the next emergency room visit.
+**Chapter 6: Scheduled Life Protocol**
+You will restructure feeding, play, and interaction times into a rigid 24-hour schedule that removes unpredictability—the psychological state displacement-aggressive cats exploit. You will understand the cortisol-rhythm connection and how timed meals directly impact aggression windows.
 
 ---
 
-### PART 3: Medical and Behavioral Foundations
+### PART THREE: MEDICAL AND PROFESSIONAL NAVIGATION
 
-*Goal: Give you the language and knowledge to push for appropriate professional help.*
+*The intervention layer: working with vets, understanding pharmacology, accessing specialists*
 
-**Chapter 7: Demand a Medical Workup** *(Real output: A one-page "vet conversation script" with specific tests to request—thyroid, neurological, pain assessment—and the questions to ask if your vet dismisses behavioral causes)*
+**Chapter 7: The Diagnostic Checklist Before Behaviorist Referral**
+You will know which medical conditions (hyperthyroidism, FIV, dental disease, neurological damage) must be ruled out or treated first—and how to push for appropriate workup from a general vet who may dismiss behavioral causes. You will understand the medical vs. behavioral distinction in clear, specific terms.
 
-After reading this, you will know what ruling out medical causes actually requires. Most cats with displaced aggression have underlying pain, hyperthyroidism, or neurological changes that standard vets miss. You'll stop accepting "it's just behavioral" as a dismissal.
+**Chapter 8: Pharmacological Options Realistically Assessed**
+You will understand the three tiers of pharmaceutical intervention (SSRIs, benzodiazepines, propranolol) with honest efficacy rates for displaced aggression specifically. You will know what to ask for in a vet consult, how to evaluate whether a medication is working, and what timeline to expect. You will not waste 8 months on a trial-and-error process without structure.
 
-**Chapter 8: Understand the Displaced Aggression Mechanism** *(Real output: A plain-language explainer of what displaced aggression IS neurologically—why it happens, why it's different from redirected aggression, and why it's not your fault)*
-
-After reading this, you will be able to explain to a vet, a behaviorist, or a skeptical family member exactly what is happening in your cat's brain. This matters for getting appropriate help and for your own psychological survival.
-
-**Chapter 9: Medication Realism** *(Real output: A comparison chart of common pharmacological interventions (fluoxetine, gabapentin, clonazepam, etc.) with realistic outcome expectations, timeline for effect, and what "success" looks like for severe cases)*
-
-After reading this, you will have honest expectations. Medication can reduce intensity and frequency. It is not a cure. You'll know what questions to ask your vet about dosing, combination therapy, and when to consult a veterinary behaviorist vs. a general vet.
+**Chapter 9: The Behaviorist Meeting Framework**
+You will prepare for a veterinary behaviorist consultation with a documented incident log, environmental photos, and specific questions that distinguish a qualified specialist from a general trainer. You will understand what a real behaviorist can and cannot fix—and what "reasonable management" looks like as an outcome.
 
 ---
 
-### PART 4: The Decision Framework and Support Systems
+### PART FOUR: QUALITY OF LIFE AND THE HARD DECISIONS
 
-*Goal: Address the parts no one talks about—the grief, the isolation, the impossible decisions.*
+*The endgame layer: sustainable management, owner wellbeing, and end-of-life clarity*
 
-**Chapter 10: Build Your Crisis Team** *(Real output: A template for assembling your support network: which professionals to contact, how to find a veterinary behaviorist, online communities with actual resources, and who should NOT be on your team)*
+**Chapter 10: Your Exhaustion Is Valid**
+You will name and address compassion fatigue and trauma responses specific to living with a volatile pet—including hypervigilance, anticipatory anxiety, and grief for the relationship you expected to have. You will learn boundary-setting language for social situations where others minimize your experience.
 
-After reading this, you will have a list of specific resources. Not "talk to your vet" but: the American College of Veterinary Behaviorists directory, how to find a certified applied animal behaviorist, and which online forums are actually useful vs. full of people who have never lived with severe aggression.
+**Chapter 11: The Three-Year Threshold**
+You will evaluate long-term management sustainability using a concrete quality-of-life matrix. You will understand the realistic prognosis for improvement at the 3+ year mark, and you will be able to articulate the difference between "managing forever" and "making a final decision"—without shame either way.
 
-**Chapter 11: The Quality of Life Assessment** *(Real output: A scored quality-of-life rubric specific to households managing severe feline aggression—covering your safety, the cat's welfare, and a decision timeline for when to escalate vs. continue managing)*
-
-After reading this, you will have an objective framework. When you've been in crisis for years, your calibration is off. This rubric gives you a concrete way to assess whether the current situation is sustainable, whether things are improving, or whether a harder decision needs to be made.
-
-**Chapter 12: How to Not Lose Yourself** *(Real output: A maintenance protocol for your own psychological health—boundaries with well-meaning people, how to grieve the cat relationship you thought you'd have, and when to consider this a trauma that needs its own support)*
-
-After reading this, you will have permission and language for what this situation actually is. You're living with a source of unpredictable violence. That has psychological weight. This chapter addresses the isolation, the guilt, the grief, and the specific strategies owners in this situation actually use to survive it.
+**Chapter 12: Euthanasia Without Guilt**
+You will have a structured conversation framework for discussing behavioral euthanasia with family members, vets, and yourself. You will understand that choosing to end a cat's life due to a neurological condition that causes suffering for both cat and owner is not failure—it is a legitimate, compassionate choice. You will have language to process this without self-judgment.
 
 ---
 
 ## 4. KEY HUMAN TOUCH ELEMENTS
 
-**The Central Frame:** Every displaced aggression owner has already grieved the cat they thought they had. The product must acknowledge this grief directly and not try to fix it with toxic positivity. The cat is not "bad." The situation is not sustainable in its current form. Both can be true.
+**Lead with the nightmare first.** Open the guide with a reconstructed scenario that mirrors the verbatim quote—validated, specific, not sanitized. The reader needs to feel seen before they can engage with solutions.
 
-**The "Three Years" Touchstone:** Reference the verbatim quote's timeframe directly—"You've been doing this for three years. That is not weakness. That is not enabling. That is what love looks like when there are no good options." This validates without minimizing the suffering.
+**"I learned to anticipate the attacks at night."** This line becomes a structural anchor. It tells us the owner found a workaround, not a cure. Honor that wisdom. Acknowledge that survival strategies are real progress, not a consolation prize.
 
-**The Emergency Room Visit:** Most owners in this category have either been to urgent care or seriously considered it. A brief acknowledgment ("If you're reading this with a fresh bite, stop here and go to urgent care first") immediately establishes that this guide takes their reality seriously.
+**"Little tiny stray ended up at my house."** The rescue origin matters. Many of these owners are dealing with cats whose early neurological development was shaped by uncertainty, scarcity, and stress. This is not about bad ownership—it's about cats who came in with broken threat-detection systems. Reframe the guilt.
 
-**The "I Haven't Failed" Reframe:** The single most common emotional thread in these stories is guilt. Build a persistent undercurrent across all chapters: every technique in this guide assumes you are not failing. You are managing an extraordinary situation with inadequate support.
+**The three-year mark.** This is the psychological inflection point for this audience. Acknowledge it directly. At three years, the owner has already proven commitment. They've done the work. The guide respects that by not wasting their time with beginner advice.
 
-**Sample Voice Line (from Chapter 12):** *"You did not choose this. You chose to help a scared, stray animal who showed up at your door. Whatever happens next, that choice was good. The complexity of the outcome does not retroactively make it wrong."*
+**Safety over optimism, always.** No chapter ends with false hope. Every solution comes with an honest success-rate qualifier. These readers have been burned by promises before. Trust is earned through specificity.
 
 ---
 
 ## 5. FORMAT & PRICING
 
-**Format:**
-PDF with printable worksheets (14-page guide + 5 printable assets: threat map template, early warning log, exit protocol card, vet conversation script, quality-of-life rubric)
+**Format:** PDF with printable supplements
+- A laminated-ready **Night Protocol Checklist** (3 pages)
+- A fillable **Incident Log Template**
+- A **Quality-of-Life Assessment Matrix** (one-page decision tool)
+- A **Vet/Behaviorist Prep Sheet**
 
-The printable assets are not optional—they are the product. A guide on crisis management that requires you to remember things in a moment of crisis is useless. The exit protocol card should be laminated and visible. The threat map should be filled out once and referenced when the cat's patterns shift.
+**Price Point: $24.97**
 
-**Price Point Rationale:**
+Rationale: This audience has already spent money—on supplements, vet visits, maybe a failed behaviorist. They're not price-sensitive; they're desperation-sensitive. The $24.97 point signals seriousness without exploitation. It's below the cost of a single vet visit but above the "cheat sheet" tier. These owners want a guide that respects the gravity of their situation, and price anchoring does that work.
 
-*Recommended: $37*
-This is above the typical $9-19 impulse range for pet content, intentionally. Owners in this situation are not browsing; they are in active crisis. They have likely
+---
+
+## 6. MARKET INTEL ANGTH
+
+Displaced aggression sits at a specific intersection: high-suffering, underserved, and growing. Several macro-forces are converging:
+
+**Rescue adoption rates have normalized severe behavioral histories.** The pandemic-era adoption surge brought millions of cats—including those with unknown backgrounds, early trauma, and unsocialization—into homes that were unprepared. Many of these cats are now entering year 3-4 post-adoption, which is precisely when chronic behavioral issues become non-negotiable management problems rather than "phases."
+
+**The vet-to-behaviorist pipeline is broken.** Most general vets receive minimal behavioral training. General trainers cannot touch aggression cases. Veterinary behaviorists have 6-18 month waitlists. In that gap, owners are Googling in the dark and making things worse. This guide occupies that gap directly.
+
+**Behavioral euthanasia is becoming destigmatized—but without resources.** The cultural conversation around quality-of-life decisions for pets has opened up significantly. But the resources for owners making those decisions are sparse. This guide serves the owner whether they choose to continue managing or choose to end their cat's suffering—and it removes the shame from either choice.
+
+**This is a "bridge to the hard conversation" product.** It doesn't promise a cure. It promises to help the owner survive the situation, make informed decisions, and stop blaming themselves. That's a $24.97 promise worth making.

@@ -1,9 +1,9 @@
-Oh man, I went through this exact thing. Came home to find my two cats suddenly sworn enemies after two years of being best friends. One minute they're grooming each other, the next there's blood on the carpet and I'm googling "do cats hold grudges" at 11pm.
+Oh man, this happened to me too. Came home from work to my two boys having a full-on standoff in the hallway — one of them had drawn blood on the other's ear. They'd been best friends for three years. Just... gone. I genuinely thought I might have to rehome one of them.
 
-First thing nobody tells you: **this is called redirected aggression**, and it's not a personality conflict between your cats. Something triggered a fear response — could be a noise, a cat outside, even a smell on your clothes — and your cat redirected that panic onto the other one. They're not mad. They're scared. Fear associations can be broken. Grudges can't, but fear associations absolutely can.
+What I learned: the first 48 hours are everything. The moment you separate them, don't wait until you've figured out what caused it. Your cats are operating from their threat-detection brain right now, not their thinking brain. Every visual or auditory encounter keeps that arousal spiked — we're talking 72+ hours for their neurochemistry to even begin normalizing. So even if you have a tiny apartment, you need two complete zones with everything they need (litter, food, hiding spots) on opposite ends. That's non-negotiable.
 
-The biggest thing that helped me: **reconstruct the exact timeline** of what happened. Open a notes app and write down everything you remember from 48 hours before the first incident. Every sound, every visitor, any changes in routine. Redirected aggression has a specific signature, and once you see the pattern, it stops feeling random and scary.
+The second thing: don't try to rush the reintroduction process. I made this mistake. When they seemed calmer after a week, I moved too fast and set us back two weeks. There's a checkpoint system — you only advance when both cats show specific signals, not just when you feel like it's been long enough.
 
-The second thing: **your cats have different fear thresholds**. One might be ready for visual contact in two weeks while the other needs four. Trying to move too fast resets everything. Slower is faster here.
+I found a free checklist that walks through the exact week-by-week protocol — it helped me stop guessing and actually trust the process. Happy to share if you want it.
 
-I found a checklist that walked me through the exact reintroduction sequence — scent swaps, feeding sessions, visual contact in stages. Happy to share if it helps. Three months sounds long but it's honestly a blip. Your cats aren't broken.
+It took us about 10 weeks total, but they're back to grooming each other now. This is survivable. You didn't do anything wrong.

@@ -1,24 +1,24 @@
 {
   "slug": "cat-sudden-aggression-reintroduction-guide",
-  "draft_hash": "2bee1c80c66e853892792ee7bde4b66f",
+  "draft_hash": "8080e67b8cc2670b281fb23415f25e04",
   "items": [
-    "Complete the 15-item Pain and Illness Checklist for both cats today, rating every item as Yes, No, or Unsure and photographing the results with the date to establish a medical baseline for your veterinarian.",
-    "Schedule a veterinary appointment immediately if any checklist item registers as Yes or Unsure, because sudden aggression in previously stable cats requires medical evaluation before any behavioral intervention can be effective.",
-    "Observe whether one cat consistently flinches, freezes, or moves away when the other approaches even casually, which may indicate the aggressor is experiencing pain that makes normal interactions unbearable.",
-    "Note any recent medication changes, supplements, or flea treatments started in the last 30 days for either cat, as new medications can cause behavioral side effects including unexplained aggression toward companions.",
-    "Conduct a room-by-room assessment for environmental changes such as new furniture, rearranged spaces, unfamiliar scents from visitors, or construction noise that may have disrupted your cats' established territory.",
-    "Evaluate resource distribution throughout your home by checking whether food bowls, water stations, litter boxes, and resting spots are adequate in number and strategically placed to prevent competition between your cats.",
-    "Watch for signs of redirected aggression by identifying any triggers your cats cannot directly access, such as outdoor cats visible through windows, loud construction sounds, or new pets in neighboring apartments.",
-    "Begin a scent exchange protocol by rubbing clean socks on each cat's face and cheeks and placing them in the other cat's space, allowing them to investigate the exchanged scent without direct confrontation.",
-    "Establish a complete separation protocol keeping both cats in entirely distinct areas with closed doors between them for a minimum of 48 hours, ensuring no visual or physical contact during this cooling-down period.",
-    "Progress to supervised visual contact through a barrier such as a baby gate while feeding both cats their favorite treats, rewarding calm behavior and separating immediately at the first sign of tension or stalking.",
-    "Maintain separate food bowls, litter boxes, water stations, and resting areas throughout the entire reintroduction process, keeping all resources in their designated separated spaces to prevent resource-guarding conflicts.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open cat-sudden-aggression-reintroduction-guide.md and review the relevant section."
+    "Immediate Separation Setup: Create two separate resource zones with food, water, litter, and scented items from each cat's favorite spots, placing them in rooms where they cannot hear or see each other through walls.",
+    "Immediate Separation Setup: Give each cat 15 minutes of focused one-on-one attention by sitting quietly and speaking softly while letting them approach you on their own terms.",
+    "Immediate Separation Setup: Check both cats carefully for injuries around the neck, face, and base of the tail, noting any blood, swelling, or flinching when specific areas are touched.",
+    "Immediate Separation Setup: Identify which cat appears more frightened, withdrawn, or injured to determine whether one cat was the target who finally snapped back rather than the actual aggressor.",
+    "Medical Screening Signs: Watch for a cat who seems \"off\" before the fight \u2014 less interested in food, more withdrawn, or uncharacteristically irritable in the days leading up to the incident.",
+    "Medical Screening Signs: Assess whether the aggression was disproportionate to the trigger, where a normal approach from the other cat set off an extreme, chaotic reaction rather than a predictable response.",
+    "Medical Screening Signs: Track inconsistency in the aggressor's behavior, noting if they are fine with you but hostile to the other cat, or tolerant in some rooms but aggressive in others.",
+    "Medical Screening Signs: Look for redirected aggression opportunities, checking whether either cat had access to a window or door where they could have become agitated by an outdoor animal or perceived threat they couldn't reach.",
+    "Environmental Reconstruction: Spend 20 minutes reconstructing the 72 hours before the fight day by day on paper or in a phone note, going through each day systematically to identify what happened.",
+    "Environmental Reconstruction: Document every household change including guests, moved furniture, new medications, altered work schedules, or routine disruptions that might have stressed one or both cats.",
+    "Environmental Reconstruction: Remember that the \"sudden\" fight was the final event in a stress cascade, not a random occurrence \u2014 your job is to find which stressor was the last domino to fall.",
+    "Environmental Reconstruction: Consider whether any recent construction, loud noises, neighborhood activity, or changes to your own behavior could have elevated the household stress level without your noticing."
   ],
   "categories": [
-    "Rule Out Medical Causes First",
-    "Identify Environmental Triggers",
-    "Execute Safe Reintroduction"
+    "Immediate Separation Setup",
+    "Medical Screening Signs",
+    "Environmental Reconstruction"
   ],
-  "generated_at": "2026-05-12T05:49:09.683140"
+  "generated_at": "2026-05-12T11:03:10.008229"
 }

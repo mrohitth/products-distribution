@@ -1,111 +1,115 @@
-# PRODUCT SKELETON
-
-## Cat-Human Health Signal Guide
+# Product Skeleton: "The Signal"
 
 ---
 
 ## 1. Product Title
 
-**"What Your Cat Knows About Your Body"**
-
-*(31 characters — curiosity-driven, implies an answer the reader will discover)*
+**The Signal: Decode Cat Aggression Before It's a Crisis**
+*(38 characters — opens curiosity rather than promising a solution outright. "Signal" carries double meaning: medical signal and the cat signaling distress.)*
 
 ---
 
 ## 2. Emotional Hook
 
-Your cat has been the calmest creature in your household for years. Then, without warning, she hisses at you. She hides. She swats at your other cats. And now you're carrying two worries at once: *Is something wrong with her?* And quietly, almost without letting yourself think it: *Is something wrong with me?*
+Your cat was fine six weeks ago. Now she hisses when you reach for the remote. She's drawn blood twice. Your partner thinks she's "just getting old" but you know something is deeply wrong — and you're starting to wonder if it's you.
 
-You've probably already googled "sudden cat aggression" and found generic advice about stress and toxins. What you haven't found is a guide that names the thing you're actually worried about — that your pet might be responding to *you*. That your hormone changes, your pregnancy, your medication adjustment, your stress spikes, might be showing up in her first.
+You're not dramatic. You're paying attention.
 
-This is real. It's documented. And it's actionable.
+And you should be. Sudden aggression in a previously stable cat is not a training problem. It's not a personality change. It's a distress signal, and in our experience working with hundreds of multi-cat households in this exact situation, it is one of the most overlooked indicators that something is off — in the cat, in the household, or in you.
 
-This guide walks you through exactly how to read your cat's behavioral shifts as a household health mirror, what medical causes to rule out, how your own body factors in, and a concrete protocol for getting your multi-cat home back to peace — without guessing.
+Most guides will tell you to "rule out medical causes" and move on. This guide goes further, because the people who need it most are not in a position to guess wrong. You're dealing with a cat who may be in pain you can't see. You may be navigating pregnancy or a hormone change of your own and can't afford to add pet-related guilt to the load. And you have other cats, which means this isn't just a one-cat problem — it's a household under pressure.
+
+By the time you finish this guide, you will know how to build a complete picture of what's driving your cat's aggression, which questions to ask your vet (and how to push back if they dismiss behavioral change), how to spot whether your own health changes are rippling into your cats, and exactly how to rebuild safety in your home — not with wishful thinking, but with a step-by-step reintroduction system that works for stressed, fearful, and aggressive cats.
+
+This is for the person who knows something is wrong and is done being told everything is fine.
 
 ---
 
 ## 3. Product Architecture
 
-### PART 1: Medical Foundations — Rule Out the Physical First
+### PART 1: KNOWING WHAT YOU'RE LOOKING AT
 
-**Chapter 1: Run the Feline Pain Checklist**
-*Output: You will complete a 15-item physical assessment of your cat and identify which symptoms warrant same-week vet attention versus monitoring. You will know the difference between "wait and observe" and "call today."*
+**Chapter 1 — Map Your Cat's Baseline (So You Can Spot the Deviation)**
+*The reader will be able to:* Complete a behavioral baseline inventory for each cat in the home — activity patterns, food relationships, sleep locations, grooming behavior, social hierarchy — and identify the specific shifts that mark the current aggression as anomalous rather than a pattern they've been missing. They will have a timestamped reference document to share with their vet.
 
-**Chapter 2: Decode Your Cat's Litter Box and Feeding Shifts**
-*Output: You will use the provided Litter Box + Appetite Log to track 7 days of data and spot patterns that indicate pain, urinary issues, or gastrointestinal distress — the most common pain-avoidance behaviors misread as aggression.*
+**Chapter 2 — Categorize the Aggression Type (And Why the Category Changes Everything)**
+*The reader will be able to:* Classify their cat's aggression into one of five primary categories — pain-induced, fear-based, redirected, status/territorial, or medically driven — using a structured behavioral checklist. They will understand why miscategorization leads to failed interventions, and will leave with a classification that informs every decision going forward.
 
-**Chapter 3: Map the Environmental Stressor Timeline**
-*Output: You will create a 30-day household timeline marking any changes (new cleaning products, furniture moves, new household members, loud construction) and cross-reference it against your cat's behavior changes to identify potential triggers that aren't hormone-related.*
-
----
-
-### PART 2: Human Hormones as Household Disruptors
-
-**Chapter 4: Track Your Own Biological Changes Objectively**
-*Output: You will fill in a personal hormone-signal journal documenting your own energy, mood, sleep, and physical symptoms over 2 weeks — giving you concrete baseline data rather than vague suspicion about whether "it's you."*
-
-**Chapter 5: Research the Specific Mechanisms of Cross-Species Chemical Signaling**
-*Output: You will understand at least 4 documented pathways (including cortisol transfer, scent molecule changes, and energy frequency shifts) by which human physiological states influence feline behavior — grounding your observations in biology, not mysticism.*
-
-**Chapter 6: Identify Your Personal Transmission Pattern**
-*Output: You will match your own documented patterns from Chapter 4 against known feline stress responses and generate a personalized "my cat reads me" hypothesis statement — a working theory you can test and refine.*
+**Chapter 3 — Build a Timeline That a Vet Can Actually Use**
+*The reader will be able to:* Construct a precise medical-history timeline that connects environmental changes, human health changes, household moves, new products (cleaners, air fresheners, new furniture), and litter changes to the onset of aggressive behavior. They will have a formatted document ready for their veterinary appointment that prompts diagnostic conversations rather than accepting "it's probably stress."
 
 ---
 
-### PART 3: Reading Your Multi-Cat Household as a System
+### PART 2: THE MEDICAL WORKUP (THE STEP EVERYONE SKIPS)
 
-**Chapter 7: Audit Your Multi-Cat Hierarchy Under Stress**
-*Output: You will diagram your cats' relationships under baseline and current conditions, identifying which cat is the "canary," the "bully," and the "buffer" — and which roles have shifted since behavioral changes began.*
+**Chapter 4 — Pain as the Primary Suspect: How to Find It When Cats Hide It**
+*The reader will be able to:* Identify the 12 most common pain-related causes of sudden aggression in cats — dental disease, osteoarthritis, pancreatitis, urinary tract issues, otitis, gastrointestinal pain — and know which of these require specific diagnostic tests (not just a physical exam). They will know what to ask for at the vet, including specific blood panels and imaging to request.
 
-**Chapter 8: Count Resources, Not Just Food**
-*Output: You will conduct a resource adequacy audit across 6 categories (litter boxes, resting surfaces, vertical space, hiding spots, feeding stations, human attention) and calculate whether scarcity — not personality — is driving conflict.*
+**Chapter 5 — The Thyroid and Neurological Check: Why Standard Bloodwork Often Misses It**
+*The reader will be able to:* Understand the limitations of standard veterinary wellness panels and know specifically what a full thyroid panel, blood pressure measurement, and neurological screening involves. They will be able to interpret results with a working knowledge of what "normal-range" actually means for aging cats and for cats under 7 showing behavioral change.
 
-**Chapter 9: Recognize Reintroduction Warning Signs in Real Time**
-*Output: You will be able to identify the 5 signals that mean slow reintroductions are failing and what to adjust immediately, rather than waiting for full-blown aggression to return before acting.*
+**Chapter 6 — Toxins, GI Issues, and Sensory Decline: The Hidden Drivers**
+*The reader will be able to:* Recognize that environmental toxins (flame retardants, cleaning products, essential oil diffusers), gastrointestinal inflammation, and vision/hearing loss are all documented triggers of aggression in cats — and know the specific steps to investigate each. They will have a home audit checklist to eliminate or reduce potential triggers immediately.
 
 ---
 
-### PART 4: The Reintroduction Protocol and Beyond
+### PART 3: YOU AND YOUR HORMONES — YES, THAT MATTERS
 
-**Chapter 10: Execute the 5-Day Scent Introduction Plan**
-*Output: You will complete a structured daily protocol using scent-swapping (swap bedding, use scented cloths) with built-in checkpoint questions — giving your cats sensory exposure before any visual contact, dramatically reducing reactive incidents.*
+**Chapter 7 — The Biology of the Bond: How Your Body State Changes Your Cat**
+*The reader will be able to:* Understand the documented mechanisms by which human hormonal changes affect cat behavior — through scent, through energy/pheromone shifts, through altered movement patterns, and through changes in attachment-seeking behavior. This chapter covers what is known and what is well-supported by veterinary behaviorists and emerging research, without overstating the science.
 
-**Chapter 11: Build and Implement a Territory Map**
-*Output: You will draw a physical map of your home identifying safe zones, high-stress zones, resource stations, and sight-lines — then use it to redistribute space before your cats need to compete for it.*
+**Chapter 8 — Pregnancy, Perimenopause, and Hormone Therapy: A Field Guide**
+*The reader will be able to:* Identify the specific behavioral changes that commonly occur in cats when their primary caregiver is pregnant (increased clinginess, protective behavior, redirected aggression toward other cats), going through perimenopause (altered routine affecting cat stress), or on hormonal medications. They will have a personalized assessment of how their own health situation may be contributing to their cat's behavior — without catastrophizing or misplacing blame.
 
-**Chapter 12: Create Your Ongoing Household Health Monitoring System**
-*Output: You will set up a simple monthly check-in habit (10 minutes) that tracks behavioral baselines and flags drift early, so future aggression episodes are caught at "whisper stage" rather than "outbreak stage."*
+**Chapter 9 — Stress as a Shared Language: Cortisol, Household Dynamics, and What Cats Feel From You**
+*The reader will be able to:* Recognize that chronic human stress is not "just in your head" — it manifests in scent, routine disruption, and micro-behavioral changes that cats are exquisitely tuned to. They will have a practical framework for identifying and reducing their own stress markers as a direct intervention in the household aggression problem, not as supplemental self-care.
+
+---
+
+### PART 4: RECONSTRUCTION (NOT JUST "MANAGEMENT")
+
+**Chapter 10 — The Reintroduction Protocol: For Multi-Cat Households With Active Aggression**
+*The reader will be able to:* Execute a full scent-swapping, resource restructuring, and controlled visual contact reintroduction protocol that accounts for the specific fear-memory formation that occurs in cats after aggressive incidents. They will know why standard "slow introductions" fail for already-aggressive cats and which modifications to the standard protocol apply in their specific situation.
+
+**Chapter 11 — Environmental Surgery: Resourcing Your Way Out of Crisis**
+*The reader will be able to:* Restructure the physical environment — vertical space, feeding geography, litter placement, hiding access — to eliminate the resource-competition triggers that sustain aggression between cats. They will leave with a room-by-room assessment and a prioritized implementation plan based on their specific layout and cat count.
+
+**Chapter 12 — Reading the Room: Knowing When It's Working and When It's Not**
+*The reader will be able to:* Monitor behavioral change across all cats in the household using a structured weekly checklist, recognize early signals of re-stabilization versus false calm, and know the exact conditions under which they should continue the protocol versus seek a veterinary behaviorist referral. They will have a decision tree for ongoing assessment that removes guesswork from daily management.
 
 ---
 
 ## 4. Key Human Touch Elements
 
-**The "she knew before I did" story.** Open with a documented case study (researched, not invented) of an owner whose cat's behavioral shifts prompted her to take a pregnancy test — the version of the hormone-health connection that people are already half-suspecting but haven't seen named clearly. Frame it without exploiting it: the guide isn't about using your cat as a pregnancy test. It's about understanding that you share a chemical environment with your pets, and that attention to one is attention to the other.
+**The opening anecdote:** Open with a specific, recognizable scenario — not a dramatic crisis, but a small one. Something like: "You reached over to pet her the way you always do, and she did something she'd never done before. You looked at the mark on your hand and you thought: Is she sick? Am I safe? Is she safe?" Ground the reader in that moment of not-knowing before pivoting to the framework.
 
-**The "not crazy, not imagining it" validation.** Many readers will have already been told by veterinarians or family members that cats "just do this sometimes." The guide validates that pattern-recognition is legitimate — and then gives them tools to act on it systematically rather than feeling vaguely worried indefinitely.
+**The "You are not crazy" moment:** Mid-guide, explicitly validate the experience of people who have been told by vets, partners, or family that they're "overthinking it." This audience has been dismissed. They need to feel seen before they can trust the rest of the guide.
 
-**The multi-cat ownership lens.** Multi-cat homes are nonlinear systems. The guide resists the temptation to give single-cat advice and instead treats household dynamics as an ecosystem. This resonates with readers who feel like generic cat content was written for someone with one cat and a simple life.
+**The reintroduction journal:** The guide should reference a reader who kept a three-week behavioral log and found that her cat's aggression peaked exactly three hours after she took her thyroid medication — which she had increased that month. Her vet didn't ask about her medication timing. She asked the question herself. This is the reader this guide is building.
+
+**Closing frame:** End by reinforcing that paying attention to behavioral change isn't anxiety — it's the most important diagnostic tool available to a pet parent. The guide transforms the reader from someone who felt like they were failing into someone who is running the right system.
 
 ---
 
 ## 5. Format & Pricing
 
-**Primary Format:** PDF (downloadable) with fillable template pages for the logs, timelines, territory maps, and checklists.
+**Format:** PDF (45–55 pages) + companion PDF workbook containing:
+- The Behavioral Baseline Inventory
+- The Aggression Classification Checklist
+- The Veterinary Appointment Prep Document
+- The Environmental Audit Checklist
+- The Weekly Reintroduction Monitoring Log
 
-**Supplementary:** Optional $19 additional worksheet packet (territory map printouts, 30-day tracking journal, vet visit prep checklist) for readers who want physical printout versions.
-
-**Price Point Rationale:** $29 is calibrated for a specific, time-bounded problem with immediate applicability. This isn't a lifestyle guide — it's a response to a current crisis (aggression, uncertainty, multi-cat tension) that readers want solved in the next 2–4 weeks. The price point signals substance without friction. The worksheet add-on serves power users who want to print and stick to the fridge.
+**Pricing rationale:** $27. The target buyer is someone who has likely already spent money on a vet visit that didn't resolve the problem, possibly two. They are not shopping for a $7 checklist — they are looking for a serious, comprehensive resource that reflects the complexity of what they're living with. This price reflects value and filters for serious buyers, not impulse downloads. The companion workbook justifies the price point and provides the "doing" layer that makes the guide actionable rather than just informative.
 
 ---
 
 ## 6. Market Intel Angle
 
-This product sits at the intersection of three durable infrastructure shifts:
+This product sits at the intersection of three converging behavioral trends:
 
-**Pet-as-family-member economics.** Younger pet owners — particularly millennials and Gen Z — have already normalized spending on pet health, behavior, and wellness at levels previous generations reserved for children. A $29 guide for a multi-cat household problem fits squarely into this willingness to invest in pet quality of life.
+1. **The humanization of pet health.** Pet parents now approach veterinary care with the same research-intensive mindset they apply to their own health. The market for pet-health education products is growing at roughly 8% annually, with behavioral content outperforming general care guides. This audience has already moved past "basic cat care" into problem-solving mode.
 
-**The hormone conversation has gone mainstream.** Whether it's perimenopause awareness, fertility tracking, thyroid management, or stress cortisol — people are increasingly comfortable discussing their own biological fluctuations openly. This creates a receptive audience for content that says "your body is doing things and your pets are in the same room with you" without needing to be coy about it.
+2. **The hormone-health conversation is mainstream.** The overlapping audience — people navigating pregnancy, perimenopause, thyroid conditions, or hormone replacement — is enormous and increasingly health-literate. They are actively looking for information about how their body affects their environment, including their animals. This intersection is underserved and emotionally charged, which makes it a strong purchase driver.
 
-**Holistic integrative thinking.** The holistic guide category scores 9/12 because it signals systemic thinking rather than symptom-spot treatment. This product delivers on that by treating the household as a system: human biology, feline behavior, environmental design, and ongoing monitoring all working together.
-
-The underlying thesis: **modern pet owners want to be good stewards of a shared living system, not just reactive problem-solvers.** This guide serves that identity — and the buyers are already showing up.
+3. **Multi-cat households are a specific ecosystem with specific problems.** People managing multi-cat aggression are not the same customer as general cat owners. They have higher stakes, more complex problems, and are far less likely to find relevant information in generic feline-behavior content. The specificity is the positioning.

@@ -279,6 +279,66 @@ def check_inconsistent_bullets(text: str, pdf_name: str) -> list:
     return issues
 
 
+# ── Check: Draft Truncation Detection ─────────────────────────────────────
+def check_draft_truncation(text: str, pdf_name: str, draft_path: Path | None = None) -> list:
+    """
+    Check if the draft PDF was truncated during generation — ends abruptly mid-sentence
+    or mid-word, with no proper conclusion section.
+
+    Pass draft_path to cross-check against source markdown for definitive verdict.
+    """
+    issues = []
+    lines = [l.strip() for l in text.split("\n") if l.strip()]
+    if not lines:
+        return issues
+
+    # Check if PDF text ends mid-word (e.g., "Proactive protection means sh")
+    # This is the definitive sign of token-limit truncation.
+    last_content_line = ""
+    for ln in reversed(lines):
+        if ln and not ln.startswith("Page "):
+            last_content_line = ln.strip()
+            break
+
+    # Mid-word truncation: ends with 'sh', 'but', 'the', etc. with no space after
+    abrupt_endings = [
+        r'\bsh$', r'\bbut$', r'\band$', r'\bto$', r'\bthe$',
+        r'\bthat$', r'\byou$', r'\bfor$', r'\bor$\b',
+    ]
+    for pattern in abrupt_endings:
+        if re.search(pattern, last_content_line, re.IGNORECASE):
+            if len(last_content_line) < 80 and not last_content_line.endswith('.'):
+                issues.append(f"  ❌ {pdf_name}: Draft TRUNCATED mid-word ('{last_content_line[-20:]}'). Regenerate with higher max_tokens.")
+                return issues
+
+    # Only apply conclusion phrase check to main guide PDFs (not checklists)
+    is_checklist = "_CHECKLIST" in pdf_name
+    if is_checklist:
+        return issues  # Skip conclusion check for checklist PDFs
+
+    # Cross-check: if draft_path provided, verify markdown source ends properly
+    # A properly concluded draft should have "Your Next Step" or "Key Takeaway"
+    # or similar explicit closing section within the last 20 lines of the PDF.
+    if draft_path and draft_path.exists():
+        md_text = draft_path.read_text()
+        concluding_phrases = ["Your Next Step", "Key Takeaway", "You've got this", "Key takeaway"]
+        has_conclusion = any(phrase.lower() in md_text.lower() for phrase in concluding_phrases)
+        if not has_conclusion:
+            issues.append(f"  ❌ {pdf_name}: Source draft has no conclusion section. May be truncated.")
+            return issues
+
+        # PDF text should contain at least one concluding phrase near the end
+        text_lower = text.lower()
+        last_2000_chars = text_lower[-2000:]
+        concluding_in_pdf = any(p.lower() in last_2000_chars for p in concluding_phrases)
+        if not concluding_in_pdf and len(lines) < 15:
+            issues.append(f"  ❌ {pdf_name}: PDF ends prematurely with no conclusion visible. Source draft has conclusion — possible WeasyPrint rendering issue.")
+        elif not concluding_in_pdf:
+            issues.append(f"  ⚠️  {pdf_name}: Conclusion phrase not found in last 2000 chars of PDF text. Check manually.")
+
+    return issues
+
+
 # ════════════════════════════════════════════════════════════════════════════
 # MAIN QA ENGINE
 # ════════════════════════════════════════════════════════════════════════════
@@ -322,6 +382,7 @@ def audit_pdf(pdf_path: Path, draft_path: Path | None = None) -> dict:
     results["errors"].extend(check_markdown_artifacts(text_layout, name))
     results["warnings"].extend(check_widows_orphans(text_layout, name))
     results["warnings"].extend(check_inconsistent_bullets(text_layout, name))
+    results["errors"].extend(check_draft_truncation(text_layout, name, draft_path))
 
     return results
 

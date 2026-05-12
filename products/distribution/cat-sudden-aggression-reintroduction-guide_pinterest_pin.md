@@ -1,23 +1,29 @@
 ## Pin Title (Primary)
-Cat Attacking Suddenly? Here's What to Do
+Cats Who Groomed Yesterday Are Fighting—Now What?
 
 ## Pin Title (Alt for testing)
-Why Did My Cat Suddenly Attack the Other Cat?
+Why Medical Issues Often Trigger Sudden Cat Fights
 
 ## Description
-One cat attacked another out of nowhere—and you've been on edge ever since. This guide explains why sudden inter-cat aggression happens, what medical causes to rule out first, and the step-by-step reintroduction protocol that works. Includes a checklist to help you identify triggers, environmental adjustments, and how to safely rebuild their relationship from scratch. If your cats have lived together peacefully and then lashed out, this is your starting point.
+Two cats who groomed each other yesterday are now in a full fight. You're shaking. You don't know why they turned or what to do next.
+
+This guide covers the medical issues that trigger sudden aggression, the environmental factors most owners miss, and a 14-day reintroduction plan that breaks "slow reintroductions" into actual daily steps.
+
+You'll learn what questions your vet should be asking, which household changes are silently stressing your cats, and exactly what to do on Day 1 versus Day 7 versus Day 14.
+
+Stop Googling conflicting advice — this is the structured path through the confusion.
 
 ## Board Placement
-- Primary Board: Cat Behavior Solutions
-- Secondary boards: Cat Health Guide, Home Pets
+- Primary Board: Cat Behavior Help
+- Secondary boards: Multi-Cat Household, Cat Health Issues
 
 ## Pin Metadata
-- Topic: cat aggression, inter-cat aggression, cat fighting, cat reintroduction, sudden cat behavior change, cat behavioral problems
-- Audience intent: cat owners experiencing sudden fighting between longtime companion cats, seeking immediate guidance and long-term solutions
-- Search priority keywords: why is my cat attacking my other cat, sudden cat aggression, how to reintroduce cats after fighting, cat aggression medical causes
+- Topic: inter-cat aggression, cat fighting, cat reintroductions, sudden cat aggression, cat behavior problems, cat stress
+- Audience intent: cat owners whose previously-friendly cats have suddenly started fighting and need a clear plan
+- Search priority keywords: why is my cat attacking my other cat suddenly, how to stop cat fighting, cat reintroduction protocol, cats fighting after years of being fine
 
 ## Call-to-Action Text on Pin
-Free Checklist Inside
+Free 14-Day Reintroduction Checklist in Bio
 
 ## Notes
-Visual recommendation: dark charcoal text on cream/off-white background for readability and calm aesthetic. High-quality photo of two calm, separated cats or a doorway visual suggesting separation/reintroduction setup. Bold sans-serif header with the pin title centered, numbered steps or checklist icon in design. Consider split layout: checklist graphic on one side, text on other. Avoid imagery showing cats actively fighting—readers want solutions, not reminders of the problem.
+Visual: split-screen layout — one side showing two cats separated in different rooms, other side showing them calm and feeding on opposite sides of a door. Color palette: calm blues/grays, not alarming red. Checklist iconography works well for the step-by-step nature of the guide. Text overlay should emphasize that this isn't vague "be patient" advice — it should feel actionable and diagnostic.

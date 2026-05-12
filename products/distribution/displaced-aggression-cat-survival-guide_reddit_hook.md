@@ -1,13 +1,11 @@
-Three years. That's not a phase—you've been living in survival mode, and I want you to hear me when I say you're not failing her. Displaced aggression this severe is one of the most isolating behavioral issues in cats. Most resources assume your cat knocked over a vase. They weren't written for the 3am ambush followed by the perfectly innocent face afterward.
+Three years. I want you to know that's not failure—that's endurance. You're not stupid for struggling with this. Displaced aggression is one of the most neurologically stubborn conditions in cats, and the fact that you've kept both of you alive (and largely sane) this long says something.
 
-Here's what actually moved the needle for me:
+Here's what actually helped me when I was where you are:
 
-**1. Map your home for traps.** Narrow hallways. Single-exit rooms. Spaces behind open doors. Your cat isn't choosing to attack you—something triggers her (usually a window), she can't reach it, and you happen to be walking down the hall. Walking my home like I was planning a heist revealed zones I'd been walking into blindly for years.
+**1. Safety architecture before anything else.** You can't modify behavior if you've been bitten into urgent care. Create cat-free sleeping spaces—close the bedroom door with a baby gate if you have to. Your first job is triage, not fixing.
 
-**2. Build predictable risk zones.** Attacks *will* happen. Your job isn't to stop them through love alone—you can't out-love a neurological misfire. Your job is making them less likely, less severe, and less damaging. Separate safe rooms with multiple escape routes, timing your own movements around her patterns, and creating physical infrastructure that acknowledges reality.
+**2. The night protocol is real.** Cats are crepuscular—they're wired for peak activity when you're drowsy and vulnerable. I set motion-activated lights in hallways so I had a few extra seconds of warning. Not glamorous, but it helped me stop bracing for impact every time I got up to pee.
 
-**3. Track the patterns.** Even a simple log—time, what happened before, her body language—revealed triggers I was completely missing. Those "random" attacks started looking less random.
+**3. Stop internalizing it.** Your cat isn't punishing you. Displaced aggression means the rational brain has left the building—the original trigger isn't accessible, so you become the outlet. That's not personality. That's neurology.
 
-I found a checklist that walks through this exact sequence step by step. Happy to share if it helps—just say the word.
-
-You're still showing up for her after three years. That's not nothing.
+I found a checklist that walks through the exact safety sequence—room setup, warning signs to watch for, night protocols. Happy to share if it helps. You shouldn't have to do this alone, and you're not failing.

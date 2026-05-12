@@ -1,11 +1,9 @@
-Hey, I went through the exact same thing — cat who was an angel for three years suddenly became a different creature, and I felt like I was losing my mind trying to figure out what I did wrong.
+This is so much harder than people realize, and the fact that your partner is blowing it off makes it even lonelier. You're not imagining this — sudden aggression is your cat telling you something is wrong, and you're right to take it seriously.
 
-Here's what I wish someone told me earlier:
+A few things that genuinely helped me navigate this: First, document everything before your next vet visit. Not just "she's been aggressive" but the exact triggers, timing, and body language. Vets work with whatever you bring them, and a behavioral timeline turns a vague concern into something they can actually act on.
 
-**1. Rule out pain before anything else.** Cats are evolutionary pros at hiding injury. That sudden aggression might be her telling you something hurts. The litter box habits, the way she moves, whether she's grooming differently — all of it matters. Before you dig into environmental stuff, run through a physical pain assessment first.
+Second — and this part caught me off guard — there are over a dozen medical conditions that manifest as sudden aggression in cats, and most of them are invisible without specific tests. Feline arthritis, hyperthyroidism, dental disease, urinary issues. Pain cats will lunge. That's not a personality problem, it's a medical emergency wearing fur.
 
-**2. Actually check in with yourself — this part is real.** Pregnancy, stress, hormone changes, even starting a new medication. Your cat picks up on this stuff before you do. When my estrogen shifted during perimenopause, both my cats got weirdly protective and then randomly aggressive. Once I understood that connection, I could actually do something about it.
+Third, the hormone connection is real. If you're pregnant, going through hormonal shifts, even just stressed — cats pick up on that. Not because they're psychic, but because your scent, your cortisol levels, your energy changes how you move and approach them, and stressed cats react.
 
-**3. Track the pattern, not just the behavior.** Write down what happened, when, and what's been different in your household. That pattern is how you and your vet figure out what's actually going on.
-
-This is exactly what that guide walks through — the medical side, the human side, and how to piece it all together. I found a checklist that walked me through the exact sequence — happy to share if it helps. You're not imagining this. It's solvable.
+There's a checklist that walks through the exact sequence for building your vet conversation and documenting what matters. Happy to share if it helps. You’re being a good advocate for your cat — keep pushing. 💛

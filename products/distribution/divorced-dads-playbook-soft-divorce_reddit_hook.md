@@ -1,11 +1,14 @@
-That part about "she needs to FEEL it" hit hard because you're right — she's operating on a completely different timeline and you're stuck waiting for her to care about closing the loop. You're not imagining this. The emotional asymmetry is real, and it makes the legal limbo feel even worse.
 
-Here's what helped me shift out of that waiting pattern:
+The "soft divorce" thing is real and honestly? It's one of the most frustrating parts nobody talks about. You're knee-deep in paperwork, responding to settlement offers within hours, checking in with your attorney weekly—and she's taking three weeks to reply because in her mind, this already ended. You're living the divorce. She's just doing admin.
 
-**First, stop treating her emotional pace as a signal about your worth.** She's not moving fast because she already processed this months or years ago. That's not about you — it's just her timeline. Build your own reference points: document conversations, save timestamps, track agreements. You need a record that doesn't depend on her memory or goodwill.
+Here's what helped me stop spinning:
 
-**Second, reframe your communication timing.** When you text her about legal stuff when she's in "already done" mode, she skims past it. Save the substantive questions for windows when she's already engaged — after she's texted about the kids, after she's reached out first. It's not manipulation, it's communication that actually lands.
+**1. She's not dragging her feet out of spite most of the time—it's momentum loss.** She did her emotional math, decided it was over, and mentally filed the paperwork as a formality. Understanding this kept me from taking every delay personally and helped me respond strategically instead of from anger.
 
-**Third, you can move the file forward without her.** Don't wait for her to initiate. File your motions, follow up with your attorney, request mediation dates. She doesn't get to set your pace on this.
+**2. The gap between her "done" and your legal reality has real consequences.** Court dates get pushed. Attorney attention drifts elsewhere. Leverage shrinks quietly while you're not watching. It's not just emotionally draining—it's procedurally dangerous.
 
-I found a checklist that walks through the exact sequence for keeping momentum without escalating conflict — happy to share if it helps. You've got more control here than it feels like right now.
+**3. You can communicate urgency without threatening coparenting.** It's a skill, and it starts with framing things in terms of her timeline, not yours.
+
+I found a checklist that walks through the exact sequence for keeping momentum without torching the relationship with your kids' mom. Happy to share it if that'd help.
+
+The thing nobody tells you: you can be past the shock, past the anger, and still be getting quietly erased by a process that won't complete itself. But that's fixable with the right approach.

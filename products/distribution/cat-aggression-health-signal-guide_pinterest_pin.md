@@ -1,23 +1,25 @@
 ## Pin Title (Primary)
-Why Is Your Cat Suddenly Aggressive? Check This First
+My Cat Became Aggressive Out of Nowhere—Is She Sick?
 
 ## Pin Title (Alt for testing)
-Cats Mirror Your Health — What Sudden Behavior Changes Mean
+Cat Got Aggressive? Don't Let Anyone Tell You It's Normal
 
-## Description
-Your calm cat is suddenly hissing, hiding, or swatting. You have two worries now: Is she sick? And could she be reacting to YOU? This guide breaks down what sudden cat aggression really means — including medical causes your vet might miss, how your stress and hormone changes show up in her behavior, and the 15-item pain checklist to run at home. Perfect for worried cat parents and multi-cat households. Get the complete protocol for reading your cat's behavioral shifts as a household health mirror. Free Checklist in Bio
+## Description (keyword-rich)
+Your cat was fine six weeks ago. Now she's drawn blood twice and your partner says she's "just getting old." But you know something's wrong. This guide reveals the medical causes behind sudden aggression that vets often miss—plus how to get real answers at your next appointment. You'll get a behavioral baseline to document, a classification system to understand your cat's aggression type, the 12 most common pain-related causes, and a step-by-step reintroduction protocol that actually works. If you've been dismissed by your vet or blamed yourself, this is your answer.
 
 ## Board Placement
-- Primary Board: Cat Health & Wellness
-- Secondary boards: Cat Behavior Solutions, Holistic Pet Care
+- Primary Board: Cat Aggression Solutions
+- Secondary boards: Cat Health Guide, Cat Behavior Problems
 
 ## Pin Metadata
-- Topic: cat aggression, sudden cat behavior change, cat health signs, aggressive cat behavior, cat acting weird, feline pain signs, cat wellness, cat body language, multi-cat household, holistic cat care
-- Audience intent: Cat owners noticing behavioral changes in their pet, worried about underlying medical causes, curious about how their own health or emotions might affect their cat
-- Search priority keywords: cat aggression causes, why is my cat suddenly aggressive, cat acting out suddenly, cat health warning signs, feline behavior changes, cat pain symptoms
+- Topic: cat aggression medical causes, sudden cat aggression, cat pain signals, cat behavior change, aggressive cat help
+- Audience intent: Cat owners dealing with suddenly aggressive cats who suspect an underlying health problem and want actionable guidance
+- Search priority keywords: why is my cat aggressive all of a sudden, cat aggression health signal, sudden behavior change cat, cat aggression medical causes, aggressive cat what to do
 
 ## Call-to-Action Text on Pin
-Free Checklist in Bio
+Free Guide Inside
 
 ## Notes
-Visual direction: High-contrast image of a cat with slightly dilated pupils looking alert or concerned, shot from slightly below eye level to convey the "watching" quality. Warm, natural lighting. Text overlay in bold sans-serif font (dark on light background or white on image overlay). Avoid overly cute or cartoonish styles — this pin should feel informative and slightly urgent. Consider a split-layout: left side shows concerned cat face, right side shows simple checklist iconography or a subtle household health connection graphic. Color palette: warm neutrals with a teal or sage accent for health/wellness association.
+**Visual recommendations:** Create a clean infographic-style design with a distressed but not hostile-looking cat (dilated pupils, crouched posture) and bold contrast. Use warning-adjacent color scheme (dark background, urgent accent color) to signal this is serious. Include visual hierarchy: main pain-point question prominent, supporting icons for "12 medical causes," "vet conversation guide," and "reintroduction protocol."
+
+**Content notes:** The pin should validate that the reader's instinct is correct—this isn't normal cat behavior. Avoid any language that sounds like general cat tips; make it clear this is specifically for people who've already tried basic solutions and need deeper help. The CTA "Free Guide Inside" works because it implies substantial value without being pushy.
