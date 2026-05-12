@@ -115,6 +115,33 @@
       "source_url": "https://www.reddit.com/r/Pets/comments/1echt0/aggressive_cat_coming_down_to_euthanasia_or_a/",
       "source_query": "devastated cat suddenly aggressive after years Reddit",
       "source_platform": "reddit"
+    },
+    {
+      "slug_candidate": "cat-litter-box-rescue-guide",
+      "product_direction": "The Complete Cat Litter Box Fix: Step-by-step diagnosis and resolution for cat owners still finding pee outside the box despite vet visits and cleaning",
+      "audience": "Cat owners dealing with inappropriate urination or litter box avoidance \u2014 especially multi-cat households",
+      "emotional_trigger": "Exhaustion from cleaning messes, guilt about returning a pet, frustration with vets who cannot find medical causes",
+      "total_score": "8",
+      "raw_quote": "She peed on my wedding dress. I did not know what to do.",
+      "source_platform": "archive"
+    },
+    {
+      "slug_candidate": "contractor-scam-protection-guide",
+      "product_direction": "Contractor scam protection guide: red flags, payment strategies, contract clauses, and recovery for homeowners who have been or fear being scammed",
+      "audience": "Homeowners planning renovations or repairs, especially first-time homeowners or those after major weather events",
+      "emotional_trigger": "Having been scammed by a contractor, or fear of being scammed \u2014 financial loss plus the violation of trusting someone in your home",
+      "total_score": "8",
+      "raw_quote": "They took the deposit and ghosted. Half the work left my house unlivable.",
+      "source_platform": "archive"
+    },
+    {
+      "slug_candidate": "new-cat-first-weeks-survival-guide",
+      "product_direction": "New cat first two weeks survival guide: room setup, slow introduction protocol, stress signals, and when to intervene for new cat adopters",
+      "audience": "First-time cat owners or experienced cat people adopting a new adult cat with an unknown history",
+      "emotional_trigger": "Anxiety about doing it right \u2014 the new cat is hiding, not eating, or aggressive, and the adopter is terrified of making it worse",
+      "total_score": "8",
+      "raw_quote": "She has been hiding under the bed for three days. I have not seen her eat.",
+      "source_platform": "archive"
     }
   ],
   "stage1_status": "COMPLETE",

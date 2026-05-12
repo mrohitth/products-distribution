@@ -16,6 +16,8 @@ body {
     max-width: 6.5in;
     margin: 0 auto;
     padding: 0.9in 1in;
+    orphans: 3;
+    widows: 3;
 }
 
 /* --- COVER / TITLE PAGE --- */
@@ -441,7 +443,83 @@ em {
     }
 }
 
-/* --- PRINT FIXES --- */
+/* ============================================================
+   BEAUTIFICATION — Visual enhancements for reader engagement
+   ============================================================ */
+
+/* ── Body: warm paper tone (not cold laser-white) ── */
+body {
+    background: #FAFAF8;
+}
+
+/* ── Drop caps: first letter of the opening paragraph after Part header ── */
+h2[class*="Part"] + p::first-letter {
+    font-family: 'Inter', 'Georgia', serif;
+    font-size: 3.6em;
+    font-weight: 700;
+    float: left;
+    line-height: 0.85;
+    margin-right: 0.08em;
+    margin-top: 0.05em;
+    color: #1A365D;
+}
+
+/* ── Chapter H2: thin accent bar on top for visual hierarchy ── */
+h2:not([class*="Part"]) {
+    border-top: 3px solid #E8ECF0;
+    padding-top: 0.6em;
+}
+
+/* ── TOC: styled header ── */
+nav#TOC > h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #888888;
+    border-bottom: 1px solid #E8ECF0;
+    padding-bottom: 0.5em;
+}
+
+/* ── Decorative HR: ornamental section divider ── */
+hr {
+    border: none;
+    text-align: center;
+    margin: 2.2em 0;
+    height: 1.2em;
+}
+
+hr::before {
+    content: "✦  ◆  ✦";
+    font-size: 0.65em;
+    letter-spacing: 0.8em;
+    color: #C8D0DC;
+    /* Center the ornament cluster */
+    position: relative;
+    left: 0.4em;
+}
+
+/* ── Footer: product name + page number on non-first pages ── */
+@page {
+    @bottom-center {
+        content: "Digital Guide  ·  " counter(page);
+        font-family: 'Inter', sans-serif;
+        font-size: 8.5pt;
+        color: #BBBBBB;
+        letter-spacing: 0.05em;
+    }
+}
+
+/* First page: no footer */
+@page :first {
+    @bottom-center {
+        content: none;
+    }
+}
+
+/* ============================================================
+   PRINT FIXES
+   ============================================================ */
 @media print {
     body {
         background: #FFFFFF;

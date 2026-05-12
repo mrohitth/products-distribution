@@ -273,3 +273,17 @@ Do not make any further payments until the dispute is resolved in writing. Send 
 A printable one-page version of the vetting checklist and the recovery checklist are available as a free download.
 
 **Your Bonus: Included** — available in your Lemon Squeezy library.
+
+---
+
+## Your Next Step
+
+You now know how to vet a contractor, structure a payment schedule, and protect yourself legally. That knowledge is only valuable if you use it.
+
+**If you are about to hire someone:** Download the vetting checklist. Run every verification step before you sign. The 30 minutes you spend checking licensing, insurance, and references is the cheapest insurance policy you will ever buy.
+
+**If you have already been scammed:** File the CSLB complaint today. Then contact a construction law attorney. Do not wait for the contractor to respond — the longer you wait, the harder recovery becomes. Evidence disappears, contractors become unreachable, and statutes of limitations apply.
+
+The single most important thing you can do right now: stop giving contractors cash or Zelle transfers. Use a credit card or a written payment schedule tied to milestones. That change alone will protect you from 90% of common scams.
+
+You have done the hard part by educating yourself. Now act.

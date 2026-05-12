@@ -192,3 +192,15 @@ You've got the framework. The checklist is your fast track to implementation —
 ---
 
 *Built for cats who deserve better than guesswork. Bundle includes main guide + companion checklist.*
+
+---
+
+## Your Next Step
+
+This guide gives you the framework. The vet visit, the box audit, the stress assessment — you now know the sequence. Do not try to do everything at once.
+
+**Start here:** Call your vet and say these exact words: "My cat stopped using the litter box three weeks ago. I want to rule out medical causes before we address it behaviorally." That is the script. It gets you the workup you need without the vet defaulting to stress as a default diagnosis.
+
+From there: pick one item from Chapter 2 to implement this week. Just one. The litter box reset is a sequence — do not skip steps, but do not freeze either.
+
+You have got this.

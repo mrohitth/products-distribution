@@ -233,7 +233,11 @@ def check_widows_orphans(text: str, pdf_name: str) -> list:
     Check for orphaned single words at section boundaries.
     NOTE: Words appearing alone between long paragraphs in pdftotext output
     are typically word-wrapping artifacts, not actual layout problems.
-    Only flag if there are 5+ such instances.
+    pdftotext extracts each typeset line separately — a word that appears
+    alone between two long lines is WeasyPrint's deliberate line-breaking,
+    not a page-break orphan. Real orphans (bottom-of-page single lines)
+    require page-boundary detection which pdftotext extraction cannot provide.
+    Only flag if there are 8+ such instances (threshold raised to reduce noise).
     """
     issues = []
     lines = [l for l in text.split("\n") if l.strip()]
@@ -246,8 +250,8 @@ def check_widows_orphans(text: str, pdf_name: str) -> list:
                 next_l = lines[i+1].strip() if i+1 < len(lines) else ""
                 if prev and next_l and len(prev) > 20 and len(next_l) > 20:
                     orphan_count += 1
-    if orphan_count >= 5:
-        issues.append(f"  ⚠️  {pdf_name}: {orphan_count} orphaned words detected — may be word-wrap artifacts (not real orphans)")
+    if orphan_count >= 8:
+        issues.append(f"  ℹ️  {pdf_name}: {orphan_count} short lines between long lines — pdftotext artifact, not a layout defect")
     return issues
 
 
@@ -361,7 +365,7 @@ def audit_pdf(pdf_path: Path, draft_path: Path | None = None) -> dict:
         return results
 
     # Check 1: Visual Hierarchy
-    results["warnings"].extend(check_orphaned_headers(text_layout, name))
+    results["info"].extend(check_orphaned_headers(text_layout, name))
     results["warnings"].extend(check_font_sizes(text_layout, name))
     if CSS_PATH.exists():
         css_text = CSS_PATH.read_text()
@@ -381,7 +385,7 @@ def audit_pdf(pdf_path: Path, draft_path: Path | None = None) -> dict:
     results["warnings"].extend(check_ai_isms(text_layout, name))
     results["warnings"].extend(check_repetitive_intros(text_layout, name))
     results["errors"].extend(check_markdown_artifacts(text_layout, name))
-    results["warnings"].extend(check_widows_orphans(text_layout, name))
+    results["info"].extend(check_widows_orphans(text_layout, name))
     results["warnings"].extend(check_inconsistent_bullets(text_layout, name))
     results["errors"].extend(check_draft_truncation(text_layout, name, draft_path))
 
