@@ -247,7 +247,93 @@ def run_pipeline(dry_run: bool = False, target_products: list[str] | None = None
 
     # ── Stage 4: AI Product Critic Audit ────────────────────────────────────────────
     print(stage_banner(4, "AI Product Critic Audit"))
-    print("  Skipping inline audit (runs via sessions_spawn in cron context)")
+    try:
+        cfg = load_config()
+        providers = cfg.get("models", {}).get("providers", {})
+        minimax = providers.get("minimax", {})
+        mxn_creds = {
+            "base_url": minimax.get("baseUrl", "https://api.minimax.io/anthropic"),
+            "api_key": minimax.get("apiKey", ""),
+        }
+        if mxn_creds["api_key"]:
+            for prod in products:
+                slug = prod["slug"]
+                draft_path = WORKSPACE / prod["draft"]
+                guide_pdf = OUTPUT_DIR / f"{slug}.pdf"
+                checklist_pdf = OUTPUT_DIR / f"{slug}_CHECKLIST.pdf"
+
+                draft_text = draft_path.read_text(encoding="utf-8") if draft_path.exists() else ""
+                r_g = subprocess.run(
+                    ["pdftotext", "-layout", str(guide_pdf), "-"],
+                    capture_output=True, text=True, timeout=30
+                )
+                guide_text = r_g.stdout[:2000] if r_g.returncode == 0 else "(no PDF text)"
+
+                r_c = subprocess.run(
+                    ["pdftotext", "-layout", str(checklist_pdf), "-"],
+                    capture_output=True, text=True, timeout=30
+                )
+                checklist_text = r_c.stdout[:1000] if r_c.returncode == 0 else "(no checklist)"
+
+                audit_prompt = f"""You are an AI Product Critic. Audit this digital product across 3 dimensions:
+
+1. COMPREHENSIVENESS (1-10): Does the guide fully cover the problem it claims to solve? Any gaps?
+2. VISUAL POLISH (1-10): Based on the content, does it read like a polished product? Any rough edges?
+3. VALUE CHECK (1-10): Would someone pay $5-15 for this guide given the content quality?
+
+Slug: {slug}
+Draft (first 2000 chars):
+{draft_text[:2000]}
+
+PDF text preview:
+{guide_text}
+
+Checklist preview:
+{checklist_text}
+
+Output ONLY JSON: {{"comprehensiveness": int, "visual_polish": int, "value_check": int, "issues": ["issue1", ...], "recommendation": "PASS/FLAG/FAIL"}}"""
+
+                import urllib.request, urllib.error as urlerr
+                audit_body = {
+                    "model": "MiniMax-M2.7",
+                    "max_tokens": 1000,
+                    "temperature": 0.3,
+                    "system": "You audit digital products strictly. Score honestly. No sugar-coating.",
+                    "messages": [{"role": "user", "content": audit_prompt}],
+                }
+                req = urllib.request.Request(
+                    f"{mxn_creds['base_url']}/v1/messages",
+                    data=json.dumps(audit_body).encode("utf-8"),
+                    headers={
+                        "Content-Type": "application/json",
+                        "Authorization": f"Bearer {mxn_creds['api_key']}",
+                        "anthropic-version": "2023-06-01",
+                    },
+                    method="POST",
+                )
+                with urllib.request.urlopen(req, timeout=60) as resp:
+                    audit_data = json.loads(resp.read())
+                    for block in audit_data.get("content", []):
+                        if block.get("type") == "text":
+                            audit_text = block["text"]
+                            # Extract JSON from response
+                            match = re.search(r'\{.*\}', audit_text, re.DOTALL)
+                            if match:
+                                try:
+                                    audit_result = json.loads(match.group(0))
+                                    rec = audit_result.get("recommendation", "FLAG")
+                                    issues = audit_result.get("issues", [])
+                                    print(f"  {slug}: {audit_result.get('comprehensiveness', '?')}/10 | "
+                                          f"{audit_result.get('visual_polish', '?')}/10 | "
+                                          f"{audit_result.get('value_check', '?')}/10 | "
+                                          f"{rec} {'⚠️  ' + '; '.join(issues[:2]) if issues else ''}")
+                                except Exception:
+                                    print(f"  {slug}: Audit result unparseable — check output")
+                            break
+        else:
+            print("  No API key — audit skipped")
+    except Exception as e:
+        print(f"  ⚠️  Audit error: {e}")
     print("  ✅ Stage 4 complete")
 
     # ── Stage 5: QA Gate ──────────────────────────────────────────────────────────────

@@ -1,111 +1,272 @@
 #!/usr/bin/env python3
 """
-Stage 5.7 — AI Agentic Checklist Synthesizer (v6)
+AI Agentic Checklist Synthesizer — v7 (Dynamic)
 =================================================
-Three changes from v5:
-  1. COMPLETE SENTENCES — all items fully written, no truncation
-  2. PLAIN ENGLISH — no academic terms (crepuscular → dawn and dusk, etc.)
-  3. GROUPED INTO 3 CATEGORIES with sub-header rows
-     CSS: align-items: flex-start for checkboxes, #555 for item descriptions
+Three core improvements over v6:
+  1. NO HARDCODED ITEMS — reads actual draft content from products/drafts/
+  2. AI-GENERATED checklists via MiniMax based on real trendscout data
+  3. Cached for efficiency — regenerates only when draft content changes
 
 Each item follows the Senior Content Strategist formula:
     [Bolded Header] + [Action Verb] + [Main Task] + [Why/How Detail]
-Prohibitions: No fragments | No items under 20 words | No academic language
+
+Usage:
+    python3 scripts/synthesize_checklist.py                          # all active slugs
+    python3 scripts/synthesize_checklist.py cat-litter-box-rescue-guide_v1  # specific slug
+    python3 scripts/synthesize_checklist.py --force                  # force regenerate cache
 """
-import sys, html as html_mod, json
+import sys, html as html_mod, json, hashlib
 from pathlib import Path
 from datetime import datetime
 
 WORKSPACE = Path("/home/mathew/.openclaw/workspace")
 OUTPUT_DIR = WORKSPACE / "output" / "final_products"
+DRAFTS_DIR = WORKSPACE / "products" / "drafts"
+TRENDS_DIR = WORKSPACE / "wiki" / "trends"
+CACHE_DIR = WORKSPACE / "products" / ".checklist_cache"
+
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+MAX_CHARS_PER_SLUG = 12  # 12 items per checklist
 
 
-# ══════════════════════════════════════════════════════════════════
-#  SYNTHESIZED CHECKLIST ITEMS — v6
-#  All complete sentences | Plain English | 3 categories each (4 items)
-# ══════════════════════════════════════════════════════════════════
+# ── Config helpers (shared) ────────────────────────────────────────────────────
 
-SYNTHESIZED_ITEMS = {
+def load_config() -> dict:
+    with open(Path("/home/mathew/.openclaw/openclaw.json")) as f:
+        return json.load(f)
 
-    # ── CAT-LITTER BOX RESCUE GUIDE ─────────────────────────────────
-    # Category 1: Medical Check (items 1-4)
-    # Category 2: Box Setup (items 5-8)
-    # Category 3: Recovery Plan (items 9-12)
 
-    "cat-litter-box-rescue-guide_v1": [
-        # ── Category 1: Medical Check ──
-        "Schedule a Vet Urinalysis Within 3 Days: Peeing outside the box is a medical signal before it's a behavioral one. A urinalysis rules out UTI, bladder stones, FLUTD, and kidney disease — the most common medical causes.",
-        "Request a Blood Panel If Your Cat Is Middle-Aged or Older: Kidney disease and diabetes both cause increased urination that owners mistake for behavioral problems. A basic blood panel costs $80-$150 and gives you a clean baseline or an early warning.",
-        "Watch for These Signs That Need an Emergency Vet Visit: Straining to pee with little output, crying while in the box, blood in urine, or lethargy combined with not eating. These are not wait-and-see symptoms — they indicate a potential blockage.",
-        "Ask Your Vet to Rule Out Diabetes and Hyperthyroidism: Both conditions increase water intake and urination volume. If your cat is drinking more and peeing more, these are on the differential diagnosis list alongside UTI.",
-        # ── Category 2: Box Setup ──
-        "Switch to an Uncovered Box That's 1.5x Your Cat's Body Length: Most store-bought boxes are too small. A storage tote with a cut-out entrance gives most cats enough room to turn around and dig without their back touching the walls.",
-        "Follow the N+1 Rule for Box Count: One box per cat, plus one extra. In a two-cat home, that means three boxes on separate floors with at least two escape routes each — cats don't want to feel cornered mid-elimination.",
-        "Use Unscented Clumping Litter at 2 Inches Deep, Scooped Daily: Scented litters repel cats with sensitive noses. Unscented clumping litter at the right depth prevents paw-pad discomfort and makes daily scooping fast enough to actually happen.",
-        "Keep Every Litter Box Away From Food Bowls and Loud Appliances: Cats evolved to eliminate away from their food source. Boxes near refrigerators, washers, or furnaces get avoided — the sound and vibration feel threatening during a vulnerable moment.",
-        # ── Category 3: Recovery Plan ──
-        "Soak Accident Spots With Cat-Specific Enzymatic Cleaner for 15 Minutes Before Blotting: Generic cleaners leave uric acid residue that cats can still smell. A cat-labeled enzymatic formula (Rocco & Roxie or similar) breaks it down fully — let it sit 15 minutes, then blot, never scrub.",
-        "Run a Feliway Diffuser in the Room Where Accidents Happened Most: Feliway mimics the calming facial pheromone cats leave when they feel safe. One diffuser covers about 700 square feet and takes 2-3 weeks to reach full effectiveness — don't judge it before day 21.",
-        "Add a Third Box in the Area With the Most Accidents Before Day 14: Extra boxes catch more of the house and give cats options. Place this third box in the most accident-prone area, not in a remote corner the cat already avoids.",
-        "Book a Follow-Up Vet Visit at Day 30 If Accidents Haven't Stopped Completely: Medical and environmental fixes take 3-4 weeks to show full effect. If you're not at 90% improvement by day 30, go back to the vet or ask for a referral to a veterinary behaviorist.",
-    ],
+def get_minimax_credentials(cfg: dict) -> dict:
+    providers = cfg.get("models", {}).get("providers", {})
+    minimax = providers.get("minimax", {})
+    return {
+        "base_url": minimax.get("baseUrl", "https://api.minimax.io/anthropic"),
+        "api_key": minimax.get("apiKey", ""),
+    }
 
-    # ── CONTRACTOR SCAM PROTECTION GUIDE ───────────────────────────
-    # Category 1: Vet Before You Sign (items 1-4)
-    # Category 2: Payment Protection (items 5-8)
-    # Category 3: If You've Been Hit (items 9-12)
 
-    "contractor-scam-protection-guide_v1": [
-        # ── Category 1: Vet Before You Sign ──
-        "Search Your State's License Board by Name and License Number Before Hiring: Every state has a Contractor State License Board or equivalent. A 5-minute search at cslb.ca.gov or your state's equivalent tells you if the license is current, clean, and tied to a real business.",
-        "Ask for Proof of General Liability Insurance and Workers' Comp — Written, Not Verbal: A contractor who says they're insured but can't produce a policy document isn't insured. Minimum recommended coverage is $1M general liability. For big projects, call the insurance company directly to confirm.",
-        "Check Your State's Consumer Protection Site for Filed Complaints: Most states publish complaint history online. Search the contractor's name and license number together — a pattern of unresolved complaints from multiple homeowners is a clear walk-away signal.",
-        "Get Three Written Bids That Include Full Scope, Materials, Timeline, and Payment Schedule: Verbal estimates don't bind anyone. A written bid that refuses to specify materials or timeline isn't a real bid — it's a setup for a surprise invoice later.",
-        # ── Category 2: Payment Protection ──
-        "Never Pay More Than $1,000 or 10% Down — Whichever Is Less — for Residential Work: This isn't just good advice, it's the law in California and a model in many other states. If a contractor asks for more upfront before starting, that is a red flag — walk away.",
-        "Pay by Check, Credit Card, or a Platform With Fraud Protection — Never Cash: Cash leaves no trail and is untraceable if something goes wrong. A credit card gives you a chargeback option. If a contractor insists on cash, that's two red flags at once.",
-        "Get These Six Clauses in Every Contract Before Signing: Scope of work with materials list, payment schedule tied to milestones, change order process with pricing, warranty clause, termination clause, and lien waiver. Without all six, you have no legal protection.",
-        "File a Mechanics Lien on Your Property Within 90 Days of Any Payment if Work Stops: A mechanics lien prevents the contractor from collecting from other sources using your property as collateral. It also puts other subcontractors on notice that your title isn't clean — act within your state's deadline.",
-        # ── Category 3: If You've Been Hit ──
-        "File a Complaint With Your State License Board Within Your State's Filing Window: Most states have a specific deadline — don't assume you have unlimited time. The CSLB or equivalent can revoke a contractor's license and order restitution. Time matters in regulatory recovery.",
-        "File a Police Report If the Amount Exceeds Your State's Threshold — Typically $950+: Contractor fraud above that threshold crosses into felony territory in most states. A police report creates a paper trail and may trigger an investigation if other victims have filed similar reports.",
-        "Report the Fraud to the FTC at ReportFraud.ftc.gov Even if the Amount Is Small: Your individual report may not lead to immediate recovery, but it contributes to a pattern case. The FTC builds cases across state lines and your data matters even in small-dollar cases.",
-        "Consult a Construction Litigation Attorney if the Amount Lost Exceeds Your State's Small Claims Limit: Small claims court handles up to your state's limit (typically $5,000-$15,000). For larger amounts, a construction attorney can file in superior court and potentially attach assets or liens.",
-    ],
+def call_minimax(creds: dict, system_prompt: str, user_prompt: str, max_tokens: int = 4000) -> str | None:
+    import urllib.request, urllib.error
 
-    # ── NEW CAT FIRST WEEKS SURVIVAL GUIDE ─────────────────────────
-    # Category 1: First 48 Hours (items 1-4)
-    # Category 2: Week 1 Routine (items 5-8)
-    # Category 3: Week 2 and Beyond (items 9-12)
-    # Plain English: crepuscular → dawn and dusk, etc.
+    url = f"{creds['base_url']}/v1/messages"
+    body = {
+        "model": "MiniMax-M2.7",
+        "max_tokens": max_tokens,
+        "temperature": 0.5,
+        "system": system_prompt,
+        "messages": [{"role": "user", "content": user_prompt}],
+    }
 
-    "new-cat-first-weeks-survival-guide_v1": [
-        # ── Category 1: First 48 Hours ──
-        "Pick One Small Room as the Safe Room — Not the Whole House: Give your new cat one bedroom or small area with a litter box (away from food), one hiding spot, and water. Forcing full-house access on day one creates panic — let them come to you.",
-        "Keep the Room Quiet and Low-Traffic for the First 48 Hours: No loud music, no visitors, no vacuuming near the safe room. Dim the lights slightly if there's a lot of outside movement. Your goal is a space where the cat feels safe enough to start exploring.",
-        "Sit Quietly in the Room Without Looking at the Cat — Offer Treats From Your Lap: Read your phone or a book out loud at low volume. This gets your cat used to your presence without the pressure of eye contact. Eye contact from a stranger is a threat signal in cat language.",
-        "Use Slow Blinks and Look Away When Making Eye Contact — This Signals Non-Threat: Slow blinking at a cat is how cats say I trust you. Practice it when your cat looks at you. Within a day or two, your cat will slow-blink back — that's the first sign of real bonding.",
-        # ── Category 2: Week 1 Routine ──
-        "Set Feeding to Happen Right Before Your Bedtime — Roughly 10 to 11pm: Cats are naturally active at dawn and dusk. Moving the last meal of the day to your bedtime means your cat's natural drowsiness overlaps with yours — and they sleep through the night with you.",
-        "Run a 15-Minute Active Play Session Before the Final Meal Using a Wand Toy: Active play at dusk tires out the hunting instinct. Use a wand toy or laser pointer for 15 minutes, then feed. The play-exhaust-hunt-satisfy cycle is how cats naturally end their day.",
-        "Do Not Get Up or Make Eye Contact When Your Cat Cries at Night — Silence Breaks the Loop: Cats quickly learn that meowing at night gets human attention. If you don't want 5am wake-ups for the next decade, don't reinforce the behavior in the first week. Zero response, zero eye contact.",
-        "Weigh Your Cat Once a Week on a Kitchen Scale to Confirm Normal Adjustment: Weight loss of more than 5-7% of body weight in one week is a medical red flag, not a behavioral one. Track the trend — a single low reading means nothing, a downward trend means call the vet.",
-        # ── Category 3: Week 2 and Beyond ──
-        "Open Access to One New Room Per Week — Always With an Escape Route Back to the Safe Room: Let your cat discover one new room per week. They need to know they can retreat to the safe room whenever they want. Forcing full-house access before week 3 causes sustained stress.",
-        "Keep Food and Water in a Different Room From the Litter Box — Cats Won't Eat Near Their Bathroom: This is an instinctive territorial rule. If the litter box is in the same room as food and water, your cat may start avoiding the box — move one or the other to prevent this.",
-        "Watch for These Warning Signs That Need a Vet Call Within 24 Hours: Not eating for 24+ hours, hiding for more than 3 days without coming out briefly, visible aggression (swatting or hissing when you enter the room), or any straining to urinate. These aren't wait-and-see situations.",
-        "Schedule a Post-Adoption Vet Check Within 14 Days With Your Adoption Records: Bring whatever the shelter gave you — medical records, behavioral notes, food information. Many medical issues (Giardia, upper respiratory infections) surface in the first two weeks after shelter exposure.",
-    ],
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {creds['api_key']}",
+            "anthropic-version": "2023-06-01",
+        },
+        method="POST",
+    )
 
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            data = json.loads(resp.read())
+            for block in data.get("content", []):
+                if block.get("type") == "text":
+                    return block["text"]
+            return ""
+    except Exception as e:
+        print(f"  API error: {e}")
+        return None
+
+
+# ── Active slug discovery (dynamic from TrendScout JSON) ─────────────────────
+
+def get_active_slugs() -> list[str]:
+    """Load slugs from today's TrendScout JSON. Falls back to slugs from drafts dir."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    trends_file = TRENDS_DIR / f"{today}.json"
+
+    if trends_file.exists():
+        data = json.loads(trends_file.read_text())
+        slugs = []
+        for t in data.get("trends", []):
+            slug = t.get("slug_candidate", "")
+            # Also try as-is: the slug_candidate from scout includes _v{N}
+            draft = DRAFTS_DIR / f"{slug}.md"
+            if draft.exists():
+                slugs.append(slug)
+            else:
+                # Try without version suffix
+                base = slug.rsplit("_v", 1)[0] if "_v" in slug else slug
+                for f in sorted(DRAFTS_DIR.glob(f"{base}*.md"), reverse=True):
+                    slugs.append(f.stem)
+                    break
+        if slugs:
+            return slugs
+
+    # Fallback: discover all draft slugs
+    slugs = []
+    if DRAFTS_DIR.exists():
+        for f in DRAFTS_DIR.glob("*.md"):
+            if "_SKELETON" not in f.stem:
+                slugs.append(f.stem)
+    return slugs
+
+
+# ── Cache system ──────────────────────────────────────────────────────────────
+
+def get_draft_hash(slug: str) -> str:
+    """MD5 hash of draft content for cache invalidation."""
+    draft_path = DRAFTS_DIR / f"{slug}.md"
+    if not draft_path.exists():
+        return ""
+    return hashlib.md5(draft_path.read_bytes()).hexdigest()
+
+
+def load_cached_items(slug: str) -> tuple[list[str], list[str]] | None:
+    """Returns (items[], category_labels[]) from cache if draft unchanged."""
+    cache_path = CACHE_DIR / f"{slug}.json"
+    if not cache_path.exists():
+        return None
+    try:
+        cache = json.loads(cache_path.read_text())
+        current_hash = get_draft_hash(slug)
+        if cache.get("draft_hash") == current_hash:
+            return cache.get("items", []), cache.get("categories", [])
+    except Exception:
+        pass
+    return None
+
+
+def save_cached_items(slug: str, items: list[str], categories: list[str]) -> None:
+    """Save generated items + categories to cache."""
+    cache_path = CACHE_DIR / f"{slug}.json"
+    cache = {
+        "slug": slug,
+        "draft_hash": get_draft_hash(slug),
+        "items": items,
+        "categories": categories,
+        "generated_at": datetime.now().isoformat(),
+    }
+    cache_path.write_text(json.dumps(cache, indent=2))
+
+
+# ── AI-driven checklist generation ────────────────────────────────────────────
+
+SYSTEM_PROMPT = """You are a Senior Content Strategist writing action checklists that
+always COMPLEMENT a full guide — they are NOT standalone.
+
+Each checklist item follows this exact structure:
+[Bolded Header] + [Action Verb] + [Main Task] + [Why/How Detail]
+
+Format: "Bolded Header: Complete sentence explaining what to do and why it matters."
+The bolded header and the body are separated by ": " — the header is a short descriptive label, the body is a complete sentence.
+
+Rules:
+- ALL items must be COMPLETE SENTENCES — no fragments
+- Every item must be at least 20 words — short items are not helpful
+- Plain English only — no academic terms
+- Each item must be a REAL, ACTIONABLE step — not a concept or idea
+- Write in the imperative: "Call your vet..." NOT "You should call your vet..."
+- Group items into exactly 3 categories with 4 items each (12 items total)
+- Category labels must be short (max 40 chars), imperative, and specific
+- No placeholder text, no "Coming in V2," no vague promises
+- Draw the items DIRECTLY from the guide content — don't invent new steps
+
+Output ONLY a JSON object:
+{
+  "categories": ["Category 1 Label", "Category 2 Label", "Category 3 Label"],
+  "items": [
+    "Category 1, Item 1: Complete sentence...",
+    "Category 1, Item 2: Complete sentence...",
+    ...
+    "Category 3, Item 4: Complete sentence..."
+  ]
 }
 
+Exactly 12 items. 3 categories. 4 items per category.
+No markdown, no extra text, just the JSON object."""
 
-# ══════════════════════════════════════════════════════════════════
-#  CSS — v6
-#   • align-items: flex-start on checkboxes (better vertical alignment)
-#   • .item-body in #555 to distinguish from bold headers
-#   • Category sub-headers styled distinctly
-# ══════════════════════════════════════════════════════════════════
+
+def generate_checklist_items(creds: dict, slug: str, draft_text: str, trend_data: dict | None) -> tuple[list[str], list[str]] | None:
+    """
+    Generate 12 checklist items + 3 category labels using MiniMax.
+    Returns (items[], categories[]) or None on failure.
+    """
+    # Build context from trend data (the pain point, audience, etc.)
+    trend_context = ""
+    if trend_data:
+        trend_context = (
+            f"Audience: {trend_data.get('audience', '')}\n"
+            f"Pain Point: {trend_data.get('raw_quote', '')[:300]}\n"
+            f"Emotional Trigger: {trend_data.get('emotional_trigger', '')}\n"
+            f"Guide Direction: {trend_data.get('product_direction', '')}\n"
+        )
+
+    # Extract key sections from draft (first ~6000 chars of body content)
+    # Strip YAML frontmatter
+    body = draft_text
+    if body.startswith("---"):
+        parts = body.split("---", 2)
+        if len(parts) >= 3:
+            body = parts[2].strip()
+
+    draft_excerpt = body[:6000]
+    word_count = len(body.split())
+
+    user = f"""Read this guide draft and create a 12-item action checklist that helps the reader implement the guide's advice.
+
+Guide Slug: {slug}
+Guide Word Count: {word_count}
+{trend_context}
+
+DRAFT CONTENT:
+{draft_excerpt}
+
+Generate 12 actionable checklist items (4 per category, 3 categories) that capture the ESSENTIAL steps from this guide."""
+
+    result = call_minimax(creds, SYSTEM_PROMPT, user, max_tokens=3000)
+    if not result:
+        return None
+
+    # Parse JSON — handle markdown fences
+    cleaned = re.sub(r"```(?:json)?\s*", "", result).strip()
+    if cleaned.endswith("```"):
+        cleaned = cleaned[:-3].strip()
+
+    try:
+        parsed = json.loads(cleaned)
+    except json.JSONDecodeError:
+        # Try to find JSON object in the response
+        match = re.search(r'\{.*\}', cleaned, re.DOTALL)
+        if match:
+            try:
+                parsed = json.loads(match.group(0))
+            except json.JSONDecodeError:
+                return None
+        else:
+            return None
+
+    items = parsed.get("items", [])
+    categories = parsed.get("categories", [])
+
+    # Validate
+    if len(items) != 12:
+        print(f"    ⚠️  Expected 12 items, got {len(items)} — padding/shrinking")
+        while len(items) < 12:
+            items.append(f"Check the Full Guide: This step is described in detail in the companion guide — open {slug}.md and review the relevant section.")
+        items = items[:12]
+
+    if len(categories) != 3:
+        categories = ["First Steps", "Core Actions", "Follow-Through"]
+        print(f"    ⚠️  Expected 3 categories, got {len(categories)} — using defaults")
+
+    return items, categories
+
+
+# ── CSS — v7 ──────────────────────────────────────────────────────────────────
 
 def checklist_css() -> str:
     return """
@@ -132,7 +293,6 @@ def checklist_css() -> str:
         margin: 0 auto;
     }
 
-    /* ── Typography ─────────────────────────────────────────────── */
     h1 {
         font-size: 22pt;
         font-weight: 700;
@@ -152,11 +312,10 @@ def checklist_css() -> str:
         text-transform: uppercase;
     }
 
-    /* ── Category sub-header ─────────────────────────────────── */
     .category-header {
         font-size: 10pt;
         font-weight: 700;
-        color: #4ADE80;       /* moss green accent */
+        color: #4ADE80;
         text-transform: uppercase;
         letter-spacing: 0.06em;
         margin: 14pt 0 6pt 0;
@@ -168,7 +327,6 @@ def checklist_css() -> str:
         margin-top: 0;
     }
 
-    /* ── Checklist items ─────────────────────────────────────────── */
     ol.items {
         list-style: none;
         padding: 0;
@@ -177,7 +335,7 @@ def checklist_css() -> str:
 
     li.item {
         display: flex;
-        align-items: flex-start;   /* v6: checkbox top-aligned */
+        align-items: flex-start;
         gap: 9px;
         margin-bottom: 8pt;
         font-size: 11.5pt;
@@ -203,19 +361,16 @@ def checklist_css() -> str:
         flex: 1;
     }
 
-    /* Bolded header inline */
     .item-header {
         font-weight: 700;
         color: #1a1a2e;
     }
 
-    /* Plain English description — v6: #555 dark gray */
     .item-body {
         font-weight: 400;
         color: #555555;
     }
 
-    /* ── Footer ─────────────────────────────────────────────────── */
     .footer {
         margin-top: 14pt;
         padding-top: 9pt;
@@ -225,37 +380,6 @@ def checklist_css() -> str:
         text-align: center;
     }
     """
-
-
-def parse_items(raw_items: list) -> list:
-    """
-    Split a flat list of 12 items into 3 categories of 4.
-    Categories are inferred from product type and position.
-    Returns list of (category_label, items) tuples.
-    """
-    # Each product has exactly 12 items in groups of 4
-    chunks = [raw_items[i:i+4] for i in range(0, len(raw_items), 4)]
-    return chunks
-
-
-# Category labels per product
-CATEGORY_LABELS = {
-    "cat-litter-box-rescue-guide_v1": [
-        "Medical Check — Rule Out Health Problems First",
-        "Box Setup — Create the Right Environment",
-        "Recovery Plan — 30-Day Reset With Milestones",
-    ],
-    "contractor-scam-protection-guide_v1": [
-        "Before You Sign — Verify Everything",
-        "Payment Protection — Lock Down Your Money",
-        "If You've Been Hit — Recovery Steps",
-    ],
-    "new-cat-first-weeks-survival-guide_v1": [
-        "First 48 Hours — Set Up for Success",
-        "Week 1 Routine — Build the Sleep Schedule",
-        "Week 2 and Beyond — Expand and Monitor",
-    ],
-}
 
 
 def item_to_html(raw: str) -> str:
@@ -280,22 +404,65 @@ def item_to_html(raw: str) -> str:
     )
 
 
-def generate_checklist_pdf(slug: str, title_str: str) -> str | None:
-    items = SYNTHESIZED_ITEMS.get(slug, [])
-    if not items:
-        return None
+# ── Load trend data for context ─────────────────────────────────────────────
 
-    categories = CATEGORY_LABELS.get(slug, [])
-    category_chunks = parse_items(items)
+def load_trend_data(slug: str) -> dict | None:
+    """Search recent trend files for matching slug and return trend data."""
+    if not TRENDS_DIR.exists():
+        return None
+    for f in sorted(TRENDS_DIR.glob("*.json"), reverse=True):
+        try:
+            data = json.loads(f.read_text())
+            for t in data.get("trends", []):
+                cand = t.get("slug_candidate", "")
+                if cand and (cand == slug or slug.startswith(cand)):
+                    return t
+                # Also try matching base slug (without _v{N})
+                base = slug.rsplit("_v", 1)[0] if "_v" in slug else slug
+                if cand == base:
+                    return t
+        except Exception:
+            pass
+    return None
+
+
+# ── Title extraction from draft frontmatter ─────────────────────────────────
+
+def extract_title_from_draft(slug: str) -> str:
+    """Read frontmatter title from draft, or fallback to slug."""
+    draft_path = DRAFTS_DIR / f"{slug}.md"
+    if draft_path.exists():
+        text = draft_path.read_text()
+        if text.startswith("---"):
+            parts = text.split("---", 2)
+            if len(parts) >= 2:
+                fm = parts[1]
+                for line in fm.split("\n"):
+                    if line.startswith("title:"):
+                        return line.split(":", 1)[1].strip().strip('"\'')
+    # Fallback from slug
+    return slug.replace("-", " ").replace("_v1", "").replace("_v2", "").title()
+
+
+# ── Main generation ──────────────────────────────────────────────────────────
+
+def generate_checklist_pdf(slug: str, title_str: str,
+                           items: list[str], categories: list[str]) -> str | None:
+    """Generate PDF from items + categories for a given slug."""
+    if not items:
+        print(f"  No items for '{slug}' — skipping")
+        return None
 
     checklist_path = OUTPUT_DIR / f"{slug}_CHECKLIST.pdf"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     date_str = datetime.now().strftime("%B %d, %Y")
 
-    # Build HTML: iterate categories + items
+    # Chunk items into 3 groups of 4
+    chunks = [items[i:i+4] for i in range(0, len(items), 4)]
+
     html_parts = []
-    for chunk, cat_label in zip(category_chunks, categories):
+    for chunk, cat_label in zip(chunks, categories):
         html_parts.append(f'<div class="category-header">{html_mod.escape(cat_label)}</div>')
         html_parts.append('<ol class="items">')
         for it in chunk:
@@ -332,45 +499,79 @@ def generate_checklist_pdf(slug: str, title_str: str) -> str | None:
         return None
 
 
-SYNTHESIZED_SLUGS = {
-    "cat-litter-box-rescue-guide_v1":      "Cat Litter Box Rescue Guide",
-    "contractor-scam-protection-guide_v1":  "Contractor Scam Protection Guide",
-    "new-cat-first-weeks-survival-guide_v1": "New Cat First Weeks Survival Guide",
-}
+# ── Orchestrator ──────────────────────────────────────────────────────────────
 
+def run(slugs: list[str] | None = None, force: bool = False) -> int:
+    print("=" * 55)
+    print("AI Agentic Checklist Synthesizer v7 (Dynamic)")
+    print("=" * 55)
 
-def get_active_slugs():
-    """Load slugs from today's TrendScout JSON. Fallback to all SYNTHESIZED_SLUGS."""
-    today = datetime.now().strftime("%Y-%m-%d")
-    trends_file = WORKSPACE / "wiki" / "trends" / f"{today}.json"
-    if trends_file.exists():
-        data = json.loads(trends_file.read_text())
-        active = [t["slug_candidate"] for t in data.get("trends", [])
-                  if t.get("slug_candidate") in SYNTHESIZED_SLUGS]
-        if active:
-            return active
-    return list(SYNTHESIZED_SLUGS.keys())
-
-
-if __name__ == "__main__":
-    print("=" * 60)
-    print("AI Agentic Checklist Synthesizer (v6 — Complete + Plain English)")
-    print("=" * 60)
+    try:
+        cfg = load_config()
+        creds = get_minimax_credentials(cfg)
+        if not creds["api_key"]:
+            print("  ERROR: No MiniMax API key")
+            return 1
+    except Exception as e:
+        print(f"  ERROR: {e}")
+        return 1
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    active = get_active_slugs()
-    print(f"  Active products: {active}")
+    # Discover slugs
+    if slugs is None:
+        slugs = get_active_slugs()
 
-    for slug in active:
-        title = SYNTHESIZED_SLUGS.get(slug)
-        if not title:
-            print(f"  [WARN] No title for '{slug}' — skipping")
+    if not slugs:
+        print("  No active slugs found. Run TrendScout first or place drafts in products/drafts/")
+        return 1
+
+    print(f"  Active products: {slugs}")
+
+    for slug in slugs:
+        print(f"\n  [{slug}]")
+
+        # Read draft
+        draft_path = DRAFTS_DIR / f"{slug}.md"
+        if not draft_path.exists():
+            print(f"    ⚠️  No draft file: {draft_path.name} — skipping")
             continue
-        result = generate_checklist_pdf(slug, title)
-        if result:
-            print(f"  ✅ {result}")
-        else:
-            print(f"  ❌ Failed: {slug}")
 
-    print("=" * 60)
+        draft_text = draft_path.read_text(encoding="utf-8")
+        title = extract_title_from_draft(slug)
+
+        # Check cache
+        cached = None if force else load_cached_items(slug)
+        if cached:
+            items, categories = cached
+            print(f"    📋 Loaded from cache ({len(items)} items)")
+        else:
+            # Load trend data for context
+            trend_data = load_trend_data(slug)
+
+            # Generate via AI
+            print(f"    Generating checklist from draft content...")
+            result = generate_checklist_items(creds, slug, draft_text, trend_data)
+            if result is None:
+                print(f"    ❌ Generation failed — skipping")
+                continue
+
+            items, categories = result
+            save_cached_items(slug, items, categories)
+            print(f"    ✅ Generated {len(items)} items in {len(categories)} categories")
+
+        # Generate PDF
+        generate_checklist_pdf(slug, title, items, categories)
+
+    print(f"\n{'='*55}")
+    return 0
+
+
+# ── Entry point ────────────────────────────────────────────────────────────────
+
+if __name__ == "__main__":
+    force = "--force" in sys.argv
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+
+    slugs = args if args else None
+    sys.exit(run(slugs=slugs, force=force))
