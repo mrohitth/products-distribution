@@ -10,6 +10,7 @@ Changes from v1:
   - No reference to non-existent off_switch_V1.md
   - Consistent slug versioning with trendscout_scout.py (same normalize_slug)
   - Reads `slug_candidate` from trend JSON (already versioned by scout)
+  - Parallel processing: max 2 concurrent MiniMax calls (ThreadPoolExecutor)
 
 Usage:
     python3 scripts/trendscout_gen.py              # use today's JSON
@@ -18,6 +19,7 @@ Usage:
 import json, re, sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 WORKSPACE = Path("/home/mathew/.openclaw/workspace")
 TRENDS_DIR = WORKSPACE / "wiki" / "trends"
@@ -181,11 +183,69 @@ Write a complete, production-ready guide. This is the final product."""
     return call_minimax(creds, DRAFT_SYSTEM, user, max_tokens=8000)
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────────
+# ── Main (Parallel) ──────────────────────────────────────────────────────────────
+
+def process_one_trend(creds: dict, trend: dict, date_arg: str) -> tuple[dict, str | None]:
+    """Process a single trend: skeleton -> draft. Returns (trend, draft_path) or (trend, None)."""
+    slug = trend.get("slug_candidate", "")
+    if not slug:
+        return (trend, None)
+
+    title = trend.get("product_direction", "").split(":")[0].strip()
+    if not title:
+        title = slug.replace("-", " ").title()
+
+    print(f"  {title[:60]} -> {slug}")
+
+    draft_path = DRAFTS_DIR / f"{slug}.md"
+    skel_path = SKELETONS_DIR / f"{slug}_SKELETON.md"
+
+    if draft_path.exists():
+        print(f"    Skipping -- draft exists")
+        return (trend, str(draft_path))
+
+    # Stage 2: Skeleton
+    if skel_path.exists():
+        skeleton_text = skel_path.read_text()
+        print(f"    Skeleton: cached")
+    else:
+        print(f"    Skeleton: generating...")
+        skeleton_text = generate_skeleton(creds, trend)
+        if not skeleton_text:
+            print(f"    Skeleton FAILED")
+            return (trend, None)
+        skel_path.write_text(skeleton_text)
+
+    # Stage 3: Draft
+    print(f"    Draft: generating...")
+    draft_text = generate_draft(creds, trend, skeleton_text)
+    if not draft_text:
+        print(f"    Draft FAILED")
+        return (trend, None)
+
+    draft_full = f"""---
+title: "{title}"
+slug: "{slug}"
+trend: "{trend.get('product_direction', '')}"
+audience: "{trend.get('audience', '')}"
+emotional_trigger: "{trend.get('emotional_trigger', '')}"
+score: {trend.get('total_score', '?')}/12
+ai_conviction: {trend.get('ai_conviction', 'MEDIUM')}
+date: {date_arg}
+source_platform: {trend.get('source_platform', 'reddit')}
+---
+
+{draft_text}
+"""
+
+    draft_path.write_text(draft_full)
+    print(f"    Draft: saved -> {draft_path.name}")
+    return (trend, str(draft_path))
+
 
 def main() -> int:
     date_arg = sys.argv[1] if len(sys.argv) > 1 else datetime.now(ET).strftime("%Y-%m-%d")
-    print(f"[{datetime.now(ET).strftime('%H:%M:%S ET')}] TrendScout Gen — {date_arg}")
+    print(f"[{datetime.now(ET).strftime('%H:%M:%S ET')}] TrendScout Gen -- {date_arg}")
     print("=" * 60)
 
     try:
@@ -210,80 +270,25 @@ def main() -> int:
         return 1
 
     print(f"  Found {len(trends)} trends to process")
-
     SKELETONS_DIR.mkdir(parents=True, exist_ok=True)
     DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
 
     results = []
-
-    for i, trend in enumerate(trends, 1):
-        slug = trend.get("slug_candidate", "")
-        if not slug:
-            print(f"\n[{i}/{len(trends)}] No slug — skipping")
-            continue
-
-        title = trend.get("product_direction", "").split(":")[0].strip()
-        if not title:
-            title = slug.replace("-", " ").title()
-
-        print(f"\n[{i}/{len(trends)}] {title[:60]}")
-        print(f"    Slug: {slug}")
-
-        # Check if draft already exists for this exact slug (version-aware)
-        draft_path = DRAFTS_DIR / f"{slug}.md"
-        skel_path = SKELETONS_DIR / f"{slug}_SKELETON.md"
-
-        if draft_path.exists():
-            print(f"    Skipping — draft already exists: {slug}.md")
-            results.append((trend, str(draft_path)))
-            continue
-
-        # Stage 2: Generate Skeleton
-        if skel_path.exists():
-            print(f"    Using existing skeleton: {skel_path.name}")
-            skeleton_text = skel_path.read_text()
-        else:
-            print(f"    Generating skeleton...")
-            skeleton_text = generate_skeleton(creds, trend)
-            if not skeleton_text:
-                print(f"    ❌ Skeleton FAILED — skipping")
-                continue
-            skel_path.write_text(skeleton_text)
-            print(f"    ✅ Skeleton saved: {skel_path.name}")
-
-        # Stage 3: Generate Draft — ALL 4 parts complete
-        print(f"    Generating full 4-part draft...")
-        draft_text = generate_draft(creds, trend, skeleton_text)
-        if not draft_text:
-            print(f"    ❌ Draft FAILED")
-            continue
-
-        # Write with trend metadata frontmatter
-        draft_full = f"""---
-title: "{title}"
-slug: "{slug}"
-trend: "{trend.get('product_direction', '')}"
-audience: "{trend.get('audience', '')}"
-emotional_trigger: "{trend.get('emotional_trigger', '')}"
-score: {trend.get('total_score', '?')}/12
-ai_conviction: {trend.get('ai_conviction', 'MEDIUM')}
-date: {date_arg}
-source_platform: {trend.get('source_platform', 'reddit')}
----
-
-{draft_text}
-"""
-
-        draft_path.write_text(draft_full)
-        print(f"    ✅ Draft saved: {draft_path.name}")
-        results.append((trend, str(draft_path)))
+    print(f"  Processing (max 2 concurrent MiniMax calls)...")
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        futures = {pool.submit(process_one_trend, creds, t, date_arg): t for t in trends}
+        for fut in as_completed(futures):
+            trend, draft_path = fut.result()
+            if draft_path:
+                results.append((trend, draft_path))
+                print(f"  + {Path(draft_path).stem}")
 
     print(f"\n{'='*60}")
-    print(f"  COMPLETE — {len(results)} drafts created")
+    print(f"  COMPLETE -- {len(results)} drafts created")
     for trend, path in results:
         title = trend.get("product_direction", "").split(":")[0].strip()
         slug = trend.get("slug_candidate", "?")
-        print(f"  • {title} ({slug}) → {path}")
+        print(f"  * {title} ({slug}) -> {path}")
     print(f"{'='*60}")
     return 0
 

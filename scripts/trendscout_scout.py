@@ -358,111 +358,6 @@ def get_next_version(base_slug: str) -> str:
     return f"{base_slug}_v{max_v + 1}"
 
 
-# ── AI Result Analysis ───────────────────────────────────────────────────────────
-
-def analyze_search_result_ai(creds: dict, result: dict) -> dict | None:
-    """
-    Use MiniMax to analyze a single search result and produce:
-    {audience, emotional_trigger, score_breakdown, total_score,
-     solvable_10_page_guide, product_direction, slug_candidate}
-    Returns None if the result is not product-worthy.
-    """
-    title = result.get("title", "")[:150]
-    description = result.get("description", "")[:600]
-    url = result.get("url", "")
-
-    if len(description) < 80:
-        return None
-
-    system = """You are a digital product trend analyst. Given a Reddit/Quora search result,
-determine if the problem is worth building a digital product (guide/checklist) around.
-
-Score each dimension 1-3:
-- Audience (1=small niche, 2=moderate, 3=large defined group actively searching)
-- Emotion (1=low pain, 2=annoyed, 3=visceral urgency or anxiety)
-- Monetization (1=unlikely to pay, 2=might buy a $5 checklist, 3=would pay $12+)
-- Recurrence (1=one-off problem, 2=seasonal, 3=evergreen — people will search this forever)
-
-Only recommend products where:
-- The problem is clearly stated with emotional weight
-- A 10-page guide or checklist is a SOLVABLE approach
-- The audience is identifiable and large enough
-- The problem recurs (new people search this weekly)
-
-Output ONLY JSON with these fields:
-- "score_breakdown": {"Audience": int, "Emotion": int, "Monetization": int, "Recurrence": int}
-- "total_score": int (sum)
-- "audience": "string — describe the audience"
-- "emotional_trigger": "string — describe the emotion"
-- "product_direction": "string — the guide angle (max 100 chars)"
-- "solvable_10_page_guide": bool
-- "slug_candidate": "string — URL-friendly slug from product direction"
-- "verdict": "PASS" or "REJECT" (REJECT means total_score < 8 or not solvable)
-- "rejection_reason": "string — only if REJECT, explain briefly"
-No markdown, just JSON."""
-
-    import urllib.request, urllib.error
-
-    url_api = f"{creds['base_url']}/v1/messages"
-    body = {
-        "model": "MiniMax-M2.7",
-        "max_tokens": 1000,
-        "temperature": 0.3,
-        "system": system,
-        "messages": [{"role": "user", "content": f"""Title: {title}
-Description: {description}
-Source URL: {url}
-Analyze this Reddit/Quora post and determine if it should become a digital product."""}],
-    }
-
-    req = urllib.request.Request(
-        url_api,
-        data=json.dumps(body).encode("utf-8"),
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {creds['api_key']}",
-            "anthropic-version": "2023-06-01",
-        },
-        method="POST",
-    )
-
-    text = None
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            data_in = json.loads(resp.read())
-            text = ""
-            for block in data_in.get("content", []):
-                if block.get("type") == "text":
-                    text = block["text"]
-                    break
-
-            if not text:
-                return None
-
-            cleaned = re.sub(r"```(?:json)?\s*", "", text).strip()
-            if cleaned.endswith("```"):
-                cleaned = cleaned[:-3].strip()
-            parsed = json.loads(cleaned)
-            parsed["source_url"] = url
-            parsed["title"] = title
-            parsed["raw_quote"] = description[:600]
-            return parsed
-    except (json.JSONDecodeError, Exception):
-        # Fallback: try to find JSON in the text
-        if text and isinstance(text, str):
-            match = re.search(r'\{.*\}', text, re.DOTALL)
-            if match:
-                try:
-                    parsed = json.loads(match.group(0))
-                    parsed["source_url"] = url
-                    parsed["title"] = title
-                    parsed["raw_quote"] = description[:600]
-                    return parsed
-                except (json.JSONDecodeError, ValueError):
-                    pass
-        return None
-
-
 # ── Config helpers ─────────────────────────────────────────────────────────────────
 
 def load_config() -> dict:
@@ -478,6 +373,152 @@ def get_minimax_credentials(cfg: dict) -> dict:
         "base_url": minimax.get("baseUrl", "https://api.minimax.io/anthropic"),
         "api_key": minimax.get("apiKey", ""),
     }
+
+
+def call_minimax(creds: dict, system: str, user: str,
+                 max_tokens: int = 4000, temp: float = 0.3, timeout: int = 120) -> str | None:
+    """Generic MiniMax API call helper."""
+    import urllib.request, urllib.error
+
+    url = f"{creds['base_url']}/v1/messages"
+    body = {
+        "model": "MiniMax-M2.7",
+        "max_tokens": max_tokens,
+        "temperature": temp,
+        "system": system,
+        "messages": [{"role": "user", "content": user}],
+    }
+
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {creds['api_key']}",
+            "anthropic-version": "2023-06-01",
+        },
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            data_in = json.loads(resp.read())
+            for block in data_in.get("content", []):
+                if block.get("type") == "text":
+                    return block["text"]
+            return None
+    except Exception as e:
+        print(f"  API error: {e}")
+        return None
+
+
+def extract_json_from_response(text: str) -> dict | list | None:
+    """Extract JSON from MiniMax response (handles markdown fences, loose text)."""
+    if not text:
+        return None
+    cleaned = re.sub(r"```(?:json)?\s*", "", text).strip()
+    if cleaned.endswith("```"):
+        cleaned = cleaned[:-3].strip()
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        # Try to find JSON object or array in text
+        for pattern in [r'\{.*\}', r'\[.*?\]']:
+            match = re.search(pattern, cleaned, re.DOTALL)
+            if match:
+                try:
+                    return json.loads(match.group(0))
+                except json.JSONDecodeError:
+                    continue
+        return None
+
+
+# ── Batch Result Analysis (replaces 1-at-a-time) ──────────────────────────────────
+
+def batch_analyze_results(creds: dict, all_results: list[tuple[dict, str, str]]) -> list[dict | None]:
+    """
+    Send ALL search results to MiniMax in ONE call for batch scoring.
+    all_results: list of (result_dict, query_str, platform_str)
+    Returns list of analyzed dicts (or None for too-short results) parallel to input.
+    """
+    # First filter: skip anything too short (saves tokens in the prompt)
+    valid = []
+    for r, q, p in all_results:
+        desc = r.get("description", "").strip()
+        if len(desc) >= 80:
+            valid.append((r, q, p))
+        else:
+            print(f"    \u26a0\ufe0f  Skipping result: too short ({len(desc)} chars)")
+
+    if not valid:
+        return [None] * len(all_results)
+
+    system = """You are a digital product trend analyst. Score each provided Reddit/Quora search result.
+
+For each result, score 1-3 on each dimension:
+- Audience: size/definition of the affected group
+- Emotion: pain intensity and urgency
+- Monetization: willingness to pay for a solution
+- Recurrence: evergreen vs one-time problem
+
+Only mark PASS if total_score >= 8 AND the problem is solvable as a 10-page guide.
+Be strict. Not everything is a product.
+
+Output ONLY a JSON array. Each element:
+{"index": n, "verdict": "PASS" or "REJECT", "total_score": int,
+ "score_breakdown": {"Audience": int, "Emotion": int, "Monetization": int, "Recurrence": int},
+ "audience": "string", "emotional_trigger": "string",
+ "product_direction": "string (max 100 chars)", "slug_candidate": "string",
+ "solvable_10_page_guide": bool, "rejection_reason": "string (if REJECT)"}"""
+
+    results_text = "\n\n".join([
+        f"--- Result {i+1} ---\nTitle: {r.get('title','')[:150]}\nDescription: {r.get('description','')[:600]}\nSource: {p}\nQuery: {q}"
+        for i, (r, q, p) in enumerate(valid)
+    ])
+
+    user = f"""Score these {len(valid)} search results. Determine if each should become a digital product (guide/checklist).
+
+{results_text}"""
+
+    result_text = call_minimax(creds, system, user, max_tokens=4000, temp=0.3, timeout=120)
+    if not result_text:
+        print(f"    \u26a0\ufe0f  Batch analysis returned empty — marking all as None")
+        return [None] * len(all_results)
+
+    parsed = extract_json_from_response(result_text)
+    if not parsed or not isinstance(parsed, list):
+        print(f"    \u26a0\ufe0f  Batch analysis parse failed — raw: {result_text[:200]}")
+        return [None] * len(all_results)
+
+    # Build index map from the response
+    index_map = {}
+    for item in parsed:
+        if isinstance(item, dict):
+            idx = item.get("index")
+            if idx is not None:
+                index_map[idx - 1] = item  # convert 1-based to 0-based
+
+    # Map back to original input
+    results = []
+    all_idx = 0
+    for orig_r, orig_q, orig_p in all_results:
+        desc = orig_r.get("description", "").strip()
+        if len(desc) < 80:
+            results.append(None)
+        else:
+            # This result was sent as valid[all_idx]
+            analyzed = index_map.get(all_idx)
+            if analyzed:
+                analyzed["source_url"] = orig_r.get("url", "")
+                analyzed["title"] = orig_r.get("title", "")[:150]
+                analyzed["raw_quote"] = desc[:600]
+                results.append(analyzed)
+            else:
+                results.append(None)
+            all_idx += 1
+
+    return results
+
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────────
@@ -538,87 +579,114 @@ def main() -> int:
     if not brave_key:
         print("  WARNING: No Brave Search API key — searches will fail")
 
-    # ── Step 2: Search & AI-analyze each result ──────────────────────────────────
-    print(f"\n[STEP 2] Searching and analyzing — {len(search_queries)} queries")
+    # ── Step 2: Parallel search + batch analysis ──────────────────────────────
+    print(f"\n[STEP 2] Parallel Brave Search — {len(search_queries)} queries")
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    all_raw_results: list[tuple[dict, str, str]] = []  # (result_dict, query, platform)
+
+    def search_one(q: str, p: str) -> list[tuple[dict, str, str]]:
+        try:
+            res = brave_search_api(q, count=4, api_key=brave_key)
+            return [(r, q, p) for r in res]
+        except Exception as e:
+            print(f"    \u26a0\ufe0f  Search error for [{p}] {q[:50]}: {e}")
+            return []
+
+    # All 9+ Brave searches run in parallel via ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=9) as pool:
+        fut_map = {pool.submit(search_one, q, p): (q, p) for q, p in search_queries}
+        for fut in as_completed(fut_map):
+            q, p = fut_map[fut]
+            batch = fut.result()
+            all_raw_results.extend(batch)
+            print(f"    [{p.upper()}] {q[:70]} \u2192 {len(batch)} results")
+
+    total_search_results = len(all_raw_results)
+    print(f"\n  Total results collected: {total_search_results}")
+
+    if not all_raw_results:
+        print("  No results from any query — exiting")
+        audit_output = {
+            "scouted_at": datetime.now(ET).isoformat(),
+            "source_channels": ["reddit.com", "quora.com"],
+            "queries": search_queries,
+            "total_search_results": 0,
+            "trends": [],
+            "rejected": [],
+            "stage1_status": "NO_RESULTS",
+            "high_score_trends": 0,
+        }
+        today_file.write_text(json.dumps(audit_output, indent=2))
+        return 0
+
+    # ── Step 2b: Batch MiniMax analysis (1 call instead of N) ────────────────────
+    print(f"\n  Batch analyzing {total_search_results} results via MiniMax...")
+    analyzed_batch = batch_analyze_results(creds, all_raw_results)
+
     all_analyzed_results = []
     all_rejected_results = []
-    total_search_results = 0
 
-    for q_idx, (query, platform) in enumerate(search_queries, 1):
-        print(f"\n  [{q_idx}/{len(search_queries)}] [{platform.upper()}] {query[:80]}")
-        results = brave_search_api(query, count=4, api_key=brave_key)
-        total_search_results += len(results)
+    for idx, analyzed in enumerate(analyzed_batch):
+        r, query, platform = all_raw_results[idx]
 
-        if not results:
-            print(f"    No results")
+        if analyzed is None:
+            all_rejected_results.append({
+                "title": r.get("title", "")[:80],
+                "description": r.get("description", "")[:200],
+                "rejection_reason": "Too short or AI analysis failed",
+                "source_query": query,
+            })
             continue
 
-        for r_idx, r in enumerate(results):
-            analyzed = analyze_search_result_ai(creds, r)
+        verdict = analyzed.get("verdict", "REJECT")
+        slug_candidate = normalize_slug(analyzed.get("slug_candidate", ""))
 
-            if analyzed is None:
-                print(f"    \u26a0\ufe0f  Skipping result {r_idx+1}: too short or AI error")
-                all_rejected_results.append({
-                    "title": r.get("title", "")[:80],
-                    "description": r.get("description", "")[:200],
-                    "rejection_reason": "Too short to analyze or AI error",
-                    "source_query": query,
-                })
-                continue
+        if verdict == "REJECT":
+            all_rejected_results.append({
+                "source_query": query,
+                "title": analyzed.get("title", "")[:80],
+                "description": analyzed.get("raw_quote", "")[:200],
+                "rejection_reason": analyzed.get("rejection_reason", "Low score"),
+                "score_breakdown": analyzed.get("score_breakdown", {}),
+                "total_score": analyzed.get("total_score", 0),
+            })
+            continue
 
-            verdict = analyzed.get("verdict", "REJECT")
-            slug_candidate = normalize_slug(analyzed.get("slug_candidate", ""))
-
-            if verdict == "REJECT":
-                print(f"    \u274c Rejected: {analyzed.get('slug_candidate', r['title'][:60])[:60]}")
+        # Cross-date slug dedup
+        if slug_candidate and slug_candidate in seen_slugs:
+            versioned = get_next_version(slug_candidate)
+            if versioned != f"{slug_candidate}_v1":
+                slug_candidate = versioned
+                print(f"    \U0001f504 Conflict—using {slug_candidate}")
+            else:
                 all_rejected_results.append({
                     "source_query": query,
                     "title": analyzed.get("title", "")[:80],
                     "description": analyzed.get("raw_quote", "")[:200],
-                    "rejection_reason": analyzed.get("rejection_reason", "Low score"),
-                    "score_breakdown": analyzed.get("score_breakdown", {}),
-                    "total_score": analyzed.get("total_score", 0),
+                    "rejection_reason": f"Duplicate slug: {slug_candidate}",
                 })
                 continue
 
-            # Cross-date slug dedup
-            if slug_candidate and slug_candidate in seen_slugs:
-                versioned = get_next_version(slug_candidate)
-                if versioned != f"{slug_candidate}_v1":
-                    slug_candidate = versioned
-                    print(f"    \U0001f504 Conflict — using {slug_candidate}")
-                else:
-                    print(f"    \u23ed\ufe0f  Skipping duplicate slug: {slug_candidate}")
-                    all_rejected_results.append({
-                        "source_query": query,
-                        "title": analyzed.get("title", "")[:80],
-                        "description": analyzed.get("raw_quote", "")[:200],
-                        "rejection_reason": f"Duplicate slug: {slug_candidate}",
-                    })
-                    continue
-
-            # Success — add to accepted list
-            trend = {
-                "trend_id": len(all_analyzed_results) + 1,
-                "audience": analyzed.get("audience", ""),
-                "raw_quote": analyzed.get("raw_quote", ""),
-                "emotional_trigger": analyzed.get("emotional_trigger", ""),
-                "score_breakdown": analyzed.get("score_breakdown", {}),
-                "total_score": analyzed.get("total_score", 0),
-                "solvable_10_page_guide": analyzed.get("solvable_10_page_guide", True),
-                "product_direction": analyzed.get("product_direction", ""),
-                "slug_candidate": slug_candidate,
-                "ai_conviction": "HIGH CONVICTION" if analyzed.get("total_score", 0) >= 8 else "MEDIUM",
-                "source_url": analyzed.get("source_url", ""),
-                "source_query": query,
-                "source_platform": platform,
-            }
-            all_analyzed_results.append(trend)
-            seen_slugs.add(slug_candidate)
-            total_score = trend["total_score"]
-            print(f"    \u2705 [{total_score}/12] {slug_candidate[:60]}")
-
-        time.sleep(0.5)
+        # Accepted
+        trend = {
+            "trend_id": len(all_analyzed_results) + 1,
+            "audience": analyzed.get("audience", ""),
+            "raw_quote": analyzed.get("raw_quote", ""),
+            "emotional_trigger": analyzed.get("emotional_trigger", ""),
+            "score_breakdown": analyzed.get("score_breakdown", {}),
+            "total_score": analyzed.get("total_score", 0),
+            "solvable_10_page_guide": analyzed.get("solvable_10_page_guide", True),
+            "product_direction": analyzed.get("product_direction", ""),
+            "slug_candidate": slug_candidate,
+            "ai_conviction": "HIGH CONVICTION" if analyzed.get("total_score", 0) >= 8 else "MEDIUM",
+            "source_url": analyzed.get("source_url", ""),
+            "source_query": query,
+            "source_platform": platform,
+        }
+        all_analyzed_results.append(trend)
+        seen_slugs.add(slug_candidate)
+        print(f"    \u2705 [{trend['total_score']}/12] {slug_candidate[:60]}")
 
     # ── Step 3: Final ranking ──────────────────────────────────────────────────────
     print(f"\n[STEP 3] Results summary")

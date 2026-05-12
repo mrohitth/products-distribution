@@ -329,42 +329,34 @@ def run(slugs: list[str] | None = None, force: bool = False) -> int:
     print(f"  Products to generate: {slugs}")
 
     results = []
-    for slug in slugs:
-        print(f"\n  [{slug}]")
-
+    def process_one_slug(slug: str) -> None:
         draft_path = DRAFTS_DIR / f"{slug}.md"
         if not draft_path.exists():
-            print(f"    ⚠️  No draft file — skipping")
-            continue
-
-        # Check if regeneration needed
+            print(f"  [{slug}] No draft file -- skipping")
+            return
         if not force and not distribution_needs_regeneration(slug):
-            print(f"    📋 Up to date — no regeneration needed")
-            results.append((slug, str(DIST_DIR / f"{slug}_reddit_hook.md"),
-                            str(DIST_DIR / f"{slug}_pinterest_pin.md")))
-            continue
-
+            print(f"  [{slug}] Up to date")
+            return
         draft_text = draft_path.read_text(encoding="utf-8")
         trend = load_trend_data(slug)
-
-        # Reddit hook
-        print(f"    Generating Reddit hook...")
         reddit_text = generate_reddit_hook(creds, slug, draft_text, trend)
         if not reddit_text:
-            print(f"    ⚠️  Reddit hook generation failed — skipping")
-            continue
-
-        # Pinterest pin
-        print(f"    Generating Pinterest pin...")
+            print(f"  [{slug}] Reddit hook failed")
+            return
         pinterest_text = generate_pinterest_pin(creds, slug, draft_text, trend)
         if not pinterest_text:
-            print(f"    ⚠️  Pinterest pin generation failed — skipping")
-            continue
-
-        # Save
-        rp, pp = save_distribution(slug, reddit_text, pinterest_text)
+            print(f"  [{slug}] Pinterest pin failed")
+            return
+        save_distribution(slug, reddit_text, pinterest_text)
         save_distro_cache(slug)
-        results.append((slug, rp, pp))
+        print(f"  [{slug}] Done")
+
+    print(f"  Processing {len(slugs)} products (max 2 concurrent)...")
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        futures = {pool.submit(process_one_slug, s): s for s in slugs}
+        for fut in as_completed(futures):
+            pass
+
 
     print(f"\n{'='*55}")
     print(f"  COMPLETE — {len(results)} products distributed")

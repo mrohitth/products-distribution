@@ -16,6 +16,7 @@ Usage:
     python3 scripts/synthesize_checklist.py --force                  # force regenerate cache
 """
 import sys, html as html_mod, json, hashlib, re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from datetime import datetime
 

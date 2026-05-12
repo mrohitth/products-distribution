@@ -1,630 +1,570 @@
 {
-  "scouted_at": "2026-05-12T03:39:19.094572-04:00",
+  "scouted_at": "2026-05-12T03:50:51.577605-04:00",
   "date": "2026-05-12",
   "queries": [
     [
-      "overwhelmed new caregiver feel hopeless Reddit caregiving",
+      "job rejection after 100 applications desperate Reddit",
       "reddit"
     ],
     [
-      "desperate freelance client refuses to pay Reddit",
+      "freelance client won't pay invoice exhausted Reddit",
       "reddit"
     ],
     [
-      "remote work burnt out isolated frustrated Reddit",
+      "roommate moved out damaged apartment scared deposit Reddit",
       "reddit"
     ],
     [
-      "student loan debt trapped overwhelmed Quora",
+      "renovation contractor ghosted lost thousands overwhelmed Reddit",
+      "reddit"
+    ],
+    [
+      "Quora job interview rejected 30 times frustrated",
       "quora"
     ],
     [
-      "home renovation disaster regret frustrated Reddit homeimprovement",
+      "first solo travel planning anxious overwhelmed Reddit",
       "reddit"
     ],
     [
-      "pet health emergency vet bill shocked Reddit askvet",
+      "medical billing error insurance denied desperate Reddit",
       "reddit"
     ],
     [
-      "technology overwhelmed frustrated senior citizens Reddit",
+      "DIY kitchen remodel disaster can't afford contractor Reddit",
       "reddit"
     ],
     [
-      "relationship feeling alone disconnected Reddit relationships",
-      "reddit"
-    ],
-    [
-      "divorce after long marriage lost scared Reddit",
+      "parent estranged family boundary setting overwhelmed Reddit",
       "reddit"
     ]
   ],
   "accepted": [
     {
-      "trend_id": 6,
-      "audience": "Freelancers across design, development, writing, and creative fields who face payment disputes with clients",
-      "raw_quote": "As a general rule, <strong>freelancers don&#x27;t have much recourse if a client decides not to pay</strong>. A contract isn&#x27;t a magical sheet of paper that compels someone to pay you. Good relationships are what get you paid.",
-      "emotional_trigger": "Financial anxiety and helplessness \u2014 unpaid invoices threaten freelancers' livelihood, and many feel they have no recourse even with contracts",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "Freelance Payment Protection: A Contract & Collection Checklist to Secure Your Income and Get Paid",
-      "slug_candidate": "freelance-payment-protection-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/UXDesign/comments/16vu1ku/client_refuses_to_pay_me_full_amount_for_a/",
-      "source_query": "desperate freelance client refuses to pay Reddit",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 7,
-      "audience": "Freelancers, independent contractors, and consultants who invoice clients for services",
-      "raw_quote": "If clients can\u2019t pay, <strong>send certified letters</strong>. ... Everyone saying get paid for sections is right. Or make customers give an affordable deposit so you know they are committed ...",
-      "emotional_trigger": "Financial anxiety and frustration from unpaid invoices threatening livelihood and cash flow",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "Complete guide to getting paid reliably: contract templates, deposit strategies, invoicing best practices, and legal collection steps for freelancers",
-      "slug_candidate": "freelancer-get-paid-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/freelance/comments/10rwsv4/customers_dont_pay_me/",
-      "source_query": "desperate freelance client refuses to pay Reddit",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 8,
-      "audience": "Freelancers, independent contractors, and small agencies who do client work \u2014 a growing, well-defined demographic actively seeking payment protection advice",
-      "raw_quote": "As a freelancer/agency <strong>you need to have contracts signed before any work starts</strong>. The contract should have milestones and a payment dates clearly stated, as well as contingencies for when these terms are breached by either party, as well as and ...",
-      "emotional_trigger": "Rage and anxiety from being stiffed on payment while clients demand more work. The emotional weight is visceral: lost income, confrontation avoidance, cash flow panic, feeling exploited.",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "The Freelancer's Payment Protection Playbook: Contract templates, milestone strategies, deposit structures, and legal contingency steps to never get stiffed again",
-      "slug_candidate": "freelancer-payment-protection-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/freelance/comments/kx6794/clients_arent_paying_but_want_more_work_done/",
-      "source_query": "desperate freelance client refuses to pay Reddit",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 14,
-      "audience": "Recent graduates, especially law students and public servants, carrying $50k-$200k+ in federal student loan debt who feel overwhelmed by repayment timelines and anxious about their financial future",
-      "raw_quote": "I have 6 figures of student loan debt and just started paying them in October (graduated during the pandemic). I am starting a side hustle that will bring in about 50k/year to put towards them. I don\u2019t want that in my plate for 10+ years. ... I graduated law school with $105,000 in student loans. I now work for the Federal Government and plan to use PSLF. I am on the SAVE plan and my payment is very manageable. At times I get overwhelmed, but I keep telling myself it\u2019s 10 years (8 more for me) and that I can keep paying the minimum until it\u2019s forgiven.",
-      "emotional_trigger": "Deep anxiety and overwhelm about carrying 6-figure debt for 10+ years; fear of being trapped in debt; stress about managing payments while building a life post-graduation",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A guide helping graduates manage both the emotional weight and practical steps of student loan repayment\u2014covering PSLF, income-driven plans, side hustle strategies, and mental frameworks for reducing debt-related anxiety",
-      "slug_candidate": "student-loan-anxiety-guide-pslf-repayment",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/StudentLoans/comments/1b198rn/how_do_you_deal_with_the_anxiety_of_carrying/",
-      "source_query": "student loan debt trapped overwhelmed Quora",
-      "source_platform": "quora"
-    },
-    {
-      "trend_id": 16,
-      "audience": "US student loan borrowers \u2014 primarily recent graduates, mid-career professionals, and parents co-signing loans. 45 million+ Americans with federal student debt, plus private borrowers.",
-      "raw_quote": "In one survey, <strong>78% of student-loan borrowers reported experiencing anxiety related to their debt</strong>.3 Beyond that, depression, burnout, and staying in unfulfilling jobs simply to keep up with repayment obligations are also common experiences among ...",
-      "emotional_trigger": "Chronic anxiety and depression tied to debt burden. People trapped in unfulfilling jobs solely for repayment. Feelings of shame, hopelessness, and financial paralysis.",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A practical guide to managing student debt without sacrificing mental health \u2014 covering repayment plans, refinancing, career pivots, and psychological strategies for dealing with financial stress.",
-      "slug_candidate": "student-debt-anxiety-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.smart529.com/learn/content-library/how-to-get-ahead-of-your-student-debt.html",
-      "source_query": "student loan debt trapped overwhelmed Quora",
-      "source_platform": "quora"
-    },
-    {
-      "trend_id": 19,
-      "audience": "Homeowners in their 30s-50s facing major life decisions about whether to renovate their current home or sell and move. These are typically people with equity in their home, some disposable income, and a lifestyle/housing decision point (growing family, empty nest, job change, etc.)",
-      "raw_quote": "I totally agree with this comment. Cheaper isn\u2019t always better, especially when it comes to renovations. In my experience, paying more for a great GC will ultimately save you money and lots of frustration.",
-      "emotional_trigger": "Fear of making a six-figure mistake and living with regret. The visceral anxiety of being 'stuck' in a decision that will affect their daily life for months or years, with no clear 'right' answer. Homeowners feel paralyzed between the devil they know (current home/neighborhood) and the uncertainty of moving.",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A comprehensive 'Renovate vs. Move' Decision Checklist that walks homeowners through the financial, lifestyle, and emotional factors to consider before committing to a massive renovation.",
-      "slug_candidate": "renovate-vs-move-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/homeowners/comments/1jc0fhl/has_anyone_ever_regret_doing_a_massive_renovation/",
-      "source_query": "home renovation disaster regret frustrated Reddit homeimprovement",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 26,
-      "audience": "Married couples and long-term partners experiencing emotional distance and declining intimacy",
-      "raw_quote": "I\u2019ve been feeling really lost lately and wanted to reach out to see if anyone else is going through something similar. My partner and I used to be so close, you know? We would talk for hours, laugh until our sides hurt, and just enjoy being together. But somewhere along the way, we started drifting apart.",
-      "emotional_trigger": "Deep fear of losing a loved one, loneliness within the relationship, feelings of being lost with no clear path forward",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "Reconnection Roadmap: Practical Exercises to Rebuild Intimacy and Close the Gap with Your Partner",
-      "slug_candidate": "reconnection-roadmap-marriage-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Marriage/comments/1ffhxst/i_feel_so_disconnected_from_my_partner_and_i_dont/",
-      "source_query": "relationship feeling alone disconnected Reddit relationships",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 1,
-      "audience": "New family caregivers (typically adult children) who have recently become primary caregivers for aging parents and feel unprepared for the role",
-      "raw_quote": "I recently became the primary caregiver for my dad, and honestly, I wasn\u2019t prepared for how emotionally and physically draining it can be. Between managing his medications, cooking, cleaning, handling appointments, and trying to keep up with my own responsibilities, I feel like I barely have a minute to breathe.",
-      "emotional_trigger": "Overwhelming stress and anxiety about managing medications, appointments, household tasks, and personal responsibilities with no clear system or training",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A practical checklist guide for new caregivers covering medication management, medical appointment prep, home organization, legal/financial basics, and self-care in the first 30 days",
-      "slug_candidate": "new-caregiver-30-day-survival-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/CaregiverSupport/comments/1od2sm2/im_overwhelmed_any_tips_for_new_caregivers/",
-      "source_query": "overwhelmed new caregiver feel hopeless Reddit caregiving",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 2,
-      "audience": "Family caregivers (esp. adult children caring for elderly parents) feeling trapped, isolated, and financially strained",
-      "raw_quote": "I wouldn&#x27;t want to risk the hell of caregiving again and I wouldn&#x27;t want to put another person through taking care of me if I get something. ... I have no friends, can\u2019t go any where unless I can schedule it with my two brothers (who get cranky if I want to be gone for a long time), have no money, can\u2019t see my own kid as much because they didn\u2019t like living with my elderly parent, and will be homeless after the passing of my parent. I love them, but all I feel like is a housekeeper slash med giving bathroom attendant.",
-      "emotional_trigger": "Deep despair and identity loss \u2014 feeling like a 'bathroom attendant' rather than a person; fear that caregiving consumes your entire life while the world forgets you exist",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A practical guide teaching caregivers how to set boundaries, preserve their identity, plan financially, and prevent total life collapse while caregiving",
-      "slug_candidate": "caregiver-self-preservation-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/CaregiverSupport/comments/1cpbmkt/has_becoming_a_caregiver_ruined_your_life/",
-      "source_query": "overwhelmed new caregiver feel hopeless Reddit caregiving",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 3,
-      "audience": "Family caregivers (53M+ in the US alone) caring for aging parents, sick spouses, or disabled loved ones - a large, identifiable demographic actively seeking support resources",
-      "raw_quote": "As a caregiver, <strong>you are at risk for depression</strong>. Sometimes this is feeling hopeless or helpless, the inability to sleep, or trouble getting up and facing the day. And sometimes it makes you want to cry.",
-      "emotional_trigger": "Depression, hopelessness, helplessness, insomnia, and emotional exhaustion among caregivers who feel isolated and overwhelmed by their responsibilities",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A practical guide helping caregivers identify burnout, build daily mental health habits, and access support without guilt - a solvable, actionable approach",
-      "slug_candidate": "caregiver-burnout-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.caregiver.org/resource/emotional-side-caregiving/",
-      "source_query": "overwhelmed new caregiver feel hopeless Reddit caregiving",
-      "source_platform": "reddit"
-    },
-    {
       "trend_id": 4,
-      "audience": "Family and unpaid caregivers (often adult children or spouses) who feel isolated, overwhelmed, and financially strained while managing care for a loved one",
-      "raw_quote": "I am angry, sad, lost, hopeless. I need a therapist and can\u2019t afford one. I hate what my life has become and i don\u2019t know how to fix it. Please know you\u2019re not alone. I\u2019ll write more when I have a bit more time. ... You never wrote more. How are things now? ... I don&#x27;t really have any advice because I feel the same way, but as someone else who is a younger caregiver, I just want to tell you that you&#x27;re not alone.",
-      "emotional_trigger": "Visceral hopelessness and entrapment \u2014 they feel trapped in a role they didn't choose, can't afford help, and see no way out. The emotional weight is high.",
+      "audience": "Job seekers who have applied to dozens or hundreds of positions without getting hired; includes career changers, laid-off professionals, and those re-entering the workforce after long tenures",
+      "raw_quote": "I\u2019ve had 19 different jobs since I turned 15 (2 careers and 33 years of employment) and I have never called to follow up on an application. Email follow up after an initial interview, yes, but cold calling HR departments to follow up? Never. ... I am at my wits end, 100+ job application since December, 5 interviews, nobody will hire me. ... How do you deal with so many rejections.",
+      "emotional_trigger": "Desperation and hopelessness from mass rejection despite qualifications; financial anxiety and identity crisis when employment history doesn't protect them",
       "score_breakdown": {
         "Audience": 3,
         "Emotion": 3,
-        "Monetization": 2,
+        "Monetization": 3,
         "Recurrence": 3
       },
-      "total_score": 11,
+      "total_score": 12,
       "solvable_10_page_guide": true,
-      "product_direction": "Self-Guided Caregiver Burnout Recovery Guide: Practical steps to find relief, set boundaries, and rebuild hope without expensive therapy",
-      "slug_candidate": "caregiver-burnout-self-help-guide",
+      "product_direction": "A practical guide to following up after job applications\u2014covering when to follow up, email templates, tracking systems, and how to stand out without being annoying",
+      "slug_candidate": "job-application-follow-up-guide",
       "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/CaregiverSupport/comments/dgj82q/im_feeling_overwhelmed_and_trapped_not_sure_what/",
-      "source_query": "overwhelmed new caregiver feel hopeless Reddit caregiving",
+      "source_url": "https://www.reddit.com/r/recruitinghell/comments/1nwfxpq/i_applied_for_125_jobs_so_far_and_all_of_them/",
+      "source_query": "job rejection after 100 applications desperate Reddit",
       "source_platform": "reddit"
     },
     {
       "trend_id": 5,
-      "audience": "Freelancers, independent contractors, consultants, and gig workers who face non-paying clients",
-      "raw_quote": "IMO, if they&#x27;ve hired someone else and are refusing to pay, it&#x27;s time to <strong>send the e-mail that says pay by X date or we&#x27;re going to court</strong>. Then follow through. Does your jurisdiction have any special protections for freelancers?",
-      "emotional_trigger": "Financial anxiety and frustration from unpaid invoices \u2014 this threatens freelancers' livelihood and creates stress about how to recover money owed",
+      "audience": "Freelancers across all verticals (designers, developers, writers, consultants, marketers) \u2014 a massive and growing workforce globally",
+      "raw_quote": "Best of luck! x ... <strong>Try to clear up the payment before you deliver next work</strong>. After that ask for upfront payment, without negotiations about it. If the referals comes from above kind of clients, upfront payment is a must!",
+      "emotional_trigger": "Financial anxiety and frustration when clients don't pay. The visceral stress of having done work but not receiving compensation, dealing with awkward follow-ups, and the power imbalance of being a small operator vs. a client who holds the purse strings",
       "score_breakdown": {
         "Audience": 3,
         "Emotion": 3,
-        "Monetization": 2,
+        "Monetization": 3,
         "Recurrence": 3
       },
-      "total_score": 11,
+      "total_score": 12,
       "solvable_10_page_guide": true,
-      "product_direction": "The Freelancer's Unpaid Invoice Playbook: A Step-by-Step Guide to Getting Paid or Taking Legal Action",
-      "slug_candidate": "unpaid-invoice-freelancer-guide",
+      "product_direction": "The Freelancer's Invoice Protection Playbook: Contracts, Follow-Up Scripts, and Getting Paid Without Burning Bridges",
+      "slug_candidate": "freelancer-get-paid-invoice-protection-guide",
       "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/freelance/comments/empz2g/client_has_not_paid_and_will_not_respond/",
-      "source_query": "desperate freelance client refuses to pay Reddit",
+      "source_url": "https://www.reddit.com/r/freelance/comments/o7k3tm/getting_a_client_to_pay_invoices_help_please/",
+      "source_query": "freelance client won't pay invoice exhausted Reddit",
       "source_platform": "reddit"
     },
     {
-      "trend_id": 9,
-      "audience": "Remote workers (employees and freelancers) struggling with burnout, isolation, and blurred work-life boundaries. A large, growing post-pandemic demographic.",
-      "raw_quote": "12 votes, 13 comments. I got burned out from my work. Working remotely often blurs the line between my work and personal life. However, I have no\u2026",
-      "emotional_trigger": "Burnout, isolation, and the anxiety of having no separation between work and personal life. The poster feels stuck and overwhelmed by the lack of structure in remote work.",
+      "trend_id": 7,
+      "audience": "Freelancers (writers, designers, developers, consultants) who have completed work but haven't been paid by clients",
+      "raw_quote": "If you have exhausted all avenues and are not getting a positive response (or a payment) from a freelance client who hasn&#x27;t paid, <strong>it might be time to take some more serious measures</strong>.",
+      "emotional_trigger": "Financial anxiety, stress, and anger over unpaid invoices; fear of losing income while uncertain how to escalate without damaging the relationship or knowing their legal rights",
       "score_breakdown": {
         "Audience": 3,
         "Emotion": 3,
-        "Monetization": 2,
+        "Monetization": 3,
         "Recurrence": 3
       },
-      "total_score": 11,
+      "total_score": 12,
       "solvable_10_page_guide": true,
-      "product_direction": "The Remote Worker's Boundary Blueprint: A 10-step checklist to reclaim your energy, set firm boundaries, and restore work-life separation while thriving remotely.",
-      "slug_candidate": "remote-work-burnout-prevention-guide",
+      "product_direction": "A step-by-step playbook with email scripts, demand letter templates, escalation checklists, and legal options for recovering unpaid freelance invoices",
+      "slug_candidate": "freelance-unpaid-invoice-playbook",
       "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/remotework/comments/1cqv31c/feeling_isolated_and_burned_out/",
-      "source_query": "remote work burnt out isolated frustrated Reddit",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 10,
-      "audience": "Remote workers who are social by nature and experience loneliness or energy drain from lack of in-person interaction while working from home",
-      "raw_quote": "We own 5 acres, have two dogs, and now a son who is at home with the nanny so I get to see him all the time which is AMAZING, but I do struggle with feeling isolated at work. I\u2019m a pretty social person and video calls just don\u2019t give me the same energy as having a conversation in person does. I know being around people is good for humans, but are long commutes? Being away from family? Spending all day outside of your home?",
-      "emotional_trigger": "Isolation and guilt \u2014 the tension between valuing family proximity and missing genuine workplace connection, compounded by video call fatigue and feeling drained without spontaneous human contact",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A practical guide helping social remote workers build genuine human connection, combat isolation, and design a sustainable WFH routine that satisfies their social needs without commuting",
-      "slug_candidate": "remote-work-social-connection-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/remotework/comments/18m5itl/psychologically_struggling_working_remotely/",
-      "source_query": "remote work burnt out isolated frustrated Reddit",
+      "source_url": "https://www.withmoxie.com/blog/what-to-do-if-your-freelance-client-hasnt-paid-you",
+      "source_query": "freelance client won't pay invoice exhausted Reddit",
       "source_platform": "reddit"
     },
     {
       "trend_id": 11,
-      "audience": "Remote and hybrid knowledge workers struggling with WFH isolation, burnout, procrastination, and work-life boundary issues",
-      "raw_quote": "I\u2019m struggling with the same thing. Went full remote when Covid started and burnt out SO fast, after a month or so. I am still fully remote 4.5 years later and I find my days full of doomscrolling, keeping myself boxed in my office in my own home, and working late because I\u2019ve procrastinated.",
-      "emotional_trigger": "Deep burnout and guilt from procrastination while feeling trapped and isolated working from home 24/7",
+      "audience": "Homeowners and property owners undertaking renovation projects who need to hire contractors",
+      "raw_quote": "Then have the courage to tell the person that. Also contractors screw people over all the time. I\u2019ve lost thousands trusting people and not being cheap at all.",
+      "emotional_trigger": "Frustration and anxiety over losing thousands of dollars and being disrespected by contractors who ghost them after showing interest",
       "score_breakdown": {
         "Audience": 3,
         "Emotion": 3,
-        "Monetization": 2,
+        "Monetization": 3,
         "Recurrence": 3
       },
-      "total_score": 11,
+      "total_score": 12,
       "solvable_10_page_guide": true,
-      "product_direction": "A practical guide for remote workers to reclaim structure, beat burnout, and build sustainable work-from-home habits that actually stick",
-      "slug_candidate": "remote-work-burnout-survival-guide",
+      "product_direction": "The Homeowner's Contractor Vetting Checklist: Never Get Ghosted or Screwed Again",
+      "slug_candidate": "contractor-vetting-checklist-homeowners",
       "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/WFH/comments/1ggmhf9/feeling_burnt_out_from_working_from_home/",
-      "source_query": "remote work burnt out isolated frustrated Reddit",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 12,
-      "audience": "Remote workers aged 22-40 experiencing burnout, isolation, and work-related anxiety \u2014 a massive post-pandemic demographic",
-      "raw_quote": "I see a therapist remotely once a week and it&#x27;s been helpful. ... Hey, I understand that you&#x27;re in a very challenging and stressful situation, and it sounds like you&#x27;re feeling overwhelmed, burnt out, and isolated. It&#x27;s completely understandable that you&#x27;re reaching out and seeking help. Here&#x27;s what I can offer: You&#x27;re not alone. Feeling lost, frustrated...",
-      "emotional_trigger": "Visceral burnout and feeling trapped with no clear path forward; high distress about mental health declining",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "Remote Worker Burnout Recovery: A Practical Checklist for Reclaiming Your Mental Health",
-      "slug_candidate": "remote-worker-burnout-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/careeradvice/comments/17pc3zo/working_remotely_and_the_stress_of_my_job_have/",
-      "source_query": "remote work burnt out isolated frustrated Reddit",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 13,
-      "audience": "Recent graduates and middle-aged professionals struggling with student loan debt who feel financially overwhelmed and are actively seeking relief strategies",
-      "raw_quote": "Answer: Loan, Loan, Financial, financial. Don\u2019t make a mountain of the the challenges in life. Would you be able to climb a steep mountain? Similar to that, the challenges that we face in life, we make it big, so big that we make a mountain out of it. I understand you have a student loan, ...",
-      "emotional_trigger": "Anxiety and hopelessness \u2014 'drowning' metaphor, 'overwhelming' stress, feeling that making ends meet is 'impossible'",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "Student Loan Survival Checklist: 10 Steps to Stop Drowning and Start Building Financial Stability",
-      "slug_candidate": "student-loan-survival-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.quora.com/The-constant-financial-stress-is-overwhelming-Im-drowning-in-student-loans-and-it-feels-impossible-to-make-ends-meet-What-should-I-do",
-      "source_query": "student loan debt trapped overwhelmed Quora",
-      "source_platform": "quora"
-    },
-    {
-      "trend_id": 17,
-      "audience": "Homeowners planning or currently undergoing renovations, especially first-time renovators who feel overwhelmed by the process",
-      "raw_quote": "<strong>It&#x27;s beyond frustrating</strong>....oh one more thing, I came home one day and found 4 of my favorite coffee mugs broken in the trash can. I understand accidents happen, but they didn&#x27;t even bother to tell me or apologize.....at my breaking point lol ...",
-      "emotional_trigger": "Visceral frustration and loss of control \u2014 feeling blindsided by contractors, damaged belongings, and unexpected problems during an already stressful life change",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A contractor-proofing checklist: how to vet contractors, protect your belongings, document everything, and set boundaries before work begins",
-      "slug_candidate": "renovation-protection-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Renovations/comments/1cenwrv/redditors_who_have_recently_renovated_what_was/",
-      "source_query": "home renovation disaster regret frustrated Reddit homeimprovement",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 20,
-      "audience": "Cat owners facing or worried about emergency vet situations, especially urinary/medical emergencies; people seeking pet insurance after a shock bill; new cat owners wanting financial preparedness",
-      "raw_quote": "He just wasnt urinating/drinking water as often though he did urinate, it was small infrequent amounts which is why I did not want to wait and went ahead of the vet appointment, but I was just surprised at how it was presented and the convo was more financial than medical, which again, coming from the human side of things just came off a bit off putting. I have identified two vet offices that are cat only and I am looking forward to resuming his care there and finding pet insurance (though they will not cover anything urinary for him after this).",
-      "emotional_trigger": "Sticker shock from a $6K emergency vet bill + anxiety about their sick cat + frustration with how finances were prioritized over pet care communication + helplessness about being caught unprepared",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "Cat Emergency Vet Cost Guide: What to Expect, How to Prepare Financially, and Questions to Ask Before the Bill Hits",
-      "slug_candidate": "cat-emergency-vet-cost-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/AskVet/comments/1kuwwoo/title_6k_emergency_vet_bill_for_cats_urinary/",
-      "source_query": "pet health emergency vet bill shocked Reddit askvet",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 22,
-      "audience": "Pet owners (primarily dog/cat owners) who face or will face unexpected veterinary emergencies and need financial strategies",
-      "raw_quote": "80 votes, 288 comments. <strong>My dog had emergency surgery last week and the bills have been insane</strong>. Between meds, follow-ups, and food, I&#x27;m trying to stay\u2026",
-      "emotional_trigger": "The dual distress of a sick or injured beloved pet AND the crushing financial burden of emergency medical costs that can reach thousands of dollars",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "The Pet Emergency Vet Cost Survival Guide: Insurance strategies, emergency fund templates, payment plan negotiating tactics, and affordable care alternatives",
-      "slug_candidate": "pet-emergency-vet-bills-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Pets/comments/1o7lkf1/emergency_vet_bills_are_brutalhow_do_you_all/",
-      "source_query": "pet health emergency vet bill shocked Reddit askvet",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 25,
-      "audience": "Adults in committed relationships who feel emotionally disconnected or lonely despite being partnered",
-      "raw_quote": "Does it happen.... yes. Is it okay.... In my opinion, no. Feeling lonely does not feel good, and feeling that way when you are in a relationship. Where, by definition, you are not alone, Would be an even stronger sense of disconnection.",
-      "emotional_trigger": "The visceral pain of feeling alone next to the person you chose to be with, the shame of admitting it, and the fear that this disconnect signals something is broken",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A practical guide for partners who feel lonely in their relationship to rebuild emotional connection without waiting for their partner to change first",
-      "slug_candidate": "reconnect-partner-lonely-relationship-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Life/comments/1j8v549/is_it_okay_to_feel_lonely_in_a_relationship/",
-      "source_query": "relationship feeling alone disconnected Reddit relationships",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 29,
-      "audience": "Adults (25-55) in long-term marriages experiencing emotional disconnection, feeling trapped between loyalty to a 'good' partner and deep unmet needs. Large, well-defined demographic actively seeking clarity on whether to stay or leave.",
-      "raw_quote": "You need to heal the part of you that feels scared or empty otherwise you will always be seeking \u2018more\u2019 and never finding it. ... It\u2019s not that he\u2019s a bad husband\u2014he buys me gifts, supports me, and is reliable. But I feel like I\u2019m emotionally starving, and I don\u2019t think he\u2019ll ever be able to fulfill me in the way I need. So he does have passion and love for you, but he&#x27;s not expressing it in a way you want to receive it. ... Divorce might end up being where you&#x27;re going and you two are just incompatible and it took this long to realize.",
-      "emotional_trigger": "Existential fear and anxiety about making a life-altering decision. The poster experiences emotional starvation despite having a responsible, gift-giving husband\u2014classic incompatibility guilt. The paralysis between wanting to leave but feeling 'done' creates high-distress decision paralysis.",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A decision-clarity guide for spouses questioning their marriage: exercises to distinguish fear from intuition, signs of fixable vs. fundamental incompatibility, and a structured framework to gain confidence in their choice.",
-      "slug_candidate": "emotional-incompatibility-marriage-decision-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Divorce/comments/1isigkd/i_think_im_done_with_my_marriage_but_im_scared_to/",
-      "source_query": "divorce after long marriage lost scared Reddit",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 30,
-      "audience": "Adults going through or anticipating divorce who are concerned about financial devastation, particularly those married to unemployed or financially irresponsible spouses",
-      "raw_quote": "<strong>I had a scare of potential ruin while going through divorce, and it was the first moment I realized how marrying the wrong person can financially destroy you.</strong> He refused to get a job or got fired most of our marriage, spent my money without ...",
-      "emotional_trigger": "Fear of financial ruin and anxiety about being trapped in a marriage that drains all assets; relief-seeking after surviving the worst-case financial scenario",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A practical guide helping divorce-bound individuals protect their assets, understand their financial rights, and avoid common money-draining mistakes during the divorce process",
-      "slug_candidate": "divorce-financial-protection-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Divorce/comments/1k7m6vd/anyone_else_get_financially_ruined_but_everything/",
-      "source_query": "divorce after long marriage lost scared Reddit",
+      "source_url": "https://www.reddit.com/r/Renovations/comments/17g6rjb/keep_getting_ghosted_by_the_contractors/",
+      "source_query": "renovation contractor ghosted lost thousands overwhelmed Reddit",
       "source_platform": "reddit"
     },
     {
       "trend_id": 15,
-      "audience": "Graduate students (Masters/PhD) overwhelmed by student loans and credit card debt who are avoiding or ignoring their financial obligations",
-      "raw_quote": "Overwhelmed by their student loans and credit card debt, some graduate students choose to ignore their money woes, setting themselves up for more financial turmoil. Here&#x27;s how to avoid that trap.",
-      "emotional_trigger": "Anxiety and avoidance behavior around debt \u2014 they know they have a problem but are psychologically paralyzed, leading to compounding financial damage",
+      "audience": "Job seekers experiencing repeated interview rejections, ranging from entry-level to mid-career professionals who feel stuck despite qualifications",
+      "raw_quote": "You were not considered a good \u2018fit\u2019 for the culture of the organization / or sometimes this means the interviewer chose someone who was more like \u201ctheir type of person\u201d. As long as you are being yourself and are presenting / preparing per the above suggestions, I wouldn&#x27;t worry about this. This scenario indicates that if you got the job, you might be unhappy there anyway\u2026but it\u2019s frustrating and hard not to take personally.",
+      "emotional_trigger": "Exhaustion, self-doubt, and frustration after 30+ rejections \u2014 the poster feels rejected and is struggling not to internalize failure",
       "score_breakdown": {
-        "Audience": 2,
+        "Audience": 3,
         "Emotion": 3,
-        "Monetization": 2,
+        "Monetization": 3,
         "Recurrence": 3
       },
-      "total_score": 10,
+      "total_score": 12,
       "solvable_10_page_guide": true,
-      "product_direction": "The Graduate Student's Debt Action Plan: Stop Avoiding, Start Fixing Your Loans in 30 Days",
-      "slug_candidate": "grad-student-debt-action-plan",
+      "product_direction": "A complete interview rebound system covering mindset reset, answer restructuring, body language prep, and rejection analysis to convert future interviews",
+      "slug_candidate": "rejection-proof-interview-system",
       "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.apa.org/gradpsych/2013/01/debt",
-      "source_query": "student loan debt trapped overwhelmed Quora",
+      "source_url": "https://www.quora.com/Ive-been-rejected-over-30-times-by-interviewers-What-should-I-do-now",
+      "source_query": "Quora job interview rejected 30 times frustrated",
       "source_platform": "quora"
     },
     {
       "trend_id": 18,
-      "audience": "Homeowners planning major renovation projects (siding, roofing, kitchens) who want to avoid costly mistakes and relationship strain",
-      "raw_quote": "Anyone have any regrets after replacing your siding? I\u2019m getting closer to picking a company to do the work? ... Dude, a renovation pushes married couples to their limits, why you would do this with a girlfriend is beyond me. Search through Reddit disaster stories of couples breaking up and having shared property.",
-      "emotional_trigger": "Fear of making expensive home renovation mistakes, anxiety about hiring unreliable contractors, stress on marriages/relationships during disruptive projects",
+      "audience": "Software engineers and tech job seekers actively applying to positions at tech companies",
+      "raw_quote": "Failed in 9 tech interviews in the last 6 months, I just can\u2019t take it anymore, what should I do? originally appeared on Quora: the place to gain and share knowledge, empowering people to learn from others and better understand the world.",
+      "emotional_trigger": "Desperation and burnout from repeated rejection; the person is at a breaking point after failing 30+ interviews",
       "score_breakdown": {
         "Audience": 3,
-        "Emotion": 2,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "The Home Renovation Survival Guide: Avoid the Costly Mistakes That Break Couples and Bank Accounts",
-      "slug_candidate": "home-renovation-mistakes-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/HomeImprovement/comments/1li054g/what_are_your_biggest_home_renovation_regrets/",
-      "source_query": "home renovation disaster regret frustrated Reddit homeimprovement",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 21,
-      "audience": "Pet owners who have faced unexpected or disputed emergency vet bills and feel financially exploited by veterinary care",
-      "raw_quote": "Your decisions from that point on were made based on the incorrect information the vet gave you. They made a mistake, not you. <strong>I&#x27;m absolutely stunned that they still build you for $1,700 of treatment based on an incorrect diagnosis</strong>.",
-      "emotional_trigger": "Financial betrayal and anger \u2014 they feel they were swindled by a vet misdiagnosis and are seeking validation that the system failed them",
-      "score_breakdown": {
-        "Audience": 2,
         "Emotion": 3,
-        "Monetization": 2,
+        "Monetization": 3,
         "Recurrence": 3
       },
-      "total_score": 10,
+      "total_score": 12,
       "solvable_10_page_guide": true,
-      "product_direction": "Emergency Vet Bill Disputes: How to Evaluate Diagnoses, Get Refunds, and Protect Your Pet",
-      "slug_candidate": "emergency-vet-bill-dispute-guide",
+      "product_direction": "A tactical checklist for passing tech interviews: what to study, how to practice, mistakes to avoid, and how to recover from rejection",
+      "slug_candidate": "never-fail-a-tech-interview-again-checklist",
       "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Pets/comments/1q8k2qg/i_feel_like_i_wasted_1700_at_the_emergency_vet/",
-      "source_query": "pet health emergency vet bill shocked Reddit askvet",
-      "source_platform": "reddit"
+      "source_url": "https://www.inc.com/quora/what-i-learned-from-failing-30-interviews.html",
+      "source_query": "Quora job interview rejected 30 times frustrated",
+      "source_platform": "quora"
     },
     {
-      "trend_id": 23,
-      "audience": "Pet owners facing unexpected or emergency veterinary bills, particularly cat owners dealing with urgent health issues like urinary problems",
-      "raw_quote": "A place where you can ask veterinary medicine related questions and get advice from veterinary professionals \u00b7 https://imgur.com/a/v7EJVTV I only ask because the charges seemed rather high. The cat was going in due to peeing blood and my Mother took him in to get checked out.",
-      "emotional_trigger": "Anxiety and frustration about whether they're being overcharged during a stressful emergency situation with their pet",
+      "trend_id": 22,
+      "audience": "Adults with health insurance in the US who have received or will receive unexpected medical bills or insurance claim denials",
+      "raw_quote": "Got a bill in June 2021 saying claim was denied. I called my insurance company which then called the provider. The provider submitted claim with my daughter as the subscriber. Provider resubmitted the claim which was denied so i called my insurance company again. They called the provider and told them they had to eat the cost because the error was made by the provider, not my daughter or the insurance.",
+      "emotional_trigger": "Anxiety and frustration from receiving surprise medical bills 1-2 years after service, dealing with provider billing errors, and uncertainty about how to dispute or resolve unexpected financial liability",
       "score_breakdown": {
         "Audience": 3,
-        "Emotion": 2,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "Emergency Vet Bill Review Checklist: Know What Charges Are Normal Before You Pay",
-      "slug_candidate": "emergency-vet-bill-review-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/AskVet/comments/1ejhvu3/emergency_vet_bill_do_these_charges_seem_typical/",
-      "source_query": "pet health emergency vet bill shocked Reddit askvet",
-      "source_platform": "reddit"
-    },
-    {
-      "trend_id": 28,
-      "audience": "Women and men in their 40s-50s navigating divorce after 15-25+ year marriages, suddenly re-entering the dating world after being with one person since their late teens or early 20s",
-      "raw_quote": "My husband left me for another woman just shy of 25 years of marriage. I had even bought a dress to wear for our 25th anniversary\u2014it\u2019s too late to return it, and I feel like a fool. I got married at 18, and now I\u2019m suddenly single. It\u2019s been quite the adjustment. ... That&#x27;s terrible. I&#x27;m sorry. ... I\u2019m 43, and I will be a total novice at dating. Scared to even try! The divorce itself is amicable\u2014we have a child so we are forcing ourselves to be civil.",
-      "emotional_trigger": "The visceral pain of betrayal combined with paralyzing fear of starting over\u2014feeling like a complete novice at dating in a world that feels foreign, layered with the humiliation of the dress and wasted years",
-      "score_breakdown": {
-        "Audience": 2,
         "Emotion": 3,
-        "Monetization": 2,
+        "Monetization": 3,
         "Recurrence": 3
       },
-      "total_score": 10,
+      "total_score": 12,
       "solvable_10_page_guide": true,
-      "product_direction": "A practical guide for late-30s to mid-40s divorcees on re-entering dating after long marriages\u2014building confidence, understanding modern dating apps, setting boundaries, and avoiding common pitfalls",
-      "slug_candidate": "dating-after-divorce-over-40-guide",
+      "product_direction": "A step-by-step guide to disputing medical billing errors and insurance claim denials when the error was made by the provider",
+      "slug_candidate": "medical-billing-dispute-guide",
       "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Divorce/comments/wwsqs9/divorced_after_15_20_25_years_of_marriage/",
-      "source_query": "divorce after long marriage lost scared Reddit",
+      "source_url": "https://www.reddit.com/r/personalfinance/comments/omssea/urgent_care_emailed_me_a_medical_bill_112_year/",
+      "source_query": "medical billing error insurance denied desperate Reddit",
       "source_platform": "reddit"
     },
     {
-      "trend_id": 24,
-      "audience": "Adult children, family members, caregivers, and customer service workers who regularly interact with older adults and feel frustrated teaching them technology",
-      "raw_quote": "It&#x27;s true that many older people grew up in a time when computers were less prevalent. <strong>Some may feel genuinely overwhelmed by the pace at which technology has evolved, especially if they didn&#x27;t have opportunities to engage with it in the past</strong>.",
-      "emotional_trigger": "Annoyance and helplessness when older relatives or customers resist basic technology, leading to repeated support burdens and family tension",
+      "trend_id": 26,
+      "audience": "Homeowners planning a kitchen remodel who feel financially stretched and overwhelmed by costs",
+      "raw_quote": "Before you go talking to a contractor, you need to understand what you actually want and what you think you\u2019re willing pay for it. Then you need to temper your expectations it sounds like a 30 year old kitchen is somehow falling apart. Unless your cabinets are falling off, the things you probably really \u201cneed\u201d are a repaint of the cabinets, and if maybe splurge on a prefab quartz or granite countertop. ... I desperately need a kitchen remodel that i can&#x27;t afford, means I am in denial about still or possibly ever being &quot;upper &quot; middle class",
+      "emotional_trigger": "Desperation and anxiety about being unable to afford a necessary home upgrade, combined with shame about class identity discrepancy",
       "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 2,
-        "Monetization": 2,
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 3,
         "Recurrence": 3
       },
-      "total_score": 9,
+      "total_score": 12,
       "solvable_10_page_guide": true,
-      "product_direction": "Step-by-step guide for teaching technology to resistant older adults with patience-building techniques, simplified explanations, and common scenario solutions",
-      "slug_candidate": "teach-grandma-tech-guide",
+      "product_direction": "A guide on how to budget, prioritize, phase, and finance a kitchen remodel without breaking the bank",
+      "slug_candidate": "how-to-afford-kitchen-remodel-guide",
       "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/PetPeeves/comments/167p1gf/when_older_people_refuse_to_learn_basic_technology/",
-      "source_query": "technology overwhelmed frustrated senior citizens Reddit",
+      "source_url": "https://www.reddit.com/r/Remodel/comments/1fipzsn/i_consider_ourselves_upper_middle_class_but_how/",
+      "source_query": "DIY kitchen remodel disaster can't afford contractor Reddit",
       "source_platform": "reddit"
     },
     {
       "trend_id": 27,
-      "audience": "Adults in committed relationships who feel emotionally disconnected or lonely despite having a partner",
-      "raw_quote": "Op you should <strong>check if you are connected to yourself and can be happy being alone first</strong>. You might be expecting your so to fix a problem you have. They cant. If you are at peace with yourself and still feel alone then perhaps you just aren&#x27;t ...",
-      "emotional_trigger": "The paradox of feeling alone even with someone present\u2014sense of unmet emotional needs and existential isolation in a relationship",
+      "audience": "Homeowners planning kitchen remodels with $15K-$50K budgets who feel overwhelmed by contractor pricing and unsure if their budget expectations are realistic",
+      "raw_quote": "Otherwise LVP is best suited for a laundry room or basement as far as I am concerned. It&#x27;s a solid product, and many people seem to like the looks, but it just feels and looks &quot;flipped house&quot; or &quot;beginner DIY&quot; cheap to me. ... Most contractors won\u2019t touch a kitchen remodel for that price point.",
+      "emotional_trigger": "Anxiety and self-doubt about whether their budget is delusional, plus frustration that contractors won't work with them at their price point",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 3,
+        "Recurrence": 3
+      },
+      "total_score": 12,
+      "solvable_10_page_guide": true,
+      "product_direction": "A practical guide helping homeowners set realistic kitchen remodel budgets, understand contractor pricing, and avoid getting overcharged",
+      "slug_candidate": "kitchen-remodel-budget-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/HomeImprovement/comments/mibebm/kitchen_remodel_is_20k_impossible_or_am_i/",
+      "source_query": "DIY kitchen remodel disaster can't afford contractor Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 2,
+      "audience": "Entry-level job seekers, recent graduates (22-26), career changers, and anyone struggling with high-volume job applications and ATS systems",
+      "raw_quote": "Please don\u2019t ascribe your self worth or 100% rejection rates to logic. Recruiters are mostly trash people and hiring managers are lemmings and fascists. Don\u2019t give up but do format your resume for EACH listing because in the insanely stupid world we live in, word parsing algorithms have reduced humans to Seo tags. Try govt jobs and try getting certs.",
+      "emotional_trigger": "Anxiety, hopelessness, and shame around rejection \u2014 feeling dehumanized by automated hiring systems; the emotional weight of being 'reduced to SEO tags' when identity and livelihood feel at stake",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "The ATS-Proof Resume Playbook: A Step-by-Step Guide to Beating Automated Screening and Getting Your Application Seen by a Human",
+      "slug_candidate": "ats-proof-resume-playbook-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/resumes/comments/1dfh4l4/23f_300_applications_100_rejection_rate_what_am_i/",
+      "source_query": "job rejection after 100 applications desperate Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 3,
+      "audience": "Entry-level job seekers, recent graduates, and career changers struggling with high rejection rates and ATS systems",
+      "raw_quote": "I just applied to a job today, name dropped too and literally got rejected, also in the same day. So yeah, It&#x27;s ridiculous and I&#x27;m convinced I&#x27;ll never find a job. I swear half of the countries population has to be gone before any of us will have a proper chance at a job these days. Finding a job is like entering the housing market: impossible by yourself. ... I think LinkedIn jobs is a sack of shit. Hey, I work in a niche (SAP QM) and even when applying for this I see 50+, 100+ applicants.",
+      "emotional_trigger": "Desperation, hopelessness, and rejection fatigue from applying to hundreds of jobs with no traction; feeling the job market is rigged against them",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Beat the ATS: A Strategic Job Application Guide for Getting Past Automated Rejections",
+      "slug_candidate": "beat-the-ats-job-search-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/recruitinghell/comments/14jq18u/getting_rejected_by_100s_of_entry_level_jobs_is/",
+      "source_query": "job rejection after 100 applications desperate Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 12,
+      "audience": "Homeowners and aspiring homeowners hiring contractors for renovations, repairs, or construction projects \u2014 a massive and recurring demographic",
+      "raw_quote": "Meanwhile we were traveling often because my younger brother was hospitalized in our home state getting a heart transplant after he unexpectedly took a turn for the worst and the contractor knew that. His excuse for sucking? He said he was stressed and had a medical problem and had to look out for his health and his own family. What was his medical problem? He bit his tongue in his sleep. Yup. That\u2019s all it was. Look, we\u2019re all stressed and have to look out for our families. But we paid him $54k! I saw his name in a reddit post for my city recently, he took $25k from someone then ghosted them.",
+      "emotional_trigger": "Financial betrayal and helplessness \u2014 trusting someone with $54k+ only to be ghosted mid-project, compounded by a family medical crisis that made them vulnerable",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Contractor Vetting & Protection Guide: How to hire contractors without getting scammed, including contract clauses, payment schedules, and red flags",
+      "slug_candidate": "contractor-protection-guide-avoid-being-scammed",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/RealEstateAdvice/comments/1sec9yt/my_contractor_ghosted_me_midrenovation_and_i_want/",
+      "source_query": "renovation contractor ghosted lost thousands overwhelmed Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 13,
+      "audience": "Homeowners who have hired or need to hire contractors for renovation/repair projects",
+      "raw_quote": "So much of the industry is triggered ... their values in any way - <strong>they&#x27;re gonna ghost you because we&#x27;ve lost tens of thousands if not hundreds of thousands of dollars to people that wasted their time.</strong>...",
+      "emotional_trigger": "Frustration and financial anxiety from being ignored by contractors, with potential losses of thousands of dollars",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Contractor Vetting Checklist: Questions to Ask Before You Hire to Avoid Getting Ghosted",
+      "slug_candidate": "contractor-ghosting-checklist",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/HomeImprovement/comments/nxedrs/ghosted_by_contractors/",
+      "source_query": "renovation contractor ghosted lost thousands overwhelmed Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 16,
+      "audience": "Job seekers experiencing repeated interview rejections, particularly those making it to final rounds but not converting offers. Includes new graduates, career changers, and anyone navigating job transitions.",
+      "raw_quote": "Yes, I am saying this because 3 or 4 is smaller number in my case. I was rejected for more than 12\u201315 times in interviews and that too in final rounds for most of them. Sometimes, I became frustrated as to what is going wrong and where am I making the mistakes and eventually take unnecessary tension.",
+      "emotional_trigger": "Deep self-doubt and identity crisis ('am I a failure?') combined with frustration and anxiety about career trajectory. The pain is visceral and affects self-worth, not just surface-level frustration.",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Guide on decoding final-round rejections: why strong candidates keep failing at the last stage and a proven framework to diagnose and fix interview blind spots before your next opportunity.",
+      "slug_candidate": "why-do-i-keep-failing-final-round-interviews",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.quora.com/What-should-I-do-if-I-get-rejected-multiple-times-in-an-interview-Should-I-accept-the-fact-that-I-am-a-failure",
+      "source_query": "Quora job interview rejected 30 times frustrated",
+      "source_platform": "quora"
+    },
+    {
+      "trend_id": 20,
+      "audience": "First-time solo female travelers aged 25-40, often digital nomads or remote workers, actively researching safety and logistics for unfamiliar destinations",
+      "raw_quote": "If you go on YouTube or TikTok, there&#x27;s probably hundreds of videos about traveling as a woman alone especially in countries or cities where you just don&#x27;t know the neighborhoods very well. If you don&#x27;t have any friends, there definitely go on the Reddit subs for those cities and just ask about behavior and location safety. ... I&#x27;m usually not that anxious once I get going. I absolutely despise planning solo though.",
+      "emotional_trigger": "Pre-trip anxiety about personal safety in unknown cities + deep frustration with solo trip planning complexity \u2014 'I absolutely despise planning solo'",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "The 'First Solo Trip Planning Checklist' for anxious first-time female travelers \u2014 covers safety research protocols, pre-departure anxiety reduction steps, city-specific vetting checklist, and day-by-day planning templates",
+      "slug_candidate": "first-solo-trip-planning-checklist-female-travelers",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/digitalnomad/comments/16xmjj7/is_it_normal_to_be_nervous_for_my_first_solo_trip/",
+      "source_query": "first solo travel planning anxious overwhelmed Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 21,
+      "audience": "Solo travelers, primarily beginners to intermediate, who want to travel independently but feel paralyzed by logistics, scheduling, and covering distances solo",
+      "raw_quote": "Never planned more than 2 weeks ahead. <strong>Was anxious at times because I do need to be covering distances</strong>. But staying in place for a weekend longer just to unwind and do nothing usually gave me perspective.",
+      "emotional_trigger": "Anxiety and overwhelm around planning logistics, timing, and managing long distances without support \u2014 fear of missing something critical or getting stranded",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 3,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "A step-by-step solo travel planning checklist that removes decision paralysis and builds confidence for first-time and nervous solo trippers",
+      "slug_candidate": "solo-travel-planning-checklist-for-anxious-travelers",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/solotravel/comments/1fgu1ti/anyone_else_get_overwhelmed_by_planning_everything/",
+      "source_query": "first solo travel planning anxious overwhelmed Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 23,
+      "audience": "US adults with health insurance who face claim denials, medical billing disputes, or university health insurance waiver requirements",
+      "raw_quote": "Medical Bill \u201cTransferred\u201d from MyCommonSpirit to AdventHealth. I cannot get ahold of anyone at AdventHealth via phone or email and bills are now past due. Anyone from Colorado experience this? ... QB just called and said they needed my credit card number or I would no longer be supported. ... LPT Request: University denied my health insurance waiver because my provider has to be &quot;within 55 miles of the campus&quot; even though it is.",
+      "emotional_trigger": "Financial anxiety and helplessness \u2014 being potentially responsible for unexpected medical bills with no way to reach the provider creates urgent stress",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "A step-by-step checklist for disputing denied claims, reaching billing departments, filing state complaints, and resolving transferred provider bills",
+      "slug_candidate": "medical-claim-denied-billing-dispute-checklist",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/HealthInsurance/comments/1iokole/claimed_denied_because_healthcare_provider_did/",
+      "source_query": "medical billing error insurance denied desperate Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 25,
+      "audience": "US health insurance policyholders who've received claim denials despite having prior authorization",
+      "raw_quote": "Your situation may vary, but <strong>this is frequently just a billing error and will get resolved</strong>. Don\u2019t stress on it yet. It is likely that your doctor will resubmit the claim with different codes.",
+      "emotional_trigger": "The frustration and anxiety of being denied coverage AFTER doing everything right (getting prior authorization), facing unexpected bills and feeling powerless against insurance companies",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Win Your Insurance Appeal: A Step-by-Step Checklist for Resolving Prior Authorization Claim Denials and Getting Your Claim Paid",
+      "slug_candidate": "insurance-claim-appeal-checklist",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/HealthInsurance/comments/1ijul85/insurance_denied_claim_that_was_prior_authorized/",
+      "source_query": "medical billing error insurance denied desperate Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 1,
+      "audience": "Mid-career professionals over 30 who are overqualified and being rejected for roles they are clearly qualified for, often blamed on 'cultural fit' or ATS filters",
+      "raw_quote": "<strong>I resigned, and haven&#x27;t found another job after 1000s of applications</strong>. I eventually made a fake and crappy resume so I could get hired in retail earning less than I did in high school when adjusted for inflation.",
+      "emotional_trigger": "Deep humiliation and desperation \u2014 the poster quit their job, sent thousands of applications, got rejected repeatedly, and finally had to sabotage their own resume to land retail work earning less than their teenage wages. This is existential-level job search pain.",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Resume Strategy for Overqualified Candidates: How to Reposition Your Experience So ATS Systems and Hiring Managers Stop Rejecting You",
+      "slug_candidate": "overqualified-job-seekers-resume-strategy-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/recruitinghell/comments/1ay762l/im_continuously_getting_rejected_for_jobs_im/",
+      "source_query": "job rejection after 100 applications desperate Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 6,
+      "audience": "Freelancers, independent contractors, consultants, and self-employed professionals who have completed work for clients and are struggling to collect payment",
+      "raw_quote": "30 votes, 28 comments. A former client who still has yet to settle any of the final invoices for work completed. They are over 3 months in arrears\u2026",
+      "emotional_trigger": "Financial anxiety, anger, and helplessness caused by clients who refuse to pay for completed work \u2014 directly impacting livelihood, cash flow, and professional confidence",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "A tactical checklist/guide walking freelancers through invoice recovery: contract hardening, documentation, escalation templates, legal options, and when to cut losses",
+      "slug_candidate": "freelancer-unpaid-invoice-recovery-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/freelance/comments/ucga1m/advice_needed_my_client_refuses_to_settle/",
+      "source_query": "freelance client won't pay invoice exhausted Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 8,
+      "audience": "Freelancers and independent contractors (designers, writers, developers, consultants) who invoice clients and face payment delays or non-payment",
+      "raw_quote": "New York also has the Freelance Isnt Free Act which makes it much easier to sue for unpaid invoices. ... I&#x27;m going through this right now. A client has been saying they&#x27;re going to pay for months. I threatened to file a lawsuit, and they responded quickly saying they would pay.",
+      "emotional_trigger": "Financial anxiety and visceral anger: someone just disappeared with $10k of your money, causing real cash flow crisis and forcing uncomfortable confrontation",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Step-by-step guide for freelancers to collect unpaid invoices, from professional follow-ups to leveraging laws like the Freelance Isn't Free Act to threatening legal action",
+      "slug_candidate": "freelancer-unpaid-invoice-collection-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/freelance/comments/zdyyq1/client_owes_me_10k_and_totally_disappeared/",
+      "source_query": "freelance client won't pay invoice exhausted Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 14,
+      "audience": "Homeowners who have hired contractors for major renovation projects ($50K+) and are experiencing communication breakdowns, disputes, or abandonment mid-project",
+      "raw_quote": "I understand the challenges that contractors are dealing with and do not envy your line of work right now. I also appreciate that you &quot;solve problems&quot; and communicate with clients. That lack of communication is what&#x27;s killing me now. I suspect they did a terrible job at estimating the cost of the project, have lost their margin, and are ghosting with whatever funds they could take in hope that I won&#x27;t be able to recover anything.",
+      "emotional_trigger": "Financial devastation and helplessness \u2014 a $160K investment at risk with a half-finished property and no recourse visible. Anxiety about legal action, contractor liens, and recovering sunk costs",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "A step-by-step legal and financial recovery guide for homeowners when a contractor ghosts them or abandons a large project mid-way",
+      "slug_candidate": "contractor-ghosted-you-what-to-do-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/HomeImprovement/comments/qmuqgv/ghosted_by_contractor_at_end_of_160k_project_what/",
+      "source_query": "renovation contractor ghosted lost thousands overwhelmed Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 17,
+      "audience": "Job seekers (particularly tech/professionals) who have experienced multiple interview rejections and feel discouraged or stuck in their job search process",
+      "raw_quote": "<strong>Since I started interviewing in 2010, I have been rejected by almost 30 companies</strong>. I have been selected by 6. I have interviewed at everyone\u2019s favourite tech company in Mountain View thrice and failed.",
+      "emotional_trigger": "Frustration and discouragement from repeated interview rejections balanced with desire for hope and proven strategy to finally succeed",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "A resilience-focused interview guide for job seekers who've been rejected multiple times, with actionable bounce-back strategies and mindset frameworks",
+      "slug_candidate": "interview-rejection-recovery-checklist",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://storypick.com/quora-job-advice/",
+      "source_query": "Quora job interview rejected 30 times frustrated",
+      "source_platform": "quora"
+    },
+    {
+      "trend_id": 28,
+      "audience": "Homeowners planning major kitchen or bathroom renovations who are weighing the DIY vs. contractor cost decision, often budget-constrained first-time renovators",
+      "raw_quote": "Didn&#x27;t get quotes cuz couldn&#x27;t afford them. Probably spent 20k a few years ago doing a kitchen remodel including very minor plumbing (fridge line), some electrical, cabinets, counter tops etc. Full service would definitely have topped 60k (from friends experience) ... Yeah, the quotes are eye watering, for sure. ... I\u2019m redoing my bathrooms. I have a plumber and a tile guy. That\u2019s all I need. My plumber is helping me do demo. Tile guy will do drywall and tile. Contractor just takes money for coordinating all this.",
+      "emotional_trigger": "Sticker shock from contractor quotes ($60k+ for kitchens), combined with anxiety about making expensive renovation mistakes and desire to protect home equity while saving thousands",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Step-by-step guide to coordinating your own major renovation: what to DIY vs. hire out, how to manage contractors, and budget benchmarks to avoid overpaying",
+      "slug_candidate": "diy-kitchen-renovation-save-thousands-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Remodel/comments/1lu64l5/how_much_did_you_actually_save_by_diying_a_large/",
+      "source_query": "DIY kitchen remodel disaster can't afford contractor Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 29,
+      "audience": "Adults estranged from family members (r/EstrangedAdultChild has 90k+ members) who are navigating pressure to reconcile and struggling to maintain boundaries with relatives who push back on their no-contact decision.",
+      "raw_quote": "I know my family that is urging me to try is out of love. But I am struggling with how to maintain boundaries about it. Does any one have any tips on how to navigate? Share ... This is going to sound harsh, but I&#x27;ve admitted multiple times on this and other subs I&#x27;m an asshole about no contact/estrangement.",
+      "emotional_trigger": "Guilt, anxiety, and isolation from maintaining a difficult but necessary boundary against relentless family pressure. The poster feels like an 'asshole' for their choice\u2014classic emotional exhaustion from standing firm while being judged.",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "A compassionate guide helping estranged adults maintain no contact, respond to flying monkeys, script boundary-setting language, and manage the guilt and social fallout without compromising their mental health.",
+      "slug_candidate": "no-contact-boundaries-guide-estranged-adults",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/EstrangedAdultChild/comments/19dpm08/maintaining_no_contact_and_establishing/",
+      "source_query": "parent estranged family boundary setting overwhelmed Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 30,
+      "audience": "Adults (25-50) navigating estrangement from parents or family members, particularly those managing low/no contact during holidays, reunions, or events",
+      "raw_quote": "<strong>Common reasons for estrangement are abuse, differing expectations about family roles, neglect, clashes based on personalities, or value systems like religion</strong>. NC = No Contact, LC = Low Contact, VLC = Very Low Contact ...",
+      "emotional_trigger": "Deep anxiety, guilt, and conflict between wanting family connection and needing to protect mental health; fear of confrontation and social pressure",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "A guide with scripts, boundary-setting strategies, and emotional prep for estranged adults facing family reunions or events",
+      "slug_candidate": "estranged-family-reunion-boundary-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/EstrangedAdultChild/comments/1dzvck9/family_reunion_when_low_contact_with_parents_how/",
+      "source_query": "parent estranged family boundary setting overwhelmed Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 9,
+      "audience": "Young adults, renters, and students in shared housing situations who face financial disputes when roommates move out early or break a lease",
+      "raw_quote": "<strong>If they leave they will be breaking such a contract and zero security deposit back</strong>, also you don&#x27;t know for sure if they damaged something. It&#x27;s a pain, but not your problem, if they want to move out before the contract ends, it&#x27;s their loss.",
+      "emotional_trigger": "Frustration and confusion over unfair financial demands when roommates leave, combined with uncertainty about legal rights and obligations",
       "score_breakdown": {
         "Audience": 2,
         "Emotion": 2,
@@ -633,71 +573,117 @@
       },
       "total_score": 9,
       "solvable_10_page_guide": true,
-      "product_direction": "A guide helping people identify emotional loneliness in relationships, practice self-connection, and communicate needs to partners effectively",
-      "slug_candidate": "stop-feeling-alone-in-your-relationship",
+      "product_direction": "Roommate Security Deposit Guide: How to handle deposit disputes when roommates leave early or break a lease",
+      "slug_candidate": "roommate-security-deposit-dispute-guide",
       "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/lonely/comments/qpldmh/do_you_ever_feel_lonely_in_a_relationship/",
-      "source_query": "relationship feeling alone disconnected Reddit relationships",
+      "source_url": "https://www.reddit.com/r/roommates/comments/1cdnp3m/my_roommates_are_moving_out_and_expect_me_to_pay/",
+      "source_query": "roommate moved out damaged apartment scared deposit Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 10,
+      "audience": "Urban renters in shared apartments, particularly young professionals and students in expensive cities like NYC, LA, Boston who need to navigate roommate deposit arrangements",
+      "raw_quote": "Yes. <strong>If the two of you had moved in at the same time you both would have paid half of the deposit to the landlord</strong>. Because the roommate no longer has exclusive use of the apartment it&#x27;s important for them to get a deposit from you, to cover ...",
+      "emotional_trigger": "Anxiety about losing money, distrust of roommate's financial reliability, stress over protecting yourself from deposit disputes, fear of being stuck in an unfair arrangement",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Roommate Security Deposit Protection Guide: How to Split, Document, and Dispute Deposits Without Losing Money",
+      "slug_candidate": "roommate-security-deposit-protection-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/AskNYC/comments/106c8z0/roommate_security_deposit_help/",
+      "source_query": "roommate moved out damaged apartment scared deposit Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 19,
+      "audience": "Experienced solo travelers who still get pre-trip anxiety, skewing toward first-time or return solo travelers aged 25-45, often women seeking practical tools",
+      "raw_quote": "If you get overwhelmed, you can <strong>try a tour or hiring a driver to make it easier on yourself</strong>. Its worth spending a little more if it gives you peace of mind. You&#x27;re also not trapped.",
+      "emotional_trigger": "Pre-trip anxiety that undermines confidence despite past solo travel success; feels like impending dread about logistics, safety, and being overwhelmed",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Solo Travel Anxiety Checklist: 10 steps to calm pre-trip nerves and feel prepared before every journey",
+      "slug_candidate": "solo-travel-anxiety-checklist",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/solotravel/comments/1p7vvni/experienced_in_solo_travel_but_very_anxious_about/",
+      "source_query": "first solo travel planning anxious overwhelmed Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 24,
+      "audience": "Medicare beneficiaries with secondary insurance (typically 65+, retirees, or disabled individuals) facing unexpected medical bills from provider billing errors",
+      "raw_quote": "The provider is basically trying to stick you with their billing mistake \ud83d\udc80 When you have Medicare + secondary insurance, the provider can&#x27;t balance bill you for amounts that got denied because they screwed up the claim submission to your secondary. Cigna told them exactly what was wrong - they split services that should have been on same claim. That&#x27;s on provider to fix, not you to pay for their error.",
+      "emotional_trigger": "Anxiety and frustration from being billed for a provider's mistake; fear of paying money they don't owe",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Medicare Secondary Billing Errors: A Patient's Step-by-Step Guide to Disputing Wrongful Balance Bills",
+      "slug_candidate": "medicare-balance-billing-dispute-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/HealthInsurance/comments/1sk99uf/confused_about_bill/",
+      "source_query": "medical billing error insurance denied desperate Reddit",
       "source_platform": "reddit"
     }
   ],
   "rejected": [
     {
-      "title": "r/HomeImprovement on Reddit: Going on 2 years of full home reno. Feeling burnout",
-      "description": "We\u2019re frustrated with where we\u2019re at and feeling regret about buying this home. While we know we\u2019ll be happy with it in the end, it\u2019s hard not to feel some resentment. Any words of wisdom? Or sympathy",
+      "title": "r/AmItheAsshole on Reddit: AITA for wanting my deposit from the new person takin",
+      "description": "What would be most fair would be for the landlord to come and inspect the apartment entire apartment and tell the current renters how much damage is there. If there is none, then he would give OP her ",
       "rejection_reason": "Too short to analyze or AI error",
-      "source_query": "home renovation disaster regret frustrated Reddit homeimprovement"
+      "source_query": "roommate moved out damaged apartment scared deposit Reddit"
     },
     {
-      "source_query": "technology overwhelmed frustrated senior citizens Reddit",
-      "title": "r/AskReddit on Reddit: What technology do the senior citizens in your life strug",
-      "description": "I don&#x27;t think it&#x27;s technology so much as change. My mum uses a computer full time for her job, she&#x27;s just turned 70 and doesn&#x27;t want to retire yet. She can do her job fine. But whe",
-      "rejection_reason": "This is an AskReddit discussion thread (gathering opinions) not a problem statement from someone seeking a solution. The actual audience experiencing the pain (seniors) is unlikely to search for or buy a guide themselves. Monetization depends on convincing caregivers to buy it. The topic is too broad (all technology) rather than one specific solvable problem.",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 2,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 9
-    },
-    {
-      "source_query": "technology overwhelmed frustrated senior citizens Reddit",
-      "title": "r/slatestarcodex on Reddit: Why do many older people struggle with computers? Wh",
-      "description": "<strong>Older people seem to be overwhelmed by the constant presence of options</strong>. My father used to draw tree diagrams of all the menu and sub-menu choices of his tax software, so he would kno",
-      "rejection_reason": "While recurrence is strong, monetization is weak \u2014 this content is widely available for free (YouTube tutorials, senior center materials, AARP resources). The question is also too broad and philosophical rather than a specific, actionable problem. A digital product needs a tighter niche (e.g., 'Setting Up iPad for Dementia Patients' or 'Simplified Windows 11 for Seniors').",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 2,
-        "Monetization": 1,
-        "Recurrence": 3
-      },
-      "total_score": 8
-    },
-    {
-      "title": "r/BoomersBeingFools on Reddit: Is anyone else completely frustrated with the lac",
-      "description": "Even the boomer that runs it gets frustrated with them. ... I have a buddy who is so on top of his shit. He\u2019s 80 and uses Apple Pay and has a smartwatch and is always letting me know about ios updates",
+      "title": "r/Landlord on Reddit: [Tenant US-CA] Security deposit issue with roommate",
+      "description": "... This is an issue between you and your roommate. <strong>You need to come to an agreement together</strong>. It will have nothing to do with the landlord. If I were in your shoes, I would ask for y",
       "rejection_reason": "Too short to analyze or AI error",
-      "source_query": "technology overwhelmed frustrated senior citizens Reddit"
+      "source_query": "roommate moved out damaged apartment scared deposit Reddit"
     },
     {
-      "source_query": "relationship feeling alone disconnected Reddit relationships",
-      "title": "[Mature Content] r/AskWomen on Reddit: When was the time you realised you're lon",
-      "description": "It made me feel disconnected from him during the weekdays, and I found myself wishing the time away so the weekend could come and I could feel connected again. Periodically throughout our relationship",
-      "rejection_reason": "While the emotion is high and audience moderate, monetization is unlikely (this is perceived as needing personal advice/therapy, not a checklist). More critically, a 10-page guide is not a solvable approach for this deeply relational, emotionally complex problem that requires personal communication, couple's work, or professional help \u2014 not a downloadable resource.",
+      "title": "r/solotravel on Reddit: First solo trip - feeling anxious and regretful",
+      "description": "But if you\u2019ve done some research ... good to go. Emotions will always be a rollercoaster. <strong>If things are overwhelming and you need a moment during the trip do just that</strong>....",
+      "rejection_reason": "Too short to analyze or AI error",
+      "source_query": "first solo travel planning anxious overwhelmed Reddit"
+    },
+    {
+      "source_query": "DIY kitchen remodel disaster can't afford contractor Reddit",
+      "title": "r/HomeImprovement on Reddit: DIY vs Contractor for kitchen renovation",
+      "description": "I have a small, galley kitchen, and renovated it myself. <strong>It wasn&#x27;t hard, but I could live with the disruption for six months</strong>. In my experience, once a contractor starts, everythi",
+      "rejection_reason": "Low emotional weight in the post; advice is highly context-specific (single person's experience with one galley kitchen); the decision is too variable to codify in a guide; existing free content on YouTube/Reddit already covers this exhaustively",
       "score_breakdown": {
         "Audience": 2,
-        "Emotion": 3,
+        "Emotion": 1,
         "Monetization": 1,
         "Recurrence": 2
       },
-      "total_score": 8
+      "total_score": 6
     },
     {
-      "title": "r/Divorce on Reddit: People who got divorced after 20+ years: How long were thin",
-      "description": "I think that\u2019s what worries me the most, not on some jealousy stuff but we coulda called it a long time ago and she could have been then. I care about her to much to see her unhappy. ... 7 years of go",
+      "title": "r/EstrangedAdultChild on Reddit: Finally setting boundaries and this shit is har",
+      "description": "I don&#x27;t want to put up with the anxiety attack feeling every time they ask me to participate in family stuff. Told him that I need space and distance and to stop inviting me. After this, I receiv",
       "rejection_reason": "Too short to analyze or AI error",
-      "source_query": "divorce after long marriage lost scared Reddit"
+      "source_query": "parent estranged family boundary setting overwhelmed Reddit"
+    },
+    {
+      "title": "r/EstrangedAdultKids on Reddit: Why does my therapist recommend boundary setting",
+      "description": "My therapist was validating towards this and instead of suggesting boundary work suggested we focus more on grieving the old relationship and recognizing all the parts that were unhealthy that I want ",
+      "rejection_reason": "Too short to analyze or AI error",
+      "source_query": "parent estranged family boundary setting overwhelmed Reddit"
     }
   ],
   "total_accepted": 30,
