@@ -499,18 +499,13 @@ hr::before {
     left: 0.4em;
 }
 
-/* ── Footer: product name + page number on non-first pages ── */
+/* ── Footer: page number in bottom-center (legacy) ── */
 @page {
     @bottom-center {
-        content: "Digital Guide  ·  " counter(page);
-        font-family: 'Inter', sans-serif;
-        font-size: 8.5pt;
-        color: #BBBBBB;
-        letter-spacing: 0.05em;
+        content: none;
     }
 }
 
-/* First page: no footer */
 @page :first {
     @bottom-center {
         content: none;

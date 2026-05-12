@@ -70,13 +70,15 @@ def load_base_css() -> str:
     return ""
 
 def extra_css(product_title: str) -> str:
+    # Truncate long titles in the left footer so they don't overflow into center/right
     safe_title = html_mod.escape(product_title, quote=False)
+    truncated = safe_title[:45] + "…" if len(safe_title) > 45 else safe_title
     return f"""
 @page {{
     size: A4;
     margin: 1.25cm 1.5cm;
     @bottom-right {{ content: "Page " counter(page); font-family: 'Inter', Georgia, serif; font-size: 9pt; color: #666; }}
-    @bottom-left {{ content: "{safe_title}"; font-family: 'Inter', Georgia, serif; font-size: 9pt; color: #666; }}
+    @bottom-left {{ content: "{truncated}"; font-family: 'Inter', Georgia, serif; font-size: 9pt; color: #666; max-width: 6cm; }}
 }}
 
 img {{ max-width: 100%; height: auto; display: block; margin: 1.5rem auto; }}
