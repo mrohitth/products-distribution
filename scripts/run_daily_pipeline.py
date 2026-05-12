@@ -19,7 +19,7 @@ Usage:
 
 Cron: 0 11 * * * America/New_York (daily 11 AM ET)
 """
-import sys, os, json, subprocess, hashlib
+import sys, os, json, subprocess, hashlib, re
 from pathlib import Path
 from datetime import datetime
 
@@ -359,6 +359,13 @@ Output ONLY JSON: {{"comprehensiveness": int, "visual_polish": int, "value_check
         else:
             print(f"  ⚠️  Sync failed for {slug}")
     print(f"  ✅ Stage 6 complete")
+
+    # ── Stage 7: Distribution (Reddit Bridge + Pinterest Pin) ─────────────────────────
+    print(stage_banner(7, "Distribution — generate_distribution.py"))
+    rc = run_py("generate_distribution.py", timeout=300)
+    if rc != 0:
+        print("  ⚠️  Distribution generation had issues — continuing")
+    print(f"  ✅ Stage 7 complete")
 
     # ── Summary ─────────────────────────────────────────────────────────────────────
     pdfs = sorted(OUTPUT_DIR.glob("*.pdf"))

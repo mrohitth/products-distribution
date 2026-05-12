@@ -15,7 +15,7 @@ Usage:
     python3 scripts/synthesize_checklist.py cat-litter-box-rescue-guide_v1  # specific slug
     python3 scripts/synthesize_checklist.py --force                  # force regenerate cache
 """
-import sys, html as html_mod, json, hashlib
+import sys, html as html_mod, json, hashlib, re
 from pathlib import Path
 from datetime import datetime
 
