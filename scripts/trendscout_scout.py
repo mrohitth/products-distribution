@@ -435,24 +435,13 @@ def extract_json_from_response(text: str) -> dict | list | None:
 
 # ── Batch Result Analysis (replaces 1-at-a-time) ──────────────────────────────────
 
-def batch_analyze_results(creds: dict, all_results: list[tuple[dict, str, str]]) -> list[dict | None]:
+def batch_analyze_chunk(creds: dict, chunk: list[tuple[dict, str, str, int]],
+                         global_idx_offset: int) -> dict[int, dict]:
     """
-    Send ALL search results to MiniMax in ONE call for batch scoring.
-    all_results: list of (result_dict, query_str, platform_str)
-    Returns list of analyzed dicts (or None for too-short results) parallel to input.
+    Analyze one chunk of results (up to ~12) via MiniMax.
+    chunk: list of (result_dict, query, platform, global_index)
+    Returns dict mapping global_index -> analyzed dict (or None for reject).
     """
-    # First filter: skip anything too short (saves tokens in the prompt)
-    valid = []
-    for r, q, p in all_results:
-        desc = r.get("description", "").strip()
-        if len(desc) >= 80:
-            valid.append((r, q, p))
-        else:
-            print(f"    \u26a0\ufe0f  Skipping result: too short ({len(desc)} chars)")
-
-    if not valid:
-        return [None] * len(all_results)
-
     system = """You are a digital product trend analyst. Score each provided Reddit/Quora search result.
 
 For each result, score 1-3 on each dimension:
@@ -465,7 +454,7 @@ Only mark PASS if total_score >= 8 AND the problem is solvable as a 10-page guid
 Be strict. Not everything is a product.
 
 Output ONLY a JSON array. Each element:
-{"index": n, "verdict": "PASS" or "REJECT", "total_score": int,
+{"index": n (1-based within THIS chunk), "verdict": "PASS" or "REJECT", "total_score": int,
  "score_breakdown": {"Audience": int, "Emotion": int, "Monetization": int, "Recurrence": int},
  "audience": "string", "emotional_trigger": "string",
  "product_direction": "string (max 100 chars)", "slug_candidate": "string",
@@ -473,51 +462,73 @@ Output ONLY a JSON array. Each element:
 
     results_text = "\n\n".join([
         f"--- Result {i+1} ---\nTitle: {r.get('title','')[:150]}\nDescription: {r.get('description','')[:600]}\nSource: {p}\nQuery: {q}"
-        for i, (r, q, p) in enumerate(valid)
+        for i, (r, q, p, _) in enumerate(chunk)
     ])
 
-    user = f"""Score these {len(valid)} search results. Determine if each should become a digital product (guide/checklist).
+    user = f"""Score these {len(chunk)} search results. Determine if each should become a digital product.
 
 {results_text}"""
 
-    result_text = call_minimax(creds, system, user, max_tokens=4000, temp=0.3, timeout=120)
+    result_text = call_minimax(creds, system, user, max_tokens=3000, temp=0.3, timeout=90)
     if not result_text:
-        print(f"    \u26a0\ufe0f  Batch analysis returned empty — marking all as None")
-        return [None] * len(all_results)
+        return {}
 
     parsed = extract_json_from_response(result_text)
     if not parsed or not isinstance(parsed, list):
-        print(f"    \u26a0\ufe0f  Batch analysis parse failed — raw: {result_text[:200]}")
-        return [None] * len(all_results)
+        return {}
 
-    # Build index map from the response
     index_map = {}
     for item in parsed:
         if isinstance(item, dict):
             idx = item.get("index")
             if idx is not None:
-                index_map[idx - 1] = item  # convert 1-based to 0-based
+                local_idx = idx - 1  # 0-based within chunk
+                if 0 <= local_idx < len(chunk):
+                    global_idx = chunk[local_idx][3]
+                    r = chunk[local_idx][0]
+                    item["source_url"] = r.get("url", "")
+                    item["title"] = r.get("title", "")[:150]
+                    item["raw_quote"] = r.get("description", "")[:600].strip()
+                    index_map[global_idx] = item
+    return index_map
 
-    # Map back to original input
-    results = []
-    all_idx = 0
-    for orig_r, orig_q, orig_p in all_results:
-        desc = orig_r.get("description", "").strip()
-        if len(desc) < 80:
-            results.append(None)
+
+def batch_analyze_results(creds: dict, all_results: list[tuple[dict, str, str]]) -> list[dict | None]:
+    """
+    Batch-analyze ALL results in chunks of ~10, max 2 concurrent MiniMax calls.
+    Returns list parallel to input: analyzed dict or None.
+    """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    # Build valid list with global indices
+    valid = [(r, q, p, i) for i, (r, q, p) in enumerate(all_results)
+             if len(r.get("description", "").strip()) >= 80]
+
+    if not valid:
+        return [None] * len(all_results)
+
+    # Split into chunks of 10
+    chunk_size = 10
+    chunks = [valid[i:i + chunk_size] for i in range(0, len(valid), chunk_size)]
+    print(f"    Splitting {len(valid)} valid results into {len(chunks)} chunks of max {chunk_size}")
+
+    # Process chunks in parallel (max 2)
+    results_map: dict[int, dict] = {}
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        futures = {pool.submit(batch_analyze_chunk, creds, ch, 0): ch for ch in chunks}
+        for fut in as_completed(futures):
+            chunk_results = fut.result()
+            results_map.update(chunk_results)
+            print(f"      Chunk done: {len(chunk_results)} scored")
+
+    # Map back to original input order
+    final = []
+    for i in range(len(all_results)):
+        if i in results_map:
+            final.append(results_map[i])
         else:
-            # This result was sent as valid[all_idx]
-            analyzed = index_map.get(all_idx)
-            if analyzed:
-                analyzed["source_url"] = orig_r.get("url", "")
-                analyzed["title"] = orig_r.get("title", "")[:150]
-                analyzed["raw_quote"] = desc[:600]
-                results.append(analyzed)
-            else:
-                results.append(None)
-            all_idx += 1
-
-    return results
+            final.append(None)
+    return final
 
 
 

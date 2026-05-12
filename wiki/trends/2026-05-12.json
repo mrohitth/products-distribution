@@ -1,624 +1,267 @@
 {
-  "scouted_at": "2026-05-12T03:50:51.576212-04:00",
+  "scouted_at": "2026-05-12T03:59:03.998301-04:00",
   "source_channels": [
     "reddit.com",
     "quora.com"
   ],
-  "queries_used": [
-    "job rejection after 100 applications desperate Reddit",
-    "freelance client won't pay invoice exhausted Reddit",
-    "roommate moved out damaged apartment scared deposit Reddit",
-    "renovation contractor ghosted lost thousands overwhelmed Reddit",
-    "Quora job interview rejected 30 times frustrated",
-    "first solo travel planning anxious overwhelmed Reddit",
-    "medical billing error insurance denied desperate Reddit",
-    "DIY kitchen remodel disaster can't afford contractor Reddit",
-    "parent estranged family boundary setting overwhelmed Reddit"
+  "queries": [
+    [
+      "overwhelmed starting new job first week Reddit r/careerguidance",
+      "reddit"
+    ],
+    [
+      "roommate moved out didn't pay their share utilities desperate Reddit r/roommates",
+      "reddit"
+    ],
+    [
+      "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice",
+      "reddit"
+    ],
+    [
+      "first car ever bought terrified getting ripped off Reddit r/askcarsales",
+      "reddit"
+    ],
+    [
+      "quitting job without another lined up terrified regret Reddit r/careeradvice",
+      "reddit"
+    ],
+    [
+      "parent treating me like a child at 30 frustrated Reddit Quora",
+      "quora"
+    ],
+    [
+      "diy project went wrong completely lost how to fix Reddit r/HomeImprovement",
+      "reddit"
+    ],
+    [
+      "student loans payoff strategy overwhelmed Reddit r/personalfinance",
+      "reddit"
+    ],
+    [
+      "procrastinating everything terrified life falling apart Reddit r/getdisciplined",
+      "reddit"
+    ]
   ],
-  "trends": [
+  "total_search_results": 36,
+  "trends": [],
+  "rejected": [
     {
-      "trend_id": 4,
-      "audience": "Job seekers who have applied to dozens or hundreds of positions without getting hired; includes career changers, laid-off professionals, and those re-entering the workforce after long tenures",
-      "raw_quote": "I\u2019ve had 19 different jobs since I turned 15 (2 careers and 33 years of employment) and I have never called to follow up on an application. Email follow up after an initial interview, yes, but cold calling HR departments to follow up? Never. ... I am at my wits end, 100+ job application since December, 5 interviews, nobody will hire me. ... How do you deal with so many rejections.",
-      "emotional_trigger": "Desperation and hopelessness from mass rejection despite qualifications; financial anxiety and identity crisis when employment history doesn't protect them",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A practical guide to following up after job applications\u2014covering when to follow up, email templates, tracking systems, and how to stand out without being annoying",
-      "slug_candidate": "job-application-follow-up-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/recruitinghell/comments/1nwfxpq/i_applied_for_125_jobs_so_far_and_all_of_them/",
-      "source_query": "job rejection after 100 applications desperate Reddit",
-      "source_platform": "reddit"
+      "title": "r/HomeImprovement on Reddit: What's your worst DIY project mistake story?",
+      "description": "Went to Home Depot. The weirdest thing that day ... I got out of my car once I arrived and I overheard on the parking lot exterior speakers: \u201cattention all Home Depot shoppers - come join our workshop",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "diy project went wrong completely lost how to fix Reddit r/HomeImprovement"
     },
     {
-      "trend_id": 5,
-      "audience": "Freelancers across all verticals (designers, developers, writers, consultants, marketers) \u2014 a massive and growing workforce globally",
-      "raw_quote": "Best of luck! x ... <strong>Try to clear up the payment before you deliver next work</strong>. After that ask for upfront payment, without negotiations about it. If the referals comes from above kind of clients, upfront payment is a must!",
-      "emotional_trigger": "Financial anxiety and frustration when clients don't pay. The visceral stress of having done work but not receiving compensation, dealing with awkward follow-ups, and the power imbalance of being a small operator vs. a client who holds the purse strings",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "The Freelancer's Invoice Protection Playbook: Contracts, Follow-Up Scripts, and Getting Paid Without Burning Bridges",
-      "slug_candidate": "freelancer-get-paid-invoice-protection-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/freelance/comments/o7k3tm/getting_a_client_to_pay_invoices_help_please/",
-      "source_query": "freelance client won't pay invoice exhausted Reddit",
-      "source_platform": "reddit"
+      "title": "r/HomeImprovement on Reddit: How do you move on from DIY failures?",
+      "description": "<strong>Call it an &#x27;After Action Report&#x27; Call it &#x27;What went RIGHT and what went WRONG&#x27; Take an honest look at what you did, how you did it, and what both good and bad things you di",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "diy project went wrong completely lost how to fix Reddit r/HomeImprovement"
     },
     {
-      "trend_id": 7,
-      "audience": "Freelancers (writers, designers, developers, consultants) who have completed work but haven't been paid by clients",
-      "raw_quote": "If you have exhausted all avenues and are not getting a positive response (or a payment) from a freelance client who hasn&#x27;t paid, <strong>it might be time to take some more serious measures</strong>.",
-      "emotional_trigger": "Financial anxiety, stress, and anger over unpaid invoices; fear of losing income while uncertain how to escalate without damaging the relationship or knowing their legal rights",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A step-by-step playbook with email scripts, demand letter templates, escalation checklists, and legal options for recovering unpaid freelance invoices",
-      "slug_candidate": "freelance-unpaid-invoice-playbook",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.withmoxie.com/blog/what-to-do-if-your-freelance-client-hasnt-paid-you",
-      "source_query": "freelance client won't pay invoice exhausted Reddit",
-      "source_platform": "reddit"
+      "title": "6 Reddit Stories of Home Improvement Mistakes\u2014and How to Fix Them",
+      "description": "They attempted to take matters into their own hands by spending weeks <strong>peeling, scraping, sanding, and cleaning down the original wood to smooth it out, then using a primer and painting it over",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "diy project went wrong completely lost how to fix Reddit r/HomeImprovement"
     },
     {
-      "trend_id": 11,
-      "audience": "Homeowners and property owners undertaking renovation projects who need to hire contractors",
-      "raw_quote": "Then have the courage to tell the person that. Also contractors screw people over all the time. I\u2019ve lost thousands trusting people and not being cheap at all.",
-      "emotional_trigger": "Frustration and anxiety over losing thousands of dollars and being disrespected by contractors who ghost them after showing interest",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "The Homeowner's Contractor Vetting Checklist: Never Get Ghosted or Screwed Again",
-      "slug_candidate": "contractor-vetting-checklist-homeowners",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Renovations/comments/17g6rjb/keep_getting_ghosted_by_the_contractors/",
-      "source_query": "renovation contractor ghosted lost thousands overwhelmed Reddit",
-      "source_platform": "reddit"
+      "title": "r/HomeImprovement on Reddit: what's a DIY project that didn't go as planned?",
+      "description": "I had the same problem with the ball fitting where the pop-up arm went into the drain. Had to play with it a bit to get it put together properly. While doing that, the trap for the sink turned out to ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "diy project went wrong completely lost how to fix Reddit r/HomeImprovement"
     },
     {
-      "trend_id": 15,
-      "audience": "Job seekers experiencing repeated interview rejections, ranging from entry-level to mid-career professionals who feel stuck despite qualifications",
-      "raw_quote": "You were not considered a good \u2018fit\u2019 for the culture of the organization / or sometimes this means the interviewer chose someone who was more like \u201ctheir type of person\u201d. As long as you are being yourself and are presenting / preparing per the above suggestions, I wouldn&#x27;t worry about this. This scenario indicates that if you got the job, you might be unhappy there anyway\u2026but it\u2019s frustrating and hard not to take personally.",
-      "emotional_trigger": "Exhaustion, self-doubt, and frustration after 30+ rejections \u2014 the poster feels rejected and is struggling not to internalize failure",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A complete interview rebound system covering mindset reset, answer restructuring, body language prep, and rejection analysis to convert future interviews",
-      "slug_candidate": "rejection-proof-interview-system",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.quora.com/Ive-been-rejected-over-30-times-by-interviewers-What-should-I-do-now",
-      "source_query": "Quora job interview rejected 30 times frustrated",
-      "source_platform": "quora"
+      "title": "r/roommateproblems on Reddit: Roommate moved out early and is refusing to contri",
+      "description": "Roommate refuses to pay rent, won\u2019t leave and after freaking out when I found meth in the bathroom and packing up her stuff and yelling at her to move out - I just found out that I\u2019m the only one who ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "roommate moved out didn't pay their share utilities desperate Reddit r/roommates"
     },
     {
-      "trend_id": 18,
-      "audience": "Software engineers and tech job seekers actively applying to positions at tech companies",
-      "raw_quote": "Failed in 9 tech interviews in the last 6 months, I just can\u2019t take it anymore, what should I do? originally appeared on Quora: the place to gain and share knowledge, empowering people to learn from others and better understand the world.",
-      "emotional_trigger": "Desperation and burnout from repeated rejection; the person is at a breaking point after failing 30+ interviews",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A tactical checklist for passing tech interviews: what to study, how to practice, mistakes to avoid, and how to recover from rejection",
-      "slug_candidate": "never-fail-a-tech-interview-again-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.inc.com/quora/what-i-learned-from-failing-30-interviews.html",
-      "source_query": "Quora job interview rejected 30 times frustrated",
-      "source_platform": "quora"
+      "title": "r/AmItheAsshole on Reddit: AITA for not paying utilities while I'm not living in",
+      "description": "I am a 21F college student and I\u2019ve been in an apartment lease with 2 other girls who are really good roommates. My hometown is 30 minutes away and I dont really like to stay in my college town when I",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "roommate moved out didn't pay their share utilities desperate Reddit r/roommates"
     },
     {
-      "trend_id": 22,
-      "audience": "Adults with health insurance in the US who have received or will receive unexpected medical bills or insurance claim denials",
-      "raw_quote": "Got a bill in June 2021 saying claim was denied. I called my insurance company which then called the provider. The provider submitted claim with my daughter as the subscriber. Provider resubmitted the claim which was denied so i called my insurance company again. They called the provider and told them they had to eat the cost because the error was made by the provider, not my daughter or the insurance.",
-      "emotional_trigger": "Anxiety and frustration from receiving surprise medical bills 1-2 years after service, dealing with provider billing errors, and uncertainty about how to dispute or resolve unexpected financial liability",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A step-by-step guide to disputing medical billing errors and insurance claim denials when the error was made by the provider",
-      "slug_candidate": "medical-billing-dispute-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/personalfinance/comments/omssea/urgent_care_emailed_me_a_medical_bill_112_year/",
-      "source_query": "medical billing error insurance denied desperate Reddit",
-      "source_platform": "reddit"
+      "title": "r/badroommates on Reddit: Found out my roommate hasn\u2019t been paying utilities!! A",
+      "description": "Share ... <strong>Ask you landlord if he&#x27;d be willing to let this irresponsible ass out of his lease</strong>. If he says yes, you and the landlord can start looking for someone to fill his space",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "roommate moved out didn't pay their share utilities desperate Reddit r/roommates"
     },
     {
-      "trend_id": 26,
-      "audience": "Homeowners planning a kitchen remodel who feel financially stretched and overwhelmed by costs",
-      "raw_quote": "Before you go talking to a contractor, you need to understand what you actually want and what you think you\u2019re willing pay for it. Then you need to temper your expectations it sounds like a 30 year old kitchen is somehow falling apart. Unless your cabinets are falling off, the things you probably really \u201cneed\u201d are a repaint of the cabinets, and if maybe splurge on a prefab quartz or granite countertop. ... I desperately need a kitchen remodel that i can&#x27;t afford, means I am in denial about still or possibly ever being &quot;upper &quot; middle class",
-      "emotional_trigger": "Desperation and anxiety about being unable to afford a necessary home upgrade, combined with shame about class identity discrepancy",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A guide on how to budget, prioritize, phase, and finance a kitchen remodel without breaking the bank",
-      "slug_candidate": "how-to-afford-kitchen-remodel-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Remodel/comments/1fipzsn/i_consider_ourselves_upper_middle_class_but_how/",
-      "source_query": "DIY kitchen remodel disaster can't afford contractor Reddit",
-      "source_platform": "reddit"
+      "title": "r/legaladvice on Reddit: [MI] Roommate refuses to pay utilities.",
+      "description": "Just to clarify, this means that <strong>each resident is responsible for the full payment of utilities, but also implies that the utility bill should be split</strong>. One or more of you has to pay ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "roommate moved out didn't pay their share utilities desperate Reddit r/roommates"
     },
     {
-      "trend_id": 27,
-      "audience": "Homeowners planning kitchen remodels with $15K-$50K budgets who feel overwhelmed by contractor pricing and unsure if their budget expectations are realistic",
-      "raw_quote": "Otherwise LVP is best suited for a laundry room or basement as far as I am concerned. It&#x27;s a solid product, and many people seem to like the looks, but it just feels and looks &quot;flipped house&quot; or &quot;beginner DIY&quot; cheap to me. ... Most contractors won\u2019t touch a kitchen remodel for that price point.",
-      "emotional_trigger": "Anxiety and self-doubt about whether their budget is delusional, plus frustration that contractors won't work with them at their price point",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 12,
-      "solvable_10_page_guide": true,
-      "product_direction": "A practical guide helping homeowners set realistic kitchen remodel budgets, understand contractor pricing, and avoid getting overcharged",
-      "slug_candidate": "kitchen-remodel-budget-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/HomeImprovement/comments/mibebm/kitchen_remodel_is_20k_impossible_or_am_i/",
-      "source_query": "DIY kitchen remodel disaster can't afford contractor Reddit",
-      "source_platform": "reddit"
+      "title": "r/personalfinance on Reddit: Student Loan Debt Payoff Strategies",
+      "description": "<strong>You can deduct federal student loan interest up to 2500 per year if your MAGI qualifies</strong>, which functionally reduces the interest rate. ... I am a bot, and this action was performed au",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "student loans payoff strategy overwhelmed Reddit r/personalfinance"
     },
     {
-      "trend_id": 2,
-      "audience": "Entry-level job seekers, recent graduates (22-26), career changers, and anyone struggling with high-volume job applications and ATS systems",
-      "raw_quote": "Please don\u2019t ascribe your self worth or 100% rejection rates to logic. Recruiters are mostly trash people and hiring managers are lemmings and fascists. Don\u2019t give up but do format your resume for EACH listing because in the insanely stupid world we live in, word parsing algorithms have reduced humans to Seo tags. Try govt jobs and try getting certs.",
-      "emotional_trigger": "Anxiety, hopelessness, and shame around rejection \u2014 feeling dehumanized by automated hiring systems; the emotional weight of being 'reduced to SEO tags' when identity and livelihood feel at stake",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "The ATS-Proof Resume Playbook: A Step-by-Step Guide to Beating Automated Screening and Getting Your Application Seen by a Human",
-      "slug_candidate": "ats-proof-resume-playbook-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/resumes/comments/1dfh4l4/23f_300_applications_100_rejection_rate_what_am_i/",
-      "source_query": "job rejection after 100 applications desperate Reddit",
-      "source_platform": "reddit"
+      "title": "r/personalfinance on Reddit: Aggressively payoff student loans or save/invest",
+      "description": "Figure out what percentage of future savings needs to be allocated to student loans. That decision is kind of a style choice. Some people are more aggressive about debt. ... Yeah, keeping the emergenc",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "student loans payoff strategy overwhelmed Reddit r/personalfinance"
     },
     {
-      "trend_id": 3,
-      "audience": "Entry-level job seekers, recent graduates, and career changers struggling with high rejection rates and ATS systems",
-      "raw_quote": "I just applied to a job today, name dropped too and literally got rejected, also in the same day. So yeah, It&#x27;s ridiculous and I&#x27;m convinced I&#x27;ll never find a job. I swear half of the countries population has to be gone before any of us will have a proper chance at a job these days. Finding a job is like entering the housing market: impossible by yourself. ... I think LinkedIn jobs is a sack of shit. Hey, I work in a niche (SAP QM) and even when applying for this I see 50+, 100+ applicants.",
-      "emotional_trigger": "Desperation, hopelessness, and rejection fatigue from applying to hundreds of jobs with no traction; feeling the job market is rigged against them",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "Beat the ATS: A Strategic Job Application Guide for Getting Past Automated Rejections",
-      "slug_candidate": "beat-the-ats-job-search-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/recruitinghell/comments/14jq18u/getting_rejected_by_100s_of_entry_level_jobs_is/",
-      "source_query": "job rejection after 100 applications desperate Reddit",
-      "source_platform": "reddit"
+      "title": "r/personalfinance on Reddit: Help with student loans and what to do!",
+      "description": "Well do what works for you. My strategy for paying mine off was to <strong>pay more than the minimum payment and to throw all my extra $$ at them</strong>. Paid them off early that way.",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "student loans payoff strategy overwhelmed Reddit r/personalfinance"
     },
     {
-      "trend_id": 12,
-      "audience": "Homeowners and aspiring homeowners hiring contractors for renovations, repairs, or construction projects \u2014 a massive and recurring demographic",
-      "raw_quote": "Meanwhile we were traveling often because my younger brother was hospitalized in our home state getting a heart transplant after he unexpectedly took a turn for the worst and the contractor knew that. His excuse for sucking? He said he was stressed and had a medical problem and had to look out for his health and his own family. What was his medical problem? He bit his tongue in his sleep. Yup. That\u2019s all it was. Look, we\u2019re all stressed and have to look out for our families. But we paid him $54k! I saw his name in a reddit post for my city recently, he took $25k from someone then ghosted them.",
-      "emotional_trigger": "Financial betrayal and helplessness \u2014 trusting someone with $54k+ only to be ghosted mid-project, compounded by a family medical crisis that made them vulnerable",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "Contractor Vetting & Protection Guide: How to hire contractors without getting scammed, including contract clauses, payment schedules, and red flags",
-      "slug_candidate": "contractor-protection-guide-avoid-being-scammed",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/RealEstateAdvice/comments/1sec9yt/my_contractor_ghosted_me_midrenovation_and_i_want/",
-      "source_query": "renovation contractor ghosted lost thousands overwhelmed Reddit",
-      "source_platform": "reddit"
+      "title": "r/personalfinance on Reddit: Paying off student loans vs investing - what would ",
+      "description": "... I would absolutely <strong>focus on maxing your 401K contributions before paying extra toward your loans</strong>. It\u2019s hard to do but once you get there you\u2019ll have more money to pay off the stud",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "student loans payoff strategy overwhelmed Reddit r/personalfinance"
     },
     {
-      "trend_id": 13,
-      "audience": "Homeowners who have hired or need to hire contractors for renovation/repair projects",
-      "raw_quote": "So much of the industry is triggered ... their values in any way - <strong>they&#x27;re gonna ghost you because we&#x27;ve lost tens of thousands if not hundreds of thousands of dollars to people that wasted their time.</strong>...",
-      "emotional_trigger": "Frustration and financial anxiety from being ignored by contractors, with potential losses of thousands of dollars",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "Contractor Vetting Checklist: Questions to Ask Before You Hire to Avoid Getting Ghosted",
-      "slug_candidate": "contractor-ghosting-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/HomeImprovement/comments/nxedrs/ghosted_by_contractors/",
-      "source_query": "renovation contractor ghosted lost thousands overwhelmed Reddit",
-      "source_platform": "reddit"
+      "title": "r/getdisciplined on Reddit: Procrastination is ruining my life, can someone help",
+      "description": "Best of luck, and <strong>try to speak gently to yourself</strong>! Going from finding things simple to feeling like things are falling apart is really hard, and I&#x27;ve definitely been there. Take ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "procrastinating everything terrified life falling apart Reddit r/getdisciplined"
     },
     {
-      "trend_id": 16,
-      "audience": "Job seekers experiencing repeated interview rejections, particularly those making it to final rounds but not converting offers. Includes new graduates, career changers, and anyone navigating job transitions.",
-      "raw_quote": "Yes, I am saying this because 3 or 4 is smaller number in my case. I was rejected for more than 12\u201315 times in interviews and that too in final rounds for most of them. Sometimes, I became frustrated as to what is going wrong and where am I making the mistakes and eventually take unnecessary tension.",
-      "emotional_trigger": "Deep self-doubt and identity crisis ('am I a failure?') combined with frustration and anxiety about career trajectory. The pain is visceral and affects self-worth, not just surface-level frustration.",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "Guide on decoding final-round rejections: why strong candidates keep failing at the last stage and a proven framework to diagnose and fix interview blind spots before your next opportunity.",
-      "slug_candidate": "why-do-i-keep-failing-final-round-interviews",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.quora.com/What-should-I-do-if-I-get-rejected-multiple-times-in-an-interview-Should-I-accept-the-fact-that-I-am-a-failure",
-      "source_query": "Quora job interview rejected 30 times frustrated",
-      "source_platform": "quora"
+      "title": "r/getdisciplined on Reddit: [Need Advice] My life is falling apart due to procra",
+      "description": "72 votes, 35 comments. Here&#x27;s the thing, I procrastinate the hell out of every damn thing. Until yesterday I would blame it on whatever recently\u2026",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "procrastinating everything terrified life falling apart Reddit r/getdisciplined"
     },
     {
-      "trend_id": 20,
-      "audience": "First-time solo female travelers aged 25-40, often digital nomads or remote workers, actively researching safety and logistics for unfamiliar destinations",
-      "raw_quote": "If you go on YouTube or TikTok, there&#x27;s probably hundreds of videos about traveling as a woman alone especially in countries or cities where you just don&#x27;t know the neighborhoods very well. If you don&#x27;t have any friends, there definitely go on the Reddit subs for those cities and just ask about behavior and location safety. ... I&#x27;m usually not that anxious once I get going. I absolutely despise planning solo though.",
-      "emotional_trigger": "Pre-trip anxiety about personal safety in unknown cities + deep frustration with solo trip planning complexity \u2014 'I absolutely despise planning solo'",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "The 'First Solo Trip Planning Checklist' for anxious first-time female travelers \u2014 covers safety research protocols, pre-departure anxiety reduction steps, city-specific vetting checklist, and day-by-day planning templates",
-      "slug_candidate": "first-solo-trip-planning-checklist-female-travelers",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/digitalnomad/comments/16xmjj7/is_it_normal_to_be_nervous_for_my_first_solo_trip/",
-      "source_query": "first solo travel planning anxious overwhelmed Reddit",
-      "source_platform": "reddit"
+      "title": "r/getdisciplined on Reddit: I'm so tired of procrastination and feeling like shi",
+      "description": "Parent commenter can delete this message to hide from others. ... School sucks. Daily life tasks suck. <strong>Procrastination is not the problem, but the consequences of spending all day doing things",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "procrastinating everything terrified life falling apart Reddit r/getdisciplined"
     },
     {
-      "trend_id": 21,
-      "audience": "Solo travelers, primarily beginners to intermediate, who want to travel independently but feel paralyzed by logistics, scheduling, and covering distances solo",
-      "raw_quote": "Never planned more than 2 weeks ahead. <strong>Was anxious at times because I do need to be covering distances</strong>. But staying in place for a weekend longer just to unwind and do nothing usually gave me perspective.",
-      "emotional_trigger": "Anxiety and overwhelm around planning logistics, timing, and managing long distances without support \u2014 fear of missing something critical or getting stranded",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 2,
-        "Monetization": 3,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A step-by-step solo travel planning checklist that removes decision paralysis and builds confidence for first-time and nervous solo trippers",
-      "slug_candidate": "solo-travel-planning-checklist-for-anxious-travelers",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/solotravel/comments/1fgu1ti/anyone_else_get_overwhelmed_by_planning_everything/",
-      "source_query": "first solo travel planning anxious overwhelmed Reddit",
-      "source_platform": "reddit"
+      "title": "r/getdisciplined on Reddit: I am procrastinating on everything in life [Advice]",
+      "description": "If you&#x27;re happy to stay exactly where you are in life, you don&#x27;t need to worry about it. If not, well, you know what you need to do. ... Bruh ive been procrastinating and I keep moving up in",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "procrastinating everything terrified life falling apart Reddit r/getdisciplined"
     },
     {
-      "trend_id": 23,
-      "audience": "US adults with health insurance who face claim denials, medical billing disputes, or university health insurance waiver requirements",
-      "raw_quote": "Medical Bill \u201cTransferred\u201d from MyCommonSpirit to AdventHealth. I cannot get ahold of anyone at AdventHealth via phone or email and bills are now past due. Anyone from Colorado experience this? ... QB just called and said they needed my credit card number or I would no longer be supported. ... LPT Request: University denied my health insurance waiver because my provider has to be &quot;within 55 miles of the campus&quot; even though it is.",
-      "emotional_trigger": "Financial anxiety and helplessness \u2014 being potentially responsible for unexpected medical bills with no way to reach the provider creates urgent stress",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "A step-by-step checklist for disputing denied claims, reaching billing departments, filing state complaints, and resolving transferred provider bills",
-      "slug_candidate": "medical-claim-denied-billing-dispute-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/HealthInsurance/comments/1iokole/claimed_denied_because_healthcare_provider_did/",
-      "source_query": "medical billing error insurance denied desperate Reddit",
-      "source_platform": "reddit"
+      "title": "r/PetAdvice on Reddit: What to do if I can\u2019t afford emergency vet care?",
+      "description": "ER is expensive and if she isn\u2019t actively having symptoms I would <strong>wait until the next day to bring her to a walk-in clinic or a local vet who has appointments available</strong>. As you said y",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice"
     },
     {
-      "trend_id": 25,
-      "audience": "US health insurance policyholders who've received claim denials despite having prior authorization",
-      "raw_quote": "Your situation may vary, but <strong>this is frequently just a billing error and will get resolved</strong>. Don\u2019t stress on it yet. It is likely that your doctor will resubmit the claim with different codes.",
-      "emotional_trigger": "The frustration and anxiety of being denied coverage AFTER doing everything right (getting prior authorization), facing unexpected bills and feeling powerless against insurance companies",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 11,
-      "solvable_10_page_guide": true,
-      "product_direction": "Win Your Insurance Appeal: A Step-by-Step Checklist for Resolving Prior Authorization Claim Denials and Getting Your Claim Paid",
-      "slug_candidate": "insurance-claim-appeal-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/HealthInsurance/comments/1ijul85/insurance_denied_claim_that_was_prior_authorized/",
-      "source_query": "medical billing error insurance denied desperate Reddit",
-      "source_platform": "reddit"
+      "title": "r/DogAdvice on Reddit: How do you stay calm while you wait to call the vet in th",
+      "description": "If things get worse, go to the ER. But <strong>call the emergency vet and ask because they see pets based on triage</strong> so if it\u2019s a busy night there, there is a chance you won\u2019t get seen.",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice"
     },
     {
-      "trend_id": 1,
-      "audience": "Mid-career professionals over 30 who are overqualified and being rejected for roles they are clearly qualified for, often blamed on 'cultural fit' or ATS filters",
-      "raw_quote": "<strong>I resigned, and haven&#x27;t found another job after 1000s of applications</strong>. I eventually made a fake and crappy resume so I could get hired in retail earning less than I did in high school when adjusted for inflation.",
-      "emotional_trigger": "Deep humiliation and desperation \u2014 the poster quit their job, sent thousands of applications, got rejected repeatedly, and finally had to sabotage their own resume to land retail work earning less than their teenage wages. This is existential-level job search pain.",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "Resume Strategy for Overqualified Candidates: How to Reposition Your Experience So ATS Systems and Hiring Managers Stop Rejecting You",
-      "slug_candidate": "overqualified-job-seekers-resume-strategy-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/recruitinghell/comments/1ay762l/im_continuously_getting_rejected_for_jobs_im/",
-      "source_query": "job rejection after 100 applications desperate Reddit",
-      "source_platform": "reddit"
+      "title": "r/PetAdvice on Reddit: Emergency Vet Questions",
+      "description": "A community for pet owners to share tips, ask questions, and seek advice on pet care, behavior, health, and training for all types of animals. \ud83d\udc3e ... This may be above reddits pay grade but I am not su",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice"
     },
     {
-      "trend_id": 6,
-      "audience": "Freelancers, independent contractors, consultants, and self-employed professionals who have completed work for clients and are struggling to collect payment",
-      "raw_quote": "30 votes, 28 comments. A former client who still has yet to settle any of the final invoices for work completed. They are over 3 months in arrears\u2026",
-      "emotional_trigger": "Financial anxiety, anger, and helplessness caused by clients who refuse to pay for completed work \u2014 directly impacting livelihood, cash flow, and professional confidence",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "A tactical checklist/guide walking freelancers through invoice recovery: contract hardening, documentation, escalation templates, legal options, and when to cut losses",
-      "slug_candidate": "freelancer-unpaid-invoice-recovery-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/freelance/comments/ucga1m/advice_needed_my_client_refuses_to_settle/",
-      "source_query": "freelance client won't pay invoice exhausted Reddit",
-      "source_platform": "reddit"
+      "title": "Emergency Vet or Wait Until Morning? How to Decide",
+      "description": "This is one of the hardest decisions pet owners face, especially in the middle of the night when you\u2019re scared, tired, and alone with your worry. There\u2019s no shame in feeling torn. You love your pet. Y",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "pet emergency middle of night not sure if vet is necessary panicking Reddit r/petadvice"
     },
     {
-      "trend_id": 8,
-      "audience": "Freelancers and independent contractors (designers, writers, developers, consultants) who invoice clients and face payment delays or non-payment",
-      "raw_quote": "New York also has the Freelance Isnt Free Act which makes it much easier to sue for unpaid invoices. ... I&#x27;m going through this right now. A client has been saying they&#x27;re going to pay for months. I threatened to file a lawsuit, and they responded quickly saying they would pay.",
-      "emotional_trigger": "Financial anxiety and visceral anger: someone just disappeared with $10k of your money, causing real cash flow crisis and forcing uncomfortable confrontation",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "Step-by-step guide for freelancers to collect unpaid invoices, from professional follow-ups to leveraging laws like the Freelance Isn't Free Act to threatening legal action",
-      "slug_candidate": "freelancer-unpaid-invoice-collection-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/freelance/comments/zdyyq1/client_owes_me_10k_and_totally_disappeared/",
-      "source_query": "freelance client won't pay invoice exhausted Reddit",
-      "source_platform": "reddit"
+      "title": "r/careeradvice on Reddit: Has quitting without another opportunity lined up work",
+      "description": "Others post here a year later still unemployed and feeling unemployable and massively regret the decision. And the market right now makes the worse case slightly more likely. If it were me, I wouldn\u2019t",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "quitting job without another lined up terrified regret Reddit r/careeradvice"
     },
     {
-      "trend_id": 14,
-      "audience": "Homeowners who have hired contractors for major renovation projects ($50K+) and are experiencing communication breakdowns, disputes, or abandonment mid-project",
-      "raw_quote": "I understand the challenges that contractors are dealing with and do not envy your line of work right now. I also appreciate that you &quot;solve problems&quot; and communicate with clients. That lack of communication is what&#x27;s killing me now. I suspect they did a terrible job at estimating the cost of the project, have lost their margin, and are ghosting with whatever funds they could take in hope that I won&#x27;t be able to recover anything.",
-      "emotional_trigger": "Financial devastation and helplessness \u2014 a $160K investment at risk with a half-finished property and no recourse visible. Anxiety about legal action, contractor liens, and recovering sunk costs",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "A step-by-step legal and financial recovery guide for homeowners when a contractor ghosts them or abandons a large project mid-way",
-      "slug_candidate": "contractor-ghosted-you-what-to-do-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/HomeImprovement/comments/qmuqgv/ghosted_by_contractor_at_end_of_160k_project_what/",
-      "source_query": "renovation contractor ghosted lost thousands overwhelmed Reddit",
-      "source_platform": "reddit"
+      "title": "r/careeradvice on Reddit: Quitting a job in 2025 with nothing lined up",
+      "description": "It eventually got to be too much and I snapped and quit one day. It\u2019s been 7 years and I\u2019ve had two wonderful long term jobs since. <strong>I regret staying in that toxic job and it took me a long tim",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "quitting job without another lined up terrified regret Reddit r/careeradvice"
     },
     {
-      "trend_id": 17,
-      "audience": "Job seekers (particularly tech/professionals) who have experienced multiple interview rejections and feel discouraged or stuck in their job search process",
-      "raw_quote": "<strong>Since I started interviewing in 2010, I have been rejected by almost 30 companies</strong>. I have been selected by 6. I have interviewed at everyone\u2019s favourite tech company in Mountain View thrice and failed.",
-      "emotional_trigger": "Frustration and discouragement from repeated interview rejections balanced with desire for hope and proven strategy to finally succeed",
-      "score_breakdown": {
-        "Audience": 3,
-        "Emotion": 2,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "A resilience-focused interview guide for job seekers who've been rejected multiple times, with actionable bounce-back strategies and mindset frameworks",
-      "slug_candidate": "interview-rejection-recovery-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://storypick.com/quora-job-advice/",
-      "source_query": "Quora job interview rejected 30 times frustrated",
-      "source_platform": "quora"
+      "title": "r/careerguidance on Reddit: Did you regret quitting with nothing lined up?",
+      "description": "I don&#x27;t regret it. The thing I regret, both times is that <strong>I kept thinking things would get better and stayed and hoped</strong>. Next time, the moment when things get shitty I&#x27;m goin",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "quitting job without another lined up terrified regret Reddit r/careeradvice"
     },
     {
-      "trend_id": 28,
-      "audience": "Homeowners planning major kitchen or bathroom renovations who are weighing the DIY vs. contractor cost decision, often budget-constrained first-time renovators",
-      "raw_quote": "Didn&#x27;t get quotes cuz couldn&#x27;t afford them. Probably spent 20k a few years ago doing a kitchen remodel including very minor plumbing (fridge line), some electrical, cabinets, counter tops etc. Full service would definitely have topped 60k (from friends experience) ... Yeah, the quotes are eye watering, for sure. ... I\u2019m redoing my bathrooms. I have a plumber and a tile guy. That\u2019s all I need. My plumber is helping me do demo. Tile guy will do drywall and tile. Contractor just takes money for coordinating all this.",
-      "emotional_trigger": "Sticker shock from contractor quotes ($60k+ for kitchens), combined with anxiety about making expensive renovation mistakes and desire to protect home equity while saving thousands",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "Step-by-step guide to coordinating your own major renovation: what to DIY vs. hire out, how to manage contractors, and budget benchmarks to avoid overpaying",
-      "slug_candidate": "diy-kitchen-renovation-save-thousands-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/Remodel/comments/1lu64l5/how_much_did_you_actually_save_by_diying_a_large/",
-      "source_query": "DIY kitchen remodel disaster can't afford contractor Reddit",
-      "source_platform": "reddit"
+      "title": "r/careeradvice on Reddit: Quitting job without having another one lined up?",
+      "description": "<strong>I couldnot take the stress caused by the toxic workplace politics and quit w/o anything else been lined up</strong>. As soon as I did that the stress vanished and I could concentrate on using ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "quitting job without another lined up terrified regret Reddit r/careeradvice"
     },
     {
-      "trend_id": 29,
-      "audience": "Adults estranged from family members (r/EstrangedAdultChild has 90k+ members) who are navigating pressure to reconcile and struggling to maintain boundaries with relatives who push back on their no-contact decision.",
-      "raw_quote": "I know my family that is urging me to try is out of love. But I am struggling with how to maintain boundaries about it. Does any one have any tips on how to navigate? Share ... This is going to sound harsh, but I&#x27;ve admitted multiple times on this and other subs I&#x27;m an asshole about no contact/estrangement.",
-      "emotional_trigger": "Guilt, anxiety, and isolation from maintaining a difficult but necessary boundary against relentless family pressure. The poster feels like an 'asshole' for their choice\u2014classic emotional exhaustion from standing firm while being judged.",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "A compassionate guide helping estranged adults maintain no contact, respond to flying monkeys, script boundary-setting language, and manage the guilt and social fallout without compromising their mental health.",
-      "slug_candidate": "no-contact-boundaries-guide-estranged-adults",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/EstrangedAdultChild/comments/19dpm08/maintaining_no_contact_and_establishing/",
-      "source_query": "parent estranged family boundary setting overwhelmed Reddit",
-      "source_platform": "reddit"
+      "title": "r/askcarsales on Reddit: Never bought a car from a dealer, I\u2019m paranoid about be",
+      "description": "I\u2019d be more concerned about getting ripped off doing a street purchase than getting a shit car from a dealer.",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "first car ever bought terrified getting ripped off Reddit r/askcarsales"
     },
     {
-      "trend_id": 30,
-      "audience": "Adults (25-50) navigating estrangement from parents or family members, particularly those managing low/no contact during holidays, reunions, or events",
-      "raw_quote": "<strong>Common reasons for estrangement are abuse, differing expectations about family roles, neglect, clashes based on personalities, or value systems like religion</strong>. NC = No Contact, LC = Low Contact, VLC = Very Low Contact ...",
-      "emotional_trigger": "Deep anxiety, guilt, and conflict between wanting family connection and needing to protect mental health; fear of confrontation and social pressure",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 3,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 10,
-      "solvable_10_page_guide": true,
-      "product_direction": "A guide with scripts, boundary-setting strategies, and emotional prep for estranged adults facing family reunions or events",
-      "slug_candidate": "estranged-family-reunion-boundary-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/EstrangedAdultChild/comments/1dzvck9/family_reunion_when_low_contact_with_parents_how/",
-      "source_query": "parent estranged family boundary setting overwhelmed Reddit",
-      "source_platform": "reddit"
+      "title": "r/askcarsales on Reddit: How many people have really been \u201cscrewed over\u201d by a de",
+      "description": "Absolutely. I tried to buy a <strong>Kia stinger</strong> for the exact price advertised and on their lot. Made every excuse for why that vin wasn&#x27;t available. The manager came out and asked what",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "first car ever bought terrified getting ripped off Reddit r/askcarsales"
     },
     {
-      "trend_id": 9,
-      "audience": "Young adults, renters, and students in shared housing situations who face financial disputes when roommates move out early or break a lease",
-      "raw_quote": "<strong>If they leave they will be breaking such a contract and zero security deposit back</strong>, also you don&#x27;t know for sure if they damaged something. It&#x27;s a pain, but not your problem, if they want to move out before the contract ends, it&#x27;s their loss.",
-      "emotional_trigger": "Frustration and confusion over unfair financial demands when roommates leave, combined with uncertainty about legal rights and obligations",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 2,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 9,
-      "solvable_10_page_guide": true,
-      "product_direction": "Roommate Security Deposit Guide: How to handle deposit disputes when roommates leave early or break a lease",
-      "slug_candidate": "roommate-security-deposit-dispute-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/roommates/comments/1cdnp3m/my_roommates_are_moving_out_and_expect_me_to_pay/",
-      "source_query": "roommate moved out damaged apartment scared deposit Reddit",
-      "source_platform": "reddit"
+      "title": "r/askcarsales on Reddit: What happens to vehicles that don't sell?",
+      "description": "Only 8k off sticker? You&#x27;re getting ripped off. They should be paying you on the 30th/31st to take the car!",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "first car ever bought terrified getting ripped off Reddit r/askcarsales"
     },
     {
-      "trend_id": 10,
-      "audience": "Urban renters in shared apartments, particularly young professionals and students in expensive cities like NYC, LA, Boston who need to navigate roommate deposit arrangements",
-      "raw_quote": "Yes. <strong>If the two of you had moved in at the same time you both would have paid half of the deposit to the landlord</strong>. Because the roommate no longer has exclusive use of the apartment it&#x27;s important for them to get a deposit from you, to cover ...",
-      "emotional_trigger": "Anxiety about losing money, distrust of roommate's financial reliability, stress over protecting yourself from deposit disputes, fear of being stuck in an unfair arrangement",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 2,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 9,
-      "solvable_10_page_guide": true,
-      "product_direction": "Roommate Security Deposit Protection Guide: How to Split, Document, and Dispute Deposits Without Losing Money",
-      "slug_candidate": "roommate-security-deposit-protection-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/AskNYC/comments/106c8z0/roommate_security_deposit_help/",
-      "source_query": "roommate moved out damaged apartment scared deposit Reddit",
-      "source_platform": "reddit"
+      "title": "r/whatcarshouldIbuy on Reddit: How do you avoid getting ripped off at a dealersh",
+      "description": "If you don\u2019t want to do that, I would take your brother up on his very-kind offer. Buying a car is like one of the most stressful life experiences because dealers can basically make up costs and bill ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "first car ever bought terrified getting ripped off Reddit r/askcarsales"
     },
     {
-      "trend_id": 19,
-      "audience": "Experienced solo travelers who still get pre-trip anxiety, skewing toward first-time or return solo travelers aged 25-45, often women seeking practical tools",
-      "raw_quote": "If you get overwhelmed, you can <strong>try a tour or hiring a driver to make it easier on yourself</strong>. Its worth spending a little more if it gives you peace of mind. You&#x27;re also not trapped.",
-      "emotional_trigger": "Pre-trip anxiety that undermines confidence despite past solo travel success; feels like impending dread about logistics, safety, and being overwhelmed",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 2,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 9,
-      "solvable_10_page_guide": true,
-      "product_direction": "Solo Travel Anxiety Checklist: 10 steps to calm pre-trip nerves and feel prepared before every journey",
-      "slug_candidate": "solo-travel-anxiety-checklist",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/solotravel/comments/1p7vvni/experienced_in_solo_travel_but_very_anxious_about/",
-      "source_query": "first solo travel planning anxious overwhelmed Reddit",
-      "source_platform": "reddit"
+      "title": "r/careerguidance on Reddit: Started a new job 2 months ago and feel completely s",
+      "description": "I feel similar to you too. At my role we got a new manager. I got this demanding project with a client where he wanted to do a video meeting every Friday to go over parts of the project for 45 mins. I",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "overwhelmed starting new job first week Reddit r/careerguidance"
     },
     {
-      "trend_id": 24,
-      "audience": "Medicare beneficiaries with secondary insurance (typically 65+, retirees, or disabled individuals) facing unexpected medical bills from provider billing errors",
-      "raw_quote": "The provider is basically trying to stick you with their billing mistake \ud83d\udc80 When you have Medicare + secondary insurance, the provider can&#x27;t balance bill you for amounts that got denied because they screwed up the claim submission to your secondary. Cigna told them exactly what was wrong - they split services that should have been on same claim. That&#x27;s on provider to fix, not you to pay for their error.",
-      "emotional_trigger": "Anxiety and frustration from being billed for a provider's mistake; fear of paying money they don't owe",
-      "score_breakdown": {
-        "Audience": 2,
-        "Emotion": 2,
-        "Monetization": 2,
-        "Recurrence": 3
-      },
-      "total_score": 9,
-      "solvable_10_page_guide": true,
-      "product_direction": "Medicare Secondary Billing Errors: A Patient's Step-by-Step Guide to Disputing Wrongful Balance Bills",
-      "slug_candidate": "medicare-balance-billing-dispute-guide",
-      "ai_conviction": "HIGH CONVICTION",
-      "source_url": "https://www.reddit.com/r/HealthInsurance/comments/1sk99uf/confused_about_bill/",
-      "source_query": "medical billing error insurance denied desperate Reddit",
-      "source_platform": "reddit"
+      "title": "r/careerguidance on Reddit: Anyone ever feel overwhelmed by new job?",
+      "description": "I don\u2019t feel overwhelmed but I am not getting to learn something properly before they teach me on something else. They want me up to speed ASAP so I can do the job, I get that, but only 4 Inc me in th",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "overwhelmed starting new job first week Reddit r/careerguidance"
+    },
+    {
+      "title": "r/careerguidance on Reddit: Is it normal to be overwhelmed at a new job and regr",
+      "description": "I think I could be good at the job itself and it could be rewarding, so I want to do whatever I can to succeed. I just want to know how long will I feel so overwhelmed and anxious until I feel comfort",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "overwhelmed starting new job first week Reddit r/careerguidance"
+    },
+    {
+      "title": "r/careerguidance on Reddit: How do I cope with feeling lost and overwhelmed on m",
+      "description": "We&#x27;ve all been there. No one is good at anything the first time they do it. <strong>Get evaluated for depression and anxiety, maybe ADHD</strong>. It sounds like treatment would help. ... It&#x27",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "overwhelmed starting new job first week Reddit r/careerguidance"
+    },
+    {
+      "title": "r/raisedbynarcissists on Reddit: If you\u2019re over 30, do your parents still treat ",
+      "description": "She wants to take us tubing over break and go see the Christmas lights. We are all 30 plus. <strong>My husband gets very frustrated I told him explain to her that we can do all these things when we ha",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "parent treating me like a child at 30 frustrated Reddit Quora"
+    },
+    {
+      "title": "r/Adulting on Reddit: Does anyone else still feel like their parents treat them ",
+      "description": "I hope you have a good plan to retire in the future without your children caring for you because they will treat you like a child when you can no longer do everything yourself too. ... I am almost 30 ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "parent treating me like a child at 30 frustrated Reddit Quora"
+    },
+    {
+      "title": "I'm 27 years old. My parents still treat me like a child; what can I do about th",
+      "description": "<strong>Don&#x27;t let up until they get it</strong>. Don&#x27;t be arrogant or yell &amp; scream but just stand your ground. Eventually, they should get it. Otherwise, like me for example, you&#x27;l",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "parent treating me like a child at 30 frustrated Reddit Quora"
+    },
+    {
+      "title": "r/Adulting on Reddit: Do parents ever stop treating you like a kid?",
+      "description": "Ok, to some degree, yes, parents will &quot;always&quot; treat you like you are their child, as in their offspring, their beloved family member; in that they&#x27;ll be affectionate and embarassing, a",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "parent treating me like a child at 30 frustrated Reddit Quora"
     }
   ],
-  "stage1_status": "COMPLETE",
-  "high_score_trends": 30,
-  "total_scored": 30,
-  "version": "v3"
+  "stage1_status": "COMPLETE_NO_TRENDS",
+  "high_score_trends": 0
 }
