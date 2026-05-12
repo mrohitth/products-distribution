@@ -248,7 +248,8 @@ def run_pipeline(dry_run: bool = False, target_products: list[str] | None = None
     # ── Stage 4: AI Product Critic Audit ────────────────────────────────────────────
     print(stage_banner(4, "AI Product Critic Audit"))
     try:
-        cfg = load_config()
+        with open(Path("/home/mathew/.openclaw/openclaw.json")) as f:
+            cfg = json.load(f)
         providers = cfg.get("models", {}).get("providers", {})
         minimax = providers.get("minimax", {})
         mxn_creds = {

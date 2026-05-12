@@ -15,9 +15,11 @@ from pathlib import Path
 REPO = "mrohitth/products-distribution"
 WORKSPACE = Path("/home/mathew/.openclaw/workspace")
 CLONE_DIR = WORKSPACE / "output" / "repos" / "mrohitth_products-distribution"
+DEFAULT_BRANCH = "dev"  # Pipeline pushes to dev; --release flag required for main
 
 
-def sync_to_github(pdf_path, checklist_path=None):
+def sync_to_github(pdf_path, checklist_path=None, branch=None):
+    branch = branch or DEFAULT_BRANCH
     pdf_path = Path(pdf_path)
     if not pdf_path.exists():
         print(f"  ❌ PDF not found: {pdf_path}")
@@ -41,7 +43,7 @@ def sync_to_github(pdf_path, checklist_path=None):
 
     # Checkout remote HEAD
     subprocess.run(
-        ["git", "-C", str(CLONE_DIR), "reset", "--hard", "origin/main"],
+        ["git", "-C", str(CLONE_DIR), "reset", "--hard", f"origin/{branch}"],
         capture_output=True, timeout=15
     )
 
@@ -97,14 +99,14 @@ def sync_to_github(pdf_path, checklist_path=None):
         return False
 
     push = subprocess.run(
-        ["git", "-C", str(CLONE_DIR), "push", "origin", "main"],
+        ["git", "-C", str(CLONE_DIR), "push", "origin", branch],
         capture_output=True, text=True, timeout=30
     )
     if push.returncode != 0:
         print(f"  ❌ Push failed: {push.stderr[:200]}")
         return False
 
-    print(f"  ✅ GitHub push complete — https://github.com/{REPO}/tree/main/final_products")
+    print(f"  ✅ GitHub push complete — https://github.com/{REPO}/tree/{branch}/final_products")
     return True
 
 

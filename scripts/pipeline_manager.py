@@ -406,7 +406,7 @@ def send_draft_via_telegram(draft_path, creds):
         return None
 
 
-def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-distribution", branch="main", checklist_path=None):
+def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-distribution", branch="dev", checklist_path=None):
     """
     Push both PDF and HTML products to the products-distribution repo.
 
@@ -417,7 +417,7 @@ def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-di
         pdf_path: Absolute path to the PDF file
         html_path: Absolute path to the HTML file (optional — skips if not found)
         repo: Target GitHub repo in "owner/repo" format
-        branch: Target branch (default: main)
+        branch: Target branch (default: dev) — NEVER main without manual release
 
     Returns:
         True on success, False on failure
@@ -516,7 +516,7 @@ def sync_products_to_github(pdf_path, html_path=None, repo="mrohitth/products-di
 
 
 # Alias for backward compatibility
-def sync_to_github(file_path, repo="mrohitth/products-distribution", branch="main"):
+def sync_to_github(file_path, repo="mrohitth/products-distribution", branch="dev"):
     """Alias: forwards to sync_products_to_github (no HTML in old single-file path)."""
     return sync_products_to_github(file_path, None, repo, branch)
 
