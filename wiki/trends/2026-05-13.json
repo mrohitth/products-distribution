@@ -1,0 +1,51 @@
+{
+  "status": "COMPLETE",
+  "date": "2026-05-13",
+  "scout_method": "Brave Search",
+  "trends": [
+    {
+      "trend_id": "toddler-negative-phase-2026",
+      "platform": "reddit",
+      "subreddit": "r/toddlers",
+      "raw_quote": "That all day long you're constantly hearing 'stop this', 'stop that', 'no you can't have this'. Of course we as parents have to do those things, because toddlers can't take care of themselves and don't understand risks or long term consequences. But perhaps we can understand why it feels really frustrating and enraging when all you hear all day long is stop, stop, stop, no, no, no.",
+      "problem_statement": "Parents of toddlers feel trapped in a cycle of constant negativity, where daily interactions are dominated by 'no' and 'stop,' leading to emotional exhaustion and guilt about their own reactions.",
+      "target_audience": "Parents of toddlers aged 18 months to 3 years who feel drained by the constant negativity in daily interactions.",
+      "solvability_check": "YES - Can be addressed in a 10-page guide with concrete replacement phrases, environmental restructuring, and emotional regulation techniques.",
+      "total_score": 8.5,
+      "pain_score": 9,
+      "search_volume": 7,
+      "monetization": 8,
+      "slug": "toddler-positive-phase"
+    },
+    {
+      "trend_id": "cat-litter-box-refusal-2026",
+      "platform": "reddit",
+      "subreddit": "r/CatAdvice",
+      "raw_quote": "Cat refuses to use litter box if it has even one piece of waste in it. Demands fresh litter every single time.",
+      "problem_statement": "Cat owners dealing with litter box refusal or stress, spending hours troubleshooting, buying multiple litters, and facing costly vet visits or behavioral breakdowns.",
+      "target_audience": "Cat owners dealing with litter box issues, new cat parents overwhelmed by feline behavior problems.",
+      "solvability_check": "YES - Can be addressed in a 10-page guide with litter type matching, setup optimization, and stress reduction protocols.",
+      "total_score": 8.0,
+      "pain_score": 8,
+      "search_volume": 8,
+      "monetization": 7,
+      "slug": "cat-litter-box-solutions"
+    },
+    {
+      "trend_id": "hvac-emergency-cost-shock-2026",
+      "platform": "reddit",
+      "subreddit": "r/homeowners",
+      "raw_quote": "Many homeowners prefer the 'if it ain't broke, don't fix it' approach. However, in the HVAC world, 'broke' usually means a $500 to $2,000 repair bill.",
+      "problem_statement": "Homeowners facing unexpected HVAC failures and repair bills they weren't financially prepared for, often discovering the hard way that preventive maintenance would have been far cheaper.",
+      "target_audience": "New homeowners, homeowners who have never had HVAC system maintenance, anyone facing an unexpected heating/cooling repair bill.",
+      "solvability_check": "YES - Can be addressed in a 10-page guide with maintenance checklists, cost estimation frameworks, and service agreement guidance.",
+      "total_score": 8.5,
+      "pain_score": 8,
+      "search_volume": 8,
+      "monetization": 9,
+      "slug": "hvac-emergency-guide"
+    }
+  ],
+  "high_score_trends": 3,
+  "stage1_status": "COMPLETE"
+}
