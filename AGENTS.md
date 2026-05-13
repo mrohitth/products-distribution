@@ -1,6 +1,6 @@
 # AGENTS.md — Workspace Crew Hierarchy & Conventions
 
-_Version 5.0 | Gateway Router (MiniMax Professional Subscription). MiniMax-M2.7 is the ONLY auto-routed cloud model. DeepSeek (pay-as-you-go) requires explicit override. Llama 3.2 3B for lightweight local tasks. RAM-gated escalation at 70%._
+_Version 6.0 | Gateway Router (MiniMax Professional Subscription). MiniMax-M2.7 is the ONLY auto-routed cloud model. Llama 3.2 3B for lightweight local tasks. RAM-gated escalation at 70%._
 
 ---
 
@@ -20,13 +20,11 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 |-------|-------|------|-----------|
 | **T1 — Primary** | MiniMax-M2.7 | $0 (subscription) | ALL cloud tasks — research, drafts, code, strategy, cron |
 | **T2 — Light** | Llama 3.2 3B (Local) | $0 (local) | PII scrubbing, workspace guardian (systemEvent), gateway-fallback bridge |
-| **T3 — Overflow** | DeepSeek V4 Pro | PAYG ⚠️ | Explicit override only — never auto-routed |
-| **T4 — Overflow** | DeepSeek V4 Flash | PAYG ⚠️ | Explicit override only — never auto-routed |
 
-**Routing Logic:** All cloud tasks → MiniMax-M2.7. DeepSeek is PAYG — blocked from fallback chain. RAM >70% → fall back to local Llama.
+**Routing Logic:** All cloud tasks → MiniMax-M2.7. RAM >70% → fall back to local Llama.
 ## Tier 1: Kitty 🐱 — Chief of Staff / Lead Orchestrator
 
-**Model:** DeepSeek V4 Pro | **Tier:** T1 (Architect) | **Status:** ACTIVE | **Emoji:** 🧠
+**Model:** MiniMax-M2.7 | **Tier:** T1 (Architect) | **Status:** ACTIVE | **Emoji:** 🧠
 
 **Mandate:** High-level strategy, final product review, initial project scaffolding. High cost, max depth — use sparingly.
 
@@ -38,7 +36,7 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 
 ## Tier 2: Witty 🌐 — Memory Architect
 
-**Model:** DeepSeek V4 Flash | **Tier:** T3 (Sentinel) | **Status:** ACTIVE | **Emoji:** 📚
+**Model:** MiniMax-M2.7 | **Tier:** T2 (Workhorse) | **Status:** ACTIVE | **Emoji:** 📚
 
 **Core Principle:** Obsessive Documentation & Wiki-linking — every decision, pattern, lesson learned gets a wiki entry with cross-links.
 
@@ -62,7 +60,7 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 
 ## Tier 3: Mitty 🔒 — Security & Audit
 
-**Model:** DeepSeek V4 Flash | **Tier:** T3 (Sentinel) | **Status:** ACTIVE | **Emoji:** 🔒
+**Model:** MiniMax-M2.7 | **Tier:** T2 (Workhorse) | **Status:** ACTIVE | **Emoji:** 🔒
 
 **Responsibilities:** Daily 11 PM Eastern audits — SSH, firewall, update, exposure, cron checks. Logs to `memory/YYYY-MM-DD.md` under `## Audit Findings`.
 
@@ -174,10 +172,10 @@ Daily 10 AM ET. Scout → Architect → Draft → Distribution → Production �
 
 | Task Type | Route To |
 |-----------|----------|
-| Strategy / Final Review / Scaffolding | Kitty (DeepSeek V4 Pro) [K] |
+| Strategy / Final Review / Scaffolding | Kitty (MiniMax-M2.7) [K] |
 | Research / Complex Code / >1K lines / ETL | Titty (MiniMax-M2.7) [T] — DEFAULT |
-| Documentation / Wiki / Memory | Witty (DeepSeek V4 Flash) [W] |
-| Security / Audit / Access | Mitty (DeepSeek V4 Flash) [M] |
+| Documentation / Wiki / Memory | Witty (MiniMax-M2.7) [W] |
+| Security / Audit / Access | Mitty (MiniMax-M2.7) [M] |
 | Schedule / Remind / Cron / Local Privacy / PII | Bitty (Llama) [B] |
 
 **PoW Logging Prefix:** `[K]` `[W]` `[T]` `[M]` `[B]`

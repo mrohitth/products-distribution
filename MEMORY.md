@@ -52,15 +52,12 @@ Every automated process must announce completion with:
 
 | Tier | Role | Model | Cost | Use Case |
 |------|------|-------|------|----------|
-| **T1 — Primary** | Kitty 🐱 / Titty 🔬 | MiniMax-M2.7 | $0 (subscription) | ALL cloud tasks — research, drafts, code, strategy, cron |
+| **T1 — Primary** | Kitty 🐱 / Titty 🔬 / Witty 🌐 / Mitty 🔒 | MiniMax-M2.7 | $0 (subscription) | ALL cloud tasks — research, drafts, code, strategy, cron, memory, audit |
 | **T2 — Local** | Bitty 🌿 | Llama 3.2 3B (Ollama) | $0 (local) | PII scrubbing, lightweight ops, gateway-fallback bridge |
-| **T3 — Overflow** | Witty 🌐 / Mitty 🔒 | DeepSeek V4 Pro | PAYG ⚠️ | Explicit override only — never auto-routed |
-| **T4 — Overflow** | — | DeepSeek V4 Flash | PAYG ⚠️ | Explicit override only — never auto-routed |
 
 ### Routing Rules
 - **All cloud tasks → MiniMax-M2.7** (Professional subscription, $0 marginal cost)
-- **Lightweight local tasks → Llama 3.2 3B** (Bitty, via Ollama) — replaces DeepSeek Flash for bridge operations
-- **DeepSeek is PAYG** — removed from automatic fallback chain. Manual `model=` override required for any DeepSeek usage
+- **Lightweight local tasks → Llama 3.2 3B** (Bitty, via Ollama)
 - **RAM >70% →** Pause cloud requests; fall back to local Llama
 
 ### Command Structure
@@ -72,16 +69,16 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 ```
 
 ### Kitty 🐱 — Chief of Staff
-**Model:** DeepSeek V4 Pro · **Status:** ACTIVE · **Tools:** All tools · **Tier:** T1
+**Model:** MiniMax-M2.7 · **Status:** ACTIVE · **Tools:** All tools · **Tier:** T1
 
 ### Titty 🔬 — Technical Lead / Data Engineering
 **Model:** MiniMax-M2.7 (Professional Subscription) · **Status:** ACTIVE · **Tools:** read, write, exec, web_search, web_fetch, memory_search, memory_get · **Tier:** T2 (Default Workhorse)
 
 ### Witty 🌐 — Memory Architect
-**Model:** DeepSeek V4 Flash · **Status:** ACTIVE · **Tools:** read, write, web_search, web_fetch, memory_search, memory_get · **Tier:** T3
+**Model:** MiniMax-M2.7 · **Status:** ACTIVE · **Tools:** read, write, web_search, web_fetch, memory_search, memory_get · **Tier:** T2
 
 ### Mitty 🔒 — Security & Audit
-**Model:** DeepSeek V4 Flash · **Status:** ACTIVE · **Tools:** read, exec, memory_search, memory_get · Daily 11 PM Eastern audits · **Tier:** T3
+**Model:** MiniMax-M2.7 · **Status:** ACTIVE · **Tools:** read, exec, memory_search, memory_get · Daily 11 PM Eastern audits · **Tier:** T2
 
 ### Bitty 🌿 — Local Privacy Agent
 **Model:** Llama 3.2 3B (Local/Ollama) · **Status:** ACTIVE · **Tools:** cron, read, memory_get · **Tier:** T4  
@@ -114,14 +111,13 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 ## 🔒 Correction Ledger (Immutable)
 
 - CDC pipelines → Python/Bash only. No Spark, Kafka, Snowflake, EMR, PySpark.
-- DeepSeek → PAYG. Manual `model=` override required. Never auto-routed.
-- MiniMax M2.7 → sole cloud primary (subscription, $0 marginal cost).
+- MiniMax M2.7 → sole cloud primary (subscription, $0 marginal cost). No DeepSeek.
 - **Credentials** → System keyring only. No `.git-credentials` files, no PATs in remote URLs, no API keys in source files. `gh auth login --with-token` + `gh auth setup-git` for all GitHub access. Enforced by bitty_credential_leak_scanner.sh every 6h.
 ## 📚 Model Specifications
 
 > **→ SOURCE OF TRUTH: [MODEL_SPECS.md](MODEL_SPECS.md)**
-> Complete operating parameters for MiniMax M2.7 (default), DeepSeek V4 Pro, and DeepSeek V4 Flash.
-> Includes context windows, pricing, caching strategies, thinking modes, and routing decision matrix.
+> Complete operating parameters for MiniMax M2.7.
+> Includes context windows, pricing, caching, and thinking modes.
 
 ## 🏭 Digital Product Workflow
 
