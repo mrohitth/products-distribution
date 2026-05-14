@@ -206,4 +206,3 @@ Keep the checklist on hand as you work through the diagnostic steps. It is desig
 
 ---
 
-*Last updated: 2026-05-13*

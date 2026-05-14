@@ -651,7 +651,7 @@ def main() -> int:
             continue
 
         verdict = analyzed.get("verdict", "REJECT")
-        slug_candidate = normalize_slug(analyzed.get("slug_candidate", ""))
+        slug_candidate = normalize_slug(analyzed.get("slug_candidate") or "")
 
         if verdict == "REJECT":
             all_rejected_results.append({

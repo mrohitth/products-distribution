@@ -481,3 +481,4 @@ This was hard. You're doing the right thing. Give it time, follow the protocol, 
 ---
 
 **Key Takeaway (Overall):** Sudden inter-cat aggression is a symptom, not a diagnosis. Medical triggers, environmental stress, and social dynamics all play a role — and resolving it requires understanding all three. The two-week protocol gives you a path. The long-term management gives you peace. Start today.
+

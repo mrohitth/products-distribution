@@ -1,0 +1,184 @@
+{
+  "scouted_at": "2026-05-14T10:08:29.656665-04:00",
+  "source_channels": [
+    "reddit.com",
+    "quora.com"
+  ],
+  "queries_used": [
+    "cat medical emergency vet bill shocked overwhelmed Reddit r/CatAdvice",
+    "freelancer client ghosted me after completion desperate Reddit r/freelance",
+    "job interview rejection burnout exhausted Quora",
+    "new homeowner maintenance anxiety confused lost Reddit r/Homeowners",
+    "roommate trashed apartment security deposit lost money angry Reddit r/roommates",
+    "freelancer scope creep client demanding free work frustrated Reddit r/Entrepreneur",
+    "toddler hitting biting desperate exhausted Reddit r/parenting",
+    "small business tax deadline panic overwhelmed Reddit r/smallbusiness",
+    "divorce financial fallout lost money scared Reddit r/personalfinance"
+  ],
+  "trends": [
+    {
+      "trend_id": 1,
+      "audience": "Freelancers and independent contractors across all service industries",
+      "raw_quote": "Scope creep is definitely a major obstacle. <strong>Managed poorly it can affect your clients satisfaction and ultimately your reputation</strong>. The problem is, many clients don&#x27;t always know what they want until they see some progress.",
+      "emotional_trigger": "Fear of reputation damage and working for free due to unclear boundaries",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Contract templates, scope definition frameworks, client communication scripts for boundary-setting",
+      "slug_candidate": "scope-creep-playbook-freelancers",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Freelancers/comments/1pp7hwo/how_do_you_guys_deal_with_scope_creep/",
+      "source_query": "freelancer scope creep client demanding free work frustrated Reddit r/Entrepreneur",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 2,
+      "audience": "Struggling freelancers facing cash flow crisis and client acquisition problems",
+      "raw_quote": "upwork or fiverr to fill gaps even though rates suck. main thing is youre probably casting too wide and attracting tire kickers. tighten your ICP and maybe raise prices - cheap signals desperation and attracts flakes ... Something is fundamentally broken here, it&#x27;s getting tougher and tougher, but 500 conversations and no conversions? Either your leadgen is completely off, or your sales / product is broken. What kind of services are you selling, and how? Monthly retainers? one-off quotes? How much are you charging? What kind of work used to convert that now doesn&#x27;t? ... Same. 2 clien",
+      "emotional_trigger": "Near homelessness desperation, financial survival anxiety, system-level frustration",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Client acquisition playbook, retainer building system, proposal templates, client communication guides",
+      "slug_candidate": "client-attraction-system-freelancers",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Freelancers/comments/1rc4qcb/i_went_from_freelancer_to_being_this_close_to/",
+      "source_query": "freelancer client ghosted me after completion desperate Reddit r/freelance",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 3,
+      "audience": "Small business owners with multiple entities (LLCs, corps) managing tax compliance",
+      "raw_quote": "<strong>Implementing a daily digest script, as suggested, can significantly reduce the risk of missed deadlines</strong>. I did something similar for a local business recently, and we saw a 92% reduction in missed deadlines and a 40% decrease in manual checking time.",
+      "emotional_trigger": "Fear of missed deadlines, IRS penalties, audit risk - quantified 92% reduction in missed deadlines when solved",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Multi-entity tax deadline tracker template with automated reminders and calendar integration",
+      "slug_candidate": "multi-entity-tax-deadline-tracker",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/smallbusiness/comments/1sww15e/anyone_else_managing_tax_deadlines_across/",
+      "source_query": "small business tax deadline panic overwhelmed Reddit r/smallbusiness",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 7,
+      "audience": "Gentle parenting advocates struggling with toddler physical aggression",
+      "raw_quote": "I just stayed far enough away that she couldn&#x27;t reach me, repeated &quot;nice touches,&quot; and gave her a toy to bite. Got her upstairs for bed, and she continued trying to hurt me while I opened a book to read to her. Then I gave her a final chance. Gentle touches, or into bed without a story. She hit me again, so I said my good nights and put her in her crib. I let her be pissed off about it for 5 minutes or so, and then I went back up and read her story. No more attempts to hit. Gentle parenting is good, but that doesn&#x27;t mean you have to allow your kid to hit you.",
+      "emotional_trigger": "Cognitive dissonance, feeling defeated, losing composure with child",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 3,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Gentle parenting survival guide for physical aggression with specific scripts and boundaries",
+      "slug_candidate": "gentle-parenting-toddler-aggression",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/toddlers/comments/xty1ik/3_year_old_hitting_me_the_gentle_parenting/",
+      "source_query": "toddler hitting biting desperate exhausted Reddit r/parenting",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 4,
+      "audience": "Small business owners confused about tax filing requirements",
+      "raw_quote": "If it&#x27;s about taxes, <strong>did your business incur revenue/expenses last year?</strong> If so, you should probably know what kind of business it is or file a 1040 if you didn&#x27;t incorporate anything.",
+      "emotional_trigger": "Tax time frustration, uncertainty about filing requirements and forms",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Small business tax filing checklist guide by entity type with step-by-step instructions",
+      "slug_candidate": "small-business-tax-filing-simplified",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/smallbusiness/comments/1rk0qnw/tax_time_is_a_pain_anyone_know_of_any_solutions/",
+      "source_query": "small business tax deadline panic overwhelmed Reddit r/smallbusiness",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 5,
+      "audience": "Parents of toddlers (1-5 years) exhibiting hitting/biting behavior",
+      "raw_quote": "I have a 4.5 YO who hits all the time, his baby sister, his older sisters, my wife and I\u2026 I\u2019m starting to get really desperate. ... For my son, he would flap his hands before he got to the bitting portion of his overstimulation. So, I\u2019d watch for that and when the hand flapping starts, I redirect him to do something else. Introduce a toy, a new activity, whatever he was into at the time. It took me a bit to figure out how to read my kids body language to gauge when he was about to bite.",
+      "emotional_trigger": "Desperation, feeling overwhelmed, watching helplessly as child hurts siblings/family",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Toddler aggression guide covering impulse control techniques and reading body language cues",
+      "slug_candidate": "stop-toddler-hitting-biting-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Parenting/comments/wmn7ma/parents_whove_had_1_year_old_toddlers_that_hit/",
+      "source_query": "toddler hitting biting desperate exhausted Reddit r/parenting",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 6,
+      "audience": "Parents dealing with aggressive toddler behavior (hitting, slapping, kicking)",
+      "raw_quote": "We were able to get him into school early for socioemotional development and we also did Parent Child Interactive Therapy (PCIT). ... I\u2019d say, \u201cI have to protect my body. You know I love you, but if you keep kicking me, I\u2019m going to move to that chair until you\u2019re sure you can be kind to my body.\u201d ... Walk away hide and cry. Or hold him in my arms until he calmed down. My kid is the exact replica of me so I felt his pain. It was hard tho thankfully he doesn\u2019t do it it anymore ... I would be stern and say hitting was not ok!",
+      "emotional_trigger": "Exhaustion, guilt, uncertainty about discipline methods and long-term outcomes",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Evidence-based toddler behavior management guide with specific response scripts",
+      "slug_candidate": "toddler-aggression-blueprint",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Parenting/comments/1hyfyss/what_do_you_guys_do_for_parenting_a_toddler_who/",
+      "source_query": "toddler hitting biting desperate exhausted Reddit r/parenting",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 8,
+      "audience": "Parents of daycare-age toddlers with impulse control/biting issues risking childcare",
+      "raw_quote": "It\u2019s utterly exhausting. It\u2019s taxing on our family and our marriage. Unfortunately, our last meeting with our provider went poorly and she pretty much said he\u2019s a burden to her, her staff, and other parents. Our kid has been there since he was about 12 weeks. We\u2019re utterly devasted because he knows he shouldn\u2019t bite, he just struggles with the impulse.",
+      "emotional_trigger": "Devastation over potential daycare loss, marriage strain, child labeled as burden",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Toddler impulse control intervention guide with daycare communication strategies",
+      "slug_candidate": "stop-toddler-biting-daycare",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/daddit/comments/1cgv4df/how_it_feels_when_your_toddler_literally_wont/",
+      "source_query": "toddler hitting biting desperate exhausted Reddit r/parenting",
+      "source_platform": "reddit"
+    }
+  ],
+  "stage1_status": "COMPLETE",
+  "high_score_trends": 8,
+  "total_scored": 8,
+  "version": "v3"
+}

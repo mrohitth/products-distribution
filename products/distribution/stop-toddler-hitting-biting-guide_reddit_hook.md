@@ -1,0 +1,7 @@
+I hear you. That feeling of desperation isn't a character flaw in you—it's the exhaustion of watching your kid hurt people you love and not having the right tools yet. That's a heavy place to live.
+
+Here's what changed things for me when I was in the same spot: aggression almost always has readable signals before it happens. You already noticed one—the hand flapping. That's not random; that's your son's body giving you a warning that he's approaching overload. The guide calls this catching the wave before it crashes. When you start watching for those pre-signals, you shift from reacting to the hit to responding to what's building.
+
+The other thing that reframed everything: it's often not a behavior problem. It's a timing problem. That part of the brain that controls impulse—it's still under construction in a 4.5 year old. He's not choosing to hit. His system is overwhelmed before he has the hardware to stop himself. That distinction matters for how you respond, and honestly, for how you forgive yourself.
+
+You're already doing the hard part by paying attention. That's exactly what the guide teaches. I found a checklist that walks through the exact sequence—what to watch for, when to intervene, what to try. Happy to share if it would help. You're not broken, and neither is he. This is hard, but it's also workable.

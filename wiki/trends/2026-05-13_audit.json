@@ -1,21 +1,45 @@
 {
-  "scouted_at": "2026-05-13T11:14:44.942898-04:00",
-  "source_channels": [
-    "reddit.com",
-    "quora.com"
+  "scouted_at": "2026-05-13T11:14:44.943614-04:00",
+  "date": "2026-05-13",
+  "queries": [
+    [
+      "cat suddenly aggressive after baby arrives overwhelmed Reddit",
+      "reddit"
+    ],
+    [
+      "client wants free work before contract freelancer frustrated Reddit",
+      "reddit"
+    ],
+    [
+      "first time dad terrified newborn safety panic Quora",
+      "quora"
+    ],
+    [
+      "job rejection burnout exhausted can't keep going Reddit",
+      "reddit"
+    ],
+    [
+      "first renovation disaster cost me thousands regret homeowner Reddit",
+      "reddit"
+    ],
+    [
+      "new puppy eating everything emergency vet overwhelmed scared Reddit",
+      "reddit"
+    ],
+    [
+      "unpaid invoice client ignoring freelancer desperate lost money Reddit",
+      "reddit"
+    ],
+    [
+      "student debt anxiety depressed can't see career path Quora",
+      "quora"
+    ],
+    [
+      "houseplant dying despite watering guilty frustrated Reddit",
+      "reddit"
+    ]
   ],
-  "queries_used": [
-    "cat suddenly aggressive after baby arrives overwhelmed Reddit",
-    "client wants free work before contract freelancer frustrated Reddit",
-    "first time dad terrified newborn safety panic Quora",
-    "job rejection burnout exhausted can't keep going Reddit",
-    "first renovation disaster cost me thousands regret homeowner Reddit",
-    "new puppy eating everything emergency vet overwhelmed scared Reddit",
-    "unpaid invoice client ignoring freelancer desperate lost money Reddit",
-    "student debt anxiety depressed can't see career path Quora",
-    "houseplant dying despite watering guilty frustrated Reddit"
-  ],
-  "trends": [
+  "accepted": [
     {
       "trend_id": 3,
       "audience": "Parents with cats and babies/infants in the home",
@@ -397,8 +421,159 @@
       "source_platform": "reddit"
     }
   ],
-  "stage1_status": "COMPLETE",
-  "high_score_trends": 19,
-  "total_scored": 19,
-  "version": "v3"
+  "rejected": [
+    {
+      "source_query": "student debt anxiety depressed can't see career path Quora",
+      "title": "What are the consequences of not paying off student loans in the U.S. due to dep",
+      "description": "Answer (1 of 2): <strong>Medical reasons are not a valid excuse for failing to pay your student loans</strong>. If you fail to pay your student loans, you will destroy your credit rating, reduce the c",
+      "rejection_reason": "Problem requires systemic/legal solution - cannot be solved with a 10-page guide",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 1
+      },
+      "total_score": 7
+    },
+    {
+      "source_query": "student debt anxiety depressed can't see career path Quora",
+      "title": "Student Loan Debt Takes a Toll on a Vulnerable Population's Mental Health | Scie",
+      "description": "Her anxiety surrounding her debt mounted. <strong>Lockert felt shame for going to \u201ca fancy private school\u201d and not being able to secure full-time employment</strong>. In 2013 she went into a deep depr",
+      "rejection_reason": "Mental health issues require professional therapy, not a digital guide",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 1
+      },
+      "total_score": 8
+    },
+    {
+      "source_query": "student debt anxiety depressed can't see career path Quora",
+      "title": "Remind yourself of 'what makes you happy': Blogger shares her advice about battl",
+      "description": "All of 2012, I was severely depressed and anxious.&quot; She recalls wondering how she was going to get out of debt and if she would ever make enough money to pay it off.",
+      "rejection_reason": "Clinical depression requires professional mental health support",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 1
+      },
+      "total_score": 7
+    },
+    {
+      "source_query": "client wants free work before contract freelancer frustrated Reddit",
+      "title": "r/freelance on Reddit: Client wants me to start work before contract is signed",
+      "description": "They want you to work WITHOUT a contract and WITHOUT pay? I would NOPE out of THAT! <strong>Freelance does NOT mean FREE!</strong>",
+      "rejection_reason": "One-off transaction dispute - not a recurring problem pattern",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 0
+      },
+      "total_score": 6
+    },
+    {
+      "source_query": "client wants free work before contract freelancer frustrated Reddit",
+      "title": "r/Upwork on Reddit: Freelancer will not give work until I pay",
+      "description": "<strong>Contact Support and ask them to explain the basics of the platform to the freelancer or just hire someone else</strong>. ... I\u2019m an artist and I never send the full work unwatermarked before m",
+      "rejection_reason": "Low emotional intensity, not a significant pain point worth solving",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 1,
+        "Monetization": 1,
+        "Recurrence": 1
+      },
+      "total_score": 5
+    },
+    {
+      "source_query": "first renovation disaster cost me thousands regret homeowner Reddit",
+      "title": "r/homeowners on Reddit: Can we talk about renovation mistakes and regrets ?",
+      "description": "Last year our gas company offered to insulate our attic for free. It was blown cellulose. Now any work I do up there is a giant mess and takes twice as long. Instant regret. ... Mistake I keep making:",
+      "rejection_reason": "Low emotional intensity and low monetization potential - these are minor regrets, not urgent pain points. Also one-time situational mistakes, not systematic problems.",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 1,
+        "Monetization": 1,
+        "Recurrence": 2
+      },
+      "total_score": 6
+    },
+    {
+      "source_query": "first renovation disaster cost me thousands regret homeowner Reddit",
+      "title": "r/Renovations on Reddit: Redditors who have recently renovated: what was the mos",
+      "description": "What\u2019s one thing you wish you had known before starting your own renovation, and would it have changed any of your decisions? ... Dont overbuild/over remodel your home. ... Has anyone ever regret doin",
+      "rejection_reason": "Too diffuse - 'what was painful' is survey data, not problem statements. No specific pain point to solve. Low emotional intensity and no clear monetization angle.",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 1,
+        "Monetization": 1,
+        "Recurrence": 2
+      },
+      "total_score": 5
+    },
+    {
+      "title": "r/puppy101 on Reddit: Puppies eat literally anything and it\u2019s so damn stressful ",
+      "description": "Things my dog ate during her puppyhood: a plastic cup lid, lots of fabric, mulch, a mouse, charcoal, aquaphor, a muffin and the paper it was wrapped in, most of a pair of pants, and a toadstool. She\u2019s",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "new puppy eating everything emergency vet overwhelmed scared Reddit"
+    },
+    {
+      "title": "r/DogAdvice on Reddit: My dog won't eat",
+      "description": "NGL <strong>this is concerning</strong>. Glad to hear you&#x27;re taking her in to the vet- definitely she should be seen ASAP if she&#x27;s refusing EVERYTHING (including her favorites, and especiall",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "new puppy eating everything emergency vet overwhelmed scared Reddit"
+    },
+    {
+      "title": "r/puppy101 on Reddit: When to actually worry about puppy throwing up?",
+      "description": "One thing that helps the vet determine if there&#x27;s a problem is if her eating habits change. What was her behavior and body language like at the pet store? <strong>I would be highly suspicious it ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "new puppy eating everything emergency vet overwhelmed scared Reddit"
+    },
+    {
+      "title": "r/puppy101 on Reddit: Puppy eats EVERYTHING on the ground outside, and I'm about",
+      "description": "I&#x27;ve raised many puppies before, and I&#x27;ve never had this much of a problem before. I&#x27;m just terrified he&#x27;s going to eat something that will kill him. He&#x27;s never unsupervised a",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "new puppy eating everything emergency vet overwhelmed scared Reddit"
+    },
+    {
+      "title": "I\u2019m a first time dad today and I\u2019m so scared about every single little thing how",
+      "description": "<strong>If they got sick, I would totally panic!</strong> I was often totally overwhelmed and exhausted over worries, unexplainable and unresolvable crying jags and ever-changing feeding habits. When ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "first time dad terrified newborn safety panic Quora"
+    },
+    {
+      "title": "How to Cope With \"New Dad Anxiety\" and Imposter Syndrome | Psychology Today",
+      "description": "Being a dad comes with a normal level of anxiety, but in large doses, this can lead to persistent feelings of incompetence. <strong>Normalizing and destigmatizing &quot;dad anxiety&quot; can help</str",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "first time dad terrified newborn safety panic Quora"
+    },
+    {
+      "title": "r/NewDads on Reddit: Anxiety help; First-time dad 2 days into fatherhood and spi",
+      "description": "If you feel overwhelmed take a breather and go for a walk or find a quiet place for a little while, we all go through it. I had to give my wife our son the other night cause I was starting to lose it.",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "first time dad terrified newborn safety panic Quora"
+    },
+    {
+      "title": "You're Not Alone if You Feel New Dad Anxiety - Jeff Siegel",
+      "description": "It&#x27;s incredibly common to feel new dad anxiety. Here are ways to address your anxiety so you can embrace the challenges and joys of fatherhood.",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "first time dad terrified newborn safety panic Quora"
+    },
+    {
+      "title": "r/houseplants on Reddit: All my plants are drying up despite being watered",
+      "description": "I&#x27;m getting extremely frustrated by this, not to mention depressed at the sight of dying plants everywhere. I&#x27;m convinced I&#x27;m not doing anything differently to before I lived here. I&#x",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "houseplant dying despite watering guilty frustrated Reddit"
+    },
+    {
+      "title": "r/houseplants on Reddit: Just a reminder that it's okay to throw out your dying/",
+      "description": "I definitely feel guilty about tossing plants that are struggling, but I did not realize how much of a mood killer my dying plants were for me. I spent what little energy I had left last weekend clear",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "houseplant dying despite watering guilty frustrated Reddit"
+    }
+  ],
+  "total_accepted": 19,
+  "total_rejected": 17
 }

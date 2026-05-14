@@ -206,4 +206,3 @@ Keep it on your water heater or furnace — somewhere visible — and track each
 
 ---
 
-*Last updated: 2026-05-13*

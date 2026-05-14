@@ -457,7 +457,7 @@ def generate_checklist_pdf(slug: str, title_str: str,
     checklist_path = OUTPUT_DIR / f"{slug}_CHECKLIST.pdf"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    date_str = datetime.now().strftime("%B %d, %Y")
+    date_str = datetime.now().strftime("%Y-%m-%d")
 
     # Chunk items into 3 groups of 4
     chunks = [items[i:i+4] for i in range(0, len(items), 4)]
@@ -481,7 +481,7 @@ def generate_checklist_pdf(slug: str, title_str: str,
 <body>
   <div class="page">
     <h1>{html_mod.escape(title_str)} — Action Checklist</h1>
-    <h2>Print this page and keep it somewhere visible &nbsp;|&nbsp; Generated {date_str}</h2>
+    <h2>Print this page and keep it somewhere visible</h2>
     {checklist_rows}
     <div class="footer">Companion to the full guide in your Lemon Squeezy library &mdash; check off each item as you complete it.</div>
   </div>

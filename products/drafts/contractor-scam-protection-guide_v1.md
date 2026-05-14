@@ -287,3 +287,4 @@ You now know how to vet a contractor, structure a payment schedule, and protect 
 The single most important thing you can do right now: stop giving contractors cash or Zelle transfers. Use a credit card or a written payment schedule tied to milestones. That change alone will protect you from 90% of common scams.
 
 You have done the hard part by educating yourself. Now act.
+

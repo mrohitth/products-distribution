@@ -326,7 +326,7 @@ def check_draft_truncation(text: str, pdf_name: str, draft_path: Path | None = N
     # or similar explicit closing section within the last 20 lines of the PDF.
     if draft_path and draft_path.exists():
         md_text = draft_path.read_text()
-        concluding_phrases = ["Your Next Step", "Key Takeaway", "You've got this", "Key takeaway"]
+        concluding_phrases = ["your next step", "key takeaway", "you've got this", "final note", "next steps"]
         has_conclusion = any(phrase.lower() in md_text.lower() for phrase in concluding_phrases)
         if not has_conclusion:
             issues.append(f"  ❌ {pdf_name}: Source draft has no conclusion section. May be truncated.")

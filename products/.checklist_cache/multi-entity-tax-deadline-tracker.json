@@ -1,0 +1,24 @@
+{
+  "slug": "multi-entity-tax-deadline-tracker",
+  "draft_hash": "f5bcdbe69e62136df7061d3ae265356a",
+  "items": [
+    "Build Your Entity Foundation: Open a new spreadsheet labeled \"Entity Inventory Master\" with columns for Entity Name, Entity Type, State of Formation, State(s) of Registration, Formation Date, EIN, Tax Classification, Registered Agent, Principal Address, and Notes.",
+    "Build Your Entity Foundation: Fill in every entity you own as a separate row in your spreadsheet, including entities you have not officially dissolved yet, so nothing falls through the cracks.",
+    "Build Your Entity Foundation: Export your entity inventory to cloud storage and set a recurring quarterly reminder to review and update it as your single source of truth going forward.",
+    "Build Your Entity Foundation: Add notes to each entity row for special circumstances, pending filings, or anything else that requires ongoing attention so the document captures your complete situation at a glance.",
+    "Configure Automated Reminders: Map all tax obligations by jurisdiction, listing every filing type, due date, and payment requirement for federal, state, and county levels across all your entities.",
+    "Configure Automated Reminders: Set automated reminders in your calendar system to send notifications 30 days before each tax deadline so you have adequate time to gather documents and prepare filings.",
+    "Configure Automated Reminders: Schedule internal buffer zones by targeting all filings and payments at least 5 business days before the actual deadline to prevent last-minute scrambles and processing delays.",
+    "Configure Automated Reminders: Create calendar blocks for year-end filing coordination that mark when each entity's return is due and when your accountant needs supporting documents from you.",
+    "Establish Maintenance Rhythms: Build audit-ready documentation by maintaining organized folders with copies of all filed returns, correspondence with tax authorities, and payment receipts organized by year and entity.",
+    "Establish Maintenance Rhythms: Create backup protocols by designating a second person in your organization or an external accountant who can access your tax calendar and deadlines if you are unavailable.",
+    "Establish Maintenance Rhythms: Schedule quarterly system reviews where you verify that all entities are properly registered, check for any law changes affecting your obligations, and update your reminder system accordingly.",
+    "Establish Maintenance Rhythms: Design your system to survive your busiest seasons and planned time off by ensuring all deadlines are visible, reminders are automated, and backup contacts know your filing schedule."
+  ],
+  "categories": [
+    "Build Your Entity Foundation",
+    "Configure Automated Reminders",
+    "Establish Maintenance Rhythms"
+  ],
+  "generated_at": "2026-05-14T11:04:42.629930"
+}

@@ -193,4 +193,3 @@ Get the checklist to keep these phrases handy during the most common daily battl
 
 ---
 
-*Last updated: 2026-05-13*

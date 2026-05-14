@@ -220,3 +220,4 @@ For returning customers: [Member's Area access]
 ---
 
 *14-day timeline derived from VCA Hospitals behavioral guidelines, Cat Behavior Clinic success report data, and Maddie's Fund shelter behavior resources. This guide is informational and does not replace veterinary advice. If your cat shows signs of illness, contact your vet.*
+

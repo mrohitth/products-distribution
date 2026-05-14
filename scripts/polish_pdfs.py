@@ -35,7 +35,7 @@ def load_products_from_trends() -> list[dict]:
     data = json.loads(trends_file.read_text())
     products = []
     for t in data.get("trends", []):
-        slug = t.get("slug", "")
+        slug = t.get("slug_candidate", "") or t.get("slug", "")
         if not slug:
             continue
         # Try {slug}_v1.md first, then bare {slug}.md

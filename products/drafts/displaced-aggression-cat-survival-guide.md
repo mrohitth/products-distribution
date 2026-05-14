@@ -423,3 +423,4 @@ Go to [companion resource link] to get your copy.
 ---
 
 *This guide is for informational purposes only and does not constitute veterinary or behavioral advice. Always consult with a qualified veterinary professional before implementing behavioral modification programs or pharmaceutical interventions for your cat.*
+

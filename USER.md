@@ -53,38 +53,48 @@ _Complete profile — authoritative source for all agent context_
 ### Philosophy
 **High-conviction, research-driven, long-term horizon.** Mathew doesn't chase trends — he identifies structural shifts and positions accordingly.
 
-### Portfolio (from Fidelity — May 12, 2026 3:53 PM ET)
+### Portfolio (from Fidelity — May 14, 2026 12:09 PM ET)
 
-**Total Value: ~$60,414 | Cash: $568.87**
+**Total Value: ~$62,826 | Cash: ~$2,129 (SPAXX) | Pending activity: -$1,334 (settling)**
 
 | Ticker | Shares | Avg Cost | Current | Market Value | G/L | Weight |
 |--------|--------|----------|---------|--------------|-----|--------|
-| NVDA | 67.081 | $209.47 | $221.21 | $14,838.65 | +5.60% | 24.8% |
-| VOO | 10.636 | $628.86 | $679.26 | $7,224.55 | +8.01% | 12.1% |
-| VTI | 19.122 | $362.31 | $363.16 | $6,944.34 | +0.23% | 11.6% |
-| QQQ | 8.859 | $615.71 | $707.52 | $6,267.91 | +14.91% | 10.5% |
-| XLE | 92 | $56.20 | $57.68 | $5,306.10 | +2.63% | 8.9% |
-| SMH | 9.09 | $550.29 | $561.41 | $5,103.17 | +2.01% | 8.5% |
-| XLV | 22 | $143.68 | $145.81 | $3,207.82 | +1.48% | 5.4% |
-| ASTS | 31.234 | $81.00 | $73.38 | $2,291.95 | -9.41% | 3.8% |
-| AMGN | 6 | $328.57 | $335.97 | $2,015.82 | +2.25% | 3.4% |
-| CVX | 10 | $184.50 | $186.24 | $1,862.40 | +0.94% | 3.1% |
-| SCHD | 48.156 | $30.59 | $31.79 | $1,530.63 | +3.89% | 2.6% |
-| VXUS | 17.704 | $76.38 | $84.33 | $1,492.88 | +10.40% | 2.5% |
-| COIN | 5 | $208.50 | $206.77 | $1,033.85 | -0.83% | 1.7% |
-| QCOM | 3 | $208.60 | $211.02 | $633.06 | +1.16% | 1.1% |
+| NVDA | 51.081 | $210.16 | $235.08 | $12,007.86 | +11.9% | 19.1% |
+| VTI | 31.122 | $362.94 | $368.16 | $11,457.87 | +1.4% | 18.2% |
+| VOO | 10.636 | $628.86 | $688.90 | $7,327.14 | +9.5% | 11.7% |
+| XLE | 92 | $56.20 | $57.89 | $5,325.42 | +3.0% | 8.5% |
+| SMH | 9.09 | $550.29 | $578.85 | $5,261.74 | +5.2% | 8.4% |
+| QQQ | 2.859 | $635.20 | $721.60 | $2,063.04 | +13.6% | 3.3% |
+| XLV | 22 | $143.68 | $147.06 | $3,235.32 | +2.4% | 5.1% |
+| ASTS | 31.234 | $81.00 | $80.52 | $2,514.96 | -0.6% | 4.0% |
+| VXUS | 25.704 | $79.04 | $85.17 | $2,189.20 | +7.8% | 3.5% |
+| AMGN | 6 | $328.57 | $337.10 | $2,022.60 | +2.6% | 3.2% |
+| CVX | 10 | $184.50 | $186.32 | $1,863.15 | +1.0% | 3.0% |
+| SCHD | 48.156 | $30.59 | $31.92 | $1,537.13 | +4.3% | 2.4% |
+| TSM | 4 | $416.80 | $418.81 | $1,675.24 | +0.5% | 2.7% |
+| COIN | 5 | $208.50 | $217.66 | $1,088.30 | +4.4% | 1.7% |
+| QCOM | 3 | $208.60 | $202.25 | $606.75 | -3.0% | 1.0% |
+| SCHG | 15 | $34.17 | $34.73 | $520.95 | +1.6% | 0.8% |
 
-**Cash:** SPAXX $568.87 (0.9%) | **Pending:** -$461.70
+**Cash:** SPAXX $2,129.10 (3.4%) | **Pending activity:** -$1,334.39 (settling May 15)
 
-**Notable changes since May 3:**
-- NVDA +0.86% — now above average cost, recovered from earlier drawdown
-- SMH +9.88% — extended run; position trimmed from 8.1 → 6.241 shares
-- VTI trimmed: 34 → 19.984 shares
-- QQQ trimmed: 9.4 → 8.859 shares
-- SCHG increased: 102.4 → 128.865 shares
-- New positions: XLE (energy), XLV (healthcare) — sector rotation in progress
-- ASTS shares reduced: 8.7 → 1.234 (heavily trimmed)
-- Pending activity: -$4,175.06 (likely a buy/sell settling)
+**Today's trades (May 14, settling May 15):**
+- Bought 5 VTI @ $366.10 → -$1,830.50
+- Bought 4 TSM @ $416.80 → -$1,667.20 (NEW position)
+- Bought 8 VXUS @ $84.92 → -$679.36
+- Bought 7 SCHG @ $34.45 → -$241.15
+- Sold 4 NVDA @ $232.47 → +$929.84 (trim)
+- Sold 3 QQQ @ $718.00 → +$2,153.95 (trim)
+
+**Notable changes since May 13:**
+- NVDA: 55.081 → 51.081 shares (sold 4 @ $232.47, trim)
+- QQQ: 5.859 → 2.859 shares (sold 3 @ $718, heavily trimmed)
+- VTI: 26.122 → 31.122 shares (bought 5 @ $366.10, rebuild)
+- SCHG: 8 → 15 shares (bought 7 @ $34.45, rebuilt)
+- TSM: NEW position 4 shares @ $416.80 (Taiwan Semi)
+- SPAXX: $107.17 → $2,129.10 (cash built from NVDA/QQQ sells)
+- VXUS: 17.704 → 25.704 shares (bought 8 @ $84.92, international diversification)
+- ASTS: held 31.234 shares, now -0.6% G/L (moonhot hold)
 
 ---
 

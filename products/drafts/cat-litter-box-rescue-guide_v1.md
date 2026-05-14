@@ -204,3 +204,4 @@ This guide gives you the framework. The vet visit, the box audit, the stress ass
 From there: pick one item from Chapter 2 to implement this week. Just one. The litter box reset is a sequence — do not skip steps, but do not freeze either.
 
 You have got this.
+
