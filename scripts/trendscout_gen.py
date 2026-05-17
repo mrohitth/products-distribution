@@ -71,6 +71,10 @@ def call_minimax(creds: dict, system_prompt: str, user_prompt: str, max_tokens: 
             for block in data.get("content", []):
                 if block.get("type") == "text":
                     return block["text"]
+            # Also handle thinking blocks which MiniMax uses
+            for block in data.get("content", []):
+                if block.get("type") == "thinking":
+                    return block.get("thinking", "") or block.get("text", "")
             return ""
     except Exception as e:
         print(f"  API error: {e}")

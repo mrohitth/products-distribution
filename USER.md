@@ -55,7 +55,7 @@ _Complete profile — authoritative source for all agent context_
 
 ### Portfolio (from Fidelity — May 14, 2026 12:09 PM ET)
 
-**Total Value: ~$62,826 | Cash: ~$2,129 (SPAXX) | Pending activity: -$1,334 (settling)**
+**Total Value: ~$60,426 | Cash: $0 (SPAXX) | Pending: QQQ buy 1.033 @ $708.52 (settling May 16)**
 
 | Ticker | Shares | Avg Cost | Current | Market Value | G/L | Weight |
 |--------|--------|----------|---------|--------------|-----|--------|
@@ -64,7 +64,7 @@ _Complete profile — authoritative source for all agent context_
 | VOO | 10.636 | $628.86 | $688.90 | $7,327.14 | +9.5% | 11.7% |
 | XLE | 92 | $56.20 | $57.89 | $5,325.42 | +3.0% | 8.5% |
 | SMH | 9.09 | $550.29 | $578.85 | $5,261.74 | +5.2% | 8.4% |
-| QQQ | 2.859 | $635.20 | $721.60 | $2,063.04 | +13.6% | 3.3% |
+| QQQ | 3.892 | $718.13 | $708.52 | $2,757.56 | -1.3% | 4.8% |
 | XLV | 22 | $143.68 | $147.06 | $3,235.32 | +2.4% | 5.1% |
 | ASTS | 31.234 | $81.00 | $80.52 | $2,514.96 | -0.6% | 4.0% |
 | VXUS | 25.704 | $79.04 | $85.17 | $2,189.20 | +7.8% | 3.5% |
@@ -76,25 +76,15 @@ _Complete profile — authoritative source for all agent context_
 | QCOM | 3 | $208.60 | $202.25 | $606.75 | -3.0% | 1.0% |
 | SCHG | 15 | $34.17 | $34.73 | $520.95 | +1.6% | 0.8% |
 
-**Cash:** SPAXX $2,129.10 (3.4%) | **Pending activity:** -$1,334.39 (settling May 15)
+**Cash:** SPAXX $0 | **Pending:** QQQ buy 1.033 @ $708.52 (settling May 16)
 
-**Today's trades (May 14, settling May 15):**
-- Bought 5 VTI @ $366.10 → -$1,830.50
-- Bought 4 TSM @ $416.80 → -$1,667.20 (NEW position)
-- Bought 8 VXUS @ $84.92 → -$679.36
-- Bought 7 SCHG @ $34.45 → -$241.15
-- Sold 4 NVDA @ $232.47 → +$929.84 (trim)
-- Sold 3 QQQ @ $718.00 → +$2,153.95 (trim)
+**Today's trades (May 15):**
+- Bought QQQ 1.033 @ $708.51 → -$731.89 (settling May 16)
+- SPAXX cash: $2,129.10 → $0 (fully deployed)
 
-**Notable changes since May 13:**
-- NVDA: 55.081 → 51.081 shares (sold 4 @ $232.47, trim)
-- QQQ: 5.859 → 2.859 shares (sold 3 @ $718, heavily trimmed)
-- VTI: 26.122 → 31.122 shares (bought 5 @ $366.10, rebuild)
-- SCHG: 8 → 15 shares (bought 7 @ $34.45, rebuilt)
-- TSM: NEW position 4 shares @ $416.80 (Taiwan Semi)
-- SPAXX: $107.17 → $2,129.10 (cash built from NVDA/QQQ sells)
-- VXUS: 17.704 → 25.704 shares (bought 8 @ $84.92, international diversification)
-- ASTS: held 31.234 shares, now -0.6% G/L (moonhot hold)
+**Notable changes since May 14:**
+- QQQ: 2.859 → 3.892 shares (bought 1.033 @ $708.52, partially filling the -55% drift)
+- SPAXX: $2,129 → $0 (fully deployed into QQQ)
 
 ---
 

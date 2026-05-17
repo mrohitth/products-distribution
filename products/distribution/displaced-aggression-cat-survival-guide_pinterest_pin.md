@@ -1,27 +1,26 @@
-
 ## Pin Title (Primary)
-Cat Attacking Out of Nowhere? Here's How to Survive It
+Cat Attacking You Without Warning? Here's What Works
 
 ## Pin Title (Alt for testing)
-Aggressive Cat Left You Bleeding? Crisis Guide Inside
+Why Does My Cat Bite Me? A Realistic Survival Guide
 
-## Description (keyword-rich)
-Living with a cat who attacks without warning is exhausting and isolating. This no-nonsense guide walks you through the exact environmental controls, warning signs, and safety protocols that actually work in severe cases. Learn how to predict attacks before they happen, protect yourself and your home, and stop wondering if you're the problem. If you've tried everything and your cat still lashes out—this is the realistic framework you've been missing.
+## Description (300-500 chars)
+Living with a cat that attacks without warning is isolating and exhausting. This guide gives you realistic strategies for predicting attacks, protecting yourself, and improving your cat's quality of life—even in severe cases of displaced aggression. You'll learn crisis protocols, environmental controls, calming techniques, and when to seek professional intervention. Stop blaming yourself for a neurological condition neither of you chose. No false promises—just practical tools for getting through tonight, tomorrow, and beyond.
 
 ## Board Placement
-- Primary Board: Aggressive Cat Behavior Help
-- Secondary boards: Cat Anxiety Solutions, Emergency Pet Care Guides
+- Primary Board: Cat Behavior Problems Solutions
+- Secondary boards: Aggressive Cat Care Guide, Cat Owner Safety Tips
 
 ## Pin Metadata
-- Topic: cat aggression, aggressive cat behavior, cat biting, cat redirection, cat anxiety, feline behavioral problems, cat attack prevention, aggressive cat management
-- Audience intent: Desperate cat owners dealing with unpredictable cat aggression, seeking realistic solutions after failed attempts with supplements, collars, and calming products
-- Search priority keywords: cat attacking owner, how to stop cat aggression, redirected aggression cat, cat biting treatment, aggressive cat help
+- Topic: cat aggression, displaced aggression, redirected aggression, cat biting, cat attacking, cat behavior problems, cat anxiety, aggressive cat behavior, cat safety
+- Audience intent: Cat owners dealing with unpredictable biting/attacking behavior who feel trapped, confused, or blamed for their cat's neurological condition
+- Search priority keywords: cat aggression guide, why does my cat bite me, stopped cat attacks, severe cat behavior problems, cat redirected aggression help
 
 ## Call-to-Action Text on Pin
-Free Safety Checklist in Bio
+Free Guide in Bio
 
 ## Notes
-- Visual recommendation: High-contrast pin with image of a cat in profile alongside a structured checklist or safety protocol graphic. Use dark, serious tones (navy, charcoal) rather than bright pastels to signal this addresses a real, difficult problem—not another cheerful tip post.
-- Include small warning icon or visual marker to attract serious searchers
-- Avoid any imagery that looks cute or playful—this audience has tried cute solutions and failed
-- Content note: Pin should feel like finding a lifeline, not generic advice. Urgency and honesty should come through in every element.
+- Visual direction: Dark, serious-tone graphic suggesting urgency and relief—consider split design with distressed cat silhouette on one side and calm/safe imagery on the other. Use deep blue or charcoal backgrounds, avoid bright "happy cat" stock imagery
+- Text overlay on pin: "It's not your fault" or "Survival strategies inside" to speak directly to the guilt and overwhelm
+- This pin should feel like a lifeline, not a cheerful tip—this audience is desperate, not casual
+- Consider testing two versions: one focusing on the pain ("Stop the Attacks") and one validating their experience ("You Didn't Cause This")

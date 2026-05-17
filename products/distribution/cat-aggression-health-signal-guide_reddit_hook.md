@@ -1,9 +1,11 @@
-This is so much harder than people realize, and the fact that your partner is blowing it off makes it even lonelier. You're not imagining this — sudden aggression is your cat telling you something is wrong, and you're right to take it seriously.
+Hey, I went through something really similar last year. You're not imagining this, and you're not a bad cat parent. Sudden aggression like you're describing is genuinely one of the hardest things to navigate because nobody takes it seriously until something bad happens.
 
-A few things that genuinely helped me navigate this: First, document everything before your next vet visit. Not just "she's been aggressive" but the exact triggers, timing, and body language. Vets work with whatever you bring them, and a behavioral timeline turns a vague concern into something they can actually act on.
+A few things that helped me:
 
-Second — and this part caught me off guard — there are over a dozen medical conditions that manifest as sudden aggression in cats, and most of them are invisible without specific tests. Feline arthritis, hyperthyroidism, dental disease, urinary issues. Pain cats will lunge. That's not a personality problem, it's a medical emergency wearing fur.
+First, aggression changes rarely start with behavior — they start with pain or medical stuff. Documenting the exact circumstances around each incident (time of day, what happened right before, body language) gave me something concrete to bring to the vet. Before that, they kept saying "cats are just like that."
 
-Third, the hormone connection is real. If you're pregnant, going through hormonal shifts, even just stressed — cats pick up on that. Not because they're psychic, but because your scent, your cortisol levels, your energy changes how you move and approach them, and stressed cats react.
+Second — and this is the part I almost missed — if you've had any hormone changes yourself (pregnancy, even starting a new medication, stress), that can genuinely ripple into your cats. It's not woo-woo, it's science. Your scent, your cortisol levels, even the energy in the room shifts, and cats pick up on it in ways that can manifest as clinginess or aggression.
 
-There's a checklist that walks through the exact sequence for building your vet conversation and documenting what matters. Happy to share if it helps. You’re being a good advocate for your cat — keep pushing. 💛
+Third, your multi-cat household might be amplifying things. One cat acting out can destabilize the whole hierarchy, so it's worth mapping who tolerates who and when the tension started.
+
+I found a checklist that walked through the exact sequence of questions to ask yourself and your vet — happy to share if it helps. You clearly care a lot about getting this right, and that's already half the battle.

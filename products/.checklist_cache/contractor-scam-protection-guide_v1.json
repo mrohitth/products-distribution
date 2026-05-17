@@ -1,24 +1,24 @@
 {
   "slug": "contractor-scam-protection-guide_v1",
-  "draft_hash": "99f7f09762b56c3903af2fa154966e09",
+  "draft_hash": "ffd5b7849585a2ad367b391990aa5e72",
   "items": [
-    "Verify Before Hiring: Search your state's Contractors State License Board website and cross-reference the contractor's license number to confirm it is active and matches their business name exactly.",
-    "Verify Before Hiring: Request a Certificate of Insurance directly from the contractor's insurer and verify the policy has at least one million dollars in general liability coverage before signing anything.",
-    "Verify Before Hiring: Check your Secretary of State or county clerk records to confirm the business is registered and has been operating for at least one year in your area.",
-    "Verify Before Hiring: Confirm the contractor's license classifications match the type of work you need, because a general contractor cannot legally perform electrical or plumbing work without the proper credentials.",
-    "Lock In Contract Protections: Ensure the contract includes a detailed scope of work with specific materials and brands listed, plus concrete start and completion dates that align with your payment schedule.",
-    "Lock In Contract Protections: Add a lien waiver clause to the contract so you are protected if the contractor fails to pay subcontractors and those workers place claims against your home.",
-    "Lock In Contract Protections: Include a termination clause that specifies your right to cancel the contract and receive a refund of any money already paid minus work completed to date.",
-    "Lock In Contract Protections: Refuse to sign any assignment of benefits agreement that gives the contractor authority to collect insurance payments directly, because this removes your financial oversight entirely.",
-    "Protect Your Payments: Limit your upfront deposit to no more than one-third of the total contract price, with the remaining balance paid only at verified project milestones you have inspected.",
-    "Protect Your Payments: Use traceable payment methods like checks or credit cards instead of cash, and never pay in person to a third party or hand-deliver cash to anyone.",
-    "Protect Your Payments: Never sign blank change orders or any document that releases the contractor from liability, because every modification to scope or cost must be documented before work begins.",
-    "Protect Your Payments: Keep your own records of all payments made with dated receipts and photographs documenting work progress at each payment milestone throughout the project."
+    "Search your state's Contractors State License Board website using the license number the contractor provides to verify their license is active, current, and matches the name on your contract.",
+    "Request a Certificate of Insurance directly from the contractor's insurer and verify that their general liability policy holds at least $1 million in coverage.",
+    "Contact your Secretary of State or county clerk to confirm the contractor's business is registered, how long they've operated, and who the registered agent is.",
+    "Before signing anything, confirm the license holder's name matches the business name on the contract exactly, since scammers frequently use names very similar to legitimate firms.",
+    "Never pay more than one-third of the total project cost upfront, regardless of how eager the contractor is to begin work immediately.",
+    "Insist on paying by check, credit card, or a protected payment platform and never pay in cash, since cash offers no fraud protection or documentation trail.",
+    "Hold the final one-third of payment until project completion and your written sign-off, with the middle third paid only after you physically verify meaningful progress at the project midpoint.",
+    "Require a lien waiver clause in your contract to protect yourself from subcontractors placing liens on your home if the contractor fails to pay their suppliers or workers.",
+    "Include a detailed scope of work in your contract that specifies all materials, brands, and quantities, so you have documented proof of exactly what was promised.",
+    "Add concrete start and completion dates to your contract instead of vague timelines like \"as soon as possible,\" since dated milestones trigger your right to terminate.",
+    "Document the change order process in your contract requiring that any extra work or charges must be pre-approved and added to the contract in writing before additional work begins.",
+    "Refuse to sign any waiver that releases the contractor from liability, since these documents eliminate your legal recourse if the work is defective or incomplete."
   ],
   "categories": [
-    "Verify Before Hiring",
-    "Lock In Contract Protections",
-    "Protect Your Payments"
+    "Verify Before Signing",
+    "Protect Every Payment",
+    "Lock Down Your Contract"
   ],
-  "generated_at": "2026-05-12T12:47:11.468649"
+  "generated_at": "2026-05-16T11:27:55.509292"
 }

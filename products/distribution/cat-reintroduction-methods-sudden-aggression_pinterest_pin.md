@@ -1,24 +1,23 @@
-
 ## Pin Title (Primary)
-Why Are My Cats Suddenly Fighting? Start Here
+Why Are My Cats Suddenly Fighting? Here's What Works
 
 ## Pin Title (Alt for testing)
-The Protocol That Stops Cat Fighting for Good
+The Cat Reintroduction Protocol That Actually Works
 
-## Description (keyword-rich)
-Your cats lived together peacefully for years—then suddenly they're at each other's throats. You're terrified you might have to rehome one. This guide gives you the structured Jackson Galaxy-based reintroduction protocol to rebuild their relationship. You'll get exact 48-hour separation steps, week-by-week checkpoints, and the advance-or-pause signals that tell you when to move forward. Because this doesn't have to end in surrender.
+## Description
+Cat fights erupting out of nowhere? This step-by-step reintroduction guide walks you through the 48-hour separation protocol, week-by-week reintroduction phases, and the advance-or-pause checkpoints that tell you when your cats are ready to meet again. Based on Jackson Galaxy methods. Free checklist in bio helps you track each phase without missing critical steps.
 
 ## Board Placement
-- Primary Board: Cat Behavior Solutions
-- Secondary boards: Multi-Cat Household Tips, Cat Training Guides
+- Primary Board: Cat Behavior Problems & Solutions
+- Secondary boards: Cat Training Tips, Multi-Cat Household
 
 ## Pin Metadata
-- Topic: cat aggression, fighting cats, cat reintroduction, Jackson Galaxy method, cat behavior problems, multi-cat household, suddenly aggressive cats, cat relationship
-- Audience intent: Cat parents dealing with sudden aggression between cats who have lived together peacefully; people worried they may need to rehome a cat
-- Search priority keywords: cat aggression, cats fighting suddenly, cat reintroduction protocol, how to stop cats fighting, Jackson Galaxy cat introduction, multi-cat aggression
+- Topic: cat reintroduction, fighting cats, cat aggression, cat behavior, suddenly aggressive cats, cat relationship problems, multi-cat home
+- Audience intent: Cat owners facing sudden aggression between previously bonded cats, seeking immediate action steps and a clear protocol to follow
+- Search priority keywords: cat reintroduction protocol, cats fighting suddenly, cat aggression help, Jackson Galaxy cat introduction, how to stop cat fights, cat relationship rebuild
 
 ## Call-to-Action Text on Pin
-Step-by-Step Guide in Bio
+Free Checklist in Bio
 
 ## Notes
-Visual direction: Create a split-image design showing an angry cat on one side and two peacefully coexisting cats on the other. Use a dramatic before/after visual metaphor. Include a simple room divider or door visual element to represent separation protocol. Dark background with warm accent colors works well for solution pins in the pet niche. Text overlay should be minimal and bold. Consider adding a small clock or timeline visual element to emphasize the structured week-by-week approach.
+Visual recommendation: Split-panel design showing "BEFORE - separated, tense" on one side and "AFTER - peaceful coexistence" on the other. Include a simple 3-step icon sequence (Separate / Scent Swap / Supervised Reintroduction). Use warm but calming colors (muted orange, soft gray, cream). Text overlay on pin image summarizing the 48-hour separation urgency. Clean infographic style with minimal text on image itself.

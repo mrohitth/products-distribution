@@ -110,6 +110,13 @@ def preprocess_md(md_text: str) -> str:
         line = re.sub(r"^(#{1,6})\s*(.*?)(\s*#*)$",
                       lambda m: m.group(1) + " " + m.group(2).rstrip(), line)
         stripped = line.strip()
+        # Fix broken bold patterns:
+        # Case A: `** text:` → `**text**:` (space after **, colon at end)
+        # Case B: `** text **` → `**text**` (space after **, no colon)
+        # The key is `**` followed by space → space must be removed inside markers
+        line = re.sub(r"^\*\* (.+?)(:\s*)$", r"**\1**\2", line)
+        line = re.sub(r"^\*\*\s+(.+?)\s*(:\s*)$", r"**\1**\2", line)
+        line = re.sub(r"^\*\*\s+(.+?)\s*\:\s*\*\*$", r"**\1**", line)  # handles `** text :**` (colon inside closing **)
         # Strip artifact metadata lines
         if re.match(r"^(trend|score|date|from|subject|to|reply-to):\s*", stripped, re.I):
             i += 1

@@ -93,8 +93,8 @@ def get_active_slugs() -> list[str]:
         data = json.loads(trends_file.read_text())
         slugs = []
         for t in data.get("trends", []):
-            slug = t.get("slug_candidate", "")
-            # Also try as-is: the slug_candidate from scout includes _v{N}
+            slug = t.get("slug", "") or t.get("slug_candidate", "")
+            # Try direct match first (e.g., "safe-automatic-litter-box-guide")
             draft = DRAFTS_DIR / f"{slug}.md"
             if draft.exists():
                 slugs.append(slug)
@@ -415,7 +415,7 @@ def load_trend_data(slug: str) -> dict | None:
         try:
             data = json.loads(f.read_text())
             for t in data.get("trends", []):
-                cand = t.get("slug_candidate", "")
+                cand = t.get("slug", "") or t.get("slug_candidate", "")
                 if cand and (cand == slug or slug.startswith(cand)):
                     return t
                 # Also try matching base slug (without _v{N})

@@ -1,31 +1,25 @@
 ## Pin Title (Primary)
-Your Cat Still Peeing Outside the Box? Here's the Fix
+Cat Still Peeing Outside the Box? Here's the Fix
 
 ## Pin Title (Alt for testing)
-Stop Googling "Why Your Cat Won't Use the Litter Box"
+Why Your Cat Won't Use the Litter Box (Vet First)
 
 ## Description
-You've tried switching litter. Bought a new box. Cleaned more. Used enzyme cleaner. Still happens. This step-by-step guide tells you what to do first — and it's the step most guides skip.
-
-Inside, you'll discover:
-- The 3 causes of litter box avoidance (medical, environmental, stress)
-- Why vet first matters (and what to ask for)
-- Emergency signs every cat owner must know
-- The exact order to diagnose and fix the problem
-
-If your cat has started urinating outside the box in the last 6 months, don't guess. Know. Get the guide that walks you through the right steps in the right order.
+Cat still having accidents despite your best efforts? This step-by-step guide helps you diagnose the real reason cats pee outside the box. We cover medical causes your vet needs to rule out first (UTIs, FLUTD, kidney disease, diabetes), plus the environmental and stress factors that trigger litter box avoidance. Step 1 is always vet first - here's exactly what to ask for and which tests to request. Stop guessing and start solving. Free checklist available in bio.
 
 ## Board Placement
-- Primary Board: Cat Litter Box Problems
-- Secondary boards: Cat Behavior Solutions, Feline Health Tips
+- Primary Board: Cat Behavior & Training
+- Secondary boards: Pet Health Tips, Cat Owner Resources
 
 ## Pin Metadata
-- Topic: cat litter box, cat peeing outside box, cat behavior problems, cat health, feline urinary issues, cat potty training, litter box avoidance
-- Audience intent: Cat owners actively dealing with litter box accidents who want a systematic fix, not random tips
-- Search priority keywords: cat peeing outside litter box, why is my cat peeing elsewhere, cat stopped using litter box, litter box problems cat
+- Topic: cat litter box problems, cat peeing outside box, cat behavior issues, litter box training, cat urination problems, cat health, feline urinary issues
+- Audience intent: Frustrated cat owners who have tried switching litter, boxes, and cleaners but still find pee outside the box
+- Search priority keywords: cat peeing outside litter box, cat litter box issues, cat behavior problems, why cats miss litter box, cat urinary problems
 
 ## Call-to-Action Text on Pin
-Get the Free Guide — Link in Bio
+Free Checklist in Bio
 
 ## Notes
-Visual direction: Use a clean checklist or step-by-step visual layout. Color palette suggestion: soft teal or sage green with white text overlay. Include small cat icon or paw print motif. Keep text minimal on the pin itself — the title + CTA should be the only text elements visible. The pin should feel clinical and trustworthy, not cutesy. Avoid stock photo style of cats looking guilty — use illustration or icon-based design instead. The goal is to signal "real solution" not "cute meme."
+**Visual Recommendations:** Split design with high-quality image of a cat near a litter box on one side and a clear checklist graphic on the other. Use calming colors (soft blues, greens) to appeal to stressed pet owners. Include a small "Step 1: Vet First" badge to reinforce the guide's authority. Text should be large and readable on mobile since most Pinterest traffic comes from phone browsing.
+
+**Content Notes:** This pin targets the frustrated end of the cat owner market - they've already tried basic solutions. The "vet first" messaging differentiates this from generic litter box advice and adds credibility. The free checklist offer gives a low-commitment entry point while the guide itself represents the conversion opportunity. Consider testing a second variation that leads with the medical urgency angle for audiences searching emergency cat health terms.

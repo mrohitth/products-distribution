@@ -1,29 +1,13 @@
-# Reddit Bridge Post: contractor-scam-protection-guide
+What happened to you is brutal, and I want you to hear this first: this isn't a reflection of your judgment. Contractor fraud follows a predictable pattern, and scammers count on homeowners not knowing what to look for.
 
-## Target: r/HomeImprovement or r/Homeowners
+A few things I learned the hard way:
 
-## Post Title (Option A — curiosity gap):
-"I almost lost $12,000 to a contractor. Here's the 15-minute check that would have caught it."
+**Verify before you pay.** Run your state's Contractor State License Board lookup. Check that the license number, business name, and classifications match what's on the contract — scammers use names nearly identical to legitimate firms. Also verify their bond is current. That's your financial backstop if things go sideways.
 
-## Post Title (Option B — direct value):
-"The contractor fraud checklist I wish I had before signing anything."
+**Limit your upfront exposure.** Legitimate contractors typically need 10-20% to secure materials, not half the project cost. That's not a standard practice — it's a pattern.
 
-## Post Body:
+**Demand paper.** The receipt should be official, the contract detailed, and the business name on every document identical. Cash-only contractors who refuse traceable payment methods are often building deniability.
 
-Contractor fraud isn't rare. It follows a predictable pattern — and the pattern is 100% avoidable if you know what to look for before signing.
+I went through something similar after a storm, and I found a checklist that walked me through the exact sequence of checks to run before signing anything. It helped me avoid the same trap twice. Happy to share if it would be useful.
 
-I've been documenting how these scams work. Here's the verification checklist most homeowners skip:
-
-**Before signing anything:**
-1. Verify their license on your state's Contractors State License Board (cslb.ca.gov for California — most states have equivalent sites). Cross-reference the name on the license with the name on the contract.
-2. Ask for a Certificate of Insurance (COI) — their insurer emails it directly to you within 24 hours. If they can't produce one, walk.
-3. Never pay more than 1/3 upfront. Many state consumer protection agencies cap down payments at $1,000 or 10% of contract price, whichever is less.
-4. No cash. Check, credit card, or protected payment platform only.
-
-The fraud pattern: urgency → large upfront payment → no paper trail → vanish.
-
-I've put together a full printable checklist that covers vetting a contractor, reviewing a contract for protection clauses, and recovering your money if you've already been hit.
-
-Free download linked in my profile. No pitch, no email capture — just the checklist.
-
-Happy to answer questions from people who are mid-process or dealing with a current dispute.
+You're not stupid. These people are professional-grade grifters. The fact that you're processing this means you're already in a better position to protect yourself going forward.

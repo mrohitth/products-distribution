@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T22:55:54.174Z",
+  "updatedAt": "2026-05-17T04:51:19.081Z",
   "entries": {
     "memory:memory/2026-05-03.md:57:71": {
       "key": "memory:memory/2026-05-03.md:57:71",
@@ -1198,6 +1198,161 @@
         "llm",
         "security",
         "audit"
+      ]
+    },
+    "memory:memory/2026-05-12.md:128:160": {
+      "key": "memory:memory/2026-05-12.md:128:160",
+      "path": "memory/2026-05-12.md",
+      "startLine": 128,
+      "endLine": 160,
+      "source": "memory",
+      "snippet": "- `trendscout_gen.py` and `synthesize_checklist.py` work because they read credentials from `openclaw.json` and use `Authorization: Bearer` header — works through OpenClaw's proxy - For standalone scripts outside OpenClaw: embed via `sessions_spawn` instead of raw HTTP ### Final QA Status (2026-05-12 1:22 PM ET) - **16 PDFs** (8 guides + 8 checklists): **0 errors, 0 warnings** - Info-tier notes only: 5 orphaned-word pdftotext artifacts - Pipeline state: **CLEAN** - [x] [K] MarketBot scanner — delivered - [x] [K] MarketBot scan (cron) - [x] [K] MarketBot scanner — delivered - [x] [K] MarketBot scanner — delivered - [x] [K] MarketBot scan (cron) ## Portfolio Update (May 12, 3:53 PM ET) **Tot",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4817359924316406,
+      "maxScore": 0.4817359924316406,
+      "firstRecalledAt": "2026-05-17T04:51:19.081Z",
+      "lastRecalledAt": "2026-05-17T04:51:19.081Z",
+      "queryHashes": [
+        "4e68479a5b7d"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "trendscout-gen.py",
+        "synthesize-checklist.py",
+        "openclaw.json",
+        "sessions-spawn",
+        "info-tier",
+        "orphaned-word",
+        "read",
+        "credentials"
+      ]
+    },
+    "memory:memory/2026-05-12.md:152:195": {
+      "key": "memory:memory/2026-05-12.md:152:195",
+      "path": "memory/2026-05-12.md",
+      "startLine": 152,
+      "endLine": 195,
+      "source": "memory",
+      "snippet": "- **ASTS**: 31.234 sh @ $81.00, $2,291.95 (3.8%) — -9.41% today - **AMGN**: 6 sh @ $328.57, $2,015.82 (3.4%) - **CVX**: 10 sh @ $184.50, $1,862.40 (3.1%) - **SCHD**: 48.156 sh @ $30.59, $1,530.63 (2.6%) - **VXUS**: 17.704 sh @ $76.38, $1,492.88 (2.5%) - **COIN**: 5 sh @ $208.50, $1,033.85 (1.7%) - **QCOM**: 3 sh @ $208.60, $633.06 (1.1%) — NEW position - **SPAXX**: $568.87 cash ### Trades today: - NVDA buys: +11 @ $221.05, +0.228 @ $218.54 - VOO buy: +3 @ $678.30 - QCOM buy: +3 @ $208.60 - XLE buy: +26 @ $57.28 - SMH sells: -2.241 @ $566 (trim) - SCHG sells: -4.426 (round-trip, net zero) - EFT received: +$5,000 + $300 - Pending: -$461.70 ### Key wins today: - **News sentinel** caught NVDA",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4785195469856262,
+      "maxScore": 0.4785195469856262,
+      "firstRecalledAt": "2026-05-17T04:51:19.081Z",
+      "lastRecalledAt": "2026-05-17T04:51:19.081Z",
+      "queryHashes": [
+        "4e68479a5b7d"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "31.234",
+        "81.00",
+        "291.95",
+        "3.8",
+        "9.41",
+        "328.57",
+        "015.82",
+        "3.4"
+      ]
+    },
+    "memory:memory/2026-05-09.md:322:349": {
+      "key": "memory:memory/2026-05-09.md:322:349",
+      "path": "memory/2026-05-09.md",
+      "startLine": 322,
+      "endLine": 349,
+      "source": "memory",
+      "snippet": "- AMGN position active (6 shares, entry $328.57, target $353.55, stop $315.54) **6. Backtester Gap-Stop Fix** (`backtester.ts`) - `gap_stop` exit reason: if bar.open < stopLoss, exit at open (realistic slippage) - `gap_stop` counted as loss in aggregate win-rate and by-signal stats - Distinguishes between intraday `stop` hits vs overnight `gap_stop` slippage **7. EntrySignal Interface** (`recommendations.ts`) - Added `ma50?` and `ma50Slope?` optional fields to EntrySignal interface - Deep-pullback signal object now emits ma50 and ma50Slope for backtester lifecycle ### Current BUY Signals (2026-05-10, ~3:30 AM ET) | Ticker | Conf | Dist Below MA50 | MA50 Slope | Action | |--------|------|-",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.473817440867424,
+      "maxScore": 0.473817440867424,
+      "firstRecalledAt": "2026-05-17T04:51:19.081Z",
+      "lastRecalledAt": "2026-05-17T04:51:19.081Z",
+      "queryHashes": [
+        "4e68479a5b7d"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "328.57",
+        "353.55",
+        "315.54",
+        "gap-stop",
+        "backtester.ts",
+        "bar.open",
+        "win-rate",
+        "by-signal"
+      ]
+    },
+    "memory:memory/2026-05-09.md:297:328": {
+      "key": "memory:memory/2026-05-09.md:297:328",
+      "path": "memory/2026-05-09.md",
+      "startLine": 297,
+      "endLine": 328,
+      "source": "memory",
+      "snippet": "### Changes committed to MarketBot (GitHub, `main`) **1. Wilder RSI Fix** (`market.ts`) - `computeRSI()` was doing one-shot RSI (last 14 closes) → now proper Wilder smoothing - XLE RSI corrected: 53 (one-shot) → 40 (Wilder) ✅ - 100-day fetch window ensures 90+ trading days for RSI seeding + MA50 slope **2. MA50 Slope Filter** (`recommendations.ts`) - Added `ma50Rising = quote.ma50Slope >= 0` check to deep-pullback filter - Only fires BUY when MA50 is rising (support, not resistance) - XLE ✅ (slope +0.431%), XLV ❌ (slope -0.87%), VHT ❌ (slope -0.73%) **3. Distance-from-MA50 Cap** (`recommendations.ts`) - Added `vs50dPct >= -10` cap — rejects signals >10% below MA50 (structurally weak) - `p",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.45221599936485285,
+      "maxScore": 0.45221599936485285,
+      "firstRecalledAt": "2026-05-17T04:51:19.081Z",
+      "lastRecalledAt": "2026-05-17T04:51:19.081Z",
+      "queryHashes": [
+        "4e68479a5b7d"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "market.ts",
+        "one-shot",
+        "100-day",
+        "recommendations.ts",
+        "quote.ma50slope",
+        "deep-pullback",
+        "0.431",
+        "0.87"
+      ]
+    },
+    "memory:memory/2026-05-07.md:185:205": {
+      "key": "memory:memory/2026-05-07.md:185:205",
+      "path": "memory/2026-05-07.md",
+      "startLine": 185,
+      "endLine": 205,
+      "source": "memory",
+      "snippet": "| rankSetups() signal filtering | Global 2.0 floor on all signals | Per-signal floors | **120-day backtest results (10 tickers):** - 24 setups fired (up from 11 — 118% increase) - 62.5% win rate (15W / 6L / 3 expired) - NVDA: 4W / 0L ✓ | VTI: 4W / 0L ✓ | VOO: 3W / 0L ✓ - QQQ: 3W / 0L ✓ | SMH: 3W / 0L ✓ | SCHG: 2W / 0L ✓ - ASTS: 2W / 1L — speculative, poor candidate for this strategy - GPRO (proxy for short squeeze candidates): 0 setups (inactive) ### Research Pipeline Status - 4-layer scoring: Technical + Options Flow + Relative Strength + Analyst Sentiment - 3 momentum opportunities surfaced today: KLAC (+4.8%), TSM (+6.4%), AMAT (+4.3%) - Live brief output confirmed working ### Alert De",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.45005892813205717,
+      "maxScore": 0.45005892813205717,
+      "firstRecalledAt": "2026-05-17T04:51:19.081Z",
+      "lastRecalledAt": "2026-05-17T04:51:19.081Z",
+      "queryHashes": [
+        "4e68479a5b7d"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "2.0",
+        "per-signal",
+        "120-day",
+        "62.5",
+        "4-layer",
+        "4.8",
+        "6.4",
+        "4.3"
       ]
     }
   }

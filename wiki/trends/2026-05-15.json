@@ -1,0 +1,56 @@
+{
+  "date": "2026-05-15",
+  "status": "OK",
+  "trends": [
+    {
+      "trend_id": 1,
+      "platform": "reddit",
+      "subreddit": "r/CatAdvice",
+      "url": "https://www.reddit.com/r/CatAdvice/comments/1gv75w8/real_opinions_on_the_petpivot_autoscooper_11_or/",
+      "raw_quote": "FYI, this litter box has crushed a cat, and they were sued for 3 million. https://nypost.com/2025/06/21/us-news/nyc-owners-claim-rescue-cat-fatally-crushed-by-litter-box/",
+      "quote_author": "reddit_user",
+      "published": "November 19, 2024",
+      "pain_point": "Cat owners are terrified that automatic litter boxes could kill their cats — multiple brands have Y-axis rotating designs that have crushed pets, and owners cannot find clear safety guidance when shopping",
+      "solvable_in_10_pages": true,
+      "score": 9,
+      "score_rationale": "VERIFIED lawsuit (NYC, June 2025, $3M claim against PetPivot). Multiple Y-axis brands identified as dangerous (Catlk, CozyBlue, Kikquze, Amztoy). Vet techs warning about safety blind spots. No single resource compiles which models are safe vs. dangerous.",
+      "slug": "safe-automatic-litter-box-guide",
+      "product_name": "Safe Automatic Litter Box Guide: Avoid Killer Designs and Protect Your Cat"
+    },
+    {
+      "trend_id": 2,
+      "platform": "reddit",
+      "subreddit": "r/Pets",
+      "url": "https://www.reddit.com/r/Pets/comments/1qnarex/how_does_everyone_deal_with_litter_box_odor_and/",
+      "raw_quote": "Even though I clean it every day, whenever summer comes or the weather gets humid, that smell still seems to linger now and then.",
+      "quote_author": "reddit_user",
+      "published": "January 26, 2026",
+      "pain_point": "Cat owners with daily cleaning routines still cannot control litter box odor during humid summer months — standard solutions fail and frustration builds all season",
+      "solvable_in_10_pages": true,
+      "score": 6,
+      "score_rationale": "Real frustration confirmed. 10-page guide on humidity-resistant litter management is feasible. Lower urgency than safety — odor is discomfort, not existential risk. Score: 6/10.",
+      "slug": "cat-litter-box-humidity-guide",
+      "product_name": "Cat Litter Box Humidity Guide: Stop the Smell All Summer"
+    },
+    {
+      "trend_id": 3,
+      "platform": "reddit",
+      "subreddit": "r/CatAdvice",
+      "url": "https://www.reddit.com/r/CatAdvice/comments/1mpjmli/my_cat_needs_two_litter_boxes_but_my_parents_wont/",
+      "raw_quote": "Yes, he needs 2 litter boxes, and they need to be in safe, private locations he can access easily (without the dogs being able to access them). The box won't smell if you have a good litter and scoop it daily. I'm sorry your parents aren't listening. That's very frustrating.",
+      "quote_author": "reddit_user",
+      "published": "August 13, 2025",
+      "pain_point": "Multi-cat households with landlords or family members who resist proper litter box setup — the cat is being blamed when the real problem is insufficient resources and placement constraints",
+      "solvable_in_10_pages": true,
+      "score": 5,
+      "score_rationale": "Real frustration, but more of a family/landlord dynamics problem than a standalone product topic. 5/10 — not high enough urgency for a full guide.",
+      "slug": "multi-cat-litter-box-guide",
+      "product_name": "Multi-Cat Litter Box Setup Guide"
+    }
+  ],
+  "summary": {
+    "total_trends": 3,
+    "high_value_trends": 1,
+    "trends_over_8": 1
+  }
+}

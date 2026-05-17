@@ -1,9 +1,13 @@
-Oh man, this happened to me too. Came home from work to my two boys having a full-on standoff in the hallway — one of them had drawn blood on the other's ear. They'd been best friends for three years. Just... gone. I genuinely thought I might have to rehome one of them.
+I went through this exact thing two years ago. Four years of peaceful co-existence, then suddenly came home to find my two boys in a full standoff. It is absolutely gutting.
 
-What I learned: the first 48 hours are everything. The moment you separate them, don't wait until you've figured out what caused it. Your cats are operating from their threat-detection brain right now, not their thinking brain. Every visual or auditory encounter keeps that arousal spiked — we're talking 72+ hours for their neurochemistry to even begin normalizing. So even if you have a tiny apartment, you need two complete zones with everything they need (litter, food, hiding spots) on opposite ends. That's non-negotiable.
+Here's what I wish someone had told me immediately:
 
-The second thing: don't try to rush the reintroduction process. I made this mistake. When they seemed calmer after a week, I moved too fast and set us back two weeks. There's a checkpoint system — you only advance when both cats show specific signals, not just when you feel like it's been long enough.
+**Separate them NOW, not after you've figured out what happened.** I spent the first day trying to "solve" what caused it before I separated them. Big mistake. When cats are in that high-arousal state, their brains need 72+ hours to even START calming down — every encounter during that window makes reintroduction longer. Shut them in separate rooms with everything they need (litter, food, hiding spots, elevated perches) on opposite ends of the house. Don't wait.
 
-I found a free checklist that walks through the exact week-by-week protocol — it helped me stop guessing and actually trust the process. Happy to share if you want it.
+**You need two complete zones.** I'm talking litterbox, food/water, a resting spot, and hiding places in each room. If you've got a small space, use a bathroom and bedroom. It feels awful, but cats can handle temporary discomfort better than prolonged conflict.
 
-It took us about 10 weeks total, but they're back to grooming each other now. This is survivable. You didn't do anything wrong.
+The full reintroduction will be week-by-week — swapping scents, then visual contact through a barrier, then supervised time together. It's slow and it's not linear (some days will feel like you've gone backwards).
+
+I found a checklist that walked me through the exact sequence, and it made a huge difference. Happy to share if it helps.
+
+Three months is rough, but it's absolutely possible. A lot of folks don't realize there's a clear path through this. You don't have to rehome anyone.

@@ -134,3 +134,15 @@ Kitty (Chief of Staff) ──► Witty (Memory Architect)
 _Last updated: 2026-05-09_
 
 
+
+## Finnhub API Key — Updated 2026-05-15
+
+**Key:** `d7udjm1r01qnv95n7mi0d7udjm1r01qnv95n7mig`
+**Status:** ✅ Active and verified (NVDA quote + news feed both returning 200)
+
+**Updated locations:**
+- `/home/mathew/MarketBot/.env` → `FINNHUB_API_KEY=`
+- `/home/mathew/MarketBot/src/lib/market_discovery.ts` → hardcoded fallback token (line ~36)
+- Built successfully (`npm run build`)
+
+**Note:** The previous key `d7udjm1r01qnv95n7mig` (20 chars) was invalid — replaced with this 39-char key.

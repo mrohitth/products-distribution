@@ -1,13 +1,11 @@
-You're not a bad pet owner. You're someone who cares enough to keep trying — and that matters.
+Oh wow, I'm so sorry — that's gutting. And please know: you're not a bad cat parent. This is way more common than people talk about, and it's usually a signal that something is off, not a spite thing.
 
-I went through this exact thing for months. Switching litters, buying new boxes, wondering what I was doing wrong. Here's what actually moved the needle:
+Here's what I learned when I was in your shoes: **vet first, always vet first.** Medical causes are the most overlooked. UTI, FLUTD, even early kidney issues — they all cause cats to associate the box with pain, so they try somewhere else. An adult cat who starts this behavior out of nowhere needs a urinalysis and bloodwork. Yes, it's $100-300, but it's the only way to rule out the dangerous stuff.
 
-**First: vet first, always.** If this started within the last 6 months, a medical cause is most common and most overlooked. Ask your vet specifically for a urinalysis and bloodwork. UTI, FLUTD, kidney disease, even diabetes — they all show up this way, and most are treatable once you know.
+Once you get the all-clear, do the **N+1 litter box audit.** One box per cat, plus one extra. Most multi-cat households are running short, and cats are weirdly particular about sharing.
 
-**Second: the N+1 rule is non-negotiable.** One box per cat, plus one extra. A two-cat home needs three boxes. Also skip covered boxes and automatic ones that mask odors — cats can smell the buildup and it bothers them more than you realize.
+Also — and this matters — note WHERE she's peeing. On soft surfaces? Horizontal surfaces? This tells you a lot about whether it's medical, environmental, or stress-related.
 
-**Third: watch for emergency signs.** If your male cat is straining to urinate, crying, or producing only tiny amounts, get to a vet immediately. FLUTD blockages can be life-threatening within hours.
+I found a free checklist that walks through the exact diagnostic sequence, step by step. Happy to share it if it helps — it's what finally made me feel like I had a plan instead of just anxiety.
 
-I found a free checklist that walks through the exact sequence — vet visit first, then the environmental audit, with the specific questions to ask your vet. Happy to share if it helps.
-
-You already did the hardest part by showing up and looking for real answers. Most of these problems are fixable once you know where to start.
+You've got this. 💙

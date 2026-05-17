@@ -4,7 +4,7 @@
 **Type:** Node.js Financial Strategist
 **Status:** ✅ VERIFIED - Brief delivered to Telegram 2026-05-03
 **Delivery:** telegram:5607383477 (via OpenClaw cron announce)
-**Schedule:** Daily at 8:00 AM EST (via OpenClaw cron)
+**Schedule:** Daily at 9:30 AM EST (via OpenClaw cron — 30 min after market open)
 **Repos:** `mrohitth/MarketBot`
 **Operating Cost:** $0/month (all free tiers)
 

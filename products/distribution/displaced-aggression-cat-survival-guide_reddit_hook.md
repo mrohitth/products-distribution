@@ -1,11 +1,11 @@
-Three years. I want you to know that's not failure—that's endurance. You're not stupid for struggling with this. Displaced aggression is one of the most neurologically stubborn conditions in cats, and the fact that you've kept both of you alive (and largely sane) this long says something.
+Three years. I need you to hear that **this is not your fault** and you're not failing as a pet parent. What you're describing is displaced aggression—a neurological condition where the rational brain essentially leaves the building. Your cat isn't being malicious or ungrateful. They're stuck in a fear-arousal loop they literally cannot control.
 
-Here's what actually helped me when I was where you are:
+Here's what actually helped me when I was in your shoes:
 
-**1. Safety architecture before anything else.** You can't modify behavior if you've been bitten into urgent care. Create cat-free sleeping spaces—close the bedroom door with a baby gate if you have to. Your first job is triage, not fixing.
+**1. Build safety infrastructure BEFORE anything else.** The guide I found framed it like triage—you can't research treatments or implement behavioral modification if you've been bitten into urgent care. Identify the highest-risk rooms, remove obstacles that give you nowhere to retreat, and create safe zones you can access quickly.
 
-**2. The night protocol is real.** Cats are crepuscular—they're wired for peak activity when you're drowsy and vulnerable. I set motion-activated lights in hallways so I had a few extra seconds of warning. Not glamorous, but it helped me stop bracing for impact every time I got up to pee.
+**2. Create a deliberate Night Protocol.** Since nighttime is peak activity for cats and you're most vulnerable when drowsy, having a specific routine matters. This includes things like keeping a buffer zone when you sleep, managing light exposure, and having a plan before you enter certain spaces after dark.
 
-**3. Stop internalizing it.** Your cat isn't punishing you. Displaced aggression means the rational brain has left the building—the original trigger isn't accessible, so you become the outlet. That's not personality. That's neurology.
+**3. Stop Googling for magic fixes and focus on prediction.** The unpredictability is what's driving the trauma. Start tracking trigger patterns—time of day, environmental changes, what's happening right before attacks. You'll likely find windows of predictability you can work around.
 
-I found a checklist that walks through the exact safety sequence—room setup, warning signs to watch for, night protocols. Happy to share if it helps. You shouldn't have to do this alone, and you're not failing.
+I found a checklist that walked through this exact sequence step-by-step. It's free and cuts through the noise. Happy to share if it helps—sometimes just having a concrete plan makes the difference between barely surviving and actually managing. You're not alone in this.

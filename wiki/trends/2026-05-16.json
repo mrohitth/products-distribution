@@ -1,0 +1,524 @@
+{
+  "scouted_at": "2026-05-16T11:04:54.737086-04:00",
+  "source_channels": [
+    "reddit.com",
+    "quora.com"
+  ],
+  "queries_used": [
+    "emergency vet bill devastated Reddit",
+    "roommate won't pay rent desperate Reddit",
+    "job interview rejection devastated Quora",
+    "grad student overwhelmed taxes first year Reddit",
+    "freelance burnout isolated quitting Reddit",
+    "new contractor ripped off lost money Reddit",
+    "landlord not returning security deposit desperate Quora",
+    "car broke down can't afford repair Reddit",
+    "dating app exhaustion giving up hopeless Reddit"
+  ],
+  "trends": [
+    {
+      "trend_id": 1,
+      "audience": "Renters with roommates - millions of people share living costs",
+      "raw_quote": "Unfortunately, whether she&#x27;s having financial difficulties or not, she hasn&#x27;t even managed to pay the $575 she owes me each month in full--she&#x27;ll tell me she can get it to me in installments, pay the first $200 or so, and then conveniently forget (?) to pay the rest. At this point she&#x27;s about to owe me nearly $2,500 in back rent. We have a little tracker set up in the hallway. I&#x27;m getting a little desperate at this point. I&#x27;ve talked to the landlord about it and he&#x27;s going to non-renew our lease, then offer to let me sign a new one under the same terms, which",
+      "emotional_trigger": "Desperation over $2,500+ lost rent and potential eviction",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 3,
+        "Recurrence": 3
+      },
+      "total_score": 12,
+      "solvable_10_page_guide": true,
+      "product_direction": "Roommate Payment Agreement templates, legal eviction prep checklists, financial protection guides",
+      "slug_candidate": "roommate-rent-survival-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/roommateproblems/comments/13pbwtm/advice_wanted_roommate_wont_pay_rent/",
+      "source_query": "roommate won't pay rent desperate Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 2,
+      "audience": "Renters with non-paying roommates - widespread housing issue",
+      "raw_quote": "By paying their share, you continue to satisfy the terms of your lease agreement, which generally gives them broad protections from being evicted. If you decide to move out and they insist on staying, you are still equally responsible for the rent that\u2019s due. From personal experience, I can tell you it\u2019s one of the hardest things I\u2019ve had to go through. Desperate people can and sometimes do horrible things. In my case, my roommates desperation cost me over $35k covering his rent.",
+      "emotional_trigger": "Lost $35k covering rent, called 'one of the hardest things' - severe trauma",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 3,
+        "Recurrence": 3
+      },
+      "total_score": 12,
+      "solvable_10_page_guide": true,
+      "product_direction": "Lease protection strategies, legal recourse for tenant debt, financial recovery methods",
+      "slug_candidate": "non-paying-roommate-playbook",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/badroommates/comments/1jayu76/what_happens_if_a_roommate_doesnt_pay_rent/",
+      "source_query": "roommate won't pay rent desperate Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 4,
+      "audience": "Tenants dealing with spite-driven former roommates who left",
+      "raw_quote": "She makes a good amount of money and moved in with her mom, so she has the money to pay it but she\u2019s refusing because my other roommate is her now ex-boyfriend and she hates him. She\u2019s honestly just doing all of this out of spite. She has multiple couches in our living room and we can\u2019t even use it because of how much stuff she has in there right now. ... I am not a lawyer but watch The Peoples Court regularly. The shows I\u2019ve seen say that if she still has her belongings there, she\u2019s liable for rent for those months even if she\u2019s not there.",
+      "emotional_trigger": "Spite-fueled refusal to pay, living space unusable - high frustration",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Small claims prep for roommate debt, evidence collection, legal liability guide",
+      "slug_candidate": "roommate-gone-small-claims-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/legaladvice/comments/102fc29/roommate_left_and_is_refusing_to_pay_rent_says/",
+      "source_query": "roommate won't pay rent desperate Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 7,
+      "audience": "Homeowners hiring contractors (massive, recurring market)",
+      "raw_quote": "Even the &quot;good&quot; contractors will constantly try to rip you off. The cheap quotes are those who will either cut corners or try to slam you with extras later for things &quot;out of scope&quot;. The expensive ones are at least up front. What you want to make sure is that you always owe them money.",
+      "emotional_trigger": "Financial loss, feeling violated, helplessness against professionals",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Contractor vetting checklists, contract templates, payment protection frameworks, red flag guides",
+      "slug_candidate": "contractor-proof-your-renovation",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/homeowners/comments/1dzyt4v/contractors_constantly_trying_to_rip_you_off/",
+      "source_query": "new contractor ripped off lost money Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 9,
+      "audience": "6.69M+ freelancers experiencing burnout and isolation",
+      "raw_quote": "Engaging in regular ceremonies or rituals can help create a sense of purpose and connection, which can be especially important for those experiencing burnout. These practices can also provide an opportunity for social connection, which can help combat the isolation and loneliness that can often come with freelancing or agency work.",
+      "emotional_trigger": "Chronic exhaustion, identity loss, isolation, failure to find effective help",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Freelancer-specific burnout recovery: rituals, community, sustainable pace frameworks",
+      "slug_candidate": "freelancer-burnout-recovery-system",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/freelance/comments/13i4ths/6690000_freelancers_on_reddit_are_burned_out_but/",
+      "source_query": "freelance burnout isolated quitting Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 10,
+      "audience": "Burned-out freelancers unable to function",
+      "raw_quote": "I&#x27;d come up with a strategy/ loose guideline of a few key goals you&#x27;d like to target and explore (like, seeking counseling for the purposes of identifying where your burnout is rooted in, and strategies to counteract it). Or coming up with a list of things you enjoyed doing, and exploring those, without agenda to produce or achieve. Definitely seems like you&#x27;re on the right track by asking/ listening to your body. Don&#x27;t be discouraged if all of these things take time. ... I completely burned out from being a graphic designer. I\u2019ll never do it full time again. ... I currentl",
+      "emotional_trigger": "Can't face the day, complete depletion, body giving out signals",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Emergency reset protocol for freelancers: boundaries, identity beyond work, recovery steps",
+      "slug_candidate": "freelancer-mental-health-reset",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/freelance/comments/ezi73x/did_you_ever_feel_so_burned_outbummed_out_that/",
+      "source_query": "freelance burnout isolated quitting Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 15,
+      "audience": "Dating app users ages 20-45 experiencing burnout",
+      "raw_quote": "Dating apps have just been making me feel worse about myself, frustrated, hopeless &amp; a range of up but mostly down emotions. I\u2019m so sick of swiping. Most guys on there are not my type or the ones that like me are not the ones I\u2019m interested in. I just feel depressed whenever I open my dating apps yet I feel like I need them in order to hopefully miraculously actually find a compatible attractive match.",
+      "emotional_trigger": "Depression, hopelessness, swipe fatigue",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Digital guide on breaking dating app addiction while still finding meaningful connections",
+      "slug_candidate": "dating-app-detox",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/OnlineDating/comments/137arrw/giving_up_on_dating_apps/",
+      "source_query": "dating app exhaustion giving up hopeless Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 3,
+      "audience": "Tenants on joint leases with non-paying roommates",
+      "raw_quote": "Yeah honestly I totally understand, and I have been in shitty living situations where my roommates were not paying their part either. I ended up just talking to my property people, paying my portion, and asking that if my next place asked for a reference that it was based off of ME and my history with them, and they were willing to help me out with that. I would just pay your part, keep receipts and screenshots of everything, and leave when the time comes. The rental people can pursue her for what is owed after the fact.",
+      "emotional_trigger": "Frustration but found workaround - moderate stress level",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Joint lease protection guide, documentation strategies, exit planning",
+      "slug_candidate": "protect-yourself-joint-lease-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/badroommates/comments/1hkt9yn/roommate_does_not_pay_rent_and_we_both_are_on_the/",
+      "source_query": "roommate won't pay rent desperate Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 5,
+      "audience": "Homeowners/builders hiring contractors - significant purchase decisions",
+      "raw_quote": "I learned the hard way too. BUT I took the AH to court and hired a new contractor. The original guy was $5k the 2nd was $7,500. The contractor blew off a signed subpoena sent by local sheriffs dept. The judge granted me the $5k lost, added the $7,500 AND $300 a day extra until the debt was paid!!",
+      "emotional_trigger": "Lost $5k+ to contractor scam, went through court - high stakes trauma",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 3,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Contractor vetting checklist, payment protection strategies, fraud prevention",
+      "slug_candidate": "contractor-scam-protection-guide_v2",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Homebuilding/comments/1f2qx2y/contractor_ran_off_with_money/",
+      "source_query": "new contractor ripped off lost money Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 6,
+      "audience": "Homeowners/property owners who paid deposits to contractors",
+      "raw_quote": "Its theft. I would <strong>go to small claims Court</strong> as it is the Cheapest route and chances are the looser wont pay you but having a judgement against Him. ... Use a friend\u2019s phone to call him.",
+      "emotional_trigger": "Deposit theft, anger, uncertainty about pursuing recovery",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Small claims court guide for contractor fraud, deposit recovery strategies",
+      "slug_candidate": "recover-contractor-deposit-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/HomeImprovement/comments/lalmhu/contractor_took_my_deposit_is_it_worth_it_to_go/",
+      "source_query": "new contractor ripped off lost money Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 11,
+      "audience": "Workers who quit due to severe burnout (quitting without backup)",
+      "raw_quote": "I\u2019m currently spending this week (possibly the rest of the month?) resting and recovering. so far, me choosing to do this has encouraged 1 acquaintance and 1 of the associate managers from there to also quit/take a break from their work! tldr: I worked part time and still experienced burn out mainly due to the company I worked for. I didn\u2019t want to spend the rest of my life sad and sick. Leaving job without anything lined up - significant burnout",
+      "emotional_trigger": "Life-altering decision, guilt, fear, body shutting down, choosing self over security",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "How to quit strategically: financial runway, recovery plan, what to say, next steps",
+      "slug_candidate": "quit-your-job-burnout-survival-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/work/comments/1ldqrbe/people_who_have_quit_your_job_due_to_severe/",
+      "source_query": "freelance burnout isolated quitting Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 12,
+      "audience": "Creative professionals (video editors) burning out in high-pressure industries",
+      "raw_quote": "I&#x27;m 23, been doing this professionally since i was still in highschool. went through a very similar situation to you, working back to back 60 hour weeks with no breaks on shitty commercials or music videos etc the resentment builds slowly over months and the burnout sort of snowballs from one or two late nights into something really unpleasant quite fast (I put on a lot of weight, I started getting weird symptoms like hives from stress, i completely lost my hand eye coordination to the point where i couldn&#x27;t eat breakfast without dropping my food constantly etc)..",
+      "emotional_trigger": "Physical symptoms, resentment, career resentment, feeling trapped by skills",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Creative industry exit planning: skills transfer, alternatives, sustainable paths",
+      "slug_candidate": "escape-creative-industry-burnout",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/editors/comments/1lg07t1/burnout_after_4_years_i_wanna_quit_everything/",
+      "source_query": "freelance burnout isolated quitting Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 16,
+      "audience": "Women 28-35 on dating apps feeling exhausted",
+      "raw_quote": "I feel hopeless and honestly quite exhausted as a 30 year old female. I wish that 2nd person i went on a date with would reach out because he was quite literally the most perfect guy I could have met (or could be just me fictionalizing him to be perfect). I didn\u2019t feel such chemistry with someone in a loong while. Now I really feel like giving up on these apps...",
+      "emotional_trigger": "Hopelessness about finding compatible partners, grief for missed connection",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Strategic guide for women on dating apps to avoid burnout while maximizing quality matches",
+      "slug_candidate": "dating-app-strategy-for-women",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Bumble/comments/1g1staj/getting_exhausted_and_hopeless/",
+      "source_query": "dating app exhaustion giving up hopeless Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 17,
+      "audience": "Active dating app users feeling fatigued even with 'success'",
+      "raw_quote": "People tend to get caught up swiping, chatting, when the goal is to arrange dates with people whom you want to go out on a date with. At a rate that is sustainable for you. Spending much time in the \u201cwork stage\u201d IS fatiguing. But is it the method\u2019s fault? No. Is it yours? No, since no app teaches us.",
+      "emotional_trigger": "Questioning if the fatigue is their fault or the method's",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Sustainable dating strategy guide to make apps less exhausting",
+      "slug_candidate": "sustainable-dating-app-strategy",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/OnlineDating/comments/1q9vkku/is_it_normal_to_feel_exhausted_even_when_dating/",
+      "source_query": "dating app exhaustion giving up hopeless Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 18,
+      "audience": "Women 40+ exploring dating beyond apps",
+      "raw_quote": "I just step back from it, and focus on other things, and I am trying to explore other options, e.g. speed dating. I just moved to a new town and have been on three dates over the last two weeks, but have also been talking to a lot more men. It&#x27;s exhausting, because so few are upfront and honest, and come in good faith.",
+      "emotional_trigger": "Exhaustion from app dishonesty, curiosity about alternatives like speed dating",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Guide for women 40+ on navigating dating apps and alternative methods",
+      "slug_candidate": "dating-after-40-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/AskWomenOver40/comments/1hi4s0e/how_do_you_cope_with_dating_app_burnout/",
+      "source_query": "dating app exhaustion giving up hopeless Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 19,
+      "audience": "Newly-funded grad students navigating US taxes for first time",
+      "raw_quote": "Its hard to figure out what state and federal tax bracket you fall into and save based on that because that info isn&#x27;t very clear. <strong>I was short the first year I paid taxes because I underestimated how much state tax would be</strong>.",
+      "emotional_trigger": "Being short on taxes, confusion about brackets and state/federal split",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Tax guide specifically for first-year US grad students with fellowships and stipends",
+      "slug_candidate": "grad-student-tax-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/GradSchool/comments/ta90b6/did_any_funded_grad_students_also_get_hammered_by/",
+      "source_query": "grad student overwhelmed taxes first year Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 21,
+      "audience": "First-year PhD students confused about W-2 vs 1098-T and tax filing requirements",
+      "raw_quote": "To file your taxes, I\u2019m pretty sure you would require the W-2 from the institution. Afaik, 1098-T is just for the educational institutions to show that they paid you or something. You need W-2, using that, you\u2019ll fill your 1040, Schedule OI, 8843, etc etc whatever is applicable. ... I don&#x27;t believe fellowships are paid out via a W2. They&#x27;re reflected in the 1098T. Wages you get as a student employee have to be reported on a W2 however.",
+      "emotional_trigger": "Confusion about fellowship taxes, not knowing what forms to use",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Tax filing guide for PhD students dealing with fellowships and student employment",
+      "slug_candidate": "phd-student-tax-filing",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/GradSchool/comments/1jcx8eo/1st_year_phd_student_stuck_on_taxes/",
+      "source_query": "grad student overwhelmed taxes first year Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 22,
+      "audience": "PhD students receiving fellowships (NSF, university, etc.) - ~500k in US",
+      "raw_quote": "I&#x27;ve checked really thoroughly, ... in my first year when I was unsure how to report our fellowship money. ... These resources may help. What IRS says. Harvard&#x27;s guidance to grad students. ... The guidance from Harvard is really useful! This should be required reading for all phd students. ... I remember I had to send in quarterly checks to the IRS with my NSF fellowship. It\u2019s definitely taxable ...",
+      "emotional_trigger": "Fear of IRS audit/penalties + confusion about tax rules for fellowship income",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Tax guide specifically for grad students covering fellowship income reporting, quarterly payments, forms, and state rules",
+      "slug_candidate": "phd-fellowship-tax-survival-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/GradSchool/comments/11lcwk5/does_the_irs_actually_come_for_any_phd_students/",
+      "source_query": "grad student overwhelmed taxes first year Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 8,
+      "audience": "Homeowners mid-renovation in crisis with dishonest contractors",
+      "raw_quote": "In the future you would be better off in not touching his scope and instead back charge him for delays and negatively affecting deadlines for other trades. Contract laws may be different where you are. But this is my experience over the past 8 years as a business owner and contractor. ... He was well in violation of our terms and asking for money before we stepped in.",
+      "emotional_trigger": "Financial ruin, months lost, trust betrayal, feeling trapped",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Emergency contractor damage control: scope freeze, liens, recovery strategies",
+      "slug_candidate": "recover-from-contractor-fraud",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Contractor/comments/1g3ftim/contractor_has_seemingly_blown_all_my_money_we/",
+      "source_query": "new contractor ripped off lost money Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 13,
+      "audience": "Pet owners hit with unexpected emergency vet bills",
+      "raw_quote": "80 votes, 288 comments. My dog had emergency surgery last week and the bills have been insane. Between meds, follow-ups, and food, I&#x27;m trying to stay\u2026",
+      "emotional_trigger": "Devastation, guilt, impossible choices between pet and finances",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Pet emergency financial planning: insurance comparison, savings strategies, payment options",
+      "slug_candidate": "pet-emergency-fund-plan",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Pets/comments/1o7lkf1/emergency_vet_bills_are_brutalhow_do_you_all/",
+      "source_query": "emergency vet bill devastated Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 14,
+      "audience": "Struggling pet owners who can't afford ongoing vet care",
+      "raw_quote": "What is better for financing or helping pay vet bills? Or what to do with growth removal. ... I feel like I wasted $1,700 at the emergency vet and I need help coping. ... I feel like a bad owner for saying this, but I can&#x27;t afford a $50 vet visit for every minor worry. I\u2019m running out of funds for pets. Need advice ... I saw a recent post where someone was financially devastated ...",
+      "emotional_trigger": "Shame, guilt, running out of funds, feeling like bad owner, desperation",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Affordable pet healthcare guide: low-cost clinics, financing, preventive care on budget",
+      "slug_candidate": "affordable-pet-healthcare-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Pets/comments/1ew099w/how_do_people_afford_emergency_vet_bills/",
+      "source_query": "emergency vet bill devastated Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 20,
+      "audience": "Grad fellows struggling to estimate tax burden on stipends",
+      "raw_quote": "I think I will just find a local tax preparer who has worked with local grad students before for my first go at this.. ... I agree with others. Pay someone the first year, then use Turbotax or do it yourself after. I paid $100 for someone to do it for me my first year.",
+      "emotional_trigger": "Uncertainty about what they owe, wanting to avoid mistakes",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Tax estimation guide for grad fellows with complex compensation",
+      "slug_candidate": "grad-fellow-tax-estimator",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/GradSchool/comments/10kxiun/grad_fellows_how_do_you_estimate_your_tax_burden/",
+      "source_query": "grad student overwhelmed taxes first year Reddit",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 23,
+      "audience": "US renters who have security deposits - ~44 million rental households",
+      "raw_quote": "They all (mostly) are very specific as to how much time the landlord has to return the deposit and/or give an itemized list of charges that reduces it. If they don\u2019t do that, then in general <strong>you are entitled to your full deposit back</strong>.",
+      "emotional_trigger": "Financial loss + feeling violated/unfairly treated by landlord",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "State-specific security deposit recovery guide with demand letter templates and small claims court steps",
+      "slug_candidate": "get-your-security-deposit-back",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.quora.com/My-landlord-is-refusing-to-return-my-security-deposit-and-making-false-claims-about-damages-I-didn-t-cause-What-legal-steps-can-I-take-to-resolve-this",
+      "source_query": "landlord not returning security deposit desperate Quora",
+      "source_platform": "quora"
+    },
+    {
+      "trend_id": 24,
+      "audience": "US renters disputing security deposit deductions - ~44 million rental households",
+      "raw_quote": "Answer (1 of 15): Rachel, first of all, try not to overwhelm us with details, OK? These questions are difficult enough without being buried under all the facts you supplied. Luckily, I contacted your landlord and he explained why you aren\u2019t getting your security deposit back * You owed back re...",
+      "emotional_trigger": "Same financial loss + frustration with landlord's false damage claims",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Guide to disputing false damage claims with photo evidence templates and state demand letter",
+      "slug_candidate": "security-deposit-dispute-playbook",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.quora.com/Why-does-the-landlord-not-refund-my-security-deposit",
+      "source_query": "landlord not returning security deposit desperate Quora",
+      "source_platform": "quora"
+    },
+    {
+      "trend_id": 25,
+      "audience": "US renters who paid security deposit with no written agreement - ~44 million rental households",
+      "raw_quote": "Answer (1 of 3): It depends upon where you live. The landlord tenant laws are different in every state. You can get online and see what they are in your state. For instance, in my state the law states the landlord must decide within a 30 day period whether or how much of the deposit will be refun...",
+      "emotional_trigger": "Same frustration + helplessness from lack of documentation",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "50-state guide for recovering deposits when landlord has no written agreement, with legal options",
+      "slug_candidate": "recover-deposit-no-written-agreement",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.quora.com/What-can-someone-do-if-their-landlord-refuses-to-return-their-security-deposit-despite-several-requests-and-no-written-agreement-for-said-deposit",
+      "source_query": "landlord not returning security deposit desperate Quora",
+      "source_platform": "quora"
+    }
+  ],
+  "stage1_status": "COMPLETE",
+  "high_score_trends": 25,
+  "total_scored": 25,
+  "version": "v3"
+}

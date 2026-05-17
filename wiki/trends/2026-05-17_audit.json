@@ -1,0 +1,551 @@
+{
+  "scouted_at": "2026-05-17T10:04:40.506046-04:00",
+  "date": "2026-05-17",
+  "queries": [
+    [
+      "terrified waiting for medical test results anxiety Reddit AskDocs",
+      "reddit"
+    ],
+    [
+      "quora parents treat adult children like bank accounts family financial abuse",
+      "quora"
+    ],
+    [
+      "feeling hopeless rejected every job interview cycle desperate Reddit antiwork",
+      "reddit"
+    ],
+    [
+      "boss yelling at me in front of coworkers humiliation workplace Reddit maliciouscompliance",
+      "reddit"
+    ],
+    [
+      "quora recovering from being wrongfully terminated workplace retaliation",
+      "quora"
+    ],
+    [
+      "elderly parent falling frequently overwhelmed scared nursing home Reddit agingparents",
+      "reddit"
+    ],
+    [
+      "quora terrible manager took credit for my work gaslighting professional",
+      "quora"
+    ],
+    [
+      "devastated failed another coding interview imposter syndrome developer Reddit cscareerquestions",
+      "reddit"
+    ],
+    [
+      "terrified confront toxic friend ending friendship long overdue Reddit relationships",
+      "reddit"
+    ]
+  ],
+  "accepted": [
+    {
+      "trend_id": 9,
+      "audience": "Job seekers who are stuck in rejection cycles and can't land offers or even interviews",
+      "raw_quote": "I eve just ask for a raise and my boss keeps telling me things are going to happen and still nothing. I just want to leave, but it has been impossible to get an offer, even interviews. I am so bad at interviews also, and I have been practicing but nothing yet. I am desperate.",
+      "emotional_trigger": "Feeling incompetent, desperate, and hopeless about career prospects",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 3,
+        "Recurrence": 2
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "Complete job search overhaul covering resume, interview skills, and psychological resilience",
+      "slug_candidate": "breaking-the-job-search-stuck-cycle",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/jobs/comments/19empma/feeling_hopeless_about_the_job_search/",
+      "source_query": "feeling hopeless rejected every job interview cycle desperate Reddit antiwork",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 12,
+      "audience": "Job candidates facing illegal interview questions and unfair rejection",
+      "raw_quote": "7.1K votes, 401 comments. So, I recently had a frustrating interview experience at a manufacturing company. I got an invitation after passing the\u2026",
+      "emotional_trigger": "Righteous anger at being rejected for refusing to answer personal/inappropriate questions",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 3,
+        "Recurrence": 2
+      },
+      "total_score": 11,
+      "solvable_10_page_guide": true,
+      "product_direction": "How to handle illegal interview questions and know your rights as a candidate",
+      "slug_candidate": "interview-rights-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/antiwork/comments/1j3i9vb/had_an_interview_got_rejected_just_because_i/",
+      "source_query": "feeling hopeless rejected every job interview cycle desperate Reddit antiwork",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 3,
+      "audience": "Anyone waiting for medical test results with health anxiety",
+      "raw_quote": "I think you could see that your life would suck, even without considering the damage, that would be done to you from the radiation that you received, the constant blood draws, the tubes and wires that will be constantly attached to you, the blood pressure cough inflating every 5 minutes all night long that keeps you awake, plus there would invariably be test results that were slightly concerning, given your health anxiety, these would have to be fully investigated despite the fact that they are in fact innocuous or just need to be watched over months or years. You would not be able to work, en",
+      "emotional_trigger": "Debilitating anxiety, inability to function, health-focused catastrophizing",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Coping strategies for surviving the wait, grounding techniques, managing catastrophic thinking",
+      "slug_candidate": "medical-test-wait-anxiety-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/AskDocs/comments/1ede206/doctors_please_explain_to_my_health_anxiety_why/",
+      "source_query": "terrified waiting for medical test results anxiety Reddit AskDocs",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 4,
+      "audience": "Health anxiety sufferers waiting for medical results",
+      "raw_quote": "12 votes, 11 comments. I do suffer from OCD and Health Anxiety. But it&#x27;s never been this bad. I&#x27;m an absolute mess and cannot function while waiting\u2026",
+      "emotional_trigger": "Absolute emotional breakdown, OCD amplification, complete loss of function",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Coping frameworks for OCD/health anxiety patients during medical waiting periods",
+      "slug_candidate": "health-anxiety-medical-results-survival",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/EckhartTolle/comments/1dv2pxc/waiting_for_any_medical_test_result_is_unbearable/",
+      "source_query": "terrified waiting for medical test results anxiety Reddit AskDocs",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 5,
+      "audience": "People with health anxiety facing medical testing/waiting",
+      "raw_quote": "When I have to wait for blood test results, which is like 3 days, I have to remind myself that in fact <strong>there&#x27;s nothing I can do about it</strong>. Those days waiting and ruminating are/were often lost days.",
+      "emotional_trigger": "Lost days to rumination, awareness of wasted time, inability to accept uncertainty",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Practical techniques to stop ruminating and accept the uncontrollable wait",
+      "slug_candidate": "stop-ruminating-medical-wait",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/HealthAnxiety/comments/x0jxzi/how_to_ease_anxiety_pretesting_and_while_awaiting/",
+      "source_query": "terrified waiting for medical test results anxiety Reddit AskDocs",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 6,
+      "audience": "Health anxious individuals waiting for test results",
+      "raw_quote": "13 votes, 16 comments. I do suffer from OCD and Health Anxiety. But it&#x27;s never been this bad. I&#x27;m an absolute mess and cannot function while waiting\u2026",
+      "emotional_trigger": "OCD flare-up, absolute emotional meltdown, complete inability to function",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Stoic/grounding techniques specifically for health anxiety during medical uncertainty",
+      "slug_candidate": "health-anxiety-stoic-waiting-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/Stoicism/comments/1dv2pgt/waiting_for_any_medical_test_result_is_unbearable/",
+      "source_query": "terrified waiting for medical test results anxiety Reddit AskDocs",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 10,
+      "audience": "Qualified job seekers rejected by ATS algorithms and hiring processes",
+      "raw_quote": "I copied and pasted it again through the hiring algorithm and it scored a 99! I finally feel optimistic again! I keep trying to remind myself that there\u2019s a huge difference between being poor and broke, poor is a state of mind which leads to hopelessness, broke is just being tapped for cash at the moment.",
+      "emotional_trigger": "Frustration of being perfect for a role yet getting rejected due to algorithmic filtering",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 3,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Guide to beating resume screening algorithms and getting pastATS to human reviewers",
+      "slug_candidate": "beating-ats-resume-system",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/recruitinghell/comments/1ay762l/im_continuously_getting_rejected_for_jobs_im/",
+      "source_query": "feeling hopeless rejected every job interview cycle desperate Reddit antiwork",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 14,
+      "audience": "Employees questioning whether their boss's behavior constitutes gaslighting",
+      "raw_quote": "I really like your idea that we ... of their own, so now you just have to let them think your ideas are theirs. <strong>It&#x27;s ok to give them the credit.</strong>...",
+      "emotional_trigger": "Confusion and self-doubt about whether their manager is manipulating them or if they're overreacting",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Identify gaslighting behaviors from bosses and documented response/coping strategies",
+      "slug_candidate": "recognizing-boss-gaslighting",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.quora.com/Why-is-my-boss-gaslighting-me",
+      "source_query": "quora terrible manager took credit for my work gaslighting professional",
+      "source_platform": "quora"
+    },
+    {
+      "trend_id": 15,
+      "audience": "Mid-level professionals dealing with managers who shift blame and minimize achievements",
+      "raw_quote": "A manager shifts blame while positioning themselves as the victim: One of many gaslighting manager examples, this tactic manipulates perception. You start questioning your memory and even your competence: Feeling gaslit at work is often internalized long before it&#x27;s visible to others. You notice your achievements are minimized or credited to others: These gaslighting phrases at work can sound like: \u201cIt was a team effort\u201d or \u201cThat wasn\u2019t a big deal.\u201d",
+      "emotional_trigger": "Doubt about your own memory and competence after constant minimization of contributions",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "How to maintain your reality when leadership makes you question your own performance",
+      "slug_candidate": "protecting-your-reputation-gaslighting-boss",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.culturemonkey.io/employee-engagement/gaslighting-in-the-workplace/",
+      "source_query": "quora terrible manager took credit for my work gaslighting professional",
+      "source_platform": "quora"
+    },
+    {
+      "trend_id": 16,
+      "audience": "Adult caregivers overwhelmed caring for aging parents at fall risk",
+      "raw_quote": "Everyone is different. But if you are really bothered and scared just thinking at the thought of it, then that\u2019s not really very good for your mental health.",
+      "emotional_trigger": "Paralyzing fear of parent falling alone and being unable to help \u2014 guilt and anxiety spiral",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 3
+      },
+      "total_score": 10,
+      "solvable_10_page_guide": true,
+      "product_direction": "Home safety guide with fall prevention checklists, emergency response plans, and assistive device recommendations for aging-in-place families",
+      "slug_candidate": "aging-parent-fall-prevention-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/AgingParents/comments/1qhqsj3/is_the_fear_of_elderly_parent_falling_and_cant/",
+      "source_query": "elderly parent falling frequently overwhelmed scared nursing home Reddit agingparents",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 2,
+      "audience": "Workers experiencing ongoing workplace retaliation",
+      "raw_quote": "Answer (1 of 2): I filed a valid complaint with HR regarding my boss holding my disability against me in reviews. Both my boss (direct manager) and my boss\u2019 boss (team manager) are now actively retaliating against me (ex: leaving me out of meetings, giving assignments to everyone except me, ...",
+      "emotional_trigger": "Helplessness and ongoing workplace abuse with no clear exit",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Survival tactics for documenting retaliation, protecting career, and deciding when to leave",
+      "slug_candidate": "workplace-retaliation-survival-toolkit",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.quora.com/How-do-I-survive-workplace-retaliation",
+      "source_query": "quora recovering from being wrongfully terminated workplace retaliation",
+      "source_platform": "quora"
+    },
+    {
+      "trend_id": 7,
+      "audience": "Adults ending toxic friendships with manipulative individuals",
+      "raw_quote": "Regulating my nervous system after a toxic friendship/relationship. ... We have to face them at some point, that&#x27;s hard. I wish I could act like I never knew them but that&#x27;s impossible. ... I was actually terrified of cutting one person out of my life because they would often threaten to take their own life and one time actually threatened to harm me.",
+      "emotional_trigger": "Terror of confrontation combined with threats of self-harm from the toxic person",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Step-by-step guide for ending manipulative friendships while protecting mental health and setting boundaries",
+      "slug_candidate": "detaching-from-toxic-friends",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/selfimprovement/comments/1j01c4e/what_do_you_find_hard_after_toxic_friendships/",
+      "source_query": "terrified confront toxic friend ending friendship long overdue Reddit relationships",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 8,
+      "audience": "People left traumatized by abusive friendships showing PTSD symptoms",
+      "raw_quote": "I feel like a coward who is still ... of my life when she is tied to everyone I love? TL;DR <strong>I believe my toxic friend gave me PTSD after her abusive behavior towards me</strong>....",
+      "emotional_trigger": "Feeling like a coward while experiencing actual PTSD from the friendship",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Recovery roadmap for overcoming friendship trauma and rebuilding self-trust after abuse",
+      "slug_candidate": "healing-from-toxic-friendship-trauma",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/relationships/comments/nkd6e1/trauma_from_toxic_friendship_i_need_advice/",
+      "source_query": "terrified confront toxic friend ending friendship long overdue Reddit relationships",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 11,
+      "audience": "Job candidates going through multiple interview rounds only to get rejected at the end",
+      "raw_quote": "Only reason I even stuck it out for the two months is I went through 5 stages of interviews for a position at another company during this time, and the hiring manager even told me they were going to begin the onboarding process with me, only to get a rejection call a few days later because someone else on the team didn&#x27;t want to move forward with me.",
+      "emotional_trigger": "Devastation of reaching final stages and losing offers after months of process",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 3,
+        "Recurrence": 1
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "How to handle multi-round interview processes and manage expectations through rejection",
+      "slug_candidate": "surviving-endless-interview-rounds",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.reddit.com/r/careerguidance/comments/1muci2h/anyone_else_feeling_hopeless_in_this_job_search/",
+      "source_query": "feeling hopeless rejected every job interview cycle desperate Reddit antiwork",
+      "source_platform": "reddit"
+    },
+    {
+      "trend_id": 13,
+      "audience": "Professionals experiencing gaslighting where their work is credited to others",
+      "raw_quote": "Gaslighting in meetings: During ... credit for your work: <strong>A colleague or boss may steal your ideas or work and present them as their own, making you question your value and contribution to the team</strong>....",
+      "emotional_trigger": "Doubt and self-questioning when watching your ideas get stolen and presented as someone else's",
+      "score_breakdown": {
+        "Audience": 3,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 9,
+      "solvable_10_page_guide": true,
+      "product_direction": "Practical response strategies when coworkers or managers take credit for your work",
+      "slug_candidate": "stopping-credit-stealing-workplace",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://www.simplypsychology.org/gaslighting-at-work.html",
+      "source_query": "quora terrible manager took credit for my work gaslighting professional",
+      "source_platform": "quora"
+    },
+    {
+      "trend_id": 1,
+      "audience": "Wrongfully terminated workers seeking legal recourse",
+      "raw_quote": "If you\u2019ve been terminated due to discrimination or retaliation in the workplace, it\u2019s crucial to know your rights. Wrongful termination is illegal, and <strong>an experienced wrongful termination attorney can help you hold your employer accountable</strong>.",
+      "emotional_trigger": "Outrage over illegal termination, urgency to act within legal time limits",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 1
+      },
+      "total_score": 8,
+      "solvable_10_page_guide": true,
+      "product_direction": "Step-by-step guide for documenting, filing complaints, and building a case",
+      "slug_candidate": "wrongful-termination-survival-guide",
+      "ai_conviction": "HIGH CONVICTION",
+      "source_url": "https://msbjustice.com/wrongful-termination/",
+      "source_query": "quora recovering from being wrongfully terminated workplace retaliation",
+      "source_platform": "quora"
+    }
+  ],
+  "rejected": [
+    {
+      "source_query": "quora recovering from being wrongfully terminated workplace retaliation",
+      "title": "Wrongful termination | USAGov",
+      "description": "If your employer fired you because you exercised rights related to leave, wages, or overtime, <strong>complain to the Department of Labor</strong>. You can also reach out directly to their Wage and Ho",
+      "rejection_reason": "Government resource already addresses this; low monetization potential as free options exist",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 1,
+        "Recurrence": 1
+      },
+      "total_score": 6
+    },
+    {
+      "source_query": "quora recovering from being wrongfully terminated workplace retaliation",
+      "title": "What is a wrongful termination retaliation? - Quora",
+      "description": "Answer (1 of 3): In my case I had filed numerous complaints on a CO worker who was trying to sabotage everything I did at work . I would sometimes get off later at night after driving for hours to del",
+      "rejection_reason": "One-time legal crisis; too narrow for evergreen product; better served by attorneys",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 1
+      },
+      "total_score": 7
+    },
+    {
+      "source_query": "terrified confront toxic friend ending friendship long overdue Reddit relationships",
+      "title": "r/FriendshipAdvice on Reddit: How do you get over the trauma of a toxic friendsh",
+      "description": "Just cut off another toxic friend today. It will get better. Everyone deserves respect and love and attention . In any relationship that&#x27;s super important. If you are not receiving this , and if ",
+      "rejection_reason": "One-time relationship event; recovery is natural; limited evergreen demand",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 2,
+        "Recurrence": 1
+      },
+      "total_score": 7
+    },
+    {
+      "source_query": "terrified confront toxic friend ending friendship long overdue Reddit relationships",
+      "title": "r/AskWomenOver30 on Reddit: How do you confront a friend who\u2019s in a bad relation",
+      "description": "If you want to do that, do it in a 1:1 environment where you&#x27;re sober. After that, she&#x27;s on her own. But <strong>if you try to confront her or put too much pressure on her to end the relatio",
+      "rejection_reason": "Low urgency situation; advice is simple (be supportive, don't push); low monetization",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 1,
+        "Recurrence": 1
+      },
+      "total_score": 5
+    },
+    {
+      "source_query": "quora terrible manager took credit for my work gaslighting professional",
+      "title": "How to convince my boss that an employee is a gaslighter and making the office e",
+      "description": "I really like your idea that we ... of their own, so now you just have to let them think your ideas are theirs. <strong>It&#x27;s ok to give them the credit.</strong>...",
+      "rejection_reason": "Narrow audience (managers only), low monetization (internal HR issue), advice is problematic ('just give them the credit')",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 1,
+        "Recurrence": 1
+      },
+      "total_score": 6
+    },
+    {
+      "title": "r/cscareerquestions on Reddit: The line between \u201cimposter syndrome\u201d and \u201cyou\u2019re ",
+      "description": "I think the difference between impostor and real is how many times you fail and if you fail consistently. <strong>If you fail consistently even after trying a new spin on the problem several times, th",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "devastated failed another coding interview imposter syndrome developer Reddit cscareerquestions"
+    },
+    {
+      "title": "r/cscareerquestions on Reddit: Impostor Syndrome, or am I really not that good?",
+      "description": "<strong>I have an interview coming up for an associate software engineer that requires a 1.5 hr coding challenge, and to be quite honest I don&#x27;t think I will pass</strong>. I get flustered. I&#x2",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "devastated failed another coding interview imposter syndrome developer Reddit cscareerquestions"
+    },
+    {
+      "title": "r/csMajors on Reddit: Just bombed a coding interview, feel so bad",
+      "description": "163 votes, 28 comments. Man I&#x27;m devastated. I had such high hopes of getting through. Granted it was my first ever but ya know. It wasn&#x27;t even that\u2026",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "devastated failed another coding interview imposter syndrome developer Reddit cscareerquestions"
+    },
+    {
+      "title": "r/cscareerquestions on Reddit: Feeling demoralized after yet another failure on ",
+      "description": "<strong>CSCareerQuestions protests in solidarity with the developers who made third party reddit apps</strong>. reddit&#x27;s new API changes kill third party apps that offer accessibility features, m",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "devastated failed another coding interview imposter syndrome developer Reddit cscareerquestions"
+    },
+    {
+      "title": "r/ManagedByNarcissists on Reddit: Boss yelled at me in front of coworkers today ",
+      "description": "And <strong>when I got back, he yelled at me in front of my coworkers again, saying very insulting things to me, in a very busy and public place</strong>. His eyes were full of contempt and disgust fo",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "boss yelling at me in front of coworkers humiliation workplace Reddit maliciouscompliance"
+    },
+    {
+      "title": "r/NoStupidQuestions on Reddit: Boss humiliated me at work in front of colleagues",
+      "description": "One of my (many charming) mottos is &quot;praise in public, criticize in private.&quot; The reason is simple. <strong>After he yelled at you like he did you&#x27;re now totally demoralized, and not ju",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "boss yelling at me in front of coworkers humiliation workplace Reddit maliciouscompliance"
+    },
+    {
+      "title": "r/work on Reddit: Boss yelled at me in front of everyone",
+      "description": "<strong>He&#x27;s trying to humiliate you</strong>. The best thing you can do is, keep a level, cool head. Don&#x27;t participate. Don&#x27;t shoot your mouth off. Smile and say yes while you look for",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "boss yelling at me in front of coworkers humiliation workplace Reddit maliciouscompliance"
+    },
+    {
+      "title": "r/MaliciousCompliance on Reddit: Boss yells at me for following instructions and",
+      "description": "Everything I do seems to irritate my coworker...",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "boss yelling at me in front of coworkers humiliation workplace Reddit maliciouscompliance"
+    },
+    {
+      "title": "r/AgingParents on Reddit: Has anyone else felt Overwhelmed by all of this?",
+      "description": "The nursing home never called to schedule that. Never even called the primary care of my parents. Now they are running out of meds. I just needed to vent. My partner had to leave for work so I\u2019m here ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "elderly parent falling frequently overwhelmed scared nursing home Reddit agingparents"
+    },
+    {
+      "title": "r/AgingParents on Reddit: Has anyone\u2019s aging parent fallen and can't get up but ",
+      "description": "For me, I always knew when she would start falling - combine alcohol (which I didn\u2019t realize for years) with no eating or water, and no meds - she would start falling repeatedly. Sometimes my husband ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "elderly parent falling frequently overwhelmed scared nursing home Reddit agingparents"
+    },
+    {
+      "title": "r/AgingParents on Reddit: How many falls is too many?",
+      "description": "Search Amazon for: Lunderg Early Alert Bed Alarm for Elderly Adults - Wireless Bed Sensor Pad &amp; Pager ... Not a health professional, but based on my experience, my parents&#x27; doctors would defi",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "elderly parent falling frequently overwhelmed scared nursing home Reddit agingparents"
+    },
+    {
+      "source_query": "quora parents treat adult children like bank accounts family financial abuse",
+      "title": "9 Signs of Financial Abuse by Parents",
+      "description": "<strong>Your parents may insist on managing your money \u201cfor your own good\u201d or dictate how you should spend it, even as an adult</strong>. ... Insisting on approving every purchase you make, even when ",
+      "rejection_reason": "Low monetization potential \u2014 victims are often financially controlled or constrained. Emotional pain is present but not urgent enough to drive purchases.",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 1,
+        "Recurrence": 2
+      },
+      "total_score": 7
+    },
+    {
+      "source_query": "quora parents treat adult children like bank accounts family financial abuse",
+      "title": "What is Financial Child Abuse? - Dawson Place",
+      "description": "<strong>Some parents use financial abuse to exploit, manipulate, and control their children</strong>. If this is the case, the child will most likely experience other forms of abuse too. Other signs o",
+      "rejection_reason": "Very low monetization \u2014 financially abused individuals often lack independent resources. Problem is one-time discovery rather than recurring solvable pain.",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 2,
+        "Monetization": 1,
+        "Recurrence": 1
+      },
+      "total_score": 6
+    },
+    {
+      "source_query": "quora parents treat adult children like bank accounts family financial abuse",
+      "title": "Are there parents who financially abuse their children? How? - Quora",
+      "description": "Answer (1 of 9): <strong>Yes there are parents who financially abuse their children</strong>, I was a child that was financial abused by my mother. In 2014, I turned 18, but ever since I could remembe",
+      "rejection_reason": "Small niche audience with high shame barriers. Victims are often young adults with limited income and may not have agency to purchase. One-time traumatic context.",
+      "score_breakdown": {
+        "Audience": 1,
+        "Emotion": 2,
+        "Monetization": 1,
+        "Recurrence": 1
+      },
+      "total_score": 5
+    },
+    {
+      "source_query": "quora parents treat adult children like bank accounts family financial abuse",
+      "title": "The Complexity of Financial Abuse - The Bahnsen Group",
+      "description": "<strong>Most parents do not financially abuse their children maliciously</strong> but because they have financial difficulties that may influence them to take desperate measures to obtain liquidity su",
+      "rejection_reason": "Audience too narrow (professionals only). Low emotional urgency \u2014 this is career knowledge-seeking, not pain-driven. Professionals already have access to CE training.",
+      "score_breakdown": {
+        "Audience": 1,
+        "Emotion": 1,
+        "Monetization": 2,
+        "Recurrence": 2
+      },
+      "total_score": 6
+    }
+  ],
+  "total_accepted": 16,
+  "total_rejected": 20
+}

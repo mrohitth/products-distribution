@@ -1,0 +1,24 @@
+{
+  "slug": "grad-student-tax-guide",
+  "draft_hash": "fd48b725a4dc757044424dcccd616963",
+  "items": [
+    "Decode Your Funding: Pull your funding offer letter and label each line item as Fellowship, Stipend, or Salary to determine exactly how the IRS will treat every payment you receive from your university.",
+    "Clarify Stipend Taxability: Confirm that your living expense stipends count as fully taxable income regardless of what your department labels them, since the IRS focuses on substance rather than terminology.",
+    "Get Your 1098-T: Log into your university's student portal and download your 1098-T form for the tax year in question, recognizing that this document only reports tuition charges and not your taxable stipend income.",
+    "Check FICA Withholding: Determine whether your RA or TA paycheck includes a tuition waiver component, since some universities fail to withhold FICA on waived tuition and you may owe self-employment tax on that portion later.",
+    "Calculate Fellowship Taxability: Subtract your qualified tuition and required fees from your total fellowship award amount to find the actual taxable portion of that income.",
+    "Apply Federal Brackets to Stipend: Add all your taxable stipend income to your federal tax return using standard bracket calculations, since stipends function as ordinary income taxed at your marginal rate.",
+    "Research Your State Tax Rules: Investigate your specific state's treatment of fellowship and stipend income because state rules vary dramatically and most first-year grad students underpay state taxes significantly.",
+    "Project Your Tax Liability: Estimate your total annual taxable income by combining all stipend and salary sources, then apply both federal and state rates to avoid being surprised at filing time.",
+    "Determine Quarterly Payment Requirements: Calculate whether you owe quarterly estimated tax payments by checking if your tax liability will exceed one thousand dollars after subtracting withholding from your paycheck.",
+    "Open a Tax Savings Account: Create a dedicated savings account and deposit fifteen to twenty percent of each stipend payment into it throughout the year so you have funds available when taxes are due.",
+    "Document Eligible Deductions: Track your out-of-pocket expenses for required supplies, professional memberships, and software purchases that qualify as deductible educational expenses on your return.",
+    "Review Education Tax Benefits: Check IRS Publication 970 to identify which education credits and deductions you qualify for as a graduate student, since many generic student tax guides exclude stipends from their examples."
+  ],
+  "categories": [
+    "Decode Your Funding Sources",
+    "Calculate Federal and State Taxes",
+    "Set Up Payments and Deductions"
+  ],
+  "generated_at": "2026-05-16T13:10:03.601068"
+}

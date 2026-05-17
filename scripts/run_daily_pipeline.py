@@ -91,11 +91,11 @@ def load_products_from_trends() -> list[dict]:
 
     products = []
     for t in high_trends:
-        slug = t.get("slug_candidate", "")
+        slug = t.get("slug_candidate", "") or t.get("slug", "")
         if not slug:
             continue
 
-        # Try _v1.md first, then bare slug
+        # Try {slug}_v1.md first, then bare slug
         draft_candidates = [
             WORKSPACE / "products" / "drafts" / f"{slug}_v1.md",
             WORKSPACE / "products" / "drafts" / f"{slug}.md",
@@ -363,7 +363,7 @@ Output ONLY JSON: {{"comprehensiveness": int, "visual_polish": int, "value_check
 
     # ── Stage 7: Distribution (Reddit Bridge + Pinterest Pin) ─────────────────────────
     print(stage_banner(7, "Distribution — generate_distribution.py"))
-    rc = run_py("generate_distribution.py", timeout=300)
+    rc = run_py("generate_distribution.py", timeout=600)
     if rc != 0:
         print("  ⚠️  Distribution generation had issues — continuing")
     print(f"  ✅ Stage 7 complete")
