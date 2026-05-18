@@ -1,0 +1,58 @@
+{
+  "date": "2026-05-18",
+  "status": "COMPLETE",
+  "trends": [
+    {
+      "trend_id": "home-maintenance-anxiety",
+      "source": "r/Homeowners (Reddit)",
+      "url": "https://www.reddit.com/r/homeowners/comments/1sw4lla/do_you_ever_feel_like_youre_just_guessing_how_to/",
+      "published": "3 weeks ago",
+      "raw_quote": "do you ever feel like you're just guessing how to maintain your house?",
+      "problem_statement": "New homeowners lack a reliable maintenance schedule and can't distinguish urgent repairs from minor fixes, leading to expensive emergency calls and preventable damage.",
+      "pain_points": [
+        "No idea what preventive maintenance to do and when",
+        "Can't assess if a repair is DIY, call a pro, or wait",
+        "First-year costs average $86,698 — much of it avoidable",
+        "29% of homeowners say delaying maintenance caused a worse repair"
+      ],
+      "solution_venue": "10-page guide — seasonal home maintenance checklist + triage decision tree",
+      "total_score": 9.0,
+      "feasibility_check": "PASS — seasonal schedules and triage logic are well-documented and producible in a standalone guide"
+    },
+    {
+      "trend_id": "cat-litter-perfectionist",
+      "source": "r/CatAdvice (Reddit)",
+      "url": "https://www.reddit.com/r/CatAdvice/comments/1swusz3/turns_out_my_cat_demands_a_spotless_litter_box/",
+      "published": "3 weeks ago",
+      "raw_quote": "she will literally hold it for hours if i don't clean fast enough. i watched her walk... the box had one clump. one.",
+      "problem_statement": "Cat owners dealing with finicky litter box behavior, early morning wake-ups, and litter-tracking chaos have no clear troubleshooting framework.",
+      "pain_points": [
+        "Cat holds waste for hours if box isn't spotless — leads to UTIs and vet bills",
+        "Wakes owner 3x per night/every 2 hours demanding attention",
+        "Litter tracked everywhere despite mats, tall boxes, clumping litter",
+        "Automatic litter robots fail to solve the problem — cats refuse them"
+      ],
+      "solution_venue": "10-page guide — litter box setup optimization + cat behavior troubleshooting",
+      "total_score": 8.5,
+      "feasibility_check": "PASS — litter box science, feline behavior cues, and product comparison are well-researched and producible"
+    },
+    {
+      "trend_id": "parenting-house-mess-exhaustion",
+      "source": "r/Parenting (Reddit)",
+      "url": "https://www.reddit.com/r/Parenting/comments/1sqa7t2/house_is_a_wreck/",
+      "published": "1 month ago",
+      "raw_quote": "Ever since I had my son, my house pisses me off. It's never clean. I never have time to 'deep clean,' because I work fulltime...",
+      "problem_statement": "Working parents feel guilty about a perpetually messy home and have no realistic system for maintaining order without sacrificing time with their kids.",
+      "pain_points": [
+        "Standard 'deep clean' is impossible with kids home — expectations don't match reality",
+        "Clingy toddlers won't let parent do anything — no independent play",
+        "Lowered standards still feel like failure — emotional toll is real",
+        "Cleaners come but first need to clean before cleaners — paralysis cycle"
+      ],
+      "solution_venue": "10-page guide — zone cleaning + energy-efficient maintenance for busy parents",
+      "total_score": 8.5,
+      "feasibility_check": "PASS — zone cleaning, energy-based tidying, and realistic expectations are well-documented and producible"
+    }
+  ],
+  "notes": "All 3 trends pass the standalone feasibility check. Home maintenance anxiety is the highest-urgency play due to financial stakes. Cat litter and house mess are strong secondary plays."
+}

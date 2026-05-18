@@ -1,24 +1,24 @@
 {
   "slug": "breaking-the-job-search-stuck-cycle",
-  "draft_hash": "de4c6058eede157cbc4abd8cfbff2c6c",
+  "draft_hash": "58014411e58671fc1f0f7d5832f389b7",
   "items": [
-    "Keyword Extraction: Pull 5 real job postings from companies you'd actually want to work for and create a two-column document that separates explicit requirements from day-to-day responsibilities so you can identify the exact language the ATS is scanning for.",
-    "Experience Translation: Compare your current resume against the extracted keywords and identify every instance where you described similar work in different words so you can replace vague descriptions with the exact terminology the system is looking for.",
-    "ReWrite for the Machine: Rewrite your resume bullet points to use the exact verbs and nouns from job postings that describe your actual work experience, treating this as a translation exercise rather than creative writing so the ATS can match your qualifications to the role.",
-    "Pass the Automated Screen First: Understand that your resume's first job is to pass the ATS filter, because a human reader will never happen if the machine rejects you first, so keyword alignment must come before design or creativity.",
-    "Build Reusable Interview Instincts: Develop responses that come from real instincts rather than scripted answers, because rehearsed solutions and genuine presence produce completely different outcomes and hiring managers can tell the difference immediately.",
-    "Practice Conversational Calibration: Train yourself to adjust interview responses mid-conversation based on what the interviewer reveals, because static rehearsed answers fail when questions shift slightly or follow-up discussions branch into unexpected territory.",
-    "Target Recruiter Priorities: Understand that getting an interview depends on your resume matching the ATS keyword criteria, not on being the most qualified applicant, so focus your energy on system mechanics rather than just improving your qualifications.",
-    "Combine Skills Research: Study the specific tools, software, certifications, and methodologies mentioned in job postings so you can reference them naturally in interviews, making yourself appear genuinely qualified rather than someone who just memorized talking points.",
-    "Reframe Rejection as System Gap: Accept that most rejection happens because of a gap between your approach and what the system rewards, not because you lack competence or value, so your energy should go toward understanding the mechanics rather than doubting your worth.",
-    "Address Cumulative Rejection Damage: Acknowledge that repeated rejection causes real psychological damage that actively worsens your search performance, and actively work to repair that damage rather than pretending it doesn't affect your results.",
-    "Build Sustainable Search Infrastructure: Create a personal system that lets you sustain your job search effort for weeks or months without burning out, because the candidates who win aren't necessarily the most talented, they're the ones who stay in the game long enough to get lucky.",
-    "Commit to Complete Overhaul: Decide that you will rebuild your entire approach rather than making small tweaks, because the rejection cycle persists because of systemic gaps between your current methods and what actually works, not because you haven't tried hard enough."
+    "Engineer Your Resume for ATS Filters: Pull five job postings from companies you want to work for and create a two-column document that separates requirements from job description language so you can see exactly what the ATS is screening for.",
+    "Engineer Your Resume for ATS Filters: Extract every keyword from the requirements section of each posting and compare it against your current resume to identify language gaps that are silently filtering out your applications.",
+    "Engineer Your Resume for ATS Filters: Rearrange your resume to include exact keyword matches from the job posting, even if the phrasing feels repetitive, because the ATS cannot understand context and only registers exact or near-exact term matches.",
+    "Engineer Your Resume for ATS Filters: Test your resume by uploading it to a free ATS simulator before submitting anywhere, so you can confirm it passes the initial screen before wasting applications on materials that get silently rejected.",
+    "Build Unshakeable Interview Performance: Construct a modular answer framework that lets you reframe the same core stories for different questions, so you never get caught off guard even when interviewers ask unexpected things.",
+    "Build Unshakeable Interview Performance: Practice controlling the first impression before you say a single word, because people form lasting judgments within seconds of meeting you and you have very little time to recover from a bad start.",
+    "Build Unshakeable Interview Performance: Create a rejection analysis system where you document what went wrong after every interview and turn each failure into intelligence that makes your next attempt stronger.",
+    "Build Unshakeable Interview Performance: Rehearse your answers out loud until they feel natural but not scripted, because reading prepared responses sounds mechanical while unguided rambling sounds unprepared.",
+    "Protect Your Mind During the Search: Separate actual skill gaps from self-worth damage caused by rejection, because confusing the two makes every setback feel catastrophic when only the skill gaps actually need fixing.",
+    "Protect Your Mind During the Search: Track your job search metrics weekly, including applications sent, responses received, and interviews completed, so you can see objective progress even when subjective feelings tell you nothing is working.",
+    "Protect Your Mind During the Search: Schedule recovery time between interviews and rejections, because the job search is a marathon requiring sustainable pacing and burning out after two weeks will undo all the improvements you've made.",
+    "Protect Your Mind During the Search: Create documented outputs for every section you complete, including completed templates, practiced protocols, and verified materials, so you have tangible evidence of progress that counters the feeling of spinning your wheels."
   ],
   "categories": [
-    "ATS Resume Strategy",
-    "Interview Conversion",
-    "Psychological Resilience"
+    "Engineer Your Resume for ATS Filters",
+    "Build Unshakeable Interview Performance",
+    "Protect Your Mind During the Search"
   ],
-  "generated_at": "2026-05-17T10:14:04.517903"
+  "generated_at": "2026-05-17T11:03:19.606423"
 }

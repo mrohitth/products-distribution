@@ -1,13 +1,13 @@
-That feeling is the worst. You're sitting there, your brain screaming *wait, what?* but also *I need this job*, so you just... answer. And then you spend the next three days replaying it wondering if you just handed them a reason to say no.
+That moment when an interviewer asks something that makes your stomach drop — and you're sitting there nodding along anyway because you're desperate for the job, but some part of you knows it was wrong? That's a specific kind of awful.
 
-You're not imagining it. Some of those questions are genuinely illegal, and knowing which ones is half the battle.
+You're not imagining it, and you're not stupid for not knowing what to do in the moment. The power gap is real, and these questions are designed to feel casual while fishing for info they legally shouldn't have.
 
-Here's what helped me: federal law (Title VII, the ADA, ADEA) actually prohibits employers from asking about family status, arrest records that don't relate to the job, and disability-related questions — but interviewers get creative about disguising them. "So do you have kids?" and "Do you have any health conditions I should know about?" are red flags even when they sound casual. Knowing the *why* behind the law makes it easier to spot.
+Here's what helped me when I was in your shoes:
 
-When it happens in the moment, you don't have to answer and you don't have to accuse. A simple bridge like "I'm happy to discuss how I perform in this role — that's what matters most, right?" redirects without escalating.
+**1. Learn the disguised versions, not just the obvious ones.** Most candidates know they can't ask about kids directly — but they will ask "So what's your support system like?" or "Do you travel for work?" These rephrased versions show up way more often, and recognizing them is half the battle.
 
-After the interview, document everything while it's fresh — what they asked, your response, the date. Feelings fade; records don't.
+**2. Have a redirect phrase ready before you walk in.** Something like "Can I ask how that relates to the role?" buys you time, keeps you professional, and signals you noticed without escalating. It's not about confrontation — it's about composure.
 
-I found a checklist that walked me through the exact sequence from recognition to next steps. Happy to share if it helps.
+**3. Document everything immediately after.** Even if you're not sure yet. Recreate the conversation from memory while it's fresh — exact words, who said what, date and time. This stuff matters if you ever want to make sense of what happened.
 
-You're not alone in this, and you didn't do anything wrong by not knowing. Now you do.
+I found a checklist that walks through the exact sequence of protected questions and response language — happy to share if it helps. You deserved better in that interview.

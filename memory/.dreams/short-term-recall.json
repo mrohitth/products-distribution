@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-17T04:51:19.081Z",
+  "updatedAt": "2026-05-18T03:30:16.975Z",
   "entries": {
     "memory:memory/2026-05-03.md:57:71": {
       "key": "memory:memory/2026-05-03.md:57:71",
@@ -102,25 +102,27 @@
       "endLine": 54,
       "source": "memory",
       "snippet": "| Stage | Action | Output | |-------|--------|--------| | 1. Scout | Reddit/Quora trend hunting | `wiki/trends/YYYY-MM-DD.md` | | 2. Architect | Skeleton generation | `products/skeletons/[SLUG]_SKELETON.md` | | 3. Draft | Full V1 draft | `products/drafts/[SLUG]_V1.md` | | 4. Share | Telegram document delivery | Chat message with file paths | | 5. Production | cleanup_for_production() → WeasyPrint PDF → GitHub Release | `*.pdf` | | 6. Announce | Stage-by-stage completion with file paths + release URL | Telegram message | ### TrendScout Daily Result — 2026-05-05 (10 AM ET) - **Model:** MiniMax M2.7 · 47,569 tokens · 712 seconds · $0 marginal cost - **3 trends found:** - New Cat Heat Chaos (",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.7814282923936844,
+      "totalScore": 3.291750094294548,
       "maxScore": 0.517949166893959,
       "firstRecalledAt": "2026-05-06T14:04:09.920Z",
-      "lastRecalledAt": "2026-05-10T22:55:54.174Z",
+      "lastRecalledAt": "2026-05-18T03:30:16.975Z",
       "queryHashes": [
         "80ab5093d8ec",
         "b3681c4771d8",
         "ea19aa0c9aae",
         "ba5e0eb39834",
         "91c359473343",
-        "747a52503816"
+        "747a52503816",
+        "d697d7dbcb5b"
       ],
       "recallDays": [
         "2026-05-06",
         "2026-05-07",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-17"
       ],
       "conceptTags": [
         "reddit/quora",
@@ -476,23 +478,25 @@
       "endLine": 162,
       "source": "memory",
       "snippet": "Fixed 4 infrastructure issues found during heartbeat audit: 1. **mitty_health_pulse.sh** — Sessions threshold 100MB→150MB (was spamming HEALTH_WARN at normal 118MB) 2. **witty_manifest_updater.py** — RECREATED (file was deleted but cron still referenced it). Now scans wiki changes every 15min and updates katzen manifest.json. Verified working ✅ 3. **mitty_security_audit.sh** — RECREATED (file was deleted). Pure-shell security audit: SSH, Firewall, Gateway, Cron errors, RAM, Disk, failed logins, sessions size. Verified working ✅ 4. **Kaizen cron payload** — Changed from `edit` tool to `python3 exec` append pattern (fixes stale session state causing edit failures). Also cleared model override",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.2936334580183027,
-      "maxScore": 0.48995257318019864,
+      "totalScore": 2.807885068655014,
+      "maxScore": 0.5142516106367111,
       "firstRecalledAt": "2026-05-09T04:46:53.101Z",
-      "lastRecalledAt": "2026-05-10T22:55:54.174Z",
+      "lastRecalledAt": "2026-05-18T03:30:16.975Z",
       "queryHashes": [
         "476020dfe650",
         "67dbf173b2f6",
         "ba5e0eb39834",
         "91c359473343",
-        "747a52503816"
+        "747a52503816",
+        "d697d7dbcb5b"
       ],
       "recallDays": [
         "2026-05-09",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-17"
       ],
       "conceptTags": [
         "gateway",
@@ -1353,6 +1357,99 @@
         "4.8",
         "6.4",
         "4.3"
+      ]
+    },
+    "memory:memory/2026-05-17.md:1:9": {
+      "key": "memory:memory/2026-05-17.md:1:9",
+      "path": "memory/2026-05-17.md",
+      "startLine": 1,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "- [x] [K] TrendScout 2026-05-17 — daily pipeline run (automated cron) 2026-05-17: ## Audit Findings SSH: inactive inactive inactive | Firewall: active | Gateway: systemd OK Cron consecutive errors: 1 | RAM: 60% | Disk: 52% Sessions: 281MB | Failed logins (24h): 0",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5288038671016693,
+      "maxScore": 0.5288038671016693,
+      "firstRecalledAt": "2026-05-18T03:30:16.975Z",
+      "lastRecalledAt": "2026-05-18T03:30:16.975Z",
+      "queryHashes": [
+        "d697d7dbcb5b"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "gateway",
+        "trendscout",
+        "pipeline",
+        "run",
+        "automated",
+        "cron",
+        "audit",
+        "findings"
+      ]
+    },
+    "memory:memory/2026-05-12.md:1:31": {
+      "key": "memory:memory/2026-05-12.md:1:31",
+      "path": "memory/2026-05-12.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "## Tasks - [x] Fix and run full TrendScout daily pipeline (2026-05-12) ## TrendScout v3.3 — Full Flow Run (2026-05-12) **Problem:** Gen script timeout 180s too short for MiniMax large output (3-4 min/gen call). **Fixes applied:** - trendscout_gen.py: urlopen timeout 180s → 600s - synthesize_checklist.py: urlopen timeout 120s → 900s - run_daily_pipeline.py: Stage 2 timeout 120s → 1200s - generate_distribution.py: Added missing ThreadPoolExecutor import **Products built (5):** 1. divorced-dads-playbook-soft-divorce (37KB draft → 92KB PDF + 20KB checklist) 2. cat-reintroduction-methods-sudden-aggression (32KB → 163KB PDF + 18KB checklist) 3. cat-sudden-aggression-reintroduction-guide (3",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5096590906381607,
+      "maxScore": 0.5096590906381607,
+      "firstRecalledAt": "2026-05-18T03:30:16.975Z",
+      "lastRecalledAt": "2026-05-18T03:30:16.975Z",
+      "queryHashes": [
+        "d697d7dbcb5b"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "v3.3",
+        "3-4",
+        "min/gen",
+        "trendscout-gen.py",
+        "synthesize-checklist.py",
+        "run-daily-pipeline.py",
+        "generate-distribution.py",
+        "tasks"
+      ]
+    },
+    "memory:memory/2026-05-12.md:72:98": {
+      "key": "memory:memory/2026-05-12.md:72:98",
+      "path": "memory/2026-05-12.md",
+      "startLine": 72,
+      "endLine": 98,
+      "source": "memory",
+      "snippet": "- [x] [K] TrendScout 2026-05-12 — divorced-dads-playbook-soft-divorce pipeline complete (PDFs generated, LS manifest created, pushed to dev) - [x] [K] MarketBot scanner — delivered - [x] [K] MarketBot scan (cron) - [x] [K] MarketBot scanner — delivered - [x] [K] MarketBot scan (cron) - [x] [K] PDF Pipeline Daily — full run completed at $(TZ=America/New_York date +%H:%M ET) - [x] [K] MarketBot scanner — delivered - [x] [K] MarketBot scan (cron) - [x] [K] MarketBot scanner — delivered - [x] [K] MarketBot scan (cron) --- ## TrendScout v3.4 — Beautification + QA Hardening + Archive Drafts + News Sentinel (PM Session) ### PDF Beautification CSS (products/assets/pdf_style.css) - Warm off-white",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5088949501514435,
+      "maxScore": 0.5088949501514435,
+      "firstRecalledAt": "2026-05-18T03:30:16.975Z",
+      "lastRecalledAt": "2026-05-18T03:30:16.975Z",
+      "queryHashes": [
+        "d697d7dbcb5b"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "america/new-york",
+        "v3.4",
+        "products/assets/pdf-style.css",
+        "off-white",
+        "trendscout",
+        "divorced",
+        "dads",
+        "playbook"
       ]
     }
   }

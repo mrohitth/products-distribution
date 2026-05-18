@@ -1,24 +1,24 @@
 {
   "slug": "interview-rights-guide",
-  "draft_hash": "f4a0fb96582d043668e24458886fd594",
+  "draft_hash": "0cdbd14a9d0820385c9e536cf69e84b6",
   "items": [
-    "Know Your Legal Rights: Identify which federal law applies to your situation before deciding how to respond to a potentially illegal question during your interview.",
-    "Know Your Legal Rights: Memorize the five protected categories under Title VII\u2014race, color, religion, sex, and national origin\u2014so you can recognize when questions target these areas.",
-    "Know Your Legal Rights: Understand that under the ADA, interviewers can only ask about your ability to perform specific job duties, not about the nature or severity of any disability you may have.",
-    "Know Your Legal Rights: Recognize that the ADEA protects workers 40 and older, which means questions about your graduation year or career length are potential violations of federal law.",
-    "Respond In the Moment: Use a deflection phrase like \"I'd prefer to focus on my qualifications for this role\" when an interviewer asks something that makes you uncomfortable.",
-    "Respond In the Moment: Pause before answering any question that feels wrong\u2014taking even five seconds gives you time to decide whether the question crosses a legal line.",
-    "Respond In the Moment: Ask the interviewer how the question relates to the job requirements when you're unsure whether something is appropriate, which redirects the conversation without accusing them.",
-    "Respond In the Moment: Decline to answer if the question is clearly about a protected characteristic, even if it feels awkward\u2014your legal right to refuse is firmly established.",
-    "Protect Yourself After: Write down the exact questions asked, the interviewer's exact words, and the overall context of the conversation while everything is still fresh in your memory.",
-    "Protect Yourself After: File a formal complaint with the EEOC within 180 days of the incident if you believe your rights were violated\u2014timing is critical to preserving your case.",
-    "Protect Yourself After: Evaluate whether the rejection you received might be connected to your refusal to answer illegal questions by reviewing the timeline and any communications you received.",
-    "Protect Yourself After: Consult an employment attorney about potential legal remedies if you have strong evidence that discrimination occurred during your interview process."
+    "Know the Five Laws: Memorize the five federal employment discrimination laws (Title VII, ADA, ADEA, GINA, Pregnancy Discrimination Act) before your next interview so you can instantly recognize when a question crosses a legal line.",
+    "Recall Title VII Coverage: Remember that Title VII prohibits discrimination based on race, color, religion, sex, and national origin, and applies to employers with 15 or more employees\u2014this is the most frequently invoked protection in hiring cases.",
+    "Understand ADA Limits: Know that interviewers cannot ask about your disability status, medical history, or accommodation needs before a job offer is made, though they can ask whether you can perform specific job functions with or without reasonable accommodation.",
+    "Recognize Age Proxies: Remember that the ADEA protects workers 40 and older from age-based questions, so interviewers asking about graduation years, career length, or retirement plans may be violating federal law.",
+    "Identify Disguised Questions: Watch for disguised versions of illegal questions, such as asking about hobbies that signal religion, favorite charities, or how you spend weekends\u2014these often function as proxies for protected characteristics.",
+    "Use Deflection Language: Respond to suspicious questions by saying something like \"How is that related to the job?\" or \"Can you help me understand how that relates to this position?\" to redirect without confrontation.",
+    "Avoid Apologizing: Do not apologize or explain yourself when declining to answer an inappropriate question\u2014maintaining composure signals confidence and prevents you from appearing defensive or guilty.",
+    "Ask Clarifying Questions: Ask follow-up questions to identify whether an interviewer genuinely needs job-relevant information or is probing into protected territory\u2014this buys you time to think and reveals intent.",
+    "Document Immediately: Write down every detail of an illegal or inappropriate interview question while the conversation is still fresh, including the exact wording, context, and your response.",
+    "File an EEOC Complaint: If you believe you experienced discrimination, file a complaint with the Equal Employment Opportunity Commission, which enforces federal discrimination laws and investigates employer violations.",
+    "Check State Protections: Research your state's employment discrimination laws, as many states extend protections beyond federal minimums, including coverage for smaller employers and additional protected categories.",
+    "Reject Self-Blame: Stop replaying the interview wondering if you handled it wrong\u2014your discomfort is valid, and the law exists precisely because employers routinely overstep boundaries."
   ],
   "categories": [
-    "Know Your Legal Rights",
-    "Respond In the Moment",
-    "Protect Yourself After"
+    "Know Your Legal Protections",
+    "Respond in the Moment",
+    "Take Action If Wronged"
   ],
-  "generated_at": "2026-05-17T10:15:01.971524"
+  "generated_at": "2026-05-17T11:14:22.145682"
 }

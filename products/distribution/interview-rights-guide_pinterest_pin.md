@@ -1,24 +1,23 @@
-
 ## Pin Title (Primary)
-Illegal Interview Question? Here's What to Do
+Interviewer Asked What They Shouldn't? Know Your Legal Rights
 
 ## Pin Title (Alt for testing)
-Interviewers Cannot Ask These Questions
+Did That Interviewer Break the Law? Here's How to Tell
 
 ## Description (keyword-rich)
-Ever sat in an interview squirming when asked something that felt wrong but you couldn't quite say why? This guide gives you the exact legal protections that exist, the specific questions they cannot ask under federal law, and the exact language to use in the moment. You'll also learn how to document what happened and whether it warrants a complaint. Stop wondering if you imagined it or if you handled it wrong. You have rights as a job candidate—and this is the guide that actually explains them.
+That stomach-drop moment when they ask about your family plans, your past, or your personal life — and you're unsure whether to answer. This guide gives you the exact federal protections, the specific questions that are off-limits, and the word-for-word responses you can use in the interview room. You'll learn which topics are legally protected, what to say when cornered, and how to recover if something goes wrong. Stop wondering if you imagined it. Stop blaming yourself. Get the complete reference that job seekers wish they'd had before walking in. Free guide link in bio.
 
 ## Board Placement
-- Primary Board: Job Interview Tips
-- Secondary boards: Career Advice for Job Seekers, Employment Know Your Rights
+- Primary Board: Career Advice for Job Seekers
+- Secondary boards: Job Interview Tips and Tricks, Know Your Workplace Rights
 
 ## Pin Metadata
-- Topic: illegal interview questions, job candidate rights, interview preparation, employment discrimination, interview red flags, what not to answer, job search tips, hiring practices
-- Audience intent: Job seekers who want to know their legal protections, candidates who experienced uncomfortable interview questions, people preparing for upcoming interviews
-- Search priority keywords: illegal interview questions, interview rights, job candidate rights, what questions are illegal, interview discrimination
+- Topic: interview rights, illegal interview questions, employment law, job interview preparation, candidate rights, protected class employment, interview tips
+- Audience intent: job seekers who want to protect themselves from discrimination and know their legal rights during interviews
+- Search priority keywords: illegal interview questions, job interview rights, what interviewers can ask, employment discrimination, interview preparation guide
 
 ## Call-to-Action Text on Pin
-Get the Free Guide
+Free Guide in Bio
 
 ## Notes
-Visual recommendations: High-contrast design (dark background with white/yellow text works well for legal/empowerment content). Include visual of actual prohibited question examples (e.g., "family plans," "arrest record," "disability status" as text on the pin). Bold headline emphasizing the actionable solution. Clean, professional aesthetic that feels trustworthy and authoritative. Consider a split-layout with left side showing "Before" (confusion/anxiety) and right side showing "After" (clarity/empowerment). No stock photos of shaking hands or awkward handshakes—focus on the information itself.
+Visual recommendations: Use clean, professional design with dark text on light background. Feature a bold question-style title in 24-28pt font. Include subtle legal/scales icon or gavel imagery in muted tones (navy or forest green). Add small lock or shield icon near title to reinforce "protection" angle. Keep body text minimal — just the CTA. Aspect ratio: 2:3 standard pin format. Consider split-layout with left side featuring guide title/questions and right side showing subtle book/document icon or checklist graphic.
