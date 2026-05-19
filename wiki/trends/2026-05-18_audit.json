@@ -1,22 +1,49 @@
 {
-  "scouted_at": "2026-05-18T11:05:17.197750-04:00",
-  "source_channels": [
-    "reddit.com",
-    "quora.com"
+  "scouted_at": "2026-05-18T11:05:17.198375-04:00",
+  "date": "2026-05-18",
+  "queries": [
+    [
+      "cat not using litter box frustrated site:reddit.com/r/CatAdvice",
+      "reddit"
+    ],
+    [
+      "contractor didn't finish job lost money site:reddit.com/r/HomeImprovement",
+      "reddit"
+    ],
+    [
+      "new kitten aggressive biting site:reddit.com/r/Kitten",
+      "reddit"
+    ],
+    [
+      "homeowner overwhelmed repairs site:reddit.com/r/FirstTimeHomeBuyer",
+      "reddit"
+    ],
+    [
+      "freelance client won't pay site:reddit.com/r/freelance",
+      "reddit"
+    ],
+    [
+      "weight loss plateau can't lose more site:reddit.com/r/loseit",
+      "reddit"
+    ],
+    [
+      "parenting toddler exhausted burned out site:reddit.com/r/Parenting",
+      "reddit"
+    ],
+    [
+      "new cat peeing outside litter box site:reddit.com/r/Cats",
+      "reddit"
+    ],
+    [
+      "cat aggressive biting owner site:quora.com",
+      "quora"
+    ],
+    [
+      "home contractor scam money lost site:quora.com",
+      "quora"
+    ]
   ],
-  "queries_used": [
-    "cat not using litter box frustrated site:reddit.com/r/CatAdvice",
-    "contractor didn't finish job lost money site:reddit.com/r/HomeImprovement",
-    "new kitten aggressive biting site:reddit.com/r/Kitten",
-    "homeowner overwhelmed repairs site:reddit.com/r/FirstTimeHomeBuyer",
-    "freelance client won't pay site:reddit.com/r/freelance",
-    "weight loss plateau can't lose more site:reddit.com/r/loseit",
-    "parenting toddler exhausted burned out site:reddit.com/r/Parenting",
-    "new cat peeing outside litter box site:reddit.com/r/Cats",
-    "cat aggressive biting owner site:quora.com",
-    "home contractor scam money lost site:quora.com"
-  ],
-  "trends": [
+  "accepted": [
     {
       "trend_id": 5,
       "audience": "General cat owner audience seeking comprehensive understanding of why cats attack",
@@ -198,8 +225,87 @@
       "source_platform": "reddit"
     }
   ],
-  "stage1_status": "COMPLETE",
-  "high_score_trends": 9,
-  "total_scored": 9,
-  "version": "v3"
+  "rejected": [
+    {
+      "source_query": "freelance client won't pay site:reddit.com/r/freelance",
+      "title": "r/freelance on Reddit: Client owes me $10k and totally disappeared.",
+      "description": "Even though I have mentioned possibly posting to social media warning other freelancers about this client, I more than likely won\u2019t do that. It isn\u2019t my style. It has the potential to get messy and ev",
+      "rejection_reason": "One-time crisis situation requiring legal action, not a repeatable problem with scalable solutions for a guide. High emotion but low recurrence - this happens rarely to most freelancers. Also involves legal complexity beyond guide scope.",
+      "score_breakdown": {
+        "Audience": 2,
+        "Emotion": 3,
+        "Monetization": 2,
+        "Recurrence": 1
+      },
+      "total_score": 7
+    },
+    {
+      "title": "r/freelance on Reddit: Client has not paid and will not respond.",
+      "description": "IMO, if they&#x27;ve hired someone else and are refusing to pay, it&#x27;s time to send the e-mail that says pay by X date or we&#x27;re going to court. Then follow through. Does your jurisdiction hav",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "freelance client won't pay site:reddit.com/r/freelance"
+    },
+    {
+      "title": "r/freelance on Reddit: Customers don\u2019t pay me",
+      "description": "If clients can\u2019t pay, <strong>send certified letters</strong>. ... Everyone saying get paid for sections is right. Or make customers give an affordable deposit so you know they are committed ...",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "freelance client won't pay site:reddit.com/r/freelance"
+    },
+    {
+      "title": "r/freelance on Reddit: Advice Needed: My client refuses to settle outstanding in",
+      "description": "In your position, I&#x27;d probably reach out at this point offering to work out a payment plan for the remaining work. If they ghost or refuse, call them out on their social media if you can. More re",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "freelance client won't pay site:reddit.com/r/freelance"
+    },
+    {
+      "title": "r/cats on Reddit: Help! Cat randomly pees outside of litter box",
+      "description": "Another problem is that your cat could be sick, and her peeing outside the box is a cry for help. I&#x27;d definitely take her to the vet for a check-up to make sure all is well. This is personally a ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "new cat peeing outside litter box site:reddit.com/r/Cats"
+    },
+    {
+      "title": "My cat keeps peeing outside litterbox",
+      "description": "We cannot provide a description for this page right now",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "new cat peeing outside litter box site:reddit.com/r/Cats"
+    },
+    {
+      "title": "r/cats on Reddit: Newly adopted cat peeing outside litterbox",
+      "description": "This is a basic training method for litter boxes. But yes, a behaviorist or a vet should have some more concrete ideas/suggestions. ... Yea I was thinking about a vet, just hoping to avoid that stage ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "new cat peeing outside litter box site:reddit.com/r/Cats"
+    },
+    {
+      "title": "New cat is peeing outside litter box : r/cats",
+      "description": "That poor cat had alot of anxiety. I&#x27;ve tried Nature&#x27;s Miracle and I&#x27;m actually using it now but it&#x27;s not working. And previously when I tried it I didn&#x27;t think it worked as w",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "new cat peeing outside litter box site:reddit.com/r/Cats"
+    },
+    {
+      "title": "How to tell if a 'contractor' is actually trying to scam you out of your money b",
+      "description": "Answer (1 of 6): It\u2019s not that hard. Check with your state\u2019s Labor and Industry to see if the contractor is registered and insured. It\u2019s not out of line to ask for a Certificate of Insurance on a big ",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "home contractor scam money lost site:quora.com"
+    },
+    {
+      "title": "What should homeowners do if they have been scammed by a contractor? - Quora",
+      "description": "Answer (1 of 2): because there are too many scenarios where abuse and scams happen consumers must be doubly untrusting. be aware your financial provider may not refund losses nor the contractors repen",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "home contractor scam money lost site:quora.com"
+    },
+    {
+      "title": "What should I do if I've been a victim of fraud by a building contractor? I wasn",
+      "description": "I would <strong>contact your local police department and fill a fraudulent report first, then I would contact a lawyer</strong>. If you can&#x27;t afford one, then perhaps the one with the police depa",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "home contractor scam money lost site:quora.com"
+    },
+    {
+      "title": "What can you do if a contractor takes your money? - Quora",
+      "description": "Answer (1 of 5): <strong>Call the police</strong>\u2026contact the labor board\u2026contact the tax auditor\u2026the licencing commission\u2026the BBB\u2026the local newspapers\u2026even local TV\u2026your MP\u2026and get a little advice fr",
+      "rejection_reason": "Too short or AI analysis failed",
+      "source_query": "home contractor scam money lost site:quora.com"
+    }
+  ],
+  "total_accepted": 9,
+  "total_rejected": 12
 }
