@@ -1,0 +1,55 @@
+{
+  "status": "COMPLETE",
+  "date": "2026-05-20",
+  "scout_count": 30,
+  "trends": [
+    {
+      "title": "New Kitten Overwhelm: The Guilt-Ridden Owner Survival Guide",
+      "slug": "new-kitten-overwhelmed-owner",
+      "source_platform": "reddit",
+      "source_sub": "r/CatAdvice",
+      "source_url": "https://www.reddit.com/r/CatAdvice/comments/1syjcer/im_starting_to_resent_my_cat_and_i_feel_like_a/",
+      "raw_quote": "I think its best to just persevere. My hope is when he is older, he'll slow down. He's only 8 months old. I'm gonna be real with you. This isn't just 'getting used to a cat,' you're overwhelmed and it's making your mental health worse.",
+      "pain_point": "New kitten owners feel guilty and overwhelmed by high-energy kitten behavior. They second-guess themselves, wonder if they'll ever have a calm cat, and some contemplate rehoming.",
+      "problem_standable_guide": true,
+      "total_score": 9,
+      "confidence": "HIGH",
+      "pillar_1": "Understand kitten development (8-month energy peak is normal, not permanent)",
+      "pillar_2": "Practical energy management (play schedules, hunting sequence games, environment)",
+      "pillar_3": "Emotional validation + actionable system (yelp technique, soft-mouth training, when to worry)"
+    },
+    {
+      "title": "First-Time Homeowner Maintenance Reality Check",
+      "slug": "new-homeowner-maintenance-guide",
+      "source_platform": "reddit",
+      "source_sub": "r/homeowners",
+      "source_url": "https://www.reddit.com/r/homeowners/comments/1sw4lla/do_you_ever_feel_like_youre_just_guessing_how_to/",
+      "raw_quote": "I'm coming up at 15 years of homeownership. In hindsight I didn't have the plethora of YouTube/Instagram and Reddit availability that we have now so a lot of what I learned was during ownership when stuff didn't work right.",
+      "pain_point": "New homeowners feel like they're guessing at maintenance. They lack a systematic approach, leading to costly repairs that could have been prevented with a seasonal maintenance calendar.",
+      "problem_standable_guide": true,
+      "total_score": 7,
+      "confidence": "MEDIUM",
+      "pillar_1": "Seasonal maintenance calendar (what to check each season, before problems happen)",
+      "pillar_2": "Tool baseline + emergency repair kit (the 6-in-1 screwdriver equivalent)",
+      "pillar_3": "When to DIY vs. call a pro (cost thresholds, red flags that require licensed professionals)"
+    },
+    {
+      "title": "Toddler Meltdown Protocol: Surviving the 'No' Phase Without Losing Your Mind",
+      "slug": "toddler-no-phase-survival",
+      "source_platform": "reddit",
+      "source_sub": "r/toddlers",
+      "source_url": "https://www.reddit.com/r/toddlers/comments/1sw9vlp/what_have_i_done_and_how_do_i_fix_it/",
+      "raw_quote": "He is going to lose his mind, he will scream and cry, pls go and continue doing what you were doing, don't let him see his crying affecting you. Act normal. If he calms down and talks to you, then listen and even hug him to help him regulate but the toy does not come back.",
+      "pain_point": "Parents of toddlers in the 'no' phase feel manipulated and guilty. They don't know how to hold boundaries without either giving in (teaching kid crying works) or escalating (damaging trust).",
+      "problem_standable_guide": true,
+      "total_score": 8,
+      "confidence": "HIGH",
+      "pillar_1": "Emotional regulation during meltdowns (stay calm, don't reward the crying with negotiation)",
+      "pillar_2": "Boundary-setting that actually works (natural consequences, follow-through)",
+      "pillar_3": "Post-meltdown repair (how to reconnect after a big feelings episode)"
+    }
+  ],
+  "skipped_trends": [],
+  "high_value_count": 3,
+  "deployment_candidate": "new-kitten-overwhelmed-owner"
+}
