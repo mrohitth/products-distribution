@@ -1,24 +1,24 @@
 {
   "slug": "cat-aggression-health-signal-guide",
-  "draft_hash": "e337b2eb48370f81957ed3b43f327598",
+  "draft_hash": "36f67743a53caf05b9f6f79b74af5147",
   "items": [
-    "Document Your Cat's Baseline, Item 1: Complete a 20-minute baseline inventory documenting your cat's normal activity levels, movement patterns, and preferred resting spots so you can identify what has changed.",
-    "Document Your Cat's Baseline, Item 2: Record your cat's food relationships including eating speed, appetite changes, and meal completion rates to establish a nutritional baseline that reveals internal health shifts.",
-    "Document Your Cat's Baseline, Item 3: Document your cat's grooming behavior by noting frequency, bald patches, skin issues, and any sudden increases or decreases in self-grooming routines.",
-    "Document Your Cat's Baseline, Item 4: Track your cat's sleep locations and social navigation patterns including where she sleeps, how she greets household members, and where she accepts or rejects touch.",
-    "Investigate Medical Causes Thoroughly, Item 1: Understand that sudden aggression without environmental change signals an internal medical problem requiring veterinary investigation and diagnostic testing.",
-    "Investigate Medical Causes Thoroughly, Item 2: Ask your veterinarian about the 12 most common pain-related causes of sudden aggression and specifically request diagnostic tests that can detect them.",
-    "Investigate Medical Causes Thoroughly, Item 3: Create a medical timeline format that records when aggression started, what changed in your household, and any personal health shifts to share with your vet.",
-    "Investigate Medical Causes Thoroughly, Item 4: Push back if your vet dismisses behavioral changes as normal aging by requesting specific diagnostic tests for conditions like dental disease or hyperthyroidism.",
-    "Connect Health Changes and Reintroduction, Item 1: Assess whether your own hormone changes such as pregnancy, menstrual cycle shifts, or new medications have coincided with changes in your cat's behavior.",
-    "Connect Health Changes and Reintroduction, Item 2: Look for a correlation between your personal health changes and your cat's sudden aggression, documenting any timing patterns that emerge.",
-    "Connect Health Changes and Reintroduction, Item 3: Use a science-based reintroduction protocol that respects your cat's fear while rebuilding household peace step by step rather than forcing immediate interaction.",
-    "Connect Health Changes and Reintroduction, Item 4: Keep aggressive cats separated during the acute phase while using gradual scent-swapping and controlled reintroduction to prevent further escalation."
+    "Baseline Documentation, Item 1: Complete a baseline inventory across all five domains including activity patterns, food relationships, sleep locations, grooming behavior, and social navigation to create a reference point for detecting what has changed in your cat's behavior.",
+    "Baseline Documentation, Item 2: Document where your cat spends most of her time, her preferred height throughout the house, which rooms she claims, and whether she has abandoned any perches, hiding spots, or favorite resting areas recently.",
+    "Baseline Documentation, Item 3: Record your cat's feeding routine including times, location, whether you free-feed or schedule meals, how enthusiastically she eats, and any recent changes in appetite direction or meal-finishing behavior.",
+    "Baseline Documentation, Item 4: Track your cat's sleep locations separately for day versus night, note whether she sleeps alone or with other cats or with you, and document any sudden changes in her preferred sleeping spots.",
+    "Medical Investigation, Item 1: Rule out pain as the primary cause of sudden aggression before attempting any behavioral training or environmental changes because pain is the most common medical driver of behavioral change in cats.",
+    "Medical Investigation, Item 2: Prepare for your vet appointment using a medical timeline format that documents when aggression started, what specific triggers produce it, and which body areas your cat now guards or protects during handling.",
+    "Medical Investigation, Item 3: Know the twelve most common pain-related causes of sudden aggression in cats including dental disease, hyperthyroidism, arthritis, and urinary issues, and specifically ask your vet which diagnostic tests can detect each one.",
+    "Medical Investigation, Item 4: Track whether your own health changes or hormone shifts correlate with timing changes in your cat's aggression because human hormone changes can cause cats to become clingy, protective, or aggressive as a direct behavioral response.",
+    "Safety and Reintroduction, Item 1: Classify your cat's aggression type correctly using the guide's classification system before intervening because applying the wrong intervention to the wrong aggression type will break the reintroduction process.",
+    "Safety and Reintroduction, Item 2: Build a complete behavioral baseline document that you can share with your veterinarian to transform your appointment from a guess into a diagnostic conversation that leads somewhere.",
+    "Safety and Reintroduction, Item 3: Implement a science-based reintroduction protocol that respects your cat's fear and rebuilds household peace systematically rather than forcing proximity before your cat has regained a sense of safety.",
+    "Safety and Reintroduction, Item 4: Establish immediate safety measures including resource separation, controlled interactions, and clear escape routes for all household cats while the investigation into medical causes proceeds."
   ],
   "categories": [
-    "Document Your Cat's Baseline",
-    "Investigate Medical Causes Thoroughly",
-    "Connect Health Changes and Reintroduction"
+    "Baseline Documentation",
+    "Medical Investigation",
+    "Safety and Reintroduction"
   ],
-  "generated_at": "2026-05-12T12:42:03.038131"
+  "generated_at": "2026-05-20T23:31:49.674075"
 }

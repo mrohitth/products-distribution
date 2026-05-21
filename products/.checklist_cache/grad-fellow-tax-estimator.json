@@ -2,23 +2,23 @@
   "slug": "grad-fellow-tax-estimator",
   "draft_hash": "cf692010f88e07a0714cdf142395994b",
   "items": [
-    "Document Your Award Letter: Locate your most recent funding offer letter and write down the exact dollar amounts listed for your stipend and tuition waiver value, because these three numbers make up about 80% of your tax story and everything else is details.",
-    "Classify Your Funding Type: Contact your graduate program coordinator and ask how your funding is categorized in the payroll system, because the answer determines whether the IRS treats your income as fellowship, scholarship, or wages and the tax treatment differs for each.",
-    "Map All Income Streams: Write down every income source you have this year, including side gigs and teaching work, because each stream may have different tax rules and missing one can lead to an unexpected bill at tax time.",
-    "Identify Service Requirements: Review your award letter for any teaching, research, or assistant duties tied to your funding, because service requirements are one of the biggest factors determining whether your tuition waiver is taxable or excluded.",
-    "Determine Taxable Portions: Calculate how much of your tuition waiver or remission may be taxable by checking whether your enrollment is full-time and whether service is required, because waivers can range from fully excluded to fully taxable depending on your situation.",
-    "Check Your Withholding Status: Look at your pay stub to see if federal and state taxes are being withheld from your stipend, because fellowship income sometimes has no withholding set up automatically, which can mean a surprise bill in April.",
-    "Calculate Estimated Tax: Use the IRS withholding calculator or manually estimate your tax liability based on your identified taxable income, because understanding what you owe lets you set aside the right amount instead of guessing randomly.",
-    "Know Which Forms to Expect: Identify which tax forms your university will send you this year, such as a 1098-T for tuition or a W-2 for wages, because receiving a form you didn't expect often causes unnecessary panic.",
-    "Set Up Proper Withholding: If you have wages, ensure withholding is set up correctly by giving your payroll office the right allowances, because proper withholding is the easiest way to avoid a large tax bill at filing time.",
-    "Make Quarterly Estimates if Needed: If little or no withholding is being taken from your fellowship, calculate and send quarterly estimated tax payments to the IRS, because failing to pay as you earn can result in penalties on top of taxes owed.",
-    "Keep Records Throughout the Year: Save your award letter, pay stubs, and any correspondence about your funding classification with your tax documents, because having organized records makes filing easier and helps if you need to defend your position later.",
-    "Decide Between Self-Preparation and Professional Help: Assess whether your situation is simple enough to handle with software or complex enough to warrant a preparer who understands grad student finances, because spending $100-200 on a knowledgeable preparer is worth it if your funding involves tuition waivers and multiple income streams."
+    "Identify Award Letter Details: Find your most recent funding offer letter and locate the specific language describing your stipend, tuition waiver, and any service requirements that determine tax treatment.",
+    "Extract Exact Dollar Amounts: Write down the cash stipend amount and the assigned dollar value of your tuition waiver from your official university funding documents for use in your tax calculation.",
+    "Confirm Funding Classification: Contact your graduate program coordinator or payroll office and ask exactly how your funding is categorized, whether as fellowship, scholarship, or wages, then record the answer.",
+    "Track All Income Streams: List every source of money you receive including stipends, research assistantships, scholarships, and any other compensation, because each may be taxed differently.",
+    "Identify Taxable vs. Non-Taxable Portions: Determine which parts of your funding package qualify as taxable wages and which may be excluded as qualified education benefits based on your service requirements.",
+    "Calculate Your Taxable Income: Add together your taxable income streams and apply the appropriate federal tax brackets for your filing status to estimate what you owe before deductions.",
+    "Know Which Tax Forms to Expect: Determine whether you should receive a W-2 for wages, a 1098-T for tuition payments, or a 1099-NEC for contractor work so you can verify all documents arrive.",
+    "Understand Employment Tax Implications: Recognize that wages reported on a W-2 are subject to Social Security and Medicare taxes in addition to income tax, while fellowship income may not be.",
+    "Determine Quarterly Payment Requirements: Check whether you need to make quarterly estimated tax payments if your withholding will not cover your expected tax liability to avoid penalties.",
+    "Set Aside Money for Taxes: Create a dedicated savings account and regularly deposit a percentage of each stipend, typically 15-25 percent, to cover your estimated tax bill when filing.",
+    "Decide on Professional Help: Assess whether your tax situation is straightforward enough to file yourself using software or if your multiple income streams warrant paying a preparer who understands grad student finances.",
+    "Keep Organized Records Year-Round: Save all funding letters, pay stubs, and tax documents in one accessible folder throughout the year so you have everything ready when filing season arrives."
   ],
   "categories": [
-    "Document Your Funding Sources",
-    "Determine Your Taxable Income",
-    "Handle Taxes Throughout the Year"
+    "Identify Your Income Sources",
+    "Calculate Your Taxable Amount",
+    "Prepare for Tax Time"
   ],
-  "generated_at": "2026-05-16T13:12:41.201119"
+  "generated_at": "2026-05-20T23:39:14.861517"
 }

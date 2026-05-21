@@ -2,23 +2,23 @@
   "slug": "wrongful-termination-survival-guide",
   "draft_hash": "2cf0c3900b728b301b0ce7585ea6a9fb",
   "items": [
-    "Secure Digital Evidence: Export and screenshot all relevant company emails before access is revoked, including sent messages, performance discussions, and termination-related communications.",
-    "Secure Digital Evidence: Screenshot every relevant conversation from Slack, Microsoft Teams, or Google Chat that shows your performance, complaints filed, or discussions about termination decisions.",
-    "Secure Digital Evidence: Use your phone camera to photograph your screen as a backup, since physical photographs are harder for employers to claim were digitally altered or manipulated.",
-    "Secure Digital Evidence: Preserve metadata by capturing document properties including author, creation date, and edit history to reveal inconsistencies in your employer's stated timeline.",
-    "Compile Employment Records: Export all performance reviews, goal sheets, and feedback from Workday, BambooHR, or Lattice before your system access is completely revoked.",
-    "Compile Employment Records: Screenshot all internal HR complaints you filed, including the original complaint, every response received, and any follow-up messages marked as resolved.",
-    "Compile Employment Records: Photograph your termination letter and capture its metadata properties, since a letter created on your termination date tells a very different story than one modified in advance.",
-    "Compile Employment Records: Document any evidence deletion attempts by screenshotting access warnings, disappearing messages, or bounced emails that indicate your employer is destroying records.",
-    "File Administrative Complaints: File your complaint with the EEOC or state fair employment agency within the required timeframe, since statutes of limitation are strict and missing the deadline bars your entire case.",
-    "File Administrative Complaints: Request a Right to Sue letter from the EEOC if you need to pursue a civil claim, as this step is typically required before you can file a lawsuit in federal court.",
-    "File Administrative Complaints: Submit your complaint to both the EEOC and your state agency if your state has separate jurisdiction, because dual filing strengthens your case and expands potential remedies.",
-    "File Administrative Complaints: Keep copies of every complaint you file and document the date, confirmation number, and method of delivery, since proof of timely filing is essential if your case is challenged."
+    "Secure Your Company Email: Export and screenshot all relevant company emails immediately, including sent messages, received communications, and folder organization with visible dates and times before your access is revoked.",
+    "Capture Messaging Platform Conversations: Screenshot all Slack, Teams, Google Chat, or Discord conversations that discuss your performance, complaints you filed, or conversations related to your termination before losing access.",
+    "Export Performance Review Documents: Screenshot or export your performance reviews, goal sheets, 360-feedback, and any written commendations from Workday, BambooHR, Lattice, or whatever performance management system your employer used.",
+    "Screenshot HR and Benefits Records: Capture records of any leave requests, accommodation requests, benefits information, and HR complaints you filed through internal systems before your company access is terminated.",
+    "Include Full Context in Every Screenshot: Ensure each screenshot captures the date, time, sender and recipient fields, and URL bar in the browser to establish clear authenticity and provenance of the evidence.",
+    "Use Your Phone Camera as a Backup: Photograph your screen with your phone instead of using a screenshot tool whenever possible, since phone photos are harder to claim were digitally altered or manipulated.",
+    "Screenshot Document Metadata Properties: Capture document properties showing author, creation date, and edit history by taking screenshots of file information panels, as this establishes an authentic timeline of when records were created or changed.",
+    "Document Any Evidence Deletion Attempts: Screenshot any system access warnings, disappearing messages, emails that show deleted status, or notifications about revoked access to build a record of potential destruction of evidence.",
+    "Avoid Unauthorized System Access: Do not attempt to access company systems, email accounts, or databases after your authorization has been revoked, as unauthorized access can undermine your legal standing and damage your credibility with attorneys.",
+    "Organize Everything in a Personal Case File: Create a secure, backed-up folder on your personal devices where you store all screenshots, exports, and documentation organized by date and category to present a clear narrative when meeting with an attorney.",
+    "Keep Records of Witness Information: Write down names, contact information, and brief notes about colleagues who witnessed the circumstances surrounding your termination or your prior complaints, as their testimony may support your case.",
+    "Preserve Physical Documentation: Collect and photograph any physical documents you received or signed during your employment, including your termination letter, performance improvement plans, and any written warnings or commendations."
   ],
   "categories": [
-    "Secure Digital Evidence",
-    "Compile Employment Records",
-    "File Administrative Complaints"
+    "Secure Your Digital Evidence",
+    "Screenshot Evidence Correctly",
+    "Document and Protect Your Case"
   ],
-  "generated_at": "2026-05-17T11:13:50.199496"
+  "generated_at": "2026-05-21T00:01:48.642421"
 }

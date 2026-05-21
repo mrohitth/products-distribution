@@ -1,0 +1,24 @@
+{
+  "slug": "why-weight-loss-plateau",
+  "draft_hash": "993d20b24aa9fc5154744dfb7fc07e08",
+  "items": [
+    "Calculate your BMR using the Mifflin-St Jeor equation by multiplying 10 by your weight in kg, adding 6.25 times your height in cm, subtracting 5 times your age, and adding 5 for men or subtracting 161 for women, because standard calculators miss critical variables unique to your body.",
+    "Multiply your BMR by your true activity factor and be honest about all movement including parking distance and stairs, because overestimating activity is the most common way dieters accidentally estimate a nonexistent deficit.",
+    "Apply the appropriate adaptation modifier based on how long you have been restricting calories, starting with 5% for weeks 1-6 and increasing to 10% for weeks 7-12 and 15-20% for weeks 13-24, because your body progressively burns fewer calories the longer you diet.",
+    "Apply additional adaptation modifiers based on total weight lost, adding 3-5% for 5-10% body weight lost, 7-10% for 10-15% lost, and 12-15% for more than 15% lost, because fat loss itself triggers metabolic compensation that further reduces your daily calorie needs.",
+    "Monitor non-exercise activity daily including walking, fidgeting, parking distance, and stair usage, because unconscious movement reductions signal your body is entering adaptation mode and fighting the deficit.",
+    "Track body measurements with a tape measure at neck, waist, and hips every 2 weeks, because water retention in fat cells can mask ongoing fat loss on the scale for weeks at a time.",
+    "Weigh yourself no more than once weekly using the same scale at the same time of day while tracking the trend over 4+ weeks rather than daily fluctuations, because scale weight naturally fluctuates 2-5 pounds from water and glycogen changes alone.",
+    "Identify your personal adaptation threshold by watching for increased hunger, reduced non-exercise movement, and lower body temperature, because crossing this threshold triggers aggressive metabolic slowdown that makes continued weight loss nearly impossible.",
+    "Subtract 15-20% from your adapted TDEE to set your actual deficit target, knowing this number may be significantly lower than what you initially calculated, because using outdated math explains why most plateaus occur.",
+    "Weigh yourself and convert to kilograms by dividing pounds by 2.2, then measure height in centimeters by multiplying inches by 2.54, because precise measurements are essential for accurate BMR calculation.",
+    "Reduce your deficit if you have crossed the adaptation threshold by bringing calories closer to your adapted TDEE, because a smaller deficit produces slower but sustainable loss instead of triggering your body's starvation defenses.",
+    "Recalculate your TDEE and adaptation modifiers every 5-7 pounds of weight lost, because your body composition and metabolic needs change constantly as you progress."
+  ],
+  "categories": [
+    "Get Accurate Numbers",
+    "Track Your Adaptation",
+    "Adjust Your Approach"
+  ],
+  "generated_at": "2026-05-21T00:00:27.198288"
+}

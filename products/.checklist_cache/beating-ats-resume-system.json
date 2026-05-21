@@ -2,23 +2,23 @@
   "slug": "beating-ats-resume-system",
   "draft_hash": "e1e4e164d20c6b5cbaa367d4846a6ff9",
   "items": [
-    "Copy and Paste: Transfer the entire job posting text into a separate document so you can annotate and analyze every section without losing context or formatting.",
-    "Highlight Hard Requirements: Identify every non-negotiable criterion like degrees, certifications, years of experience, and specific tools by searching for must-have language.",
-    "Identify Soft Preferences: Find skills framed as beneficial but not mandatory by looking for words like preferred, ideal, or bonus in the job posting.",
-    "Examine LinkedIn Profiles: Review 3-5 profiles of people currently working in your target role at similar companies to discover industry terms not in the posting.",
-    "Build Your Master Keyword List: Compile every noun, phrase, and technical term from hard requirements, soft preferences, and industry shorthand into one searchable document.",
-    "Add Exact Phrasing to Your List: Include the precise language used in the job posting because ATS systems match exact text rather than conceptual equivalents.",
-    "Map Accomplishments to Numbers: Replace vague descriptions like led a team with specific data points including team size, percentage improvements, and timeframes for ATS parsing.",
-    "Verify Every Keyword Appears: Cross-reference your master list against your resume to confirm each term shows up somewhere in your work history or skills section.",
-    "Quantify Impact Statements: Turn general claims into machine-readable data by including before-and-after metrics, dollar amounts, or percentage improvements for every accomplishment.",
-    "Align Vocabulary Exactly: Mirror the phrasing from job requirements verbatim on your resume so ATS systems recognize your qualifications without needing interpretation.",
-    "Check Structural Formatting: Remove tables, graphics, columns, headers, or footers that ATS systems cannot parse correctly and may cause your content to be skipped entirely.",
-    "Test Format Compatibility: Save your resume as a plain text document to verify all keywords and formatting survived the conversion before submitting online."
+    "Extract Keywords: Copy the entire job posting into a document and highlight every hard requirement using the exact phrasing from the posting.",
+    "Extract Keywords: Identify every soft preference phrase in the job posting by looking for words like 'preferred,' 'ideal,' or 'nice to have.'",
+    "Extract Keywords: Research 3-5 LinkedIn profiles of people currently working in your target role at similar companies to find industry shorthand not in the posting.",
+    "Extract Keywords: Build a master keyword list combining all three layers of language with every term appearing somewhere in your resume.",
+    "Quantify Your Data: Replace vague descriptions like 'led a team that improved customer satisfaction' with specific numbers and measurable outcomes.",
+    "Quantify Your Data: Add specific metrics to accomplishments by including percentages, dollar amounts, timeframes, and team sizes.",
+    "Quantify Your Data: Use ATS-friendly formatting by placing numbers and data points in plain text rather than embedded in graphics or tables.",
+    "Quantify Your Data: Frame soft skills with hard evidence by following claims like 'project management' with concrete examples of project scope.",
+    "Structure for Parsing: Use standard section headers like 'Work Experience' and 'Education' instead of creative titles that ATS systems cannot categorize.",
+    "Structure for Parsing: Place the most important keywords in the top third of your resume where ATS systems weight them most heavily.",
+    "Structure for Parsing: Submit your resume in plain text or .docx format to ensure the ATS parser can extract your content accurately.",
+    "Structure for Parsing: Avoid headers, footers, columns, and text boxes that ATS systems cannot parse correctly."
   ],
   "categories": [
-    "Extract Job Posting Keywords",
-    "Research Industry Language",
-    "Restructure Resume Content"
+    "Extract Keywords",
+    "Quantify Your Data",
+    "Structure for Parsing"
   ],
-  "generated_at": "2026-05-17T11:08:42.578913"
+  "generated_at": "2026-05-20T23:36:05.522469"
 }

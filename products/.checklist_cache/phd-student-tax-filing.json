@@ -2,23 +2,23 @@
   "slug": "phd-student-tax-filing",
   "draft_hash": "4a13b81680b6c6f3df0c6459aa37bf5c",
   "items": [
-    "Classify Your Income Sources: Download your complete banking history from January 1 through December 31 of the tax year and review every single deposit you received because institutions often pay through multiple systems and you may have forgotten some income sources.\nClassify Your Income Sources: Sort every deposit into one of five categories (fellowship payments, stipend advances, research assistantship wages, teaching assistantship wages, or grant funds) because different income types have different tax rules and treatment.\nClassify Your Income Sources: Create a spreadsheet with columns for Date, Amount, Source Name, Source Type, and Form Expected (W-2, 1098-T, other, or not sure) so you have a working document that tracks all your income in one place.\nClassify Your Income Sources: Note the exact dollar amount and source for each payment so you have specific records rather than estimates when you file your taxes and claim your income.\nUnderstand Your Tax Forms: Recognize that the 1098-T reports payments made to your institution for tuition and fees, not money that went into your bank account, because this is a common source of confusion for PhD students.\nUnderstand Your Tax Forms: Check which box your institution uses on your 1098-T (Box 1 shows amounts received, Box 2 shows amounts billed) because these numbers often differ significantly from what you actually received.\nUnderstand Your Tax Forms: Note that Box 5 only shows scholarships applied to tuition, not your total scholarship amount, so your actual scholarship could be much larger than what appears on the form.\nUnderstand Your Tax Forms: Locate your W-2 from your institution's payroll office or student employment portal and confirm it matches your employment income, because the W-2 and 1098-T report completely different things.\nPrepare to File Correctly: Determine whether you need forms beyond the basic 1040, because PhD students with fellowship income may need Schedule 1 and those with foreign income may need Form 8843.\nPrepare to File Correctly: Use your spreadsheet to match each income source to the correct tax form, entering each W-2 income on your return and noting fellowship amounts separately.\nPrepare to File Correctly: Verify your W-2 income matches your actual deposit history by comparing it against your pay stubs and bank records, because payroll errors do occur.\nPrepare to File Correctly: Create a dedicated folder for organizing your 1098-T, W-2s, and bank statements so everything is accessible when you begin preparing your taxes and you do not scramble for documents at the last minute.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section.",
-    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open phd-student-tax-filing.md and review the relevant section."
+    "Track Your Income Sources: Download your complete transaction history from January 1 through December 31 of the tax year, including every deposit regardless of source or payment system.",
+    "Track Your Income Sources: Sort each deposit into the five income categories\u2014fellowship payments, stipend advances, research assistantship wages, teaching assistantship wages, and grant funds\u2014because the same dollar amount from different sources has completely different tax treatment.",
+    "Track Your Income Sources: Record the exact dollar amount and source name for every payment you received, creating a working document that accounts for every dollar before you begin tax calculations.",
+    "Track Your Income Sources: Create a spreadsheet with columns for date, amount, source name, source type, and expected tax form, filling in every deposit you can locate and marking uncertain entries clearly.",
+    "Understand Your Tax Forms: Recognize that your 1098-T shows tuition payments made to your institution, not money deposited into your bank account, so it will never match your actual cash receipts.",
+    "Understand Your Tax Forms: Compare Box 1 (payments received) and Box 2 (amounts billed) on your 1098-T to understand which reporting method your institution uses and why the numbers differ from your deposits.",
+    "Understand Your Tax Forms: Identify which income sources require a W-2 versus which appear only on your 1098-T, since employment wages and fellowship payments use different tax forms entirely.",
+    "Understand Your Tax Forms: Check Box 5 on your 1098-T for scholarship and grant amounts to understand what your institution reported as educational assistance versus taxable income.",
+    "Prepare to File Correctly: Report fellowship income without a work requirement as educational funding using the appropriate sections of Form 1040, not as ordinary wages, because these payments have special tax treatment.",
+    "Prepare to File Correctly: Ensure all RA and TA wages appear on your W-2 and are filed as employment income through your institution's payroll system, since work-based payments are taxed differently than fellowships.",
+    "Prepare to File Correctly: Determine whether you need to file Schedule OI and Form 8843 by checking your residency status, as nonresident aliens have additional filing requirements that most domestic students do not face.",
+    "Prepare to File Correctly: Match each income source from your tracking spreadsheet to the correct tax form and filing location, creating a complete picture of your tax situation before you begin filling out Form 1040."
   ],
   "categories": [
-    "Classify Your Income Sources",
+    "Track Your Income Sources",
     "Understand Your Tax Forms",
     "Prepare to File Correctly"
   ],
-  "generated_at": "2026-05-16T13:10:38.933735"
+  "generated_at": "2026-05-20T23:47:13.540315"
 }

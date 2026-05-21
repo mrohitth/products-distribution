@@ -1,0 +1,48 @@
+{
+  "status": "SKIPPED",
+  "reason": "No high-value pain points found",
+  "scanned_at": "2026-05-21T14:00:00Z",
+  "trends": [
+    {
+      "title": "Parent snapping/yelling at children - inability to stop",
+      "slug": "stop-parent-snapping-yelling",
+      "source": "r/Parenting, r/toddlers",
+      "quote": "I snap/yell at my kids when I'm frustrated and I don't know how to stop. I try SO HARD. But when I get frustrated/at the end of my rope, I yell/snap.",
+      "pain_score": 3,
+      "market_score": 3,
+      "uniqueness": 2,
+      "demand_signal": 3,
+      "total_score": 6.75,
+      "standalone_guide_viable": true,
+      "decline_reason": "Score 6.75/10 < 8.0 threshold"
+    },
+    {
+      "title": "New homeowner overwhelmed by maintenance and repair anxiety",
+      "slug": "new-homeowner-maintenance-anxiety",
+      "source": "r/Homeowners, r/HomeImprovement, r/HomeMaintenance",
+      "quote": "Even small things feel huge sometimes, simply because of the anxiety about messing something up trying to do it ourselves or hugely expensive by getting someone else to do it.",
+      "pain_score": 3,
+      "market_score": 3,
+      "uniqueness": 2,
+      "demand_signal": 3,
+      "total_score": 6.75,
+      "standalone_guide_viable": true,
+      "decline_reason": "Score 6.75/10 < 8.0 threshold. Existing skeleton: new-homeowner-maintenance-guide (overlap)"
+    },
+    {
+      "title": "Clingy demanding cat driving owner insane",
+      "slug": "clingy-cat-boundaries",
+      "source": "r/CatAdvice",
+      "quote": "My cat is SO clingy and SO demanding and it drives me insane. She doesn't leave me alone for even a moment.",
+      "pain_score": 3,
+      "market_score": 2,
+      "uniqueness": 2,
+      "demand_signal": 3,
+      "total_score": 4.5,
+      "standalone_guide_viable": true,
+      "decline_reason": "Score 4.5/10 < 8.0 threshold. Existing skeletons: cat-aggression-handbook, why-does-my-cat-bite-me, kitten-bite-training-guide (overlap)"
+    }
+  ],
+  "pipeline_decision": "SKIP_ALL",
+  "threshold": 8.0
+}

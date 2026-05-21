@@ -2,23 +2,23 @@
   "slug": "safe-automatic-litter-box-guide_v1",
   "draft_hash": "e5aea9fe192c2aec9348dc7595bf5d08",
   "items": [
-    "Verify Rotation Design Before Buying: Confirm the device uses X-axis rotation instead of Y-axis rotation before purchasing any automatic litter box, because Y-axis drums create a crushing hazard if sensors fail.",
-    "Verify Rotation Design Before Buying: Reject any model with a fixed plastic entry door or tunnel, since these create dangerous pinch points that can trap your cat's collar, tail, or limbs during operation.",
-    "Verify Rotation Design Before Buying: Research sensor failure rates for the specific model you're considering, using APPA 2025 data showing 35% of users experience sensor malfunctions within the first year as a baseline comparison.",
-    "Verify Rotation Design Before Buying: Search for lawsuits, recalls, and documented incident reports connected to the manufacturer before buying, especially after reviewing cases like the June 2025 PetPivot lawsuit that resulted in a $3 million claim.",
-    "Test Safety Features Before Use: Test weight sensor detection specifically for your cat's body weight, since small cats under 10 pounds and senior cats are at highest risk for sensor detection failures.",
-    "Test Safety Features Before Use: Verify the device has redundant safety sensors rather than relying on a single detection system, which provides a backup if the primary sensor fails during a cleaning cycle.",
-    "Test Safety Features Before Use: Run a manual test cycle with your cat nearby to observe how the mechanism responds when motion is detected, confirming it fully pauses and does not continue rotating.",
-    "Test Safety Features Before Use: Observe for false positives during the first weeks of use, such as the device locking up or refusing to cycle when no cat is present, which indicate sensor instability.",
-    "Monitor Device After Setup: Log any sensor inconsistencies you notice from day one, since intermittent sensor failures can develop gradually before causing a dangerous malfunction.",
-    "Monitor Device After Setup: Never leave your cat alone with the automatic litter box during the initial trial period until you have confirmed reliable sensor performance over multiple weeks.",
-    "Monitor Device After Setup: Verify the mechanism maintains a clear exit path at all times during operation and never fully encloses your cat inside a rotating chamber that has no escape route.",
-    "Monitor Device After Setup: Report any entrapment incident, injury, or near-miss to the manufacturer and appropriate consumer safety authorities immediately, regardless of how minor the incident may seem."
+    "Confirm Rotation Axis Type: Identify whether the automatic litter box uses X-axis or Y-axis rotation before purchasing, because Y-axis rotating drums have been directly linked to cat deaths in documented incidents including the 2025 PetPivot lawsuit.",
+    "Verify Sensor Failure Rate: Request or research the documented sensor failure rate for any automatic litter box you're considering, because APPA 2025 data shows 35% of users experience sensor malfunctions within the first year.",
+    "Check for Lawsuits and Incidents: Search for any product liability lawsuits or documented injury incidents connected to the specific brand and model you're considering, because manufacturers rarely disclose this information in their listings.",
+    "Confirm Weight Detection Range: Verify that the automatic litter box's weight sensor can detect cats as small as 5 pounds or lighter, because weight threshold failures that miss small or senior cats are a documented recurring hazard.",
+    "Inspect Entry Mechanism: Examine whether the automatic litter box has fixed plastic doors or entry tunnels, because these create pinch points that can trap a cat's collar, limb, or tail during operation.",
+    "Review Safety Documentation: Request and carefully read the manufacturer's safety documentation and emergency shut-off procedures before installation, because knowing how to stop the device quickly could save your cat's life.",
+    "Confirm Emergency Shut-off: Verify that the automatic litter box has a visible, accessible emergency stop button or manual override that allows you to immediately halt the cleaning cycle if your cat becomes trapped.",
+    "Assess Exit Path Design: Confirm that the device's design leaves a clear, unobstructed exit path even during an active cleaning cycle, so your cat cannot become trapped in a corner or enclosed space.",
+    "Test Sensor Response: Conduct regular sensor response tests by placing your cat near the entrance to verify the device pauses its cycle, because intermittent sensor failures can develop without warning and are impossible to detect without active testing.",
+    "Watch for Behavioral Changes: Monitor your cat closely for any signs of fear, hesitation, or avoidance behavior around the automatic litter box, because cats may sense sensor or mechanical failures that you cannot see.",
+    "Register for Recalls: Register your automatic litter box with the manufacturer to receive safety recall notifications, because sensor failures and mechanical defects discovered after purchase are typically communicated only to registered owners.",
+    "Schedule Sensor Calibration: Follow the manufacturer's recommended sensor calibration schedule to maintain reliable detection performance, because sensors can drift out of proper alignment over time and become unreliable."
   ],
   "categories": [
-    "Verify Rotation Design Before Buying",
-    "Test Safety Features Before Use",
-    "Monitor Device After Setup"
+    "Research Before Buying",
+    "Evaluate Product Design",
+    "Monitor After Installation"
   ],
-  "generated_at": "2026-05-15T11:05:51.429839"
+  "generated_at": "2026-05-20T23:54:59.305035"
 }

@@ -2,23 +2,23 @@
   "slug": "security-deposit-dispute-playbook",
   "draft_hash": "a04be946b8a4f966dc2a33dc3987ea70",
   "items": [
-    "Build Your Evidence Library: Photograph every room on move-in day with timestamp metadata enabled, capturing walls, floors, fixtures, and baseboards in every space. This creates a dated baseline that makes it impossible for landlords to blame existing damage on you later.",
-    "Build Your Evidence Library: Shoot close-up photos of problem areas like baseboard gaps, carpet stains, cabinet misalignments, wall cracks, and HVAC filter condition before signing any move-in condition form. Landlords specifically target these areas for false damage claims.",
-    "Build Your Evidence Library: Document pre-existing damage systematically by photographing behind furniture, in corners, under sinks, and near light switches in each room. These hidden areas commonly generate false damage claims during move-out disputes.",
-    "Build Your Evidence Library: Store all photos and documentation in at least two separate locations including cloud backup and a physical copy. Evidence that disappears or becomes inaccessible weakens your case when you need it most.",
-    "Audit Landlord Charges: Read the itemized statement like an auditor, flagging inflated charges, duplicated fees, and categorically improper deductions. Landlords count on renters not scrutinizing their itemized list carefully enough to catch these errors.",
-    "Audit Landlord Charges: Compare each deduction against your move-in photos to identify charges for damage that was already documented before you signed the condition form. This side-by-side review reveals every false claim your landlord is making.",
-    "Audit Landlord Charges: Get two to three independent contractor estimates for comparable work to establish what disputed repairs actually cost in your area. Landlords routinely charge two to three times market rate for cleaning and repairs.",
-    "Audit Landlord Charges: Flag charges for normal wear and tear that legally cannot be deducted from your security deposit in your state. Landlords frequently claim excessive wear charges that represent ordinary use during a standard tenancy.",
-    "Win Through Legal Action: Write a demand letter citing specific photos, identified false charges, and your state security deposit statute with a clear payment deadline. A well-structured demand letter creates legal pressure that landlords cannot legally ignore.",
-    "Win Through Legal Action: Send your demand letter within your state's required dispute timeframe, typically 7 to 14 days after receiving the itemized statement. Filing late can forfeit your right to recover your deposit through legal channels.",
-    "Win Through Legal Action: File small claims court paperwork if your landlord ignores the demand letter, bringing all documented evidence, photos, and correspondence. Court filing fees are typically $30 to $75 and landlords frequently settle before the hearing date.",
-    "Win Through Legal Action: Keep copies of all written communications with delivery confirmations and document every phone call including date, time, and what was discussed. This complete paper trail becomes your strongest evidence if the dispute reaches a judge."
+    "Document Your Move-In Condition: Walk through every room before signing any condition form and photograph all walls, floors, ceilings, and fixtures using your phone's timestamp feature to create a dated record of the property's actual state when you took possession.",
+    "Document Your Move-In Condition: Open every cabinet, drawer, door, and appliance door during your move-in audit and photograph the interior conditions so you have evidence of pre-existing wear that landlords commonly cite at move-out.",
+    "Document Your Move-In Condition: Check behind and beneath all furniture in each room and photograph any carpet stains, worn paths, or damage hidden from casual view, because landlords will document every visible flaw even if you missed it during the initial walkthrough.",
+    "Document Your Move-In Condition: Photograph and record the condition of every light switch, outlet cover, faucet, fixture, and door handle in the property, because these small items frequently appear on itemized deduction lists despite being wear-prone from normal use.",
+    "Build Your Evidence Library: Create a separate folder on your phone or computer for each room and upload all move-in photos with metadata intact so the timestamps and geolocation data remain attached to your documentation.",
+    "Build Your Evidence Library: Compare your move-in photos against the landlord's itemized deduction list and flag every claim that contradicts your documented pre-existing condition by writing the specific contradiction in a separate notes file.",
+    "Build Your Evidence Library: Gather all related records including your lease agreement, condition form, rent receipts, and any written communications with your landlord and store them together with your photo evidence in a single organized location.",
+    "Build Your Evidence Library: Screenshot or download any online portal entries, email confirmations, or text message exchanges with your landlord and add them to your evidence folder because digital records can disappear or become inaccessible after move-out.",
+    "Prepare Your Dispute Case: Read each line item on your itemized statement and write down exactly what evidence you have that contradicts the landlord's damage claim, including specific photos, dates, and descriptions from your move-in audit.",
+    "Prepare Your Dispute Case: Identify every charge that lacks documentation by the landlord, such as invoices with no dates, receipts for services you performed yourself, or labor charges without itemized work descriptions, because these unsupported charges are your strongest dispute targets.",
+    "Prepare Your Dispute Case: Total up the disputed amount and calculate your state's maximum allowable deadline for sending a demand letter, because missing this deadline can forfeit your right to claim twice the deposit amount in many states.",
+    "Prepare Your Dispute Case: Write a chronological summary of your tenancy that notes all maintenance requests, inspections, and communications with your landlord to include with your demand letter as supporting context for your dispute."
   ],
   "categories": [
+    "Document Your Move-In Condition",
     "Build Your Evidence Library",
-    "Audit Landlord Charges",
-    "Win Through Legal Action"
+    "Prepare Your Dispute Case"
   ],
-  "generated_at": "2026-05-16T13:13:25.533953"
+  "generated_at": "2026-05-20T23:56:29.929708"
 }

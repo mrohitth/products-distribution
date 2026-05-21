@@ -2,23 +2,23 @@
   "slug": "small-business-tax-filing-simplified",
   "draft_hash": "7aed4d76c5fcd2f3c33fec8b45c47af8",
   "items": [
-    "Check Your State Filing: Visit your state Secretary of State website and search for your business name to confirm whether you filed articles of incorporation, organization, or a certificate of formation, which determines if you have a formal entity.",
-    "Use the Decision Tree: Follow the five-question decision tree in Chapter 1 to systematically determine whether you are a sole proprietor, LLC, S-corp, or corporation by answering each question honestly and moving to the next step.",
-    "Count Your Owners: Determine whether you operate as a single-member or multi-member business because this single fact changes whether you file Schedule C, Form 1065, or Form 1120-S and determines your entire tax filing path.",
-    "Document Your Entity in Writing: Write your entity type in one complete sentence such as 'I am a single-member LLC taxed as a sole proprietor' and keep this sentence on every form you file as your consistent reference point.",
-    "File Schedule C With Your 1040: Attach Schedule C to your personal Form 1040 if you are a sole proprietor or single-member LLC because your business income and expenses ride along with your personal taxes rather than getting a separate return.",
-    "File Form 1065 for Multi-Member LLCs: File Form 1065 and issue a Schedule K-1 to each partner if you have a multi-member LLC that has not elected S-corp status because partnerships do not pay tax at the entity level.",
-    "File Form 1120-S for S-Corp Elections: File Form 1120-S and issue Schedule K-1s to each shareholder if you elected S-corp status for your LLC or corporation because S-corps also pass income through to individual tax returns.",
-    "Map Numbers to Specific IRS Boxes: Ensure every business income and expense figure goes into the correct specific box on the correct specific form because the IRS requires numbers in exact boxes, not a general spreadsheet submission.",
-    "Create a Reference Cheat Sheet: Write down or print the entity type cheat sheet showing which form corresponds to your business type and tape it to your desk so you never file the wrong form again.",
-    "Issue K-1s Before Filing Deadlines: Prepare and issue Schedule K-1s to all partners or shareholders before your personal filing deadline because each recipient needs their K-1 to complete their own individual tax return.",
-    "Gather Income and Expense Records: Collect all revenue documents, receipts, and expense records organized by category before opening any tax form because completing the correct form requires having your numbers ready in advance.",
-    "Keep Completed Returns Accessible: Save digital and physical copies of every filed tax return and K-1 in a dedicated business tax folder because you will need these documents for future filings, audits, and business planning."
+    "Identify Your Business Structure: Search your state's Secretary of State website to determine whether you registered a formal business entity such as an LLC or corporation.",
+    "Identify Your Business Structure: Stop the entity search if you never filed formation documents because you operate as a sole proprietor and file Schedule C on your personal 1040.",
+    "Identify Your Business Structure: Count your business owners to determine whether you have a single-member entity or a multi-owner structure that requires different tax treatment.",
+    "Identify Your Business Structure: Write your entity type in one sentence such as \"I am a single-member LLC taxed as a sole proprietor\" and keep this statement with all your tax documents.",
+    "File the Correct Tax Forms: File Schedule C as part of your personal 1040 if you are a sole proprietor or single-member LLC because your business income flows directly to your individual tax return.",
+    "File the Correct Tax Forms: Submit Form 1065 if you have a multi-member LLC that has not elected S-corp status because partnerships report income at the entity level before distributing to owners.",
+    "File the Correct Tax Forms: Complete Form 1120-S if you elected S-corp status for your LLC or corporation because S-corps file a separate return but income passes through to shareholders via Schedule K-1s.",
+    "File the Correct Tax Forms: Issue Schedule K-1s to each partner or shareholder after filing Form 1065 or Form 1120-S because every owner must report their share of business income on their personal 1040.",
+    "Complete Your Tax Submission: Pay yourself a reasonable salary before taking distributions if you own an S-corp and actively work in the business because the IRS requires salary as a precondition for distribution treatment.",
+    "Complete Your Tax Submission: Consult a CPA for detailed guidance if you operate as a C-corporation because corporations file Form 1120 and face double taxation on dividends paid to shareholders.",
+    "Complete Your Tax Submission: Place specific numbers in the correct IRS boxes on each form because the agency does not accept spreadsheets and requires income and expenses reported in designated fields.",
+    "Complete Your Tax Submission: Sign and submit every form in your stack after reviewing each line entry because the IRS holds you responsible for accurate filing regardless of whether you used an accountant."
   ],
   "categories": [
-    "Identify Your Entity Type",
-    "File the Right Forms",
-    "Organize Your Filing Process"
+    "Identify Your Business Structure",
+    "File the Correct Tax Forms",
+    "Complete Your Tax Submission"
   ],
-  "generated_at": "2026-05-14T11:06:20.439389"
+  "generated_at": "2026-05-20T23:56:35.369324"
 }

@@ -2,23 +2,23 @@
   "slug": "scope-creep-playbook-freelancers",
   "draft_hash": "993936c569648f24bb627bea55c44631",
   "items": [
-    "Identify Your Contract Type: Open a document and write down whether your most common work is deliverable-based, hourly, or retainer so you choose the correct template for each engagement.",
-    "Select the Right Contract Archetype: Match your contract structure to your work type\u2014use deliverable-based for defined outputs, hourly for uncertain scope, and retainer for ongoing relationships where you need predictable income.",
-    "Document Your Contract Template: Before your next client engagement, download or draft a contract template for whichever archetype fits your work so you never start a project without a signed agreement.",
-    "Match Contract Type to Work Style: Review each of your current projects and assign the appropriate contract archetype to each one, ensuring you have the right structure for every engagement.",
-    "Define Revision Limits in Writing: Specify exactly how many revision rounds are included, what counts as a revision versus a redesign, and the rate you'll charge for additional rounds so clients can't demand free work.",
-    "Lock In Your Payment Schedule: State deposit amounts, progress payment triggers, and final payment requirements as percentages tied to specific project milestones so you always know when money is due.",
-    "Add a Kill Fee Clause: Include a clause specifying what percentage of remaining contract value you receive if a client cancels mid-project so you don't work for free on aborted projects.",
-    "Protect Your Intellectual Property: Add a clause stating that IP transfers to the client only upon final payment so you retain leverage when clients delay paying their final invoice.",
-    "Create a Scope Change Request Form: Draft a simple form clients must use to formally request changes, including a description field and estimated impact on timeline and budget so every request is documented.",
-    "Require Written Approval Before Changes: Specify in your contract that no additional work begins until you provide a written estimate and the client approves it in writing so you never do unpaid work.",
-    "Quote Your Change Fees Upfront: When a client requests a change, calculate the additional cost and send it to them before doing any work so there's no dispute about payment later.",
-    "Add Milestone Check-Ins to Every Project: Schedule regular check-ins throughout your project where you review progress against the original scope and flag any drift immediately so scope creep doesn't accumulate unnoticed."
+    "Contract Type: Write down which contract template fits your primary work type before your next engagement so boundaries become self-enforcing from the start. Use deliverable-based for defined outputs, hourly for uncertain scope, and retainer for ongoing relationships.\n\nRevision Limits: State the exact number of revision rounds included in your price, define what counts as a revision, and specify the rate for additional rounds. Without this language, clients will expect unlimited changes at no extra cost.\n\nPayment Milestones: Structure payment into deposits, progress payments, and final payment tied to specific project phases, never starting work without a deposit and never finishing without final payment secured. This gives you leverage to ensure you actually get paid.\n\nKill Fee Clause: Add a kill fee specifying what percentage of remaining contract value you receive if the client cancels mid-project without cause. This protects you from investing time in work that gets canceled and leaves you uncompensated.\n\nDeliverable Decomposition: Break every project into concrete, signable pieces that define exactly what the client is buying and what falls outside the agreement. The more specific your deliverables, the fewer grey areas exist for clients to exploit.\n\nIP Transfer Language: Include a clause stating intellectual property transfers to the client only upon final payment, retaining ownership until you're fully compensated. This gives you legal leverage when clients delay payment or dispute invoices.\n\nScope Change Process: Define how clients request, approve, and pay for changes to the original scope, requiring all out-of-scope work to be formally approved before you begin. This prevents casual mentions of extra work from becoming expectations included in the original price.\n\nNon-Negotiables Document: Write down your essential contract clauses before client engagements so you know exactly what you will not compromise on. Without written non-negotiables, most freelancers bend under pressure because they have no clear reference point.\n\nScope Boundary Script: Use a word-for-word script when clients request work outside the agreed scope, clearly explaining what is included versus what requires additional payment. Having the script ready removes the awkwardness of improvising boundary conversations.\n\nContract Reference: When clients push for free extras, reference the specific contract clause they signed and reframe their request as a change requiring approval and additional payment. This removes the personal conflict by shifting focus to what was already agreed.\n\nRegular Check-Ins: Schedule recurring check-ins throughout projects to catch scope drift early before it compounds into large uncompensated work batches. Early detection lets you address misunderstandings before you've already invested free hours.\n\nImmediate Recovery: When scope has already slipped, renegotiate immediately rather than continuing to absorb hours, using the contract's scope change process to formally approve and bill for the additional work. Addressing the problem right away preserves the relationship and ensures you get paid.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section.",
+    "Check the Full Guide: This step is described in detail in the companion guide \u2014 open scope-creep-playbook-freelancers.md and review the relevant section."
   ],
   "categories": [
-    "Choose Your Contract Structure",
-    "Lock Down Your Contract Clauses",
-    "Create Your Change Process"
+    "Contract Foundations",
+    "Scope Definition",
+    "Boundary Scripts"
   ],
-  "generated_at": "2026-05-14T10:23:15.000985"
+  "generated_at": "2026-05-20T23:55:30.844408"
 }

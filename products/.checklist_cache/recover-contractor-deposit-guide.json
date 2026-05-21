@@ -2,23 +2,23 @@
   "slug": "recover-contractor-deposit-guide",
   "draft_hash": "9b442caa2ae17905262a6b67126315db",
   "items": [
-    "Calculate Your Damages: Complete a loss calculation worksheet itemizing your deposit, additional payments, materials, emergency costs, and new contractor premium with documentation sources for each entry.",
-    "Calculate Your Damages: Add up every out-of-pocket expense you incurred because the contractor failed, including equipment rentals, emergency repairs, and storage fees, using invoices and receipts as backup.",
-    "Calculate Your Damages: Determine the price difference between your original contract and the replacement contractor you hired, then save both contracts as documentation of that recoverable damage amount.",
-    "Calculate Your Damages: Pull bank statements and receipts for every payment you made to the contractor so you can present concrete dollar amounts to the judge instead of vague estimates.",
-    "Preserve All Evidence: Screenshot every text conversation with the contractor showing full timestamps visible, saving each day's conversation as a separate image file in a dedicated folder.",
-    "Preserve All Evidence: Export your text conversations using your phone's built-in export feature and email them to yourself, creating a timestamped copy that cannot be altered or lost.",
-    "Preserve All Evidence: Back up all digital evidence to at least two separate locations, such as cloud storage and a dedicated email account, so one failure cannot destroy your entire case.",
-    "Preserve All Evidence: Forward every important email about the project to a dedicated Gmail address and create a labeled folder called Contractor Case to keep communications organized and accessible.",
-    "Prepare Your Case: Organize all your evidence chronologically into a single folder labeled with the contractor's name and case date, including contracts, payment records, and communication logs.",
-    "Prepare Your Case: Look up your state's small claims court limit to verify your total claim amount falls within the jurisdiction before you file anything.",
-    "Prepare Your Case: Visit your local small claims court website to learn the specific filing forms required, acceptable document formats, and any pre-filing deadlines or procedures.",
-    "Prepare Your Case: Write a one-page summary stating what you hired the contractor to do, how much you paid, what they failed to deliver, and your exact claimed amount for quick reference in court."
+    "Calculate Your Total Damages: Add up every payment you made to the contractor including the deposit, progress payments, and any materials you purchased separately to establish your exact financial loss.",
+    "Document Out-of-Pocket Costs: Track and calculate all expenses you incurred because the contractor failed to perform such as emergency equipment rentals, emergency repair bills, and storage fees for materials.",
+    "Calculate Replacement Contractor Costs: Compare your original contract price against what you paid a new contractor to finish the work and document that dollar difference as a recoverable damage.",
+    "Complete the Loss Worksheet: Fill out a written damage summary that lists each expense category with its dollar amount and supporting documentation source so you know precisely what to claim in court.",
+    "Screenshot Text Conversations: Take screenshots of every text and WhatsApp conversation with the contractor showing full timestamps visible so their broken promises and excuses are permanently preserved.",
+    "Export Conversations to Email: Use your phone's export function to send text conversation copies to a dedicated email account you control, creating a timestamped backup of all communications.",
+    "Save Evidence in Two Locations: Email screenshots and exported conversations to yourself and also upload them to cloud storage so you have redundant copies that won't disappear if one account is lost.",
+    "Preserve Voicemails Immediately: Forward any relevant voicemails to your dedicated case email folder before they auto-delete, or transcribe them verbatim and save the audio file to cloud storage.",
+    "Send a Written Demand Letter: Write and send a formal demand letter stating the exact amount owed, referencing your contract and evidence, with a specific deadline of 15 to 30 days for payment.",
+    "Organize Documents by Category: Sort all your evidence into folders labeled by claim category including deposits, additional payments, emergency costs, and replacement contractor expenses for easy courtroom access.",
+    "Verify Court Filing Requirements: Contact your local small claims court to confirm the exact filing fee based on your claim amount and obtain the required forms before attempting to file.",
+    "File Your Claim Accurately: Submit your completed claim form with your exact total damage amount, the contractor's full legal name and address, and copies of your supporting documentation to the court clerk."
   ],
   "categories": [
-    "Calculate Your Damages",
-    "Preserve All Evidence",
-    "Prepare Your Case"
+    "Calculate Your Total Damages",
+    "Preserve Critical Evidence",
+    "File Your Claim Properly"
   ],
-  "generated_at": "2026-05-16T13:06:49.225236"
+  "generated_at": "2026-05-20T23:50:22.923333"
 }

@@ -2,23 +2,23 @@
   "slug": "roommate-gone-small-claims-guide",
   "draft_hash": "58ed91f5f3fb00288f093fc26560abf6",
   "items": [
-    "Document Your Damages: List every category of money owed, including rent shortfalls, utilities, shared household expenses, and any repairs you covered that were her responsibility.",
-    "Document Your Damages: Assign specific dollar amounts to each line item and calculate your total by multiplying recurring expenses by the number of months she failed to pay.",
-    "Document Your Damages: Categorize each claim by documentation strength as documentable, partially documentable, or estimate-only, so you know exactly which items will hold up in court.",
-    "Document Your Damages: Verify your state's statute of limitations to confirm all claims fall within the legal time window before you invest time and money in this process.",
-    "Build Your Evidence File: Collect all receipts, bank statements, and transaction records that support each documentable and partially documentable claim you plan to file.",
-    "Build Your Evidence File: Gather any written agreements, text messages, or emails where she acknowledged owing money or agreed to specific payment arrangements.",
-    "Build Your Evidence File: Compile payment app history and written communications that show a pattern of late, missing, or incomplete payments from her to you.",
-    "Build Your Evidence File: Organize your complete evidence file chronologically with clear labels so you can quickly locate any document during your hearing.",
-    "Start the Legal Process: Send a formal demand letter that creates a legal record and starts the official response clock required before filing in small claims court.",
-    "Start the Legal Process: File your claim in the correct small claims court jurisdiction, which is typically where she currently resides or where your rental agreement was signed.",
-    "Start the Legal Process: Present your itemized claims with organized documentation during the hearing, showing each amount owed alongside its supporting evidence for the judge.",
-    "Start the Legal Process: Develop an enforcement strategy for your judgment, since having a court order doesn't guarantee automatic payment and you may need to pursue wage garnishment or bank levies."
+    "Calculate Your Claim: List every category of money owed including rent shortfalls, utilities, shared household expenses, damage repairs, and any other financial obligations from your roommate agreement to establish the full scope of what you're owed.",
+    "Calculate Your Claim: Assign specific dollar amounts to each expense item and multiply recurring costs like monthly rent and utilities by the number of months the roommate failed to pay to get an accurate total.",
+    "Calculate Your Claim: Categorize each claimed expense as documentable, partially documentable, or estimate-only based on whether you have receipts and records, because only documentable claims will hold up firmly in court.",
+    "Calculate Your Claim: Verify your state's statute of limitations before proceeding further because claims filed after this deadline get dismissed automatically regardless of how valid they are.",
+    "Gather Your Evidence: Collect all receipts, bank statements, transaction records, written agreements, and Venmo or payment app screenshots that support each documentable line item in your claim because judges require proof, not promises.",
+    "Gather Your Evidence: Organize your evidence into categories matching your expense list so you can present a clear, logical case to the judge without fumbling through documents during the hearing.",
+    "Gather Your Evidence: Document partial evidence for partially documentable claims by capturing whatever screenshots, messages, or records you do have and acknowledging their limitations honestly to the court.",
+    "Gather Your Evidence: Identify any estimate-only claims and decide whether to include them as a credibility gamble or exclude them entirely to avoid weakening your stronger documented claims.",
+    "Send the Demand Letter: Draft a formal written demand letter addressed to your former roommate that specifies the exact amount owed, itemizes the debt, and requests payment within a reasonable timeframe to create an official legal record.",
+    "Send the Demand Letter: Send the demand letter via certified mail with return receipt requested so you have proof it was delivered and the recipient cannot claim they never received notice.",
+    "Send the Demand Letter: Keep a copy of the demand letter and delivery confirmation in your evidence file because it demonstrates that you attempted reasonable resolution before filing a claim.",
+    "Send the Demand Letter: Allow the deadline in your demand letter to pass without payment before proceeding to file your small claims court case, because this shows the judge you exhausted good-faith efforts to resolve the dispute."
   ],
   "categories": [
-    "Document Your Damages",
-    "Build Your Evidence File",
-    "Start the Legal Process"
+    "Calculate Your Claim",
+    "Gather Your Evidence",
+    "Send the Demand Letter"
   ],
-  "generated_at": "2026-05-16T11:26:59.911533"
+  "generated_at": "2026-05-20T23:52:02.075319"
 }

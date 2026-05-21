@@ -2,23 +2,23 @@
   "slug": "multi-entity-tax-deadline-tracker",
   "draft_hash": "f5bcdbe69e62136df7061d3ae265356a",
   "items": [
-    "Build Your Entity Foundation: Open a new spreadsheet labeled \"Entity Inventory Master\" with columns for Entity Name, Entity Type, State of Formation, State(s) of Registration, Formation Date, EIN, Tax Classification, Registered Agent, Principal Address, and Notes.",
-    "Build Your Entity Foundation: Fill in every entity you own as a separate row in your spreadsheet, including entities you have not officially dissolved yet, so nothing falls through the cracks.",
-    "Build Your Entity Foundation: Export your entity inventory to cloud storage and set a recurring quarterly reminder to review and update it as your single source of truth going forward.",
-    "Build Your Entity Foundation: Add notes to each entity row for special circumstances, pending filings, or anything else that requires ongoing attention so the document captures your complete situation at a glance.",
-    "Configure Automated Reminders: Map all tax obligations by jurisdiction, listing every filing type, due date, and payment requirement for federal, state, and county levels across all your entities.",
-    "Configure Automated Reminders: Set automated reminders in your calendar system to send notifications 30 days before each tax deadline so you have adequate time to gather documents and prepare filings.",
-    "Configure Automated Reminders: Schedule internal buffer zones by targeting all filings and payments at least 5 business days before the actual deadline to prevent last-minute scrambles and processing delays.",
-    "Configure Automated Reminders: Create calendar blocks for year-end filing coordination that mark when each entity's return is due and when your accountant needs supporting documents from you.",
-    "Establish Maintenance Rhythms: Build audit-ready documentation by maintaining organized folders with copies of all filed returns, correspondence with tax authorities, and payment receipts organized by year and entity.",
-    "Establish Maintenance Rhythms: Create backup protocols by designating a second person in your organization or an external accountant who can access your tax calendar and deadlines if you are unavailable.",
-    "Establish Maintenance Rhythms: Schedule quarterly system reviews where you verify that all entities are properly registered, check for any law changes affecting your obligations, and update your reminder system accordingly.",
-    "Establish Maintenance Rhythms: Design your system to survive your busiest seasons and planned time off by ensuring all deadlines are visible, reminders are automated, and backup contacts know your filing schedule."
+    "Document Your Entities: Open a new spreadsheet and create an Entity Inventory Master table with columns for entity name, type, formation state, registration states, formation date, EIN, tax classification, registered agent, and principal address so every question about any entity is answerable in seconds.",
+    "Document Your Entities: Fill in every entity you own with one row per entity, including entities you've been meaning to clean up\u2014they're still your responsibility until officially dissolved, so you have a complete picture of what you're tracking.",
+    "Document Your Entities: Export and back up the entity inventory to cloud storage and set a recurring quarterly reminder to review it, because this document should be as reliable and accessible as your tax records.",
+    "Document Your Entities: Add a Notes column to your inventory for special circumstances, pending filings, or things to track, so you have a single place to capture everything that doesn't fit neatly into standard fields.",
+    "Map Tax Obligations: Create a jurisdiction matrix listing every federal, state, and local tax filing requirement for each entity you own, so you can see at a glance what applies to which entity in which jurisdiction.",
+    "Map Tax Obligations: Cross-reference each filing requirement with its exact due date, any applicable extensions, and the payment due date if money is involved, because deadlines without context lead to costly mistakes.",
+    "Map Tax Obligations: Add every deadline to your calendar with automated reminders set at 30 days, 14 days, and 3 days before the actual due date, so you're never caught off guard by something you forgot to check.",
+    "Map Tax Obligations: Include quarterly estimates, annual filings, and extension deadlines in your matrix, because the biggest compliance failures happen when quarterly and annual obligations collide during Q4.",
+    "Build Redundant Systems: Create backup reminder triggers at multiple intervals for every critical deadline, so a single missed notification doesn't mean a missed filing that costs you $800 or more in penalties.",
+    "Build Redundant Systems: Set internal buffer zones by scheduling all deadlines at least 3 business days before the actual due date, giving yourself time to catch errors or resolve processing issues before they're catastrophic.",
+    "Build Redundant Systems: Save all tax correspondence, filing confirmations, and payment receipts to a dedicated cloud folder with automatic backup, so you have audit-ready documentation when the IRS asks questions.",
+    "Build Redundant Systems: Schedule a quarterly system review to update entity information, verify calendar entries, and check for law changes, because your compliance system only works if you maintain it actively."
   ],
   "categories": [
-    "Build Your Entity Foundation",
-    "Configure Automated Reminders",
-    "Establish Maintenance Rhythms"
+    "Document Your Entities",
+    "Map Tax Obligations",
+    "Build Redundant Systems"
   ],
-  "generated_at": "2026-05-14T11:04:42.629930"
+  "generated_at": "2026-05-20T23:45:15.827037"
 }

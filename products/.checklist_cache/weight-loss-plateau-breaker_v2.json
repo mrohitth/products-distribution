@@ -1,24 +1,24 @@
 {
   "slug": "weight-loss-plateau-breaker_v2",
-  "draft_hash": "a4711c748c4c3a171b1f18d5d43e78ab",
+  "draft_hash": "0a02e8635685bd41d6caf12db077a12b",
   "items": [
-    "Diagnose Your Plateau: Answer the five classification questions about weeks in deficit, hunger levels, gym performance, scale jumps, and sleep quality to identify your dominant plateau type.",
-    "Diagnose Your Plateau: Write down your answers and look for patterns \u2014 if you answered yes to constant hunger and waking exhausted, your dominant plateau is likely hormonal.",
-    "Diagnose Your Plateau: If your gym performance has plateaued or declined and you feel more sedentary outside workouts, your dominant plateau is neural adaptation requiring different interventions.",
-    "Diagnose Your Plateau: When the scale jumps 1-3kg overnight after eating more carbs or changing sodium intake, recognize this as a water retention plateau, not actual fat gain.",
-    "Calculate Your Metabolism: Multiply your current body weight in kg by 22 if you're female or 24 if you're male to estimate your baseline resting metabolic rate.",
-    "Calculate Your Metabolism: Apply your activity multiplier to your RMR to determine your true maintenance calories, which have likely decreased since you started dieting.",
-    "Calculate Your Metabolism: Subtract 300-500 calories from your recalculated maintenance to set an accurate deficit, accounting for metabolic adaptation that occurred during your weight loss.",
-    "Calculate Your Metabolism: Compare your current calorie target to what you started with \u2014 if you've reduced intake significantly without recalculating, you may be eating at maintenance instead of deficit.",
-    "Execute Interventions: Plan a strategic refeed with 150-200% of your normal carbohydrate intake for 24-48 hours to elevate leptin and thyroid hormones and signal your body that starvation has ended.",
-    "Execute Interventions: Monitor your refeed carefully \u2014 a true refeed resets hormones and accelerates fat loss, while an uncontrolled binge simply adds calories without metabolic benefits.",
-    "Execute Interventions: After refeeding, return immediately to your calculated deficit on Monday rather than extending the higher eating period, since extended surplus undoes your caloric progress.",
-    "Execute Interventions: Implement the 48-hour plateau response system when the scale stalls for more than two weeks, using your plateau classification to choose the right intervention instead of guessing."
+    "Identify Your Plateau Type: Answer the four diagnostic questions about your deficit duration and physical symptoms to determine whether you're facing a metabolic adaptation, hormonal, neural adaptation, or water retention plateau before applying any fix.",
+    "Identify Your Plateau Type: Track non-scale metrics like energy levels, body temperature, resting heart rate, and mood changes for at least two weeks because the scale alone won't tell you whether your body is still progressing or truly plateaued.",
+    "Identify Your Plateau Type: Recalculate your current metabolic rate using the TDEE formula since your maintenance calories have likely dropped by 15-25% after prolonged deficit, and continuing with your original deficit is now keeping you stuck.",
+    "Identify Your Plateau Type: Pinpoint water retention triggers by logging sodium intake, carbohydrate consumption, and menstrual cycle timing because water fluctuations of 1-3kg can mask actual fat loss and create a false plateau appearance.",
+    "Implement Strategic Refeeds: Schedule a weekly planned refeed day with a 30-50% calorie increase focused on carbohydrates specifically rather than fat because carbs spike insulin to signal your body that energy is abundant and reverse hormone suppression.",
+    "Implement Strategic Refeeds: Use the carb cycling method by eating 150-200% of your normal carb intake on refeed days while keeping protein and fat at maintenance levels to maximize the insulin and leptin hormone reset effect.",
+    "Implement Strategic Refeeds: Plan your refeed day to follow your hardest training session because working muscles act as a carbohydrate sponge that pulls glucose from your bloodstream and amplifies the hormone signaling benefit.",
+    "Implement Strategic Refeeds: Track your weight trend over a full two-week refeed cycle rather than judging refeed effectiveness by single-day scale movements since water retention and glycogen refilling create normal short-term fluctuations.",
+    "Support Long-Term Hormone Reset: Optimize sleep quality by targeting 7-9 hours per night because poor sleep elevates cortisol, suppresses leptin, and directly counteracts the hormone reset you're trying to achieve through refeeds.",
+    "Support Long-Term Hormone Reset: Manage stress through daily practices like breath work or light walks because elevated cortisol interferes with thyroid hormone conversion and prevents your metabolism from recovering during a plateau.",
+    "Support Long-Term Hormone Reset: Add thyroid-supportive nutrients like selenium and zinc through foods like Brazil nuts, oysters, and pumpkin seeds because prolonged restriction often depletes these minerals needed for T3 hormone production.",
+    "Support Long-Term Hormone Reset: Schedule a planned maintenance phase of 1-2 weeks at true maintenance calories every 12-16 weeks of deficit to allow your hormones, metabolism, and sanity to fully reset before continuing fat loss."
   ],
   "categories": [
-    "Diagnose Your Plateau Type",
-    "Calculate Your True Metabolic Rate",
-    "Execute Strategic Interventions"
+    "Identify Your Plateau Type",
+    "Implement Strategic Refeeds",
+    "Support Long-Term Hormone Reset"
   ],
-  "generated_at": "2026-05-18T11:15:46.425961"
+  "generated_at": "2026-05-20T23:59:35.689298"
 }

@@ -1,24 +1,24 @@
 {
   "slug": "cat-aggression-handbook",
-  "draft_hash": "e898ad0e6d2cd39c1a2b9209c81e249b",
+  "draft_hash": "d495f1b9d054120ff182034149f5946b",
   "items": [
-    "Classify and Diagnose, Item 1: Identify whether your cat's attacks stem from play, fear, petting-induced, territorial, redirected, pain-related, or status-related aggression. Getting the classification right determines which solution will actually work for your situation.",
-    "Classify and Diagnose, Item 2: Track attack timing, location, preceding activity, body parts targeted, and intensity level for five separate incidents. Writing down these details helps you identify patterns that reveal the aggression type.",
-    "Classify and Diagnose, Item 3: Check your cat for pain indicators including new or worsening aggression, biting when specific areas are touched, and reluctance to be handled in certain positions. Pain-induced aggression requires veterinary diagnosis before behavior modification can succeed.",
-    "Classify and Diagnose, Item 4: Distinguish predatory aggression from fear or status aggression by noting whether attacks involve silent stalking, hidden positioning, and neck or shoulder targeting. Predatory attacks follow instinct rather than emotional state.",
-    "Read and Intercept, Item 1: Watch for pre-attack body language signals before every petting session including tail flicking, skin rippling, sideways ear rotation, and pupil dilation. These signals appear within seconds and indicate your cat's tolerance threshold is being reached.",
-    "Read and Intercept, Item 2: Stop petting immediately and give your cat space when you notice any skin rippling, tail lashing, or head turning toward your hand. Continuing through these signals is the most common trigger for sudden petting-induced bites.",
-    "Read and Intercept, Item 3: Learn the difference between defensive and offensive postures by watching for crouching or rolling onto the back with flattened sideways ears. This is a prepare-to-fight posture that can escalate to serious injury if misread as affection.",
-    "Read and Intercept, Item 4: Note whether your cat has been exposed to triggers they could not access such as outdoor cats at windows, loud noises, or environmental changes. Redirected aggression often appears without warning in otherwise calm cats and persists for hours after the initial trigger.",
-    "Prevent and Manage, Item 1: Provide structured daily play sessions using wand toys that mimic prey movement rather than allowing hands or feet to serve as targets. Redirecting predatory energy toward appropriate toys eliminates the association between hands and hunting satisfaction.",
-    "Prevent and Manage, Item 2: Make environmental changes to reduce ambush opportunities by closing doors to rooms where attacks occur, using baby gates to create safe zones, and providing elevated resting areas. Restructuring your home removes the elements that make surprise attacks possible.",
-    "Prevent and Manage, Item 3: Allow hyperaroused cats a 24 to 72-hour decompression period in a separate room with food, water, and litter. This prevents redirected aggression from persisting or escalating when the cat cannot self-regulate.",
-    "Prevent and Manage, Item 4: Schedule a veterinary examination when aggression is new, escalating, or linked to potential pain indicators. Medical conditions must be ruled out before behavior modification alone can resolve the problem."
+    "Classify Your Cat's Aggression Type: Identify which of the six aggression categories your cat falls into\u2014play, fear-based, petting-induced, territorial, redirected, or pain-related\u2014since each requires a completely different intervention strategy.",
+    "Map Out the Predatory Sequence: Track the stalking-pounce-bite pattern your cat follows before attacking so you can identify the precise moment to interrupt the behavior.",
+    "Rule Out Pain as the Root Cause: Check for arthritis, dental disease, or injury if aggression has a sudden new onset, as pain-induced aggression requires medical treatment before behavior modification can work.",
+    "Recognize Stress Signals Before They Escalate: Watch for flattened ears, dilated pupils, piloerection, and tail lashing as early warning signs that precede most attacks, allowing you to end interactions before biting occurs.",
+    "Redirect Predatory Energy Onto Appropriate Toys: Use wand toys and teaser toys to channel your cat's hunting instincts away from your hands and feet, since play aggression responds best to redirecting the predatory sequence.",
+    "Give Your Cat Control Over Petting Sessions: Let your cat initiate, determine the duration, and end the petting rather than forcing continued contact, since petting-induced aggression is about your cat asserting control.",
+    "Block Access to Redirected Aggression Triggers: Close blinds or use window film to prevent your cat from seeing outdoor cats or wildlife that cause frustrated arousal, which often leads to redirected attacks on you.",
+    "Never Punish an Attack: Avoid yelling, spraying water, or physical corrections after any aggressive episode, since punishment escalates fear-based aggression and makes the behavior problem significantly worse.",
+    "Build Trust Through Predictable Positive Interactions: Establish consistent daily routines and reward calm behavior with treats to reduce your cat's underlying anxiety, which drives fear-based and territorial aggression.",
+    "Enrich the Environment to Meet Predatory Needs: Install cat trees, puzzle feeders, and hiding spots so your cat can express natural stalking and hunting behaviors throughout the day, reducing pent-up frustration.",
+    "Create a Written Behavior Modification Plan: Document which triggers exist, when attacks occur, what interventions you try, and track progress weekly so you can adjust strategies based on what actually works.",
+    "Involve Your Veterinarian or Behavior Professional: Schedule a vet visit or contact a certified behaviorist if aggression causes injury, has sudden onset, or doesn't improve within several weeks of consistent management."
   ],
   "categories": [
-    "Classify and Diagnose",
-    "Read and Intercept",
-    "Prevent and Manage"
+    "Classify the Aggression Type",
+    "Prevent Attacks Proactively",
+    "Build Long-Term Behavior Change"
   ],
-  "generated_at": "2026-05-18T11:15:09.971877"
+  "generated_at": "2026-05-20T23:31:43.171047"
 }

@@ -1,0 +1,24 @@
+{
+  "slug": "get-unpaid-clients-to-pay",
+  "draft_hash": "0e2c4ee3e3f3a646776985bcc9e226cd",
+  "items": [
+    "Contract Vulnerabilities: Review your current contract template today and locate every section covering project scope definition, payment milestones, and late payment terms.",
+    "Contract Vulnerabilities: Add a scope definition clause that explicitly lists deliverables and requires written change orders with agreed pricing before any additional work begins.",
+    "Contract Vulnerabilities: Define payment milestones that link specific deliverables to specific payment amounts and due dates so clients cannot hide behind vague completion language.",
+    "Contract Vulnerabilities: Include late fee language with both a trigger date and a consequence, such as your right to pause work when payment is 30 days overdue.",
+    "Payment Structure: Implement a deposit requirement for all new clients, typically 30-50% of the total project cost, to reduce financial exposure from the start.",
+    "Payment Structure: Break large projects into distinct phases where each phase completion triggers a specific payment amount rather than one lump sum at the end.",
+    "Payment Structure: Set explicit payment due dates tied to milestone approvals, such as requiring payment within 5 business days of written client sign-off.",
+    "Payment Structure: Establish your right to stop all active work immediately if a client fails to pay an overdue milestone, preventing additional unpaid labor.",
+    "Documentation Practices: Create written confirmation for every scope discussion using email or project management tools that generate timestamps and records.",
+    "Documentation Practices: Send formal delivery confirmations that require client acknowledgment, preventing the \"I never received that\" defense in future disputes.",
+    "Documentation Practices: Maintain organized records of all sent invoices, payment confirmations, client responses, and delivery receipts in a dedicated folder or system.",
+    "Documentation Practices: Document every client interaction about payment terms in writing rather than relying on verbal agreements that become impossible to verify later."
+  ],
+  "categories": [
+    "Contract Vulnerabilities",
+    "Payment Structure",
+    "Documentation Practices"
+  ],
+  "generated_at": "2026-05-20T23:38:19.757791"
+}
